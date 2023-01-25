@@ -6,3 +6,9 @@ rewritten again in an object-oriented programming style. It was a quick
 hack, and it needs a lot of cleanup and refactoring. A perfect code base to teach
 the value of software developement fundamentals!
 <br>
+
+* -v (verbose)
+* -sch priority (priority scheduler)
+* --all (all options)
+* -i <input file>
+* -o <output folder>
