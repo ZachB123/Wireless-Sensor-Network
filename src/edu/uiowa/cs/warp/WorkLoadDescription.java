@@ -57,5 +57,23 @@ public class WorkLoadDescription extends VisualizationObject {
     inputGraphString = gf.readGraphFile(inputFile);
     this.inputFileName = gf.getGraphFileName();
     description = new Description(inputGraphString);
+    
   }
+  // Creating main method at bottom of class
+  public static void main(String[] args) {
+	  // instantiating WorkLoadDescription with StressTest.txt as the parameter
+	  WorkLoadDescription workloadDescription = new WorkLoadDescription("StressTest.txt");
+	  
+	  Description description = workloadDescription.visualization();
+	  
+	  //TODO remove first line to get rid of unwanted name and brace
+	  //TODO remove last line to get rid of last brace 
+	  //TODO sort through remaining items
+	  
+	  // for loop that iterates through the length of description
+	  for (int i= 0; i<description.size(); i++) {
+		  
+	  }
+  }
+  
 }
