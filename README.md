@@ -12,3 +12,9 @@ the value of software developement fundamentals!
 * --all (all options)
 * -i <input file>
 * -o <output folder>
+
+# Homework 1
+For homework 1 I handled a variety of edge cases
+1. empty lines at the beginning and of the file
+2. extra spaces around filename and final curly bracket
+3. empty lines scattered throughout the flows

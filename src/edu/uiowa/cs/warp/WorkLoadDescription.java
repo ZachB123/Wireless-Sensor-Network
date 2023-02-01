@@ -4,6 +4,7 @@
 package edu.uiowa.cs.warp;
 
 import java.text.Collator;
+import java.util.Arrays;
 import java.util.Collections;
 
 /**
@@ -64,17 +65,27 @@ public class WorkLoadDescription extends VisualizationObject {
   }
   
   public static void main(String[] args) {
-	  WorkLoadDescription wld = new WorkLoadDescription("StressTest.txt");
+	  String fileName = "StressTest.txt";
+	  WorkLoadDescription wld = new WorkLoadDescription(fileName);
 	  Description content = wld.visualization();
+	  // remove empty lines
+	  for (int i = content.size() - 1; i >= 0; i--) {
+		  // equals "" if the line only contains whitespace and newlines
+		  if (content.get(i).trim().equals("")) {
+			  content.remove(i);
+		  }
+	  }
 	  // The title is the first word in the first index of the content
-	  String title = content.remove(0).split(" ")[0];
+	  // split doesn't remove spaces from the middle
+	  String title = content.remove(0).trim().split(" ")[0];
 	  // there is a } at the end so remove it
 	  content.remove(content.size()-1);
 	  // sort alphabetically
+	  // Collater is a comparator that sorts string alphabetically
 	  Collections.sort(content, Collator.getInstance());
 	  System.out.println(title);
 	  for (int i = 1; i <= content.size(); i++) {
-		  System.out.print("Flow " + i + ": " + content.get(i-1));
+		  System.out.println("Flow " + i + ": " + content.get(i-1).trim());
 	  }
   }
 }
