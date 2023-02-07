@@ -3,6 +3,8 @@
  */
 package edu.uiowa.cs.warp;
 
+import java.util.Collections;
+
 /**
  * Reads the input file, whose name is passed as input parameter to the constructor, and builds a
  * Description object based on the contents. Each line of the file is an entry (string) in the
@@ -70,10 +72,31 @@ public class WorkLoadDescription extends VisualizationObject {
 	  //TODO remove last line to get rid of last brace 
 	  //TODO sort through remaining items
 	  
-	  // for loop that iterates through the length of description
+	  //Possible edge case: If there are extra lines before description starts
+	  
+	  //Getting rid of the bracket in the first line by replacing it with an empty string
+	  String graphName = description.get(0).replace("{","");
+	  	  
+	  System.out.print(graphName);
+	  
+	  //Removing last line so the brace at end is gone 
+	  description.remove(description.size()-1);
+	  description.remove(0);
+	  
+	  
+	  
+	  //Alphabetically sorting through all of the flows in description
+	  Collections.sort(description);
+	  
+	  //Adding the string "Flow i :" To the beginning of each line in description
 	  for (int i= 0; i<description.size(); i++) {
 		  
+		  String flows = "Flow" + " " + (i+1) + " " + ":";
+		  description.set(i, flows + description.get(i));
+		  
 	  }
+	  //Printing sorted description
+	  System.out.print(description);
   }
   
 }

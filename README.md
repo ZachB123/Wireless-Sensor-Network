@@ -10,4 +10,10 @@ HW0 Update
 1/18/2023
 This is the first update to the README, added in HW0
 
+
+HW1 Update
+2/7/2023
+WorkloadDescription.java has been updated to alphabetically sort the flows in StressTest.txt
+
+
 <br>
