@@ -3,68 +3,92 @@ package edu.uiowa.cs.warp;
 import java.util.ArrayList;
 
 /**
+ * Class that represents
  * @author sgoddard
  *
  */
-public class Flow extends SchedulableObject implements Comparable<Flow>{
+public class Flow extends SchedulableObject implements Comparable<Flow> {
 
+	/**
+	 * Integer that represents an undefined value.
+	 */
 	private static final Integer UNDEFINED = -1;
-	private static final Integer DEFAULT_FAULTS_TOLERATED = 0; 
-	private static final Integer DEFAULT_INDEX = 0;
-	private static final Integer DEFAULT_PERIOD = 100; 
-	private static final Integer DEFAULT_DEADLINE = 100;
-	private static final Integer DEFAULT_PHASE = 0;
 	
+	/**
+	 * The default number of faults tolerated in the flow.
+	 */
+	private static final Integer DEFAULT_FAULTS_TOLERATED = 0;
+	
+	/**
+	 * The default index value.
+	 */
+	private static final Integer DEFAULT_INDEX = 0;
+	
+	/**
+	 * The default period value.
+	 */
+	private static final Integer DEFAULT_PERIOD = 100;
+	
+	/**
+	 * The default deadline.
+	 */
+	private static final Integer DEFAULT_DEADLINE = 100;
+	
+	/**
+	 * The default phase.
+	 */
+	private static final Integer DEFAULT_PHASE = 0;
 
-    Integer initialPriority = UNDEFINED;
-    Integer index;  // order in which the node was read from the Graph file
-    Integer numTxPerLink; //  determined by fault model
-    ArrayList<Node> nodes; // Flow src is 1st element and flow snk is last element in array
-    /*
-     *  nTx needed for each link to reach E2E reliability target. Indexed by src node of the link. 
-     *  Last entry is total worst-case E2E Tx cost for schedulability analysis
-     */
-    ArrayList<Integer> linkTxAndTotalCost; 
-    ArrayList<Edge> edges; //used in Partition and scheduling
-    Node nodePredecessor;
-    Edge edgePredecessor;
-    
-    /*
-     * Constructor that sets name, priority, and index
-     */
-    Flow (String name, Integer priority, Integer index){
-    	super(name, priority, DEFAULT_PERIOD, DEFAULT_DEADLINE, DEFAULT_PHASE);
-    	this.index = index;
-        /*
-         *  Default numTxPerLink is 1 transmission per link. Will be updated based
-         *  on flow updated based on flow length and reliability parameters
-         */
-        this.numTxPerLink = DEFAULT_FAULTS_TOLERATED + 1; 
-        this.nodes = new ArrayList<>();
-        this.edges  = new ArrayList<>();
-        this.linkTxAndTotalCost = new ArrayList<>();
-        this.edges = new ArrayList<>();	
-        this.nodePredecessor = null;
-        this.edgePredecessor = null;
-    }
-    
-    /*
-     * Constructor
-     */
-    Flow () {
-    	super();
-    	this.index = DEFAULT_INDEX;
-    	/*
-    	 *  Default numTxPerLink is 1 transmission per link. Will be updated based
-    	 *  on flow updated based on flow length and reliability parameters
-    	 */
-    	this.numTxPerLink = DEFAULT_FAULTS_TOLERATED + 1; 
-    	this.nodes = new ArrayList<>();
-    	this.linkTxAndTotalCost = new ArrayList<>();
-    	this.edges = new ArrayList<>();
-    	this.nodePredecessor = null;
-        this.edgePredecessor = null;
-    }
+	Integer initialPriority = UNDEFINED;
+	Integer index; // order in which the node was read from the Graph file
+	Integer numTxPerLink; // determined by fault model
+	ArrayList<Node> nodes; // Flow src is 1st element and flow snk is last element in array
+	/*
+	 * nTx needed for each link to reach E2E reliability target. Indexed by src node
+	 * of the link. Last entry is total worst-case E2E Tx cost for schedulability
+	 * analysis
+	 */
+	ArrayList<Integer> linkTxAndTotalCost;
+	ArrayList<Edge> edges; // used in Partition and scheduling
+	Node nodePredecessor;
+	Edge edgePredecessor;
+
+	/*
+	 * Constructor that sets name, priority, and index
+	 */
+	Flow(String name, Integer priority, Integer index) {
+		super(name, priority, DEFAULT_PERIOD, DEFAULT_DEADLINE, DEFAULT_PHASE);
+		this.index = index;
+		/*
+		 * Default numTxPerLink is 1 transmission per link. Will be updated based on
+		 * flow updated based on flow length and reliability parameters
+		 */
+		this.numTxPerLink = DEFAULT_FAULTS_TOLERATED + 1;
+		this.nodes = new ArrayList<>();
+		this.edges = new ArrayList<>();
+		this.linkTxAndTotalCost = new ArrayList<>();
+		this.edges = new ArrayList<>();
+		this.nodePredecessor = null;
+		this.edgePredecessor = null;
+	}
+
+	/*
+	 * Constructor
+	 */
+	Flow() {
+		super();
+		this.index = DEFAULT_INDEX;
+		/*
+		 * Default numTxPerLink is 1 transmission per link. Will be updated based on
+		 * flow updated based on flow length and reliability parameters
+		 */
+		this.numTxPerLink = DEFAULT_FAULTS_TOLERATED + 1;
+		this.nodes = new ArrayList<>();
+		this.linkTxAndTotalCost = new ArrayList<>();
+		this.edges = new ArrayList<>();
+		this.nodePredecessor = null;
+		this.edgePredecessor = null;
+	}
 
 	/**
 	 * @return the initialPriority
@@ -93,7 +117,7 @@ public class Flow extends SchedulableObject implements Comparable<Flow>{
 	public ArrayList<Node> getNodes() {
 		return nodes;
 	}
-	
+
 	/**
 	 * @return the nodes
 	 */
@@ -111,7 +135,7 @@ public class Flow extends SchedulableObject implements Comparable<Flow>{
 		/* update predecessor for next edge added */
 		edgePredecessor = edge;
 	}
-	
+
 	/**
 	 * Add and edge to the flow.
 	 */
@@ -122,6 +146,7 @@ public class Flow extends SchedulableObject implements Comparable<Flow>{
 		/* update predecessor for next edge added */
 		nodePredecessor = node;
 	}
+
 	/**
 	 * @return the linkTxAndTotalCost
 	 */
@@ -165,14 +190,14 @@ public class Flow extends SchedulableObject implements Comparable<Flow>{
 	}
 
 	@Override
-    public int compareTo(Flow flow) {
-    	// ascending order (0 is highest priority)
-        return flow.getPriority() > this.getPriority() ? -1 : 1;
-    }
-    
-    @Override
-    public String toString() {
-        return getName();
-    }
-    
+	public int compareTo(Flow flow) {
+		// ascending order (0 is highest priority)
+		return flow.getPriority() > this.getPriority() ? -1 : 1;
+	}
+
+	@Override
+	public String toString() {
+		return getName();
+	}
+
 }

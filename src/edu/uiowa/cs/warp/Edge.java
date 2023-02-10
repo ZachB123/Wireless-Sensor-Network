@@ -13,7 +13,7 @@ public class Edge extends SchedulableObject implements Comparable<Edge> {
 	private Integer numTx;
 
 	private enum EdgeState {
-		RELEASED, EXECUTING, NOT_READY 
+		RELEASED, EXECUTING, NOT_READY
 	}
 
 	Edge() {
@@ -26,30 +26,29 @@ public class Edge extends SchedulableObject implements Comparable<Edge> {
 		this.state = EdgeState.NOT_READY;
 		this.numTx = 0;
 	}
-	
-	Edge(String flow, String src, String snk, Integer priority, 
-		Integer period, Integer deadline, Integer phase, Integer numTx) {
+
+	Edge(String flow, String src, String snk, Integer priority, Integer period, Integer deadline, Integer phase,
+			Integer numTx) {
 		super(priority, period, deadline, phase);
 		this.flow = flow;
-		this.src =src;
+		this.src = src;
 		this.snk = snk;
 		this.instance = 0;
 		this.coordinator = UNKNOWN;
-		this.state = EdgeState.NOT_READY;	
+		this.state = EdgeState.NOT_READY;
 		this.numTx = numTx;
 	}
 
 	@Override
-    public int compareTo(Edge edge) {
-        return edge.getPriority() > this.getPriority() ? 1 : -1;
-    }
+	public int compareTo(Edge edge) {
+		return edge.getPriority() > this.getPriority() ? 1 : -1;
+	}
 
-    @Override
-    public String toString() {
-    	String result = String.format("%s:(%s,%s)", 
-    			this.flow, this.src, this.snk);
-        return result;
-    }
+	@Override
+	public String toString() {
+		String result = String.format("%s:(%s,%s)", this.flow, this.src, this.snk);
+		return result;
+	}
 
 	/**
 	 * @return the flow
@@ -144,10 +143,10 @@ public class Edge extends SchedulableObject implements Comparable<Edge> {
 
 	@Override
 	public void print(String headerMsg) {
-		System.out.printf("\n%s",headerMsg);
+		System.out.printf("\n%s", headerMsg);
 		this.print();
 	}
-	
+
 	@Override
 	public void print() {
 		super.print();
@@ -155,6 +154,5 @@ public class Edge extends SchedulableObject implements Comparable<Edge> {
 		System.out.printf("\tSrc:%s\n", this.src);
 		System.out.printf("\tSnk:%s\n", this.snk);
 	}
-	
-    
+
 }
