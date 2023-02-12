@@ -16,6 +16,8 @@ import java.util.Vector;
 import java.util.stream.Collectors;
 
 /**
+ * <h1>Represents all the flows in a file.</h1>
+ * 
  * Build the nodes and flows for the workload described in the workload
  * description file, whose name is passed into the Constructor via the parameter
  * inputFileName. Good default values for the constructors are m = 0.9, e2e =
@@ -270,7 +272,8 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 	/**
 	 * <h1>Add a new flow to the Flows dictionary</h1>
 	 * <p>
-	 * 
+	 * If the flow name already exists it will be overwritten with the new one.
+	 * If any flow name is not an integer, the intForFlowNames will be permanently set to false for this workload.
 	 * </p>
 	 * 
 	 * @param flowName
@@ -308,6 +311,14 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		return intForFlowNames;
 	}
 
+	/**
+	 * <h1>Adds a node to the given flow.</h1>
+	 * <p>
+	 * If the node already exists in the workload, it will only be added to the flow. Otherwise a new node will be created.
+	 * </p>
+	 * @param flowName Name of flow to add the node to.
+	 * @param nodeName The node that will be added to the flow.
+	 */
 	public void addNodeToFlow(String flowName, String nodeName) {
 		if (!Utilities.isInteger(nodeName) && intForNodeNames) {
 			/*
@@ -337,12 +348,25 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		flowNode.linkTxAndTotalCost.add(DEFAULT_TX_NUM);
 	}
 
+	
+	/**
+	 * <h1>Returns the priority of the node with nodeName belonging to the flow flowName</h1>
+	 * <p>Gets the flow by the flowName then uses an iterator from the flow's nodes to
+	 * iterate through all the nodes until the node with name nodeName is found. Then that
+	 * node's priority is returned</p>
+	 * <p>0 is returned if the node or flow is not found.</p>
+	 * 
+	 * @param flowName the name of the flow
+	 * @param nodeName the node in the flow
+	 * @return the priority of nodeName belonging to flowName
+	 */
 	public Integer getFlowPriority(String flowName, String nodeName) {
 		var priority = 0;
 		var flow = getFlow(flowName);
 		Iterator<Node> nodes = flow.nodes.iterator();
 		while (nodes.hasNext()) {
 			var node = nodes.next();
+			// why is == used?
 			if (node.getName() == nodeName) {
 				priority = node.getPriority(); // found the src node, set its index
 				break;
@@ -381,21 +405,45 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		return flowNode.getPriority();
 	}
 
+	/**
+	 * <h1>Returns the period of the flow with flowName.</h1>
+	 * 
+	 * @param flowName the name of the flow to find the period of
+	 * @return the flow's period
+	 */
 	public Integer getFlowPeriod(String flowName) {
 		var flowNode = getFlow(flowName);
 		return flowNode.getPeriod();
 	}
-
+	
+	/**
+	 * <h1>Returns the deadline of the flow with flowName.</h1>
+	 * 
+	 * @param flowName the name of the flow to find the deadline of.
+	 * @return the flow's deadline.
+	 */
 	public Integer getFlowDeadline(String flowName) {
 		var flowNode = getFlow(flowName);
 		return flowNode.getDeadline();
 	}
 
+	/**
+	 * <h1>Returns the phase of the flow with flowName.</h1>
+	 * 
+	 * @param flowName the name of the flow to find the phase of.
+	 * @return the flow's phase.
+	 */
 	public Integer getFlowPhase(String flowName) {
 		var flowNode = getFlow(flowName);
 		return flowNode.getPhase();
 	}
 
+	/**
+	 * <h1>Returns the flow tx attempts per link for the flow with name flowName.</h1> 
+	 * 
+	 * @param flowName the name of the flow.
+	 * @return number of tx per link.
+	 */
 	public Integer getFlowTxAttemptsPerLink(String flowName) {
 		var flowNode = getFlow(flowName);
 		return flowNode.numTxPerLink;
@@ -525,6 +573,17 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		}
 	}
 
+	
+	/**
+	 * <h1>Returns the fixed tx per link and the total tx cost of the given flow.</h1>
+	 * <p>The tx per link is defined as the number of faults allowed plus one since a node has to be used once to
+	 * transmit a message. The return value is an ArrayList with link num nodes in flow + 1. The last element in 
+	 * the list is the maximum tx in the flow. all previous elements represent the tx per node of a flow and each
+	 * correspond to node.</p>
+	 * 
+	 * @param flow the flow object to find the tx of.
+	 * @return an arraylist of integers with each entry corresponding to a node in the flow's tx. The last entry is the maximum tx.
+	 */
 	private ArrayList<Integer> getFixedTxPerLinkAndTotalTxCost(Flow flow) {
 		var nodesInFlow = flow.nodes;
 		var nNodesInFlow = nodesInFlow.size();
@@ -758,8 +817,15 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		// String[0] is better
 	}
 
-	// public function to return the dictionary of nodes
+	/**
+	 * <h1>Returns the index of the given node.</h1>
+	 * <p>A nodes index is an alternate name for the simulator input file.</p>
+	 * 
+	 * @param nodeName the Name of the node
+	 * @return the index of the node
+	 */
 	public Integer getNodeIndex(String nodeName) {
+		// public function to return the dictionary of nodes
 		var index = 0;
 		var node = nodes.get(nodeName); // could throw an exception if null, but just return 0 for now
 		if (node != null) {
