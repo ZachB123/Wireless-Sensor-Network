@@ -370,7 +370,11 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
     var flowNode = getFlow(flowName);
     return flowNode.numTxPerLink;
   }
-
+/**
+ * Creates several lists which include flow objects, all of which are sorted
+ * in a different way, then adds the flows sorted by priority order to 
+ * a new list which contains the flow names in said order
+ */
   public void setFlowsInPriorityOrder() {
     // create a list of Flow objects from the FlowMap using the stream interface.
     List<Flow> unsortedFlows = flows.values().stream().collect(Collectors.toList());
@@ -385,7 +389,9 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
     flowNamesInPriorityOrder = new ArrayList<>();
     sortedFlows.forEach((node) -> flowNamesInPriorityOrder.add(node.getName()));
   }
-
+/*
+ * Ordering flows in the order in which the deadlines have been met
+ */
   public void setFlowsInDMorder() {
     /* create a list of Flow objects from the FlowMap using the stream interface. */
     List<Flow> unsortedFlows = flows.values().stream().collect(Collectors.toList());
@@ -402,7 +408,9 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
     flowNamesInPriorityOrder = new ArrayList<>();
     sortedFlows.forEach((node) -> flowNamesInPriorityOrder.add(node.getName()));
   }
-
+/*
+ * Creates lists for flows and then orders them by Period.
+ */
   public void setFlowsInRMorder() {
     // create a list of Flow objects from the FlowMap using the stream interface.
     List<Flow> unsortedFlows = flows.values().stream().collect(Collectors.toList());
@@ -514,7 +522,14 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
     txArrayList.add(numEdgesInFlow + maxFaultsInFlow);
     return txArrayList;
   }
-
+/*
+ * A private method that rigorously uses a matrix representation to 
+ * display the reliability of packets reaching each node within a given amount
+ * of time. Rows are continuously added to the matrix until the final reliability
+ * has been determined. The reliability is computed and updated as throughout the
+ * entire process, and after it is complete, returns an arraylist of 
+ * the pushed nodes.
+ */
   private ArrayList<Integer> numTxAttemptsPerLinkAndTotalTxAttempts(Flow flow, Double e2e, Double M,
       boolean optimizationRequested) {
     var nodesInFlow = flow.nodes;
@@ -670,7 +685,13 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
     Collections.addAll(nPushesArrayList, nPushes);
     return nPushesArrayList;
   }
-
+/*
+ * Gets the names of the nodes from the node map, and sorts them
+ * by alphabetical order. If there are strings of integers in the node names,
+ * loop through all of the node names to determine if the node names are all 
+ * ints. If they are all ints, sort by ascending order, otherwise,
+ * sort alphabetically as specified.
+ */
 
   public String[] getNodeNamesOrderedAlphabetically() {
     var nodes = getNodes();
@@ -730,7 +751,12 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
     }
     return index;
   }
-
+/*
+ * Gets the nodes for the specified flow, and then creates an array
+ * of the nodes in the same order, if flow name given is not found, give 
+ * a warning that says so.
+ */
+  
   public String[] getNodesInFlow(String flowName) {
     // get the flow node for requested Flow and then loop through the
     // nodes in the flow to create an array of the node names in
@@ -750,7 +776,10 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
     }
     return nodes;
   }
-
+/*
+ * public method that finds the hyper period, which is the least common multiple
+ * of every period. 
+ */
   public Integer getHyperPeriod() {
     var hyperPeriod = 1; // hyperPeriod is LCM of all periods. Initialize to 1
     for (String flowName : getFlowNames()) {
@@ -763,7 +792,10 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
     }
     return hyperPeriod;
   }
-
+/*
+ * Returns an integer that displays the amount of transmission that is required
+ * for each flow to meet their target.
+ */
   public Integer getTotalTxAttemptsInFlow(String flowName) {
     var flow = getFlow(flowName);
     var linkTxAndTotalCost = flow.getLinkTxAndTotalCost();
@@ -783,12 +815,17 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
     return linkTxAndTotalCost.toArray(new Integer[0]);
   }
 
-
+/**
+ * Public method that adds an edge to a given node.
+ */
   public void addEdge(String nodeName, Edge edge) {
     var node = nodes.get(nodeName); // get the node object
     node.addEdge(edge);
   }
-
+/**
+ * Public method that returns an integer that represents the flow with
+ * the greatest length out of a series of flows.
+ */
   public Integer maxFlowLength() {
     Integer maxLength = 0;
     for (Flow flow : flows.values()) {
