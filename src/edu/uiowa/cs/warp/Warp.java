@@ -174,6 +174,17 @@ public class Warp {
 	 */
 	private static ScheduleChoices schedulerSelected;
 
+	/**
+	 * <h1>Entry point of the warp program.</h1>
+	 * <p>Sets up the warp parameters according to the command line arguments.
+	 * The program will print the parameters if it is in verbose mode.
+	 * Then a workload is created based off of the input file.
+	 * Finally if all was requested, all visualizations files are made, and if
+	 * set 
+	 * </p>
+	 * 
+	 * @param args command line arguments.
+	 */
 	public static void main(String[] args) {
 		// parse command-line options and set WARP system parameters
 		setWarpParameters(args);
@@ -234,6 +245,15 @@ public class Warp {
 
 	}
 
+	/**
+	 * <h1>Visualizes a workload.</h1>
+	 * <p>Puts the visualization in the the output folder directory.
+	 * The type of visualization is determined by the choice object
+	 * that is passed in.</p>
+	 * 
+	 * @param workLoad The workload to visualize
+	 * @param choice An item from the WorkLoadChoices enum that specifies what visualization to create.
+	 */
 	private static void visualize(WorkLoad workLoad, WorkLoadChoices choice) {
 		var viz = VisualizationFactory.createWorkLoadVisualization(workLoad, outputSubDirectory, choice);
 		if (viz != null) {
@@ -246,7 +266,16 @@ public class Warp {
 			}
 		}
 	}
-
+	
+	/**
+	 * <h1>Creates a visualization for a WarpInterface</h1>
+	 * <p>Puts the visualization in the the output folder directory.
+	 * The type of visualization is determined by the choice object
+	 * that is passed in.</p>
+	 * 
+	 * @param warp a WarpInteface probably a WarpSystem class
+	 * @param choice An item from the SystemChoices enum that specifies what visualization to create.
+	 */
 	private static void visualize(WarpInterface warp, SystemChoices choice) {
 		var viz = VisualizationFactory.createProgramVisualization(warp, outputSubDirectory, choice);
 		if (viz != null) {
@@ -258,12 +287,29 @@ public class Warp {
 		}
 	}
 
+	/**
+	 * <h1>Verifies a WarpInterface's performance.</h1>
+	 * <p>Verifies the deadlines, reliabilities and if there are channel conflicts.
+	 * If something is not verified a message will be printed to the console and in
+	 * the case of a failure to verify the deadlines or the channel conflicts, a 
+	 * deadline/channel report will be created. If everything is successful a success
+	 * message will be printed to the console.</p>
+	 * 
+	 * @param warp The WarpInterface to verify.
+	 */
 	private static void verifyPerformanceRequirements(WarpInterface warp) {
 		verifyDeadlines(warp);
 		verifyReliabilities(warp);
 		verifyNoChannelConflicts(warp);
 	}
-
+	
+	/**
+	 * <h1>Checks if the reliabilities are met on the WarpInterface.</h1>
+	 * <p>NOTE: the reliability check is currently not implemented and will
+	 * always return true. Prints the result of the check to the console.</p>
+	 * 
+	 * @param warp The WarpInterface to check the reliabilities of.
+	 */
 	private static void verifyReliabilities(WarpInterface warp) {
 		if (schedulerSelected != ScheduleChoices.RTHART) {
 			/* RealTime HART doesn't adhere to reliability targets */
@@ -277,7 +323,15 @@ public class Warp {
 			}
 		}
 	}
-
+	
+	/**
+	 * <h1>Checks to see if the deadlines are met on the warp interface</h1>
+	 * <p>Returns false if there is at least one deadline missed. If a deadline
+	 * is missed a deadline report file will be created. Result is printed to
+	 * the console.</p>
+	 * 
+	 * @param warp The WarpInterface to check the deadlines of.
+	 */
 	private static void verifyDeadlines(WarpInterface warp) {
 		if (!warp.deadlinesMet()) {
 			System.err.printf("\n\tERROR: Not all flows meet their deadlines under %s scheduling.\n",
@@ -289,6 +343,13 @@ public class Warp {
 		}
 	}
 
+	/**
+	 * <h1>Checks if there is a channel conflict in the warp interface.</h1>
+	 * <p>The result is printed to the console. If a channel analysis file was
+	 * not originally requested, one will be made.</p>
+	 * 
+	 * @param warp The WarpInterface to check the channel conflicts of.
+	 */
 	private static void verifyNoChannelConflicts(WarpInterface warp) {
 		if (warp.toChannelAnalysis().isChannelConflict()) {
 			System.err.printf("\n\tERROR: Channel conficts exists. See Channel Visualization for details.\n");
