@@ -13,6 +13,7 @@ package edu.uiowa.cs.warp;
  * ProgramVisualization is a class that compiles data and
  * organizes it in a easily readable manner using a series of methods
  * to create different aspects of the visualization
+ *
  */
 public class ProgramVisualization extends VisualizationObject {
 
@@ -25,6 +26,7 @@ public class ProgramVisualization extends VisualizationObject {
 /**
  * Method that takes an existing warp interface and converts it in into 
  * a program that can be visualized.
+ * @param warp interface that will be used for visualization
  */
   ProgramVisualization(WarpInterface warp) {
     super(new FileManager(), warp, SOURCE_SUFFIX);
@@ -36,6 +38,7 @@ public class ProgramVisualization extends VisualizationObject {
   
 /**
  * Method that creates a Gui with a title, header, and data that can be visualized.
+ * @return a gui visualization listing all above info.
  */
   @Override
   public GuiVisualization displayVisualization() {
@@ -47,6 +50,7 @@ public class ProgramVisualization extends VisualizationObject {
    * Initializes a header that displays the title,scheduler name, amount of faults
    * in the program, as well as other data, like the minimum packet reception rate,
    * the length from edge to edge, and channel of numbers.
+   * @return header that displays all important info/data for the visualization
    */
   @Override
   protected Description createHeader() {
@@ -68,6 +72,7 @@ public class ProgramVisualization extends VisualizationObject {
  * Creates a new description called footer, which checks to see if deadlines have 
  * been met. If they have, tell the users deadlines have been met, if not
  * give a warning telling them that they haven't.
+ * @return footer that shows deadlines have been met
  */
   @Override
   protected Description createFooter() {
@@ -86,7 +91,9 @@ public class ProgramVisualization extends VisualizationObject {
 /**
  * Creates a Header for the columns, which names them as a Time Slot, 
  * which will be named for each node respectively.
+ * @return columnNames for the header
  */
+ 
   @Override
   protected String[] createColumnHeader() {
     var orderedNodes = program.toWorkLoad().getNodeNamesOrderedAlphabetically();
@@ -101,6 +108,7 @@ public class ProgramVisualization extends VisualizationObject {
 /**
  *Creates and Organizes the visualization data as a matrix,
  * being labeled by row and column
+ * @return visualizationData a matrix representing the data in a readable form.
  */
   @Override
   protected String[][] createVisualizationData() {
@@ -121,6 +129,7 @@ public class ProgramVisualization extends VisualizationObject {
 /**
  * Creates a basic title for the graph, displaying the correct name 
  * for whatever graph is used.
+ * @return the title of the graph.
  */
   private String createTitle() {
     return String.format("WARP program for graph %s\n", program.getName());
