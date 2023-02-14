@@ -22,9 +22,12 @@ public class VisualizationImplementation implements Visualization {
   private WorkLoad workLoad = null;
   private VisualizationObject visualizationObject;
 
-/*
+/**
  * Initializes a new visualization that takes a warp interface, a string, and
  * a SystemChoices enum and uses them to create a file name and visualization
+ * @param warp interface in which workload will be retrieved
+ * @param outputDirectory a string representing the output directory for file name
+ * @param choice the choice in which the user decides for creating the visualization
  */
   public VisualizationImplementation(WarpInterface warp, String outputDirectory,
       SystemChoices choice) {
@@ -35,8 +38,12 @@ public class VisualizationImplementation implements Visualization {
     visualizationObject = null;
     createVisualization(choice);
   }
-/*
- * Same as above, but using a WorkLoad instead of a Warp Interface.
+/**
+ * Same as method above but just retrieves a workLoad interface rather than 
+ * obtaining it through a warp interface
+ * @param workLoad workLoad that will be used to get data for visualization
+ * @param outputDirectory string representing output directory for file name
+ * @param choice choice that is decided by user in how to create implementation
  */
   public VisualizationImplementation(WorkLoad workLoad, String outputDirectory,
       WorkLoadChoices choice) {
@@ -47,8 +54,8 @@ public class VisualizationImplementation implements Visualization {
     visualizationObject = null;
     createVisualization(choice);
   }
-/*
- * If a visualization object exists, display it
+/**
+ * if a visualization object exists, display it.
  */
   @Override
   public void toDisplay() {
@@ -72,8 +79,10 @@ public class VisualizationImplementation implements Visualization {
   public String toString() {
     return visualization.toString();
   }
-/*
- * Switch that allows for selecting different types of visualizations.
+/**
+ * A switch that affects how the visualization is created
+ * @param choice can be set to different requests to change how visualization is implemented
+ * 
  */
   private void createVisualization(SystemChoices choice) {
     switch (choice) { // select the requested visualization
@@ -116,9 +125,9 @@ public class VisualizationImplementation implements Visualization {
         break;
     }
   }
-/*
- * Switch that includes options for visualization not included by the other
- * method
+/**
+ * more options for visualization like the above method
+ * @param choice user choice for how visualization is represented
  */
   private void createVisualization(WorkLoadChoices choice) {
     switch (choice) { // select the requested visualization
@@ -140,8 +149,10 @@ public class VisualizationImplementation implements Visualization {
         break;
     }
   }
-/*
- * Uses a file to visualize an object.
+/**
+ * Uses a file to visualize an object
+ * @param <T> unsure what T is defined as
+ * @param obj object to be used for visualization
  */
   private <T extends VisualizationObject> void createVisualization(T obj) {
     visualization = obj.visualization();
@@ -150,9 +161,11 @@ public class VisualizationImplementation implements Visualization {
     fileName = obj.createFile(fileNameTemplate); // in output directory
     visualizationObject = obj;
   }
-/*
+/**
  * Uses a string outputDirectory to create a template for a filename
  * that allows for easier formatting if the '/' is used in the file name
+ * @param outputDirectory string used to make template for file name
+ * @return new template for created file name
  */
   private String createFileNameTemplate(String outputDirectory) {
     String fileNameTemplate;
