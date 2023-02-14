@@ -22,7 +22,10 @@ public class VisualizationImplementation implements Visualization {
   private WorkLoad workLoad = null;
   private VisualizationObject visualizationObject;
 
-
+/*
+ * Initializes a new visualization that takes a warp interface, a string, and
+ * a SystemChoices enum and uses them to create a file name and visualization
+ */
   public VisualizationImplementation(WarpInterface warp, String outputDirectory,
       SystemChoices choice) {
     this.fm = new FileManager();
@@ -32,7 +35,9 @@ public class VisualizationImplementation implements Visualization {
     visualizationObject = null;
     createVisualization(choice);
   }
-
+/*
+ * Same as above, but using a WorkLoad instead of a Warp Interface.
+ */
   public VisualizationImplementation(WorkLoad workLoad, String outputDirectory,
       WorkLoadChoices choice) {
     this.fm = new FileManager();
@@ -42,7 +47,9 @@ public class VisualizationImplementation implements Visualization {
     visualizationObject = null;
     createVisualization(choice);
   }
-
+/*
+ * If a visualization object exists, display it
+ */
   @Override
   public void toDisplay() {
     // System.out.println(displayContent.toString());
@@ -51,17 +58,23 @@ public class VisualizationImplementation implements Visualization {
       window.setVisible();
     }
   }
-
+/*
+ * Writes a content to a file to another file
+ */
   @Override
   public void toFile() {
     fm.writeFile(fileName, fileContent.toString());
   }
-
+/*
+ * Converts a visualization to a string in a readable manner
+ */
   @Override
   public String toString() {
     return visualization.toString();
   }
-
+/*
+ * Switch that allows for selecting different types of visualizations.
+ */
   private void createVisualization(SystemChoices choice) {
     switch (choice) { // select the requested visualization
       case SOURCE:
@@ -103,7 +116,10 @@ public class VisualizationImplementation implements Visualization {
         break;
     }
   }
-
+/*
+ * Switch that includes options for visualization not included by the other
+ * method
+ */
   private void createVisualization(WorkLoadChoices choice) {
     switch (choice) { // select the requested visualization
       case COMUNICATION_GRAPH:
@@ -124,7 +140,9 @@ public class VisualizationImplementation implements Visualization {
         break;
     }
   }
-
+/*
+ * Uses a file to visualize an object.
+ */
   private <T extends VisualizationObject> void createVisualization(T obj) {
     visualization = obj.visualization();
     fileContent = obj.fileVisualization();
@@ -132,7 +150,10 @@ public class VisualizationImplementation implements Visualization {
     fileName = obj.createFile(fileNameTemplate); // in output directory
     visualizationObject = obj;
   }
-
+/*
+ * Uses a string outputDirectory to create a template for a filename
+ * that allows for easier formatting if the '/' is used in the file name
+ */
   private String createFileNameTemplate(String outputDirectory) {
     String fileNameTemplate;
     var workingDirectory = fm.getBaseDirectory();

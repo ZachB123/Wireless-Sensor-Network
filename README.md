@@ -5,15 +5,35 @@ research project. It was first written in Swift and rewritten in Java. It was th
 rewritten again in an object-oriented programming style. It was a quick
 hack, and it needs a lot of cleanup and refactoring. A perfect code base to teach
 the value of software developement fundamentals!
-
-HW0 Update
-1/18/2023
-This is the first update to the README, added in HW0
-
-
-HW1 Update
-2/7/2023
-WorkloadDescription.java has been updated to alphabetically sort the flows in StressTest.txt
-
-
 <br>
+
+* -v (verbose)
+* -sch priority (priority scheduler)
+* --all (all options)
+* -i <input file>
+* -o <output folder>
+
+# Homework 1
+
+For homework 1 I handled a variety of edge cases
+
+1. empty lines at the beginning and of the file
+2. extra spaces around filename and final curly bracket
+3. empty lines scattered throughout the flows
+
+# Homework 2
+
+What each team member documented.
+
+## Zach
+
+* Flow.java
+* a through k in Workload.java
+* Warp.java
+* Program.java
+
+## Noah
+
+* ProgramVisualization.java
+* VisualizationImplementation.java
+* l through w in Workload.java
