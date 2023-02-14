@@ -16,9 +16,12 @@ import java.util.Vector;
 import java.util.stream.Collectors;
 
 /**
- * Build the nodes and flows for the workload described in the workload description file, whose name
- * is passed into the Constructor via the parameter inputFileName. Good default values for the
- * constructors are m = 0.9, e2e = 0.99, and numFaults = 1 when the second constructor is used.
+ * <h1>Represents all the flows in a file.</h1>
+ * 
+ * Build the nodes and flows for the workload described in the workload
+ * description file, whose name is passed into the Constructor via the parameter
+ * inputFileName. Good default values for the constructors are m = 0.9, e2e =
+ * 0.99, and numFaults = 1 when the second constructor is used.
  * 
  * @author sgoddard
  * @version 1.4
@@ -375,21 +378,21 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
  * in a different way, then adds the flows sorted by priority order to 
  * a new list which contains the flow names in said order
  */
-  public void setFlowsInPriorityOrder() {
-    // create a list of Flow objects from the FlowMap using the stream interface.
-    List<Flow> unsortedFlows = flows.values().stream().collect(Collectors.toList());
-    // Now sort by a secondary key, which is index in this case
-    List<Flow> sortedByIndex = unsortedFlows.stream().sorted(Comparator.comparing(Flow::getIndex))
-        .collect(Collectors.toList());
-    // Now sort by primary key, which is priority in this case
-    List<Flow> sortedFlows = sortedByIndex.stream().sorted(Comparator.comparing(Flow::getPriority))
-        .collect(Collectors.toList());
-    // Finally, create a new flowNamesInPriorityOrder that contains the flow names in the requested
-    // order
-    flowNamesInPriorityOrder = new ArrayList<>();
-    sortedFlows.forEach((node) -> flowNamesInPriorityOrder.add(node.getName()));
-  }
-/*
+	public void setFlowsInPriorityOrder() {
+		// create a list of Flow objects from the FlowMap using the stream interface.
+		List<Flow> unsortedFlows = flows.values().stream().collect(Collectors.toList());
+		// Now sort by a secondary key, which is index in this case
+		List<Flow> sortedByIndex = unsortedFlows.stream().sorted(Comparator.comparing(Flow::getIndex))
+				.collect(Collectors.toList());
+		// Now sort by primary key, which is priority in this case
+		List<Flow> sortedFlows = sortedByIndex.stream().sorted(Comparator.comparing(Flow::getPriority))
+				.collect(Collectors.toList());
+		// Finally, create a new flowNamesInPriorityOrder that contains the flow names
+		// in the requested
+		// order
+		flowNamesInPriorityOrder = new ArrayList<>();
+		sortedFlows.forEach((node) -> flowNamesInPriorityOrder.add(node.getName()));
+	}/*
  * Ordering flows in the order in which the deadlines have been met
  */
   public void setFlowsInDMorder() {
@@ -818,19 +821,17 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 /**
  * Public method that adds an edge to a given node.
  */
-  public void addEdge(String nodeName, Edge edge) {
-    var node = nodes.get(nodeName); // get the node object
-    node.addEdge(edge);
-  }
-/**
+	public void addEdge(String nodeName, Edge edge) {
+		var node = nodes.get(nodeName); // get the node object
+		node.addEdge(edge);
+	}/**
  * Public method that returns an integer that represents the flow with
  * the greatest length out of a series of flows.
  */
-  public Integer maxFlowLength() {
-    Integer maxLength = 0;
-    for (Flow flow : flows.values()) {
-      maxLength = Math.max(maxLength, flow.nodes.size());
-    }
-    return maxLength;
-  }
-}
+	public Integer maxFlowLength() {
+		Integer maxLength = 0;
+		for (Flow flow : flows.values()) {
+			maxLength = Math.max(maxLength, flow.nodes.size());
+		}
+		return maxLength;
+	}
