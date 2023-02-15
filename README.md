@@ -37,3 +37,13 @@ What each team member documented.
 * ProgramVisualization.java
 * VisualizationImplementation.java
 * l through w in Workload.java
+
+## Homework 3
+
+## Zach
+
+* Tests c,d,g,h,k,l,o,p
+
+## Noah
+
+* Tests a,b,e,f,i,j,m,n
