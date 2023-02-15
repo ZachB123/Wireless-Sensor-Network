@@ -10,45 +10,51 @@ package edu.uiowa.cs.warp;
  */
 
 /**
- * ProgramVisualization is a class that compiles data and organizes it in a
- * easily readable manner using a series of methods to create different aspects
- * of the visualization
+ * ProgramVisualization is a class that compiles data and
+ * organizes it in a easily readable manner using a series of methods
+ * to create different aspects of the visualization
+ *
  */
 public class ProgramVisualization extends VisualizationObject {
 
-	private static final String SOURCE_SUFFIX = ".dsl";
-	private ProgramSchedule sourceCode;
-	private Program program;
-	private Boolean deadlinesMet;
+  private static final String SOURCE_SUFFIX = ".dsl";
+  private ProgramSchedule sourceCode;
+  private Program program;
+  private Boolean deadlinesMet;
+  
+  
+/**
+ * Method that takes an existing warp interface and converts it in into 
+ * a program that can be visualized.
+ * @param warp interface that will be used for visualization
+ */
+  ProgramVisualization(WarpInterface warp) {
+    super(new FileManager(), warp, SOURCE_SUFFIX);
+    this.program = warp.toProgram();
+    this.sourceCode = program.getSchedule();
+    this.deadlinesMet = warp.deadlinesMet();
+  }
+  
+  
+/**
+ * Method that creates a Gui with a title, header, and data that can be visualized.
+ * @return a gui visualization listing all above info.
+ */
+  @Override
+  public GuiVisualization displayVisualization() {
+    return new GuiVisualization(createTitle(), createColumnHeader(), createVisualizationData());
+  }
 
-	/**
-	 * Method that takes an existing warp interface and converts it in into a
-	 * program that can be visualized.
-	 */
-	ProgramVisualization(WarpInterface warp) {
-		super(new FileManager(), warp, SOURCE_SUFFIX);
-		this.program = warp.toProgram();
-		this.sourceCode = program.getSchedule();
-		this.deadlinesMet = warp.deadlinesMet();
-	}
-
-	/**
-	 * Method that creates a Gui with a title, header, and data that can be
-	 * visualized.
-	 */
-	@Override
-	public GuiVisualization displayVisualization() {
-		return new GuiVisualization(createTitle(), createColumnHeader(), createVisualizationData());
-	}
-
-	/**
-	 * Initializes a header that displays the title,scheduler name, amount of faults
-	 * in the program, as well as other data, like the minimum packet reception
-	 * rate, the length from edge to edge, and channel of numbers.
-	 */
-	@Override
-	protected Description createHeader() {
-		Description header = new Description();
+  
+  /**
+   * Initializes a header that displays the title,scheduler name, amount of faults
+   * in the program, as well as other data, like the minimum packet reception rate,
+   * the length from edge to edge, and channel of numbers.
+   * @return header that displays all important info/data for the visualization
+   */
+  @Override
+  protected Description createHeader() {
+    Description header = new Description();
 
 		header.add(createTitle());
 		header.add(String.format("Scheduler Name: %s\n", program.getSchedulerName()));
@@ -85,48 +91,50 @@ public class ProgramVisualization extends VisualizationObject {
 		return footer;
 	}
 
-	/**
-	 * Creates a Header for the columns, which names them as a Time Slot, which will
-	 * be named for each node respectively.
-	 */
-	@Override
-	protected String[] createColumnHeader() {
-		var orderedNodes = program.toWorkLoad().getNodeNamesOrderedAlphabetically();
-		String[] columnNames = new String[orderedNodes.length + 1];
-		columnNames[0] = "Time Slot"; // add the Time Slot column header first
-		/* loop through the node names, adding each to the header */
-		for (int i = 0; i < orderedNodes.length; i++) {
-			columnNames[i + 1] = orderedNodes[i];
-		}
-		return columnNames;
-	}
+/**
+ * Creates a Header for the columns, which names them as a Time Slot, 
+ * which will be named for each node respectively.
+ * @return columnNames for the header
+ */
+ 
+  @Override
+  protected String[] createColumnHeader() {
+    var orderedNodes = program.toWorkLoad().getNodeNamesOrderedAlphabetically();
+    String[] columnNames = new String[orderedNodes.length + 1];
+    columnNames[0] = "Time Slot"; // add the Time Slot column header first
+    /* loop through the node names, adding each to the header */
+    for (int i = 0; i < orderedNodes.length; i++) {
+      columnNames[i + 1] = orderedNodes[i];
+    }
+    return columnNames;
+  }
+/**
+ *Creates and Organizes the visualization data as a matrix,
+ * being labeled by row and column
+ * @return visualizationData a matrix representing the data in a readable form.
+ */
+  @Override
+  protected String[][] createVisualizationData() {
+    if (visualizationData == null) {
+      int numRows = sourceCode.getNumRows();
+      int numColumns = sourceCode.getNumColumns();
+      visualizationData = new String[numRows][numColumns + 1];
 
-	/**
-	 * Creates and Organizes the visualization data as a matrix, being labeled by
-	 * row and column
-	 */
-	@Override
-	protected String[][] createVisualizationData() {
-		if (visualizationData == null) {
-			int numRows = sourceCode.getNumRows();
-			int numColumns = sourceCode.getNumColumns();
-			visualizationData = new String[numRows][numColumns + 1];
-
-			for (int row = 0; row < numRows; row++) {
-				visualizationData[row][0] = String.format("%s", row);
-				for (int column = 0; column < numColumns; column++) {
-					visualizationData[row][column + 1] = sourceCode.get(row, column);
-				}
-			}
-		}
-		return visualizationData;
-	}
-
-	/**
-	 * Creates a basic title for the graph, displaying the correct name for whatever
-	 * graph is used.
-	 */
-	private String createTitle() {
-		return String.format("WARP program for graph %s\n", program.getName());
-	}
+      for (int row = 0; row < numRows; row++) {
+        visualizationData[row][0] = String.format("%s", row);
+        for (int column = 0; column < numColumns; column++) {
+          visualizationData[row][column + 1] = sourceCode.get(row, column);
+        }
+      }
+    }
+    return visualizationData;
+  }
+/**
+ * Creates a basic title for the graph, displaying the correct name 
+ * for whatever graph is used.
+ * @return the title of the graph.
+ */
+  private String createTitle() {
+    return String.format("WARP program for graph %s\n", program.getName());
+  }
 }
