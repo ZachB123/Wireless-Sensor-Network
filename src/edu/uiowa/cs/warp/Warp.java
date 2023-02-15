@@ -372,7 +372,7 @@ public class Warp {
 	}
 
 	/**
-	 * <h1>Sets the class attributes based on the command line arguments</h1>
+	 * <h1>Sets the class attributes based on the command line arguments.</h1>
 	 * <p>
 	 * If no value is given for an attribute the value will be set to the default.
 	 * </p>
