@@ -62,7 +62,9 @@ public class Program implements SystemAttributes {
 
 	/**
 	 * <h1>Returns the workload of the program object.</h1>
-	 * <p>A workload contains all of the flows.</p>
+	 * <p>
+	 * A workload contains all of the flows.
+	 * </p>
 	 * 
 	 * @return workload
 	 */
@@ -1218,10 +1220,13 @@ public class Program implements SystemAttributes {
 
 	/**
 	 * <h1>Returns a mapping of the program's workload's nodes to an index.</h1>
-	 * <p>A Hashmap is returned that maps a Node to an index number. The lower the number,
-	 * the further to the front of the alphabet the node is.</p>
+	 * <p>
+	 * A Hashmap is returned that maps a Node to an index number. The lower the
+	 * number, the further to the front of the alphabet the node is.
+	 * </p>
 	 * 
-	 * @return nodeIndexMap from Strings representing node names to Integers for their alphabetical order
+	 * @return nodeIndexMap from Strings representing node names to Integers for
+	 *         their alphabetical order
 	 */
 	public HashMap<String, Integer> getNodeMapIndex() {
 		var orderedNodes = workLoad.getNodeNamesOrderedAlphabetically(); // create an array of node

@@ -33,6 +33,7 @@ import edu.uiowa.cs.warp.Visualization.WorkLoadChoices;
 
 /**
  * <h1>This is the entry point to the warp program.</h1>
+ * 
  * @author sgoddard
  * @version 1.5
  *
@@ -40,104 +41,102 @@ import edu.uiowa.cs.warp.Visualization.WorkLoadChoices;
 public class Warp {
 
 	/**
-	 * The default number (integer) of wireless channels that are available to schedule.
-	 * This is a command line option.
+	 * The default number (integer) of wireless channels that are available to
+	 * schedule. This is a command line option.
 	 */
 	private static final Integer NUM_CHANNELS = 16;
-	
+
 	/**
-	 * The minimum link quality in the system.
-	 * This is a double from 0 to 1 that represents the minimum percentage that a 
-	 * link can fail to send.
-	 * This is a command line option.
+	 * The minimum link quality in the system. This is a double from 0 to 1 that
+	 * represents the minimum percentage that a link can fail to send. This is a
+	 * command line option.
 	 */
 	private static final Double MIN_LQ = 0.9;
-	
+
 	/**
-	 * The default end to end reliability for all flows
-	 * This float represents the percentage of successful data transfers through the 
-	 * system that is required.
+	 * The default end to end reliability for all flows This float represents the
+	 * percentage of successful data transfers through the system that is required.
 	 * This is a command line option.
 	 */
 	private static final Double E2E = 0.99;
-	
+
 	/**
 	 * The default sub-directory for the output files produced by the program
 	 */
 	private static final String DEFAULT_OUTPUT_SUB_DIRECTORY = "OutputFiles/";
-	
+
 	/**
 	 * Determines what scheduling algorithm is used for the scheduling of messages.
-	 * ScheduleChoices is an enum which is a part of the SystemAttributes Interface which extends the 
-	 * ReliabilityParameters Interface.
+	 * ScheduleChoices is an enum which is a part of the SystemAttributes Interface
+	 * which extends the ReliabilityParameters Interface.
 	 */
 	private static final ScheduleChoices DEFAULT_SCHEDULER = ScheduleChoices.PRIORITY;
-	
+
 	/*
-	 * default number of faults to be tolerated per transmission. 
-	 * This is a command line option.
+	 * default number of faults to be tolerated per transmission. This is a command
+	 * line option.
 	 */
 	private static final Integer DEFAULT_FAULTS_TOLERATED = 0;
 
 	/**
-	 * The number of wireless channels that can be used to schedule messages.
-	 * Each channel can process a set of instructions per time step.
+	 * The number of wireless channels that can be used to schedule messages. Each
+	 * channel can process a set of instructions per time step.
 	 */
 	private static Integer nChannels;
-	
+
 	/**
-	 * The number of faults that will be tolerated per edge.
-	 * An edge connects two nodes.
+	 * The number of faults that will be tolerated per edge. An edge connects two
+	 * nodes.
 	 */
 	private static Integer numFaults;
-	
+
 	/**
-	 * A global variable for the minimum link quality in the system.
-	 * Later you can add a local minLQ for individual links.
+	 * A global variable for the minimum link quality in the system. Later you can
+	 * add a local minLQ for individual links.
 	 */
 	private static Double minLQ;
-	
+
 	/**
 	 * Minimum link quality across the entire system.
 	 */
-	private static Double e2e; 
-	
+	private static Double e2e;
+
 	/**
-	 * Path to the subdirectory where output files we be located.
-	 * Out put files are gv, wf, ra.
+	 * Path to the subdirectory where output files we be located. Out put files are
+	 * gv, wf, ra.
 	 */
 	private static String outputSubDirectory;
-	
+
 	/**
 	 * Flag for if a gui is requested.
 	 */
 	private static Boolean guiRequested;
-	
+
 	/**
 	 * Flag for if a graph visualization is requested.
 	 */
 	private static Boolean gvRequested;
-	
+
 	/**
 	 * Flag for if a warp file is requested.
 	 */
 	private static Boolean wfRequested;
-	
+
 	/**
 	 * Flag for if a reliability analysis file is requested.
 	 */
 	private static Boolean raRequested;
-	
+
 	/**
 	 * Flag for if a latency analysis file is requested.
 	 */
 	private static Boolean laRequested;
-	
+
 	/**
 	 * Flag for if a channel analysis file is requested.
 	 */
 	private static Boolean caRequested;
-	
+
 	/**
 	 * Flag for if a simulation file is requested.
 	 */
@@ -147,28 +146,27 @@ public class Warp {
 	 * Flag for if all out files are requested.
 	 */
 	private static Boolean allRequested;
-	
+
 	/**
 	 * Flag for if a latency report is requested.
 	 */
 	private static Boolean latencyRequested;
-	
+
 	/**
 	 * Flag for if a scheduler is requested.
 	 */
 	private static Boolean schedulerRequested = false;
-	
+
 	/**
-	 * Flag for verbose mode.
-	 * Mainly used when running in an IDE.
+	 * Flag for verbose mode. Mainly used when running in an IDE.
 	 */
 	private static Boolean verboseMode;
-	
+
 	/**
 	 * The file where the graph workload is read.
 	 */
 	private static String inputFile;
-	
+
 	/**
 	 * The schedule that is requested.
 	 */
@@ -176,11 +174,11 @@ public class Warp {
 
 	/**
 	 * <h1>Entry point of the warp program.</h1>
-	 * <p>Sets up the warp parameters according to the command line arguments.
-	 * The program will print the parameters if it is in verbose mode.
-	 * Then a workload is created based off of the input file.
-	 * Finally if all was requested, all visualizations files are made, and if
-	 * set 
+	 * <p>
+	 * Sets up the warp parameters according to the command line arguments. The
+	 * program will print the parameters if it is in verbose mode. Then a workload
+	 * is created based off of the input file. Finally if all was requested, all
+	 * visualizations files are made, and if set
 	 * </p>
 	 * 
 	 * @param args command line arguments.
@@ -247,12 +245,14 @@ public class Warp {
 
 	/**
 	 * <h1>Visualizes a workload.</h1>
-	 * <p>Puts the visualization in the the output folder directory.
-	 * The type of visualization is determined by the choice object
-	 * that is passed in.</p>
+	 * <p>
+	 * Puts the visualization in the the output folder directory. The type of
+	 * visualization is determined by the choice object that is passed in.
+	 * </p>
 	 * 
 	 * @param workLoad The workload to visualize
-	 * @param choice An item from the WorkLoadChoices enum that specifies what visualization to create.
+	 * @param choice   An item from the WorkLoadChoices enum that specifies what
+	 *                 visualization to create.
 	 */
 	private static void visualize(WorkLoad workLoad, WorkLoadChoices choice) {
 		var viz = VisualizationFactory.createWorkLoadVisualization(workLoad, outputSubDirectory, choice);
@@ -266,15 +266,17 @@ public class Warp {
 			}
 		}
 	}
-	
+
 	/**
 	 * <h1>Creates a visualization for a WarpInterface</h1>
-	 * <p>Puts the visualization in the the output folder directory.
-	 * The type of visualization is determined by the choice object
-	 * that is passed in.</p>
+	 * <p>
+	 * Puts the visualization in the the output folder directory. The type of
+	 * visualization is determined by the choice object that is passed in.
+	 * </p>
 	 * 
-	 * @param warp a WarpInteface probably a WarpSystem class
-	 * @param choice An item from the SystemChoices enum that specifies what visualization to create.
+	 * @param warp   a WarpInteface probably a WarpSystem class
+	 * @param choice An item from the SystemChoices enum that specifies what
+	 *               visualization to create.
 	 */
 	private static void visualize(WarpInterface warp, SystemChoices choice) {
 		var viz = VisualizationFactory.createProgramVisualization(warp, outputSubDirectory, choice);
@@ -289,11 +291,13 @@ public class Warp {
 
 	/**
 	 * <h1>Verifies a WarpInterface's performance.</h1>
-	 * <p>Verifies the deadlines, reliabilities and if there are channel conflicts.
-	 * If something is not verified a message will be printed to the console and in
-	 * the case of a failure to verify the deadlines or the channel conflicts, a 
-	 * deadline/channel report will be created. If everything is successful a success
-	 * message will be printed to the console.</p>
+	 * <p>
+	 * Verifies the deadlines, reliabilities and if there are channel conflicts. If
+	 * something is not verified a message will be printed to the console and in the
+	 * case of a failure to verify the deadlines or the channel conflicts, a
+	 * deadline/channel report will be created. If everything is successful a
+	 * success message will be printed to the console.
+	 * </p>
 	 * 
 	 * @param warp The WarpInterface to verify.
 	 */
@@ -302,11 +306,13 @@ public class Warp {
 		verifyReliabilities(warp);
 		verifyNoChannelConflicts(warp);
 	}
-	
+
 	/**
 	 * <h1>Checks if the reliabilities are met on the WarpInterface.</h1>
-	 * <p>NOTE: the reliability check is currently not implemented and will
-	 * always return true. Prints the result of the check to the console.</p>
+	 * <p>
+	 * NOTE: the reliability check is currently not implemented and will always
+	 * return true. Prints the result of the check to the console.
+	 * </p>
 	 * 
 	 * @param warp The WarpInterface to check the reliabilities of.
 	 */
@@ -323,12 +329,14 @@ public class Warp {
 			}
 		}
 	}
-	
+
 	/**
 	 * <h1>Checks to see if the deadlines are met on the warp interface</h1>
-	 * <p>Returns false if there is at least one deadline missed. If a deadline
-	 * is missed a deadline report file will be created. Result is printed to
-	 * the console.</p>
+	 * <p>
+	 * Returns false if there is at least one deadline missed. If a deadline is
+	 * missed a deadline report file will be created. Result is printed to the
+	 * console.
+	 * </p>
 	 * 
 	 * @param warp The WarpInterface to check the deadlines of.
 	 */
@@ -345,8 +353,10 @@ public class Warp {
 
 	/**
 	 * <h1>Checks if there is a channel conflict in the warp interface.</h1>
-	 * <p>The result is printed to the console. If a channel analysis file was
-	 * not originally requested, one will be made.</p>
+	 * <p>
+	 * The result is printed to the console. If a channel analysis file was not
+	 * originally requested, one will be made.
+	 * </p>
 	 * 
 	 * @param warp The WarpInterface to check the channel conflicts of.
 	 */
@@ -363,27 +373,39 @@ public class Warp {
 
 	/**
 	 * <h1>Sets the class attributes based on the command line arguments</h1>
-	 * <p>If no value is given for an attribute the value will be set to the default.</p>
+	 * <p>
+	 * If no value is given for an attribute the value will be set to the default.
+	 * </p>
 	 * <h2>Options</h2>
 	 * <ul>
-	 * 		<li> -sch, --schedule %s {priority,rm,dm,rtHart,poset} #scheduler options </li>
-	 * 		<li> -c, --channels %d {[1,16]} #number of wireless channels </li>
-	 * 		<li> -m %f {[0.5,1.0]} #minimum link quality in the system </li>
-	 * 		<li> -e, --e2e %f {[0.5,1.0]} #global end-to-end communcation reliability for all flows </li>
-	 * 		<li> -f, --faults %d {[1,10]} #number of faults per edge in a flow (per period) </li>
-	 * 		<li> -gui %v #create a gui visualizations </li>
-	 * 		<li> -gv %v #create a graph visualization (.gv) file for GraphViz </li>
-	 * 		<li> -wf  %v #create a WARP (.wf) file that shows the maximum number of transmissions on each segment of the flow needed to meet the end-to-end reliability </li>
-	 * 		<li> -ra  %v #create a reliability analysis file (tab delimited .csv) for the warp program </li>
-	 * 		<li> -la  %v #create a latency analysis file (tab delimited .csv) for the warp program </li>
-	 * 		<li> -ca  %v #create a channel analysis file (tab delimited .csv) for the warp program </li>
-	 * 		<li> -s  %v #create a simulator input file (.txt) for the warp program </li>
-	 * 		<li> -a, --all  %v #create all output files (activates -gv, -wf, -ra, -s) </li>
-	 * 		<li> -l, --latency  %v #generates end-to-end latency report file (.txt) </li>
-	 * 		<li> -i, --input %s #<InputFile> of graph flows (workload) </li>
-	 * 		<li> -o, --output %s #<OutputDIRECTORY> where output files will be placed </li>
-	 * 		<li> -v, --verbose %v #Echo input file name and parsed contents. Then for each flow instance: show maximum E2E latency and min/max communication cost for that instance of the flow </li>
+	 * <li>-sch, --schedule %s {priority,rm,dm,rtHart,poset} #scheduler options</li>
+	 * <li>-c, --channels %d {[1,16]} #number of wireless channels</li>
+	 * <li>-m %f {[0.5,1.0]} #minimum link quality in the system</li>
+	 * <li>-e, --e2e %f {[0.5,1.0]} #global end-to-end communcation reliability for
+	 * all flows</li>
+	 * <li>-f, --faults %d {[1,10]} #number of faults per edge in a flow (per
+	 * period)</li>
+	 * <li>-gui %v #create a gui visualizations</li>
+	 * <li>-gv %v #create a graph visualization (.gv) file for GraphViz</li>
+	 * <li>-wf %v #create a WARP (.wf) file that shows the maximum number of
+	 * transmissions on each segment of the flow needed to meet the end-to-end
+	 * reliability</li>
+	 * <li>-ra %v #create a reliability analysis file (tab delimited .csv) for the
+	 * warp program</li>
+	 * <li>-la %v #create a latency analysis file (tab delimited .csv) for the warp
+	 * program</li>
+	 * <li>-ca %v #create a channel analysis file (tab delimited .csv) for the warp
+	 * program</li>
+	 * <li>-s %v #create a simulator input file (.txt) for the warp program</li>
+	 * <li>-a, --all %v #create all output files (activates -gv, -wf, -ra, -s)</li>
+	 * <li>-l, --latency %v #generates end-to-end latency report file (.txt)</li>
+	 * <li>-i, --input %s #<InputFile> of graph flows (workload)</li>
+	 * <li>-o, --output %s #<OutputDIRECTORY> where output files will be placed</li>
+	 * <li>-v, --verbose %v #Echo input file name and parsed contents. Then for each
+	 * flow instance: show maximum E2E latency and min/max communication cost for
+	 * that instance of the flow</li>
 	 * </ul>
+	 * 
 	 * @param args An array of strings of the command line arguments
 	 */
 	private static void setWarpParameters(String[] args) { // move command line parsing into this
@@ -508,7 +530,7 @@ public class Warp {
 			Warp.schedulerSelected = DEFAULT_SCHEDULER;
 		}
 	}
-	
+
 	/**
 	 * <h1>Prints the warp system configuration parameters</h1>
 	 */
