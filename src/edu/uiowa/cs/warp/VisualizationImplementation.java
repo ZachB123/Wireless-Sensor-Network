@@ -11,161 +11,166 @@ import java.io.File;
  */
 public class VisualizationImplementation implements Visualization {
 
-  private Description visualization;
-  private Description fileContent;
-  private GuiVisualization window;
-  private String fileName;
-  private String inputFileName;
-  private String fileNameTemplate;
-  private FileManager fm = null;
-  private WarpInterface warp = null;
-  private WorkLoad workLoad = null;
-  private VisualizationObject visualizationObject;
+	private Description visualization;
+	private Description fileContent;
+	private GuiVisualization window;
+	private String fileName;
+	private String inputFileName;
+	private String fileNameTemplate;
+	private FileManager fm = null;
+	private WarpInterface warp = null;
+	private WorkLoad workLoad = null;
+	private VisualizationObject visualizationObject;
 
-/*
- * Initializes a new visualization that takes a warp interface, a string, and
- * a SystemChoices enum and uses them to create a file name and visualization
- */
-  public VisualizationImplementation(WarpInterface warp, String outputDirectory,
-      SystemChoices choice) {
-    this.fm = new FileManager();
-    this.warp = warp;
-    inputFileName = warp.toWorkload().getInputFileName();
-    this.fileNameTemplate = createFileNameTemplate(outputDirectory);
-    visualizationObject = null;
-    createVisualization(choice);
-  }
-/*
- * Same as above, but using a WorkLoad instead of a Warp Interface.
- */
-  public VisualizationImplementation(WorkLoad workLoad, String outputDirectory,
-      WorkLoadChoices choice) {
-    this.fm = new FileManager();
-    this.workLoad = workLoad;
-    inputFileName = workLoad.getInputFileName();
-    this.fileNameTemplate = createFileNameTemplate(outputDirectory);
-    visualizationObject = null;
-    createVisualization(choice);
-  }
-/*
- * If a visualization object exists, display it
- */
-  @Override
-  public void toDisplay() {
-    // System.out.println(displayContent.toString());
-    window = visualizationObject.displayVisualization();
-    if (window != null) {
-      window.setVisible();
-    }
-  }
-/*
- * Writes a content to a file to another file
- */
-  @Override
-  public void toFile() {
-    fm.writeFile(fileName, fileContent.toString());
-  }
-/*
- * Converts a visualization to a string in a readable manner
- */
-  @Override
-  public String toString() {
-    return visualization.toString();
-  }
-/*
- * Switch that allows for selecting different types of visualizations.
- */
-  private void createVisualization(SystemChoices choice) {
-    switch (choice) { // select the requested visualization
-      case SOURCE:
-        createVisualization(new ProgramVisualization(warp));
-        break;
+	/*
+	 * Initializes a new visualization that takes a warp interface, a string, and a
+	 * SystemChoices enum and uses them to create a file name and visualization
+	 */
+	public VisualizationImplementation(WarpInterface warp, String outputDirectory, SystemChoices choice) {
+		this.fm = new FileManager();
+		this.warp = warp;
+		inputFileName = warp.toWorkload().getInputFileName();
+		this.fileNameTemplate = createFileNameTemplate(outputDirectory);
+		visualizationObject = null;
+		createVisualization(choice);
+	}
 
-      case RELIABILITIES:
-        // TODO Implement Reliability Analysis Visualization
-        createVisualization(new ReliabilityVisualization(warp));
-        break;
+	/*
+	 * Same as above, but using a WorkLoad instead of a Warp Interface.
+	 */
+	public VisualizationImplementation(WorkLoad workLoad, String outputDirectory, WorkLoadChoices choice) {
+		this.fm = new FileManager();
+		this.workLoad = workLoad;
+		inputFileName = workLoad.getInputFileName();
+		this.fileNameTemplate = createFileNameTemplate(outputDirectory);
+		visualizationObject = null;
+		createVisualization(choice);
+	}
 
-      case SIMULATOR_INPUT:
-        // TODO Implement Simulator Input Visualization
-        createVisualization(new NotImplentedVisualization("SimInputNotImplemented"));
-        break;
+	/*
+	 * If a visualization object exists, display it
+	 */
+	@Override
+	public void toDisplay() {
+		// System.out.println(displayContent.toString());
+		window = visualizationObject.displayVisualization();
+		if (window != null) {
+			window.setVisible();
+		}
+	}
 
-      case LATENCY:
-        // TODO Implement Latency Analysis Visualization
-        createVisualization(new LatencyVisualization(warp));
-        break;
+	/*
+	 * Writes a content to a file to another file
+	 */
+	@Override
+	public void toFile() {
+		fm.writeFile(fileName, fileContent.toString());
+	}
 
-      case CHANNEL:
-        // TODO Implement Channel Analysis Visualization
-        createVisualization(new ChannelVisualization(warp));
-        break;
+	/*
+	 * Converts a visualization to a string in a readable manner
+	 */
+	@Override
+	public String toString() {
+		return visualization.toString();
+	}
 
-      case LATENCY_REPORT:
-        createVisualization(new ReportVisualization(fm, warp,
-            new LatencyAnalysis(warp).latencyReport(), "Latency"));
-        break;
+	/*
+	 * Switch that allows for selecting different types of visualizations.
+	 */
+	private void createVisualization(SystemChoices choice) {
+		switch (choice) { // select the requested visualization
+		case SOURCE:
+			createVisualization(new ProgramVisualization(warp));
+			break;
 
-      case DEADLINE_REPORT:
-        createVisualization(
-            new ReportVisualization(fm, warp, warp.toProgram().deadlineMisses(), "DeadlineMisses"));
-        break;
+		case RELIABILITIES:
+			// TODO Implement Reliability Analysis Visualization
+			createVisualization(new ReliabilityVisualization(warp));
+			break;
 
-      default:
-        createVisualization(new NotImplentedVisualization("UnexpectedChoice"));
-        break;
-    }
-  }
-/*
- * Switch that includes options for visualization not included by the other
- * method
- */
-  private void createVisualization(WorkLoadChoices choice) {
-    switch (choice) { // select the requested visualization
-      case COMUNICATION_GRAPH:
-        // createWarpVisualization();
-        createVisualization(new CommunicationGraph(fm, workLoad));
-        break;
+		case SIMULATOR_INPUT:
+			// TODO Implement Simulator Input Visualization
+			createVisualization(new NotImplentedVisualization("SimInputNotImplemented"));
+			break;
 
-      case GRAPHVIZ:
-        createVisualization(new GraphViz(fm, workLoad.toString()));
-        break;
+		case LATENCY:
+			// TODO Implement Latency Analysis Visualization
+			createVisualization(new LatencyVisualization(warp));
+			break;
 
-      case INPUT_GRAPH:
-        createVisualization(workLoad);
-        break;
+		case CHANNEL:
+			// TODO Implement Channel Analysis Visualization
+			createVisualization(new ChannelVisualization(warp));
+			break;
 
-      default:
-        createVisualization(new NotImplentedVisualization("UnexpectedChoice"));
-        break;
-    }
-  }
-/*
- * Uses a file to visualize an object.
- */
-  private <T extends VisualizationObject> void createVisualization(T obj) {
-    visualization = obj.visualization();
-    fileContent = obj.fileVisualization();
-    /* display is file content printed to console */
-    fileName = obj.createFile(fileNameTemplate); // in output directory
-    visualizationObject = obj;
-  }
-/*
- * Uses a string outputDirectory to create a template for a filename
- * that allows for easier formatting if the '/' is used in the file name
- */
-  private String createFileNameTemplate(String outputDirectory) {
-    String fileNameTemplate;
-    var workingDirectory = fm.getBaseDirectory();
-    var newDirectory = fm.createDirectory(workingDirectory, outputDirectory);
-    // Now create the fileNameTemplate using full output path and input filename
-    if (inputFileName.contains("/")) {
-      var index = inputFileName.lastIndexOf("/") + 1;
-      fileNameTemplate = newDirectory + File.separator + inputFileName.substring(index);
-    } else {
-      fileNameTemplate = newDirectory + File.separator + inputFileName;
-    }
-    return fileNameTemplate;
-  }
+		case LATENCY_REPORT:
+			createVisualization(
+					new ReportVisualization(fm, warp, new LatencyAnalysis(warp).latencyReport(), "Latency"));
+			break;
+
+		case DEADLINE_REPORT:
+			createVisualization(new ReportVisualization(fm, warp, warp.toProgram().deadlineMisses(), "DeadlineMisses"));
+			break;
+
+		default:
+			createVisualization(new NotImplentedVisualization("UnexpectedChoice"));
+			break;
+		}
+	}
+
+	/*
+	 * Switch that includes options for visualization not included by the other
+	 * method
+	 */
+	private void createVisualization(WorkLoadChoices choice) {
+		switch (choice) { // select the requested visualization
+		case COMUNICATION_GRAPH:
+			// createWarpVisualization();
+			createVisualization(new CommunicationGraph(fm, workLoad));
+			break;
+
+		case GRAPHVIZ:
+			createVisualization(new GraphViz(fm, workLoad.toString()));
+			break;
+
+		case INPUT_GRAPH:
+			createVisualization(workLoad);
+			break;
+
+		default:
+			createVisualization(new NotImplentedVisualization("UnexpectedChoice"));
+			break;
+		}
+	}
+
+	/*
+	 * Uses a file to visualize an object.
+	 */
+	private <T extends VisualizationObject> void createVisualization(T obj) {
+		visualization = obj.visualization();
+		fileContent = obj.fileVisualization();
+		/* display is file content printed to console */
+		fileName = obj.createFile(fileNameTemplate); // in output directory
+		visualizationObject = obj;
+	}
+
+	/*
+	 * Uses a string outputDirectory to create a template for a filename that allows
+	 * for easier formatting if the '/' is used in the file name
+	 */
+	private String createFileNameTemplate(String outputDirectory) {
+		String fileNameTemplate;
+		var workingDirectory = fm.getBaseDirectory();
+		var newDirectory = fm.createDirectory(workingDirectory, outputDirectory);
+		// Now create the fileNameTemplate using full output path and input filename
+		if (inputFileName.contains("/")) {
+			var index = inputFileName.lastIndexOf("/") + 1;
+			fileNameTemplate = newDirectory + File.separator + inputFileName.substring(index);
+		} else {
+			fileNameTemplate = newDirectory + File.separator + inputFileName;
+		}
+		return fileNameTemplate;
+	}
 
 }
