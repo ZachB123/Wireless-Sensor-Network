@@ -29,6 +29,7 @@ import java.util.stream.Collectors;
  */
 public class WorkLoad extends WorkLoadDescription implements ReliabilityParameters {
 
+
 	private static final Integer DEFAULT_PRIORITY = 0;
 	private static final Integer DEFAULT_INDEX = 0;
 	private static final Integer DEFAULT_TX_NUM = 0;
@@ -951,4 +952,5 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		}
 		return maxLength;
 	}
+
 }
