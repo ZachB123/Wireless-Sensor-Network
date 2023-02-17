@@ -38,7 +38,7 @@ What each team member documented.
 * VisualizationImplementation.java
 * l through w in Workload.java
 
-## Homework 3
+# Homework 3
 
 ## Zach
 
@@ -47,3 +47,6 @@ What each team member documented.
 ## Noah
 
 * Tests a,b,e,f,i,j,m,n
+
+
+
