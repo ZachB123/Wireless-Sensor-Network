@@ -48,7 +48,10 @@ class WorkLoadTest {
 	void testGetHyperPeriod() {
 		fail("Not yet implemented");
 	}
-
+	
+	/**
+	 * Tests a flow not found in the file.
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetTotalTxAttemptsInFlowNonExistentFlow() {
@@ -69,6 +72,40 @@ class WorkLoadTest {
 		assertEquals(expectedErrorMessage, actualErrorMessage, 
 				String.format("Error message is incorrect. Expected %s but got %s", 
 						expectedErrorMessage, actualErrorMessage));
+	}
+	
+	/**
+	 * Tests a flow in the file.
+	 */
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetTotalTxAttemptsInFlowExistentFlow1() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
+		String flowName = "F0";
+		
+		// Create expected and actual values
+		int expected = 4;
+		int actual = wld.getTotalTxAttemptsInFlow(flowName);
+		
+		assertSame(expected, actual);
+	}
+	
+	/**
+	 * Tests a flow in the file.
+	 */
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetTotalTxAttemptsInFlowExistentFlow2() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "StressTest.txt");
+		String flowName = "AF4";
+		
+		// Create expected and actual values
+		int expected = 11;
+		int actual = wld.getTotalTxAttemptsInFlow(flowName);
+		
+		assertSame(expected, actual);
 	}
 
 	@Test
