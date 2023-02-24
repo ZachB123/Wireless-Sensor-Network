@@ -235,7 +235,32 @@ class WorkLoadTest {
 			
 			assertSame(expected, actual, String.format("Expected %d priority but got %d.", expected, actual));
 		}
+	}
+	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetFlowPriorityWithNodes() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example1a.txt");
 		
+		String nodeName = "B";
+		{
+			// Set up values
+			String flowName = "F0";
+			int expected = 0;
+			int actual = wld.getFlowPriority(flowName, nodeName);
+		
+			assertSame(expected, actual, String.format("Expected %d priority but got %d.", expected, actual));
+		}
+		
+		{
+			// Set up values
+			String flowName = "F1";
+			int expected = 0;
+			int actual = wld.getFlowPriority(flowName, nodeName);
+		
+			assertSame(expected, actual, String.format("Expected %d priority but got %d.", expected, actual));
+		}
 	}
 
 	@Test
