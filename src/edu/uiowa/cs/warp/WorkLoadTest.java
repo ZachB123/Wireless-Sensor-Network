@@ -81,14 +81,20 @@ class WorkLoadTest {
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetTotalTxAttemptsInFlowExistentFlow1() {
 		// Create the WorkLoad and flowName
-		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
+		// Default Num Faults is 0
+		WorkLoad wld = new WorkLoad(0, 0.9, 0.99, "Example.txt");
 		String flowName = "F0";
 		
+		// stresstest4 change numfaults
+		// find relationship
+		
 		// Create expected and actual values
+		System.out.println(String.format("Num: %d", wld.getTotalTxAttemptsInFlow(flowName))); 
 		int expected = 4;
 		int actual = wld.getTotalTxAttemptsInFlow(flowName);
 		
-		assertSame(expected, actual);
+		assertSame(expected, actual, String.format("Expected %d transmission attempts but got %d.", 
+														expected, actual));
 	}
 	
 	/**
@@ -98,14 +104,59 @@ class WorkLoadTest {
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetTotalTxAttemptsInFlowExistentFlow2() {
 		// Create the WorkLoad and flowName
-		WorkLoad wld = new WorkLoad(0.9, 0.99, "StressTest.txt");
+		WorkLoad wld = new WorkLoad(0, 0.9, 0.99, "StressTest.txt");
 		String flowName = "AF4";
 		
 		// Create expected and actual values
 		int expected = 11;
 		int actual = wld.getTotalTxAttemptsInFlow(flowName);
 		
-		assertSame(expected, actual);
+		assertSame(expected, actual, String.format("Expected %d transmission attempts but got %d.", 
+				expected, actual));
+	}
+	
+	/**
+	 * Tests a flow in the file with a specified numFaults.
+	 */
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetTotalTxAttemptsInFlowExistentFlowNumFaults1() {
+		// Create the WorkLoad and flowName
+		// Default Num Faults is 0
+		WorkLoad wld = new WorkLoad(6, 0.9, 0.99, "Example.txt");
+		String flowName = "F0";
+		
+		// Create expected and actual values
+		System.out.println(String.format("Num: %d", wld.getTotalTxAttemptsInFlow(flowName))); 
+		int expected = 14;
+		int actual = wld.getTotalTxAttemptsInFlow(flowName);
+		
+		assertSame(expected, actual, String.format("Expected %d transmission attempts but got %d.", 
+				expected, actual));
+	}
+	
+	/**
+	 * Tests a flow in the file with a specified numFaults.
+	 */
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetTotalTxAttemptsInFlowExistentFlowNumFaults2() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(5, 0.9, 0.99, "StressTest.txt");
+		String flowName = "AF4";
+		
+		// Create expected and actual values
+		int expected = 42;
+		int actual = wld.getTotalTxAttemptsInFlow(flowName);
+		
+		assertSame(expected, actual, String.format("Expected %d transmission attempts but got %d.", 
+				expected, actual));
+	}
+	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetFlowPriority() {
+		
 	}
 
 	@Test

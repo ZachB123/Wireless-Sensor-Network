@@ -29,7 +29,6 @@ import java.util.stream.Collectors;
  */
 public class WorkLoad extends WorkLoadDescription implements ReliabilityParameters {
 
-
 	private static final Integer DEFAULT_PRIORITY = 0;
 	private static final Integer DEFAULT_INDEX = 0;
 	private static final Integer DEFAULT_TX_NUM = 0;
@@ -273,8 +272,9 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 	/**
 	 * <h1>Add a new flow to the Flows dictionary</h1>
 	 * <p>
-	 * If the flow name already exists it will be overwritten with the new one.
-	 * If any flow name is not an integer, the intForFlowNames will be permanently set to false for this workload.
+	 * If the flow name already exists it will be overwritten with the new one. If
+	 * any flow name is not an integer, the intForFlowNames will be permanently set
+	 * to false for this workload.
 	 * </p>
 	 * 
 	 * @param flowName
@@ -315,8 +315,10 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 	/**
 	 * <h1>Adds a node to the given flow.</h1>
 	 * <p>
-	 * If the node already exists in the workload, it will only be added to the flow. Otherwise a new node will be created.
+	 * If the node already exists in the workload, it will only be added to the
+	 * flow. Otherwise a new node will be created.
 	 * </p>
+	 * 
 	 * @param flowName Name of flow to add the node to.
 	 * @param nodeName The node that will be added to the flow.
 	 */
@@ -349,13 +351,17 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		flowNode.linkTxAndTotalCost.add(DEFAULT_TX_NUM);
 	}
 
-	
 	/**
-	 * <h1>Returns the priority of the node with nodeName belonging to the flow flowName</h1>
-	 * <p>Gets the flow by the flowName then uses an iterator from the flow's nodes to
-	 * iterate through all the nodes until the node with name nodeName is found. Then that
-	 * node's priority is returned</p>
-	 * <p>0 is returned if the node or flow is not found.</p>
+	 * <h1>Returns the priority of the node with nodeName belonging to the flow
+	 * flowName</h1>
+	 * <p>
+	 * Gets the flow by the flowName then uses an iterator from the flow's nodes to
+	 * iterate through all the nodes until the node with name nodeName is found.
+	 * Then that node's priority is returned
+	 * </p>
+	 * <p>
+	 * 0 is returned if the node or flow is not found.
+	 * </p>
 	 * 
 	 * @param flowName the name of the flow
 	 * @param nodeName the node in the flow
@@ -416,7 +422,7 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		var flowNode = getFlow(flowName);
 		return flowNode.getPeriod();
 	}
-	
+
 	/**
 	 * <h1>Returns the deadline of the flow with flowName.</h1>
 	 * 
@@ -440,7 +446,8 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 	}
 
 	/**
-	 * <h1>Returns the flow tx attempts per link for the flow with name flowName.</h1> 
+	 * <h1>Returns the flow tx attempts per link for the flow with name
+	 * flowName.</h1>
 	 * 
 	 * @param flowName the name of the flow.
 	 * @return number of tx per link.
@@ -450,11 +457,10 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		return flowNode.numTxPerLink;
 	}
 
- 
 	/**
-	 * public method that takes lists of flows that are unsorted, sorted by index, 
-	 * and sorted by priority, and proceeds to make a new Array List that
-	 * contains the flow names in the order that has been requested
+	 * public method that takes lists of flows that are unsorted, sorted by index,
+	 * and sorted by priority, and proceeds to make a new Array List that contains
+	 * the flow names in the order that has been requested
 	 */
 	public void setFlowsInPriorityOrder() {
 		// create a list of Flow objects from the FlowMap using the stream interface.
@@ -471,9 +477,10 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		flowNamesInPriorityOrder = new ArrayList<>();
 		sortedFlows.forEach((node) -> flowNamesInPriorityOrder.add(node.getName()));
 	}
-/**
- * public method that sorts flows in order of deadline 
- */
+
+	/**
+	 * public method that sorts flows in order of deadline
+	 */
 	public void setFlowsInDMorder() {
 		/* create a list of Flow objects from the FlowMap using the stream interface. */
 		List<Flow> unsortedFlows = flows.values().stream().collect(Collectors.toList());
@@ -490,9 +497,10 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		flowNamesInPriorityOrder = new ArrayList<>();
 		sortedFlows.forEach((node) -> flowNamesInPriorityOrder.add(node.getName()));
 	}
-/**
- * public method that sorts flows in order of period.
- */
+
+	/**
+	 * public method that sorts flows in order of period.
+	 */
 	public void setFlowsInRMorder() {
 		// create a list of Flow objects from the FlowMap using the stream interface.
 		List<Flow> unsortedFlows = flows.values().stream().collect(Collectors.toList());
@@ -584,16 +592,20 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		}
 	}
 
-	
 	/**
-	 * <h1>Returns the fixed tx per link and the total tx cost of the given flow.</h1>
-	 * <p>The tx per link is defined as the number of faults allowed plus one since a node has to be used once to
-	 * transmit a message. The return value is an ArrayList with link num nodes in flow + 1. The last element in 
-	 * the list is the maximum tx in the flow. all previous elements represent the tx per node of a flow and each
-	 * correspond to node.</p>
+	 * <h1>Returns the fixed tx per link and the total tx cost of the given
+	 * flow.</h1>
+	 * <p>
+	 * The tx per link is defined as the number of faults allowed plus one since a
+	 * node has to be used once to transmit a message. The return value is an
+	 * ArrayList with link num nodes in flow + 1. The last element in the list is
+	 * the maximum tx in the flow. all previous elements represent the tx per node
+	 * of a flow and each correspond to node.
+	 * </p>
 	 * 
 	 * @param flow the flow object to find the tx of.
-	 * @return an arraylist of integers with each entry corresponding to a node in the flow's tx. The last entry is the maximum tx.
+	 * @return an arraylist of integers with each entry corresponding to a node in
+	 *         the flow's tx. The last entry is the maximum tx.
 	 */
 	private ArrayList<Integer> getFixedTxPerLinkAndTotalTxCost(Flow flow) {
 		var nodesInFlow = flow.nodes;
@@ -616,17 +628,24 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		txArrayList.add(numEdgesInFlow + maxFaultsInFlow);
 		return txArrayList;
 	}
-/**
- * private method creates a matrix that displays the reliability of transmitting 
- * packets to nodes in an efficient manner using the source and sink of the 
- * flow nodes
- * @param flow a flow object in which the nodes will be retrieved
- * @param e2e double to be used to set up matrix for transmission reliability
- * @param M Double used for computing reliability for source and sink
- * @param optimizationRequested boolean to verify if an optimization has been requested
- * @return an ArrayList of integers that represents the worst case cost of transmitting e2e
- 
- */
+
+	/**
+	 * private method creates a matrix that displays the reliability of transmitting
+	 * packets to nodes in an efficient manner using the source and sink of the flow
+	 * nodes
+	 * 
+	 * @param flow                  a flow object in which the nodes will be
+	 *                              retrieved
+	 * @param e2e                   double to be used to set up matrix for
+	 *                              transmission reliability
+	 * @param M                     Double used for computing reliability for source
+	 *                              and sink
+	 * @param optimizationRequested boolean to verify if an optimization has been
+	 *                              requested
+	 * @return an ArrayList of integers that represents the worst case cost of
+	 *         transmitting e2e
+	 * 
+	 */
 	private ArrayList<Integer> numTxAttemptsPerLinkAndTotalTxAttempts(Flow flow, Double e2e, Double M,
 			boolean optimizationRequested) {
 		var nodesInFlow = flow.nodes;
@@ -785,13 +804,16 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		Collections.addAll(nPushesArrayList, nPushes);
 		return nPushesArrayList;
 	}
-/**
- * public method that gets the nodes from a node map, and sorts them in alphabetical
- * order. If the names are strings of integers, then there must be an additional
- * step to sort them correctly. If all of the node names are ints, sort them in 
- * ascending order, and then convert it to a string
- * @return a list of strings containing the names of the nodes in alphabetical order.
- */
+
+	/**
+	 * public method that gets the nodes from a node map, and sorts them in
+	 * alphabetical order. If the names are strings of integers, then there must be
+	 * an additional step to sort them correctly. If all of the node names are ints,
+	 * sort them in ascending order, and then convert it to a string
+	 * 
+	 * @return a list of strings containing the names of the nodes in alphabetical
+	 *         order.
+	 */
 	public String[] getNodeNamesOrderedAlphabetically() {
 		var nodes = getNodes();
 		Set<String> keys = nodes.keySet(); // get the names from the node map
@@ -846,7 +868,9 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 
 	/**
 	 * <h1>Returns the index of the given node.</h1>
-	 * <p>A nodes index is an alternate name for the simulator input file.</p>
+	 * <p>
+	 * A nodes index is an alternate name for the simulator input file.
+	 * </p>
 	 * 
 	 * @param nodeName the Name of the node
 	 * @return the index of the node
@@ -860,13 +884,15 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		}
 		return index;
 	}
-/**
- * Loops through a requested flow and obtains the nodes contained in the flow.
- * if not, return an empty array.
- * 
- * @param flowName the flow in which nodes will be obtained from 
- * @return an array of strings containing the nodes obtained from the selected flow.
- */
+
+	/**
+	 * Loops through a requested flow and obtains the nodes contained in the flow.
+	 * if not, return an empty array.
+	 * 
+	 * @param flowName the flow in which nodes will be obtained from
+	 * @return an array of strings containing the nodes obtained from the selected
+	 *         flow.
+	 */
 	public String[] getNodesInFlow(String flowName) {
 		// get the flow node for requested Flow and then loop through the
 		// nodes in the flow to create an array of the node names in
@@ -886,11 +912,13 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		}
 		return nodes;
 	}
-/**
- * public method that obtains the least common multiple of every period, and 
- * returns it.
- * @return an Integer hyperPeriod that represents the LCM of every period.
- */
+
+	/**
+	 * public method that obtains the least common multiple of every period, and
+	 * returns it.
+	 * 
+	 * @return an Integer hyperPeriod that represents the LCM of every period.
+	 */
 	public Integer getHyperPeriod() {
 		var hyperPeriod = 1; // hyperPeriod is LCM of all periods. Initialize to 1
 		for (String flowName : getFlowNames()) {
@@ -903,12 +931,14 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		}
 		return hyperPeriod;
 	}
-/**
- * Public method that returns the amount of times that a transmission was 
- * attempted in the flow
- * @param flowName String that will be checked to see amount of transmissions
- * @return Integer representing amount of transmissions attempted.
- */
+
+	/**
+	 * Public method that returns the amount of times that a transmission was
+	 * attempted in the flow
+	 * 
+	 * @param flowName String that will be checked to see amount of transmissions
+	 * @return Integer representing amount of transmissions attempted.
+	 */
 	public Integer getTotalTxAttemptsInFlow(String flowName) {
 		var flow = getFlow(flowName);
 		var linkTxAndTotalCost = flow.getLinkTxAndTotalCost();
@@ -919,6 +949,7 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 
 	/**
 	 * finds the amount of transmissions that is required for each link in the flow
+	 * 
 	 * @param flowName flow in which amount of transmissions will be looked for
 	 * @return the same array described in the lines below.
 	 */
@@ -932,19 +963,23 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 												// others
 		return linkTxAndTotalCost.toArray(new Integer[0]);
 	}
-/**
- * public method that adds an edge to the end of the specified node
- * @param nodeName node that will have edge added to it
- * @param edge edge to be added to node
- */
+
+	/**
+	 * public method that adds an edge to the end of the specified node
+	 * 
+	 * @param nodeName node that will have edge added to it
+	 * @param edge     edge to be added to node
+	 */
 	public void addEdge(String nodeName, Edge edge) {
 		var node = nodes.get(nodeName); // get the node object
 		node.addEdge(edge);
 	}
-/**
- * Searches through all of the flows to find the one with the greatest length
- * @return an Integer representing the greatest length of a flow
- */
+
+	/**
+	 * Searches through all of the flows to find the one with the greatest length
+	 * 
+	 * @return an Integer representing the greatest length of a flow
+	 */
 	public Integer maxFlowLength() {
 		Integer maxLength = 0;
 		for (Flow flow : flows.values()) {
