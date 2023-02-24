@@ -1,0 +1,5 @@
+CustomWorkloadByZach {
+RandomFlow1 (70, 5, 10, 2) : A -> C -> D -> B
+RandomFlow2 (48, 12, 0, 5) : C -> D -> A -> B
+RandomFlow3 (23, 9, 16, 17) : D -> C -> A
+}
