@@ -1,5 +1,8 @@
 package edu.uiowa.cs.warp;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.*;
@@ -260,6 +263,30 @@ class WorkLoadTest {
 			int actual = wld.getFlowPriority(flowName, nodeName);
 		
 			assertSame(expected, actual, String.format("Expected %d priority but got %d.", expected, actual));
+		}
+	}
+	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testSetFlowsInRMOrder1() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example1a.txt");
+		
+		// We are testing that flows are sorted in order of period then priority as the second key
+		wld.setFlowsInRMorder();
+		String[] expectedArray = {"F0", "F1"};
+		List<String> expected = new ArrayList<String>(Arrays.asList(expectedArray));
+		// The actual contains a list of the names of the flows
+		List<String> actual = wld.getFlowNamesInPriorityOrder();
+		
+		int expectedLength = expected.size();
+		int actualLength = actual.size();
+		assertSame(expectedLength, actualLength, String.format("Length of expected array is %d but we got %d", expectedLength, actualLength));
+		
+		for(int i = 0; i < expectedLength; i++) {
+			String expectedString = expected.get(i);
+			String actualString = actual.get(i);
+			assertEquals(expectedString, actualString, String.format("Expected %s but got %s.", expectedString, actualString));
 		}
 	}
 
