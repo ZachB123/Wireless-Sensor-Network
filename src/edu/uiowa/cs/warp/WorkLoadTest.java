@@ -7,18 +7,65 @@ import static org.junit.jupiter.api.Assumptions.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 
+import edu.uiowa.cs.utilities.Utilities;
+
 class WorkLoadTest {
 
 	@Test
 	void testAddFlow() {
-		fail("Not yet implemented");
+		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
+		String flowName = "F0";
+		FlowMap flows = new FlowMap();
+		
+		
+		wld.addFlow(flowName);
+		assertTrue(flows.containsKey(flowName));
+		assertEquals(flows.size(), 1);
+		
+		
 	}
 
 	@Test
+	void testaddNodeToFlow() {
+		
+		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
+		String flowName = "F0";
+		String nodeName = "A";
+				
+		
+		wld.addNodeToFlow(flowName, nodeName);
+		assertTrue(wld.getFlows().containsKey("A"));
+		
+		
+		
+		
+	}
+	@Test
 	void testSetFlowPriority() {
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example1a.txt");
+		String flowName = "F0";
+		Integer priority = 0;
+		
+		wld.setFlowPriority(flowName, priority);
+		
+		assertEquals(priority, wld.getFlowPriority(flowName));
 		fail("Not yet implemented");
 	}
 
+	@Test 
+	void testGetFlowTxAttemptsPerLink() {
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example1a.txt");
+		String flowName = "F0";
+		
+		int numAttempts = wld.getFlowTxAttemptsPerLink(flowName);
+		int expected = 5;
+		
+		
+		assertEquals(expected,numAttempts);
+		
+	}
+	
+	
 	@Test
 	void testSetFlowDeadline() {
 		fail("Not yet implemented");
