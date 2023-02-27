@@ -501,6 +501,51 @@ class WorkLoadTest {
 		assertEquals(expected, actual, String.format("Expected %d but got %d.", expected, actual));
 	}
 	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetFlowDeadlineNonExistentFlow() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
+		
+		String flowName = "NonExistentFlow";
+		// default flow deadline is 100
+		Integer expected = 100;
+		Integer actual = wld.getFlowDeadline(flowName);
+		
+		assertEquals(expected, actual, String.format("expected %d but got %d", expected, actual));
+	}
+	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetFlowDeadline() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "CustomWorkloadByZach.txt");
+		{
+			String flowName = "RandomFlow1";
+			Integer expected = 10;
+			Integer actual = wld.getFlowDeadline(flowName);
+			
+			assertEquals(expected, actual, String.format("expected %d but got %d", expected, actual));			
+		}
+		
+		{
+			String flowName = "RandomFlow2";
+			Integer expected = 0;
+			Integer actual = wld.getFlowDeadline(flowName);
+			
+			assertEquals(expected, actual, String.format("expected %d but got %d", expected, actual));
+		}
+		
+		{
+			String flowName = "RandomFlow3";
+			Integer expected = 16;
+			Integer actual = wld.getFlowDeadline(flowName);
+			
+			assertEquals(expected, actual, String.format("expected %d but got %d", expected, actual));
+		}
+
+	}
+	
 
 	@Test
 	void testGetNumTxAttemptsPerLink() {
