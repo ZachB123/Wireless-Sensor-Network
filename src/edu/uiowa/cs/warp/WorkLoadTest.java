@@ -23,7 +23,7 @@ class WorkLoadTest {
 		
 		wld.addFlow(flowName);
 		assertTrue(flows.containsKey(flowName));
-		assertEquals(flows.size(), 1);
+		assertEquals(flows.size(), 1, "message");
 		
 		
 	}
@@ -68,23 +68,9 @@ class WorkLoadTest {
 		
 	}
 
-	@Test
-	void testGetFlowPriorityString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetFlowNames() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetNodeIndex() {
-		fail("Not yet implemented");
-	}
-
 	/**
 	 * Tests a flow not found in the file.
+	 * We expect an exception to be thrown
 	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -97,7 +83,8 @@ class WorkLoadTest {
 		// then the test will fail
 		Exception thrown = assertThrows(IndexOutOfBoundsException.class, () -> wld.getTotalTxAttemptsInFlow(flowName),
 				"An IndexOutOfBounds exception was expected but not thrown.");
-
+		
+		// expected and actual error messages
 		String expectedErrorMessage = "Index -1 out of bounds for length 0";
 		String actualErrorMessage = thrown.getMessage();
 
@@ -107,7 +94,8 @@ class WorkLoadTest {
 	}
 
 	/**
-	 * Tests a flow in the file.
+	 * Tests that the number of transmission for a workload with 
+	 * 0 numfaults
 	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -126,7 +114,8 @@ class WorkLoadTest {
 	}
 
 	/**
-	 * Tests a flow in the file.
+	 * Stress tests the number of transmissions in a workload
+	 * 0 faults are set
 	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -162,7 +151,7 @@ class WorkLoadTest {
 	}
 
 	/**
-	 * Tests a flow in the file with a specified numFaults.
+	 * Stress Tests a flow in the file with a specified numFaults.
 	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -178,6 +167,10 @@ class WorkLoadTest {
 		assertSame(expected, actual, String.format("Expected %d transmission attempts but got %d.", expected, actual));
 	}
 
+	/**
+	 * Testing that the priority is set to the default priority
+	 * if the flow does not exist
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetFlowPriorityNonExistentFlow() {
@@ -194,6 +187,10 @@ class WorkLoadTest {
 		assertSame(expected, actual, String.format("Expected %d priority but got %d.", expected, actual));
 	}
 
+	/**
+	 * If no priority is specified in the file we test that
+	 * it is set to the default priority
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetFlowPriorityDefaultPriority() {
@@ -208,11 +205,15 @@ class WorkLoadTest {
 
 		assertSame(expected, actual, String.format("Expected %d priority but got %d.", expected, actual));
 	}
-
+	
+	/**
+	 * Here we test that the priorities specified in the workload file
+	 * are properly transferred to the object
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetFlowPriorityCustomPriority1() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example1A.txt");
 		
 		// Create expected and actual values
@@ -236,6 +237,9 @@ class WorkLoadTest {
 		
 	}
 	
+	/**
+	 * We test more custom priorities with a file I made
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetFlowPriorityCustomPriority2() {
@@ -297,23 +301,30 @@ class WorkLoadTest {
 		}
 	}
 	
+	/**
+	 * RMorder sorts the flows by period
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testSetFlowsInRMOrder1() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example1a.txt");
 		
 		// We are testing that flows are sorted in order of period then priority as the second key
 		wld.setFlowsInRMorder();
+		
 		String[] expectedArray = {"F0", "F1"};
+		// convert and array to arraylist
 		List<String> expected = new ArrayList<String>(Arrays.asList(expectedArray));
 		// The actual contains a list of the names of the flows
 		List<String> actual = wld.getFlowNamesInPriorityOrder();
 		
+		// first check the sizes are equals so the loop won't crash
 		int expectedLength = expected.size();
 		int actualLength = actual.size();
 		assertSame(expectedLength, actualLength, String.format("Length of expected array is %d but we got %d", expectedLength, actualLength));
 		
+		// check to make sure the content of each array is equal
 		for(int i = 0; i < expectedLength; i++) {
 			String expectedString = expected.get(i);
 			String actualString = actual.get(i);
@@ -321,6 +332,9 @@ class WorkLoadTest {
 		}
 	}
 	
+	/**
+	 * Another test on my customworkload to make sure that
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testSetFlowsInRMOrder2() {
@@ -334,10 +348,12 @@ class WorkLoadTest {
 		// The actual contains a list of the names of the flows
 		List<String> actual = wld.getFlowNamesInPriorityOrder();
 		
+		// ensuring the lengths are the same so the loop won't crash
 		int expectedLength = expected.size();
 		int actualLength = actual.size();
 		assertSame(expectedLength, actualLength, String.format("Length of expected array is %d but we got %d", expectedLength, actualLength));
 		
+		// making sure the arrays are actually equal
 		for(int i = 0; i < expectedLength; i++) {
 			String expectedString = expected.get(i);
 			String actualString = actual.get(i);
@@ -345,9 +361,13 @@ class WorkLoadTest {
 		}
 	}
 	
+	/**
+	 * The secondary key is priority so I created a workload
+	 * that has all the same periods to test this
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
-	void testSetFlowsInRMOrderSamePeriod1() {
+	void testSetFlowsInRMOrderSamePeriod() {
 		// Create the WorkLoad and flowName
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "SamePeriod.txt");
 		
@@ -359,10 +379,12 @@ class WorkLoadTest {
 		// The actual contains a list of the names of the flows
 		List<String> actual = wld.getFlowNamesInPriorityOrder();
 		
+		// make sure the sizes are the same so it won't crash
 		int expectedLength = expected.size();
 		int actualLength = actual.size();
 		assertSame(expectedLength, actualLength, String.format("Length of expected array is %d but we got %d", expectedLength, actualLength));
 		
+		// ensure the arrays are equal
 		for(int i = 0; i < expectedLength; i++) {
 			String expectedString = expected.get(i);
 			String actualString = actual.get(i);
@@ -370,6 +392,10 @@ class WorkLoadTest {
 		}
 	}
 	
+	/**
+	 * If period and priority are same then we test that the flows
+	 * appear in the order that they are defined in the file
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testSetFlowsInRMOrderSamePeriodSamePriority() {
@@ -385,10 +411,12 @@ class WorkLoadTest {
 		// The actual contains a list of the names of the flows
 		List<String> actual = wld.getFlowNamesInPriorityOrder();
 		
+		// test if the arrays have the same lengths
 		int expectedLength = expected.size();
 		int actualLength = actual.size();
 		assertSame(expectedLength, actualLength, String.format("Length of expected array is %d but we got %d", expectedLength, actualLength));
 		
+		// test that the arrays are equal
 		for(int i = 0; i < expectedLength; i++) {
 			String expectedString = expected.get(i);
 			String actualString = actual.get(i);
@@ -396,48 +424,67 @@ class WorkLoadTest {
 		}
 	}
 	
+	/**
+	 * Here we test to ensure that the nodes in a flow
+	 * are returned alphabetically
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetNodeNamesOrderedAlphabetically() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
 		
+		// abc is alphabetical order
 		String[] expected = {"A", "B", "C"};
 		String[] actual = wld.getNodeNamesOrderedAlphabetically();
 		
 		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
 	}
 	
+	/**
+	 * This method checks that if the nodes are numbers that 
+	 * they are also in order
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetNodeNamesOrderedAlphabeticallyNumberedNodes() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "NumberedNodes.txt");
 		
+		// creating expected and actual values
 		String[] expected = {"1", "2", "3"};
 		String[] actual = wld.getNodeNamesOrderedAlphabetically();
 		
 		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
 	}
 	
+	/**
+	 * Here we test a mix of numbers and letters in the node names
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetNodeNamesOrderedAlphabeticallyMixedNodes() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "MixedNodes.txt");
 		
+		// creating expected and actual values
 		String[] expected = {"1A", "A1", "1B", "B1"};
 		String[] actual = wld.getNodeNamesOrderedAlphabetically();
 		
 		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
 	}
 	
+	/**
+	 * Here we test a flow that doesn't exist
+	 * In this case we expect an empty string array to be returned
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetNodesInFlowNonExistentFlow() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
 		
+		// creating flowname, expected and actual values
 		String flowName = "NonExistentFlow";
 		String[] expected = new String[0];
 		String[] actual = wld.getNodesInFlow(flowName);
@@ -445,12 +492,16 @@ class WorkLoadTest {
 		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
 	}
 	
+	/**
+	 * Testing the method that gets the names of the flows
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetNodesInFlow1() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
 		
+		// creates flowname and expected and actual values
 		String flowName = "F0";
 		String[] expected = {"A", "B", "C"};
 		String[] actual = wld.getNodesInFlow(flowName);
@@ -458,12 +509,18 @@ class WorkLoadTest {
 		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
 	}
 	
+	/**
+	 * Here we have a second test of getting the nodes
+	 * this ensures that the nodes appear in the order that they are in
+	 * the file
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetNodesInFlow2() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "CustomWorkloadByZach.txt");
 		
+		// creates flowname and expected and actual values
 		String flowName = "RandomFlow3";
 		String[] expected = {"D", "C", "A"};
 		String[] actual = wld.getNodesInFlow(flowName);
@@ -471,58 +528,82 @@ class WorkLoadTest {
 		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
 	}
 	
+	/**
+	 * We here we test the hyper period method but if a workload
+	 * has no flows then the default is 1 so we check that here
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetHyperPeriodNoFlows() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "EmptyWorkload.txt");
 		
+		// creating expected and actual values
 		Integer expected = 1;
 		Integer actual = wld.getHyperPeriod();
 
 		assertEquals(expected, actual, String.format("Expected %d but got %d.", expected, actual));
 	}
 	
+	/**
+	 * Testing the getHyperPeriod method
+	 * In my custom workload the periods are 5, 12, and 9 so the
+	 * lcm of those is 180
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetHyperPeriod() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "CustomWorkloadByZach.txt");
 		
+		// expected and actual values
 		Integer expected = 180;
 		Integer actual = wld.getHyperPeriod();
 
 		assertEquals(expected, actual, String.format("Expected %d but got %d.", expected, actual));
 	}
 	
+	/**
+	 * Here we test getting the deadline for a flow that does
+	 * not exist in the workload
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetFlowDeadlineNonExistentFlow() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
 		
 		String flowName = "NonExistentFlow";
 		// default flow deadline is 100
 		Integer expected = 100;
+		// if a flow doesn't exist it will create a default flow with default parameters
 		Integer actual = wld.getFlowDeadline(flowName);
 		
 		assertEquals(expected, actual, String.format("expected %d but got %d", expected, actual));
 	}
 	
+	/**
+	 * This method tests getting the flow deadline for all flows in
+	 * my custom workload
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetFlowDeadline() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "CustomWorkloadByZach.txt");
 		
+		// testing flow 1
 		{
+			//creating flowname and expected and actual values
 			String flowName = "RandomFlow1";
 			Integer expected = 10;
 			Integer actual = wld.getFlowDeadline(flowName);
 			
+			// assertion
 			assertEquals(expected, actual, String.format("expected %d but got %d", expected, actual));			
 		}
 		
+		// testing flow 2
 		{
 			String flowName = "RandomFlow2";
 			Integer expected = 0;
@@ -531,6 +612,7 @@ class WorkLoadTest {
 			assertEquals(expected, actual, String.format("expected %d but got %d", expected, actual));
 		}
 		
+		// testing flow 3
 		{
 			String flowName = "RandomFlow3";
 			Integer expected = 16;
@@ -541,38 +623,39 @@ class WorkLoadTest {
 
 	}
 	
+	/**
+	 * Here we test setting RandomFlow3 from my custom workload
+	 */
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testSetFlowDeadline() {
-		// Create the WorkLoad and flowName
+		// Create the WorkLoad
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "CustomWorkloadByZach.txt");
 		
+		// flow name to use
 		String flowName = "RandomFlow3";
 		
+		// making sure that the initial values are what we expect them to be
 		Integer initialExpectedDeadline = 16;
 		Integer initialActualDeadline = wld.getFlowDeadline(flowName);
 		
 		assertEquals(initialExpectedDeadline, initialActualDeadline, String.format("Expected %d but got %d", initialExpectedDeadline, initialActualDeadline));
 		
+		// setting the deadline to 1234
 		Integer expectedDeadline = 1234;
 		wld.setFlowDeadline(flowName, expectedDeadline);
 		
+		// getting the new deadline which should have changed
 		Integer actualDeadline = wld.getFlowDeadline(flowName);
 		
 		assertEquals(expectedDeadline, actualDeadline, String.format("Expected %d but got %d", expectedDeadline, actualDeadline));
 	}
 	
-
-	@Test
-	void testGetNumTxAttemptsPerLink() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testMaxFlowLength() {
-		fail("Not yet implemented");
-	}
-	
+	/**
+	 * This function is a helper method that takes in an array and returns a string representation of it
+	 * @param arr an array of any type
+	 * @return String representation of the array
+	 */
 	String printArrayHelper(Object[] arr) {
 		StringBuilder str = new StringBuilder().append("[");
 		for(int i = 0; i < arr.length; i++) {
