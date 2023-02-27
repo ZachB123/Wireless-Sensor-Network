@@ -67,12 +67,6 @@ class WorkLoadTest {
 		assertEquals(expected,numAttempts);
 		
 	}
-	
-	
-	@Test
-	void testSetFlowDeadline() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	void testGetFlowPriorityString() {
@@ -520,6 +514,7 @@ class WorkLoadTest {
 	void testGetFlowDeadline() {
 		// Create the WorkLoad and flowName
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "CustomWorkloadByZach.txt");
+		
 		{
 			String flowName = "RandomFlow1";
 			Integer expected = 10;
@@ -544,6 +539,27 @@ class WorkLoadTest {
 			assertEquals(expected, actual, String.format("expected %d but got %d", expected, actual));
 		}
 
+	}
+	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testSetFlowDeadline() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "CustomWorkloadByZach.txt");
+		
+		String flowName = "RandomFlow3";
+		
+		Integer initialExpectedDeadline = 16;
+		Integer initialActualDeadline = wld.getFlowDeadline(flowName);
+		
+		assertEquals(initialExpectedDeadline, initialActualDeadline, String.format("Expected %d but got %d", initialExpectedDeadline, initialActualDeadline));
+		
+		Integer expectedDeadline = 1234;
+		wld.setFlowDeadline(flowName, expectedDeadline);
+		
+		Integer actualDeadline = wld.getFlowDeadline(flowName);
+		
+		assertEquals(expectedDeadline, actualDeadline, String.format("Expected %d but got %d", expectedDeadline, actualDeadline));
 	}
 	
 
