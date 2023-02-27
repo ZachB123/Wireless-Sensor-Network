@@ -75,12 +75,16 @@ class WorkLoadTest {
 	}
 
 	@Test
-	void testGetFlowPriorityString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	void testGetFlowNames() {
+		WorkLoad wld = new WorkLoad(0.9,0.99, "Example1a.txt");
+		String[] flowNames = {"F0", "F1"};
+		
+		List<String> expected = new ArrayList<String>(Arrays.asList(flowNames));
+		
+		List<String> actual = wld.getFlowNamesInOriginalOrder();
+		
+		assertEquals(expected, actual);
+		
 		fail("Not yet implemented");
 	}
 
