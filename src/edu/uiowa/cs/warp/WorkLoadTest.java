@@ -477,6 +477,30 @@ class WorkLoadTest {
 		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
 	}
 	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetHyperPeriodNoFlows() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "EmptyWorkload.txt");
+		
+		Integer expected = 1;
+		Integer actual = wld.getHyperPeriod();
+
+		assertEquals(expected, actual, String.format("Expected %d but got %d.", expected, actual));
+	}
+	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetHyperPeriod() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "CustomWorkloadByZach.txt");
+		
+		Integer expected = 180;
+		Integer actual = wld.getHyperPeriod();
+
+		assertEquals(expected, actual, String.format("Expected %d but got %d.", expected, actual));
+	}
+	
 
 	@Test
 	void testGetNumTxAttemptsPerLink() {
