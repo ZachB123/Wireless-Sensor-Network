@@ -89,16 +89,6 @@ class WorkLoadTest {
 		fail("Not yet implemented");
 	}
 
-	@Test
-	void testGetNodesInFlow() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetHyperPeriod() {
-		fail("Not yet implemented");
-	}
-
 	/**
 	 * Tests a flow not found in the file.
 	 */
@@ -448,7 +438,44 @@ class WorkLoadTest {
 		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
 	}
 	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetNodesInFlowNonExistentFlow() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
+		
+		String flowName = "NonExistentFlow";
+		String[] expected = new String[0];
+		String[] actual = wld.getNodesInFlow(flowName);
+		
+		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
+	}
 	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetNodesInFlow1() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
+		
+		String flowName = "F0";
+		String[] expected = {"A", "B", "C"};
+		String[] actual = wld.getNodesInFlow(flowName);
+		
+		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
+	}
+	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetNodesInFlow2() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "CustomWorkloadByZach.txt");
+		
+		String flowName = "RandomFlow3";
+		String[] expected = {"D", "C", "A"};
+		String[] actual = wld.getNodesInFlow(flowName);
+		
+		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
+	}
 	
 
 	@Test
