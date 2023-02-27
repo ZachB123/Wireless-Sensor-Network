@@ -412,6 +412,42 @@ class WorkLoadTest {
 		}
 	}
 	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetNodeNamesOrderedAlphabetically() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
+		
+		String[] expected = {"A", "B", "C"};
+		String[] actual = wld.getNodeNamesOrderedAlphabetically();
+		
+		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
+	}
+	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetNodeNamesOrderedAlphabeticallyNumberedNodes() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "NumberedNodes.txt");
+		
+		String[] expected = {"1", "2", "3"};
+		String[] actual = wld.getNodeNamesOrderedAlphabetically();
+		
+		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
+	}
+	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	void testGetNodeNamesOrderedAlphabeticallyMixedNodes() {
+		// Create the WorkLoad and flowName
+		WorkLoad wld = new WorkLoad(0.9, 0.99, "MixedNodes.txt");
+		
+		String[] expected = {"1A", "A1", "1B", "B1"};
+		String[] actual = wld.getNodeNamesOrderedAlphabetically();
+		
+		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
+	}
+	
 	
 	
 
@@ -423,6 +459,15 @@ class WorkLoadTest {
 	@Test
 	void testMaxFlowLength() {
 		fail("Not yet implemented");
+	}
+	
+	String printArrayHelper(Object[] arr) {
+		StringBuilder str = new StringBuilder().append("[");
+		for(int i = 0; i < arr.length; i++) {
+			str.append((arr[i].toString() + ", "));
+		}
+		str.append("]");
+		return str.toString();
 	}
 
 }
