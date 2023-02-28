@@ -13,6 +13,22 @@ import org.junit.jupiter.api.Timeout;
 import edu.uiowa.cs.utilities.Utilities;
 
 class WorkLoadTest {
+	
+	// notes
+	// add messages to all asserts
+	// add at least two tests per method testing different files if there
+	// is only one scenario to test
+	// remove the weird spacing after the last line of code and the bracket
+	// remove the fails at the end of some of the tests
+	
+	// on testAddFlow add a method to test that a flow is overwritten
+	// I would do that by having a flow with some value set like period that isnt the default
+	// then when overwrittten make sure that the values are now the default
+	
+	// on testAddNodeToFlow make a method to test if the workload doesn't have a node
+	
+	// on testGetFlowNames try it with an empty workload
+	
     
 	/**
 	 * Tests to see if a flow is correctly added to a workload
