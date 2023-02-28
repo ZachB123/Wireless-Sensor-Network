@@ -13,68 +13,83 @@ import org.junit.jupiter.api.Timeout;
 import edu.uiowa.cs.utilities.Utilities;
 
 class WorkLoadTest {
-
+    
+	/**
+	 * Tests to see if a flow is correctly added to a workload
+	 */
 	@Test
 	void testAddFlow() {
+		
+		//Initialize new workload and flowname
 		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
 		String flowName = "F0";
-		FlowMap flows = new FlowMap();
-		
-		
+		//Add flow to workload
 		wld.addFlow(flowName);
-		assertTrue(flows.containsKey(flowName));
-		assertEquals(flows.size(), 1, "message");
+		//check flows in the created workload, and return true if flowName
+		//is in it
+		assertTrue(wld.getFlows().containsKey(flowName));
+		
+		
 		
 		
 	}
-
+    /**
+     * Tests that a node can be correctly added to a flow
+     * in a workload
+     */
 	@Test
 	void testaddNodeToFlow() {
-		
+		//Initialize new workload, flowname, and nodename
 		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
 		String flowName = "F0";
 		String nodeName = "A";
 				
-		
+		//Adds a node to the flow in workload
 		wld.addNodeToFlow(flowName, nodeName);
+		//Checking to see if the added node is present in workload.
 		assertTrue(wld.getFlows().containsKey("A"));
 		
 		
 		
 		
 	}
+	/**
+	 * Tests that a priority can be correctly set to
+	 * flowName.
+	 */
 	@Test
 	void testSetFlowPriority() {
+		//Initialize new workload, flowname, and priority
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example1a.txt");
 		String flowName = "F0";
 		Integer priority = 0;
-		
+		//sets priority to given flow
 		wld.setFlowPriority(flowName, priority);
-		
+		//checks to see if the priority has been correctly set to flowName
 		assertEquals(priority, wld.getFlowPriority(flowName));
 		fail("Not yet implemented");
 	}
-
+    /**
+     * Tests to see if the amount of flow transmission attempts
+     * per link is successfully gathered.
+     */
 	@Test 
 	void testGetFlowTxAttemptsPerLink() {
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example1a.txt");
 		String flowName = "F0";
 		
 		int numAttempts = wld.getFlowTxAttemptsPerLink(flowName);
-		int expected = 5;
+		int expected = 3;
 		
 		
 		assertEquals(expected,numAttempts);
 		
 	}
-
+    /**
+     * Expects to accurately get flow names in the order they are 
+     * originally in 
+     */
 	
-	
-	@Test
-	void testSetFlowDeadline() {
-		fail("Not yet implemented");
-	}
-
 	@Test
 	void testGetFlowNames() {
 		WorkLoad wld = new WorkLoad(0.9,0.99, "Example1a.txt");
@@ -88,12 +103,81 @@ class WorkLoadTest {
 		
 		fail("Not yet implemented");
 	}
-
+	/**
+	 * Tests to get index of a node that already exists 
+	 */
 	@Test
-	void testGetNodeIndex() {
+	void testGetNodeIndexExisting() {
+		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
+		
+		String nodeName = "B";
+		
+		int actual = wld.getNodeIndex(nodeName);
+		int expected = 1;
+		
+		assertEquals(expected,actual);
+		
+		
 		fail("Not yet implemented");
 	}
-
+	/**
+	 * When testing for a node where the index doesn't exist
+	 * in the flow, it should return 0
+	 */
+	@Test
+	void testGetNodeIndexNonExisting() {
+		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
+		
+		String nodeName = "null";
+		
+		int actual = wld.getNodeIndex(nodeName);
+		int expected = 0;
+		
+		assertEquals(expected,actual);
+		
+		
+		
+	
+		
+	}
+	/**
+	 * Tests if the number of transmission attempts per link
+	 * is accurate.
+	 */
+	@Test
+	void testGetNumTxAttemptsPerLink() {
+		WorkLoad wld = new WorkLoad(0.9,0.99, "Example1a.txt");
+		String flowName = "F0";
+		
+		
+		int expected = 3;
+		
+		assertEquals(expected, wld.getNumTxAttemptsPerLink(flowName));
+		
+		
+		 
+		
+		
+	}
+	
+	
+	/**
+	 * Tests to see if maxFlowLength accurately gets the right 
+	 * flow that has the most nodes
+	 */
+	@Test
+	void testMaxFlowLength() {
+		//initialize new workLoad
+		WorkLoad wld = new WorkLoad(0.9,0.99,"Example2.txt");
+		//6 is the highest length of a flow in Example2.txt
+		int expected = 6;
+		int actual = wld.maxFlowLength();
+		
+		assertEquals(expected,actual);
+		
+	}
+	
+	
 	/**
 	 * Tests a flow not found in the file.
 	 * We expect an exception to be thrown
