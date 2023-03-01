@@ -292,7 +292,7 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 		 */
 		if (flows.containsKey(flowName)) {
 			System.out.printf(
-					"\n\tWarning! A flow with name %s already exists. " + "It has been replaced with a new flow\n.");
+					"\n\tWarning! A flow with name %s already exists. ",flowName + "It has been replaced with a new flow\n.");
 		}
 		var index = flows.size();
 		var flowNode = new Flow(flowName, index, index);

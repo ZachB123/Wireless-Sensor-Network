@@ -38,15 +38,26 @@ class WorkLoadTest {
 		
 		//Initialize new workload and flowname
 		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
-		String flowName = "F0";
+		String flowName = "F2";
 		//Add flow to workload
 		wld.addFlow(flowName);
+		
 		//check flows in the created workload, and return true if flowName
 		//is in it
-		assertTrue(wld.getFlows().containsKey(flowName));
+		assertTrue(wld.getFlows().containsKey(flowName),String.format("Expected true but got false"));
+	}
+	/**
+	 * Tests if added flow with same name overwrites existing
+	 * flow
+	 */
+	@Test
+	void testAddFlowOverwritten() {
+		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
+		String flowName = "F0";
 		
+		wld.addFlow(flowName);
 		
-		
+		assertTrue(wld.getFlows().containsKey(flowName),String.format("Expected true but got false"));
 		
 	}
     /**
@@ -54,7 +65,7 @@ class WorkLoadTest {
      * in a workload
      */
 	@Test
-	void testaddNodeToFlow() {
+	void testAddNodeToFlow() {
 		//Initialize new workload, flowname, and nodename
 		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
 		String flowName = "F0";
@@ -62,12 +73,24 @@ class WorkLoadTest {
 				
 		//Adds a node to the flow in workload
 		wld.addNodeToFlow(flowName, nodeName);
+		
 		//Checking to see if the added node is present in workload.
-		assertTrue(wld.getFlows().containsKey("A"));
+		assertTrue(wld.getNodes().containsKey(nodeName),String.format("Expected true but got false"));
+	}
+	/**
+	 * Tests to see if a node will successfully get added to a
+	 * flow in an empty workload
+	 */
+	@Test
+	void testAddNodeToFlowEmpty() {
+		WorkLoad wld = new WorkLoad(0.9,0.99,"EmptyWorkload.txt");
+		String flowName = "F0";
+		String nodeName = "A";
 		
+		wld.addFlow(flowName);
+		wld.addNodeToFlow(flowName, nodeName);
 		
-		
-		
+		assertTrue(wld.getNodes().containsKey(nodeName),String.format("Expected true but got false"));
 	}
 	/**
 	 * Tests that a priority can be correctly set to
@@ -81,9 +104,9 @@ class WorkLoadTest {
 		Integer priority = 0;
 		//sets priority to given flow
 		wld.setFlowPriority(flowName, priority);
+	    int actual = wld.getFlowPriority(flowName);
 		//checks to see if the priority has been correctly set to flowName
-		assertEquals(priority, wld.getFlowPriority(flowName));
-		fail("Not yet implemented");
+		assertEquals(priority, actual,String.format("Expected %d Flow Priority but got %d.", priority, actual));
 	}
     /**
      * Tests to see if the amount of flow transmission attempts
@@ -98,8 +121,7 @@ class WorkLoadTest {
 		int expected = 3;
 		
 		
-		assertEquals(expected,numAttempts);
-		
+		assertEquals(expected,numAttempts, String.format("Expected %d transmission attempts but got %d.", expected, numAttempts));
 	}
     /**
      * Expects to accurately get flow names in the order they are 
@@ -115,9 +137,22 @@ class WorkLoadTest {
 		
 		List<String> actual = wld.getFlowNamesInOriginalOrder();
 		
-		assertEquals(expected, actual);
+		assertEquals(expected, actual, String.format("Expected Flow names %s, but got %s", expected, actual));
+	}
+	/**
+	 * Tests to see if any flow names are gotten in 
+	 * an empty workload
+	 */
+	@Test
+	void testGetFlowNamesEmpty() {
+		WorkLoad wld = new WorkLoad(0.9,0.99,"EmptyWorkload.txt");
+		String[] flowNames = {};
 		
-		fail("Not yet implemented");
+		List<String> expected = new ArrayList<String>(Arrays.asList(flowNames));
+		
+		List<String> actual = wld.getFlowNamesInOriginalOrder();
+		
+		assertEquals(expected, actual, String.format("Expected Flow names %s, but got %s", expected, actual));
 	}
 	/**
 	 * Tests to get index of a node that already exists 
@@ -131,10 +166,7 @@ class WorkLoadTest {
 		int actual = wld.getNodeIndex(nodeName);
 		int expected = 1;
 		
-		assertEquals(expected,actual);
-		
-		
-		fail("Not yet implemented");
+		assertEquals(expected,actual,String.format("Expected Node index %d but got %d.", expected, actual));
 	}
 	/**
 	 * When testing for a node where the index doesn't exist
@@ -149,12 +181,7 @@ class WorkLoadTest {
 		int actual = wld.getNodeIndex(nodeName);
 		int expected = 0;
 		
-		assertEquals(expected,actual);
-		
-		
-		
-	
-		
+		assertEquals(expected,actual,String.format("Expected node index %d but got %d.", expected, actual));
 	}
 	/**
 	 * Tests if the number of transmission attempts per link
@@ -166,17 +193,10 @@ class WorkLoadTest {
 		String flowName = "F0";
 		
 		
-		int expected = 3;
-		
-		assertEquals(expected, wld.getNumTxAttemptsPerLink(flowName));
-		
-		
-		 
-		
-		
-	}
-	
-	
+		Integer[] expected = {3,3,0};	
+		System.out.print(wld.getNumTxAttemptsPerLink(flowName));
+		assertEquals(expected,wld.getNumTxAttemptsPerLink(flowName));
+	}	
 	/**
 	 * Tests to see if maxFlowLength accurately gets the right 
 	 * flow that has the most nodes
@@ -190,9 +210,21 @@ class WorkLoadTest {
 		int actual = wld.maxFlowLength();
 		
 		assertEquals(expected,actual);
-		
 	}
-	
+	/**
+	 * Tests to see if 0 is gotten for the max length in
+	 * an empty workload.
+	 */
+	@Test
+	void testMaxFlowLengthEmpty() {
+		//initialize new workLoad
+		WorkLoad wld = new WorkLoad(0.9,0.99,"EmptyWorkload.txt");
+		//6 is the highest length of a flow in Example2.txt
+		int expected = 0;
+		int actual = wld.maxFlowLength();
+		
+		assertEquals(expected,actual);
+	}
 	
 	/**
 	 * Tests a flow not found in the file.
