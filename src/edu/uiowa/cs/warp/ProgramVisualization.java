@@ -28,7 +28,7 @@ public class ProgramVisualization extends VisualizationObject {
 	 * 
 	 * @param warp interface that will be used for visualization
 	 */
-	ProgramVisualization(WarpInterface warp) {
+	ProgramVisualization(String/*No type specified*/ warp) {
 		super(new FileManager(), warp, SOURCE_SUFFIX);
 		this.program = warp.toProgram();
 		this.sourceCode = program.getSchedule();

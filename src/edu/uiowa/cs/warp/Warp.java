@@ -278,7 +278,7 @@ public class Warp {
 	 * @param choice An item from the SystemChoices enum that specifies what
 	 *               visualization to create.
 	 */
-	private static void visualize(WarpInterface warp, SystemChoices choice) {
+	private static void visualize(String/*No type specified*/ warp, SystemChoices choice) {
 		var viz = VisualizationFactory.createProgramVisualization(warp, outputSubDirectory, choice);
 		if (viz != null) {
 			viz.toFile();
@@ -301,7 +301,7 @@ public class Warp {
 	 * 
 	 * @param warp The WarpInterface to verify.
 	 */
-	private static void verifyPerformanceRequirements(WarpInterface warp) {
+	private static void verifyPerformanceRequirements(String/*No type specified*/ warp) {
 		verifyDeadlines(warp);
 		verifyReliabilities(warp);
 		verifyNoChannelConflicts(warp);
@@ -316,7 +316,7 @@ public class Warp {
 	 * 
 	 * @param warp The WarpInterface to check the reliabilities of.
 	 */
-	private static void verifyReliabilities(WarpInterface warp) {
+	private static void verifyReliabilities(String/*No type specified*/ warp) {
 		if (schedulerSelected != ScheduleChoices.RTHART) {
 			/* RealTime HART doesn't adhere to reliability targets */
 			if (!warp.reliabilitiesMet()) {
@@ -340,7 +340,7 @@ public class Warp {
 	 * 
 	 * @param warp The WarpInterface to check the deadlines of.
 	 */
-	private static void verifyDeadlines(WarpInterface warp) {
+	private static void verifyDeadlines(String/*No type specified*/ warp) {
 		if (!warp.deadlinesMet()) {
 			System.err.printf("\n\tERROR: Not all flows meet their deadlines under %s scheduling.\n",
 					schedulerSelected.toString());
@@ -360,7 +360,7 @@ public class Warp {
 	 * 
 	 * @param warp The WarpInterface to check the channel conflicts of.
 	 */
-	private static void verifyNoChannelConflicts(WarpInterface warp) {
+	private static void verifyNoChannelConflicts(String/*No type specified*/ warp) {
 		if (warp.toChannelAnalysis().isChannelConflict()) {
 			System.err.printf("\n\tERROR: Channel conficts exists. See Channel Visualization for details.\n");
 			if (!caRequested) { // only need to create the visualization if not already requested

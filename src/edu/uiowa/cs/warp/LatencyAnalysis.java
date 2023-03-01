@@ -17,7 +17,7 @@ public class LatencyAnalysis {
   private ProgramSchedule programTable;
   private HashMap<String, Integer> nodeIndex;
 
-  LatencyAnalysis(WarpInterface warp) {
+  LatencyAnalysis(String/*No type specified*/ warp) {
     this.latencyReport = new Description();
     this.program = warp.toProgram();
     this.workload = warp.toWorkload();

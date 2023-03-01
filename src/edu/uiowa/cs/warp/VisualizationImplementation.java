@@ -18,7 +18,6 @@ public class VisualizationImplementation implements Visualization {
 	private String inputFileName;
 	private String fileNameTemplate;
 	private FileManager fm = null;
-	private WarpInterface warp = null;
 	private WorkLoad workLoad = null;
 	private VisualizationObject visualizationObject;
 
@@ -33,7 +32,7 @@ public class VisualizationImplementation implements Visualization {
 	 * @param choice          the choice in which the user decides for creating the
 	 *                        visualization
 	 */
-	public VisualizationImplementation(WarpInterface warp, String outputDirectory, SystemChoices choice) {
+	public VisualizationImplementation(String/*No type specified*/ warp, String outputDirectory, SystemChoices choice) {
 		this.fm = new FileManager();
 		this.warp = warp;
 		inputFileName = warp.toWorkload().getInputFileName();
