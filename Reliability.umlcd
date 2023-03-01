@@ -57,41 +57,6 @@
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_9geoULhDEe2QK54y_oSyxw" sourceConnectionVisual="_9geoUbhDEe2QK54y_oSyxw" text="ReliabilityVisualization creates the visualizations for&#xD;&#xA;the reliability analysis of the WARP program. &lt;p>&#xD;&#xA;&#xD;&#xA;CS2820 Spring 2023 Project: Implement this class to create&#xD;&#xA;the file visualization that is requested in Warp.&#xD;&#xA;&#xD;&#xA;@author sgoddard&#xD;&#xA; *" item="_9gf2cLhDEe2QK54y_oSyxw">
     <modelElement href="Reliability.uml#_23p6M7hDEe2QK54y_oSyxw"/>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_9gTCILhDEe2QK54y_oSyxw" comments="_9gSbELhDEe2QK54y_oSyxw" targetConnectionVisual="_9gSbEbhDEe2QK54y_oSyxw" name="ReliabilityAnalysis" associationsIn="_9geBQLhDEe2QK54y_oSyxw">
-    <modelElement href="Reliability.uml#_2qExMLhDEe2QK54y_oSyxw"/>
-    <visualProperties xmi:id="_9gTCIbhDEe2QK54y_oSyxw" position="1083.0,579.0" size="-1.0,-1.0"/>
-    <visibility xmi:id="_9gTCIrhDEe2QK54y_oSyxw" label="+"/>
-    <operations xmi:id="_9gTCI7hDEe2QK54y_oSyxw" name="verifyReliabilities">
-      <modelElement href="Reliability.uml#_2qExMbhDEe2QK54y_oSyxw"/>
-      <visibility xmi:id="_9gTCJLhDEe2QK54y_oSyxw" label="+"/>
-      <cardinality xmi:id="_9gTCJbhDEe2QK54y_oSyxw" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_9gTCJrhDEe2QK54y_oSyxw">
-        <modelElement href="Reliability.uml#_2qExMrhDEe2QK54y_oSyxw"/>
-        <type xmi:id="_9gTCJ7hDEe2QK54y_oSyxw" name="Boolean">
-          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </type>
-      </outParameters>
-    </operations>
-    <operations xmi:id="_9gTCKLhDEe2QK54y_oSyxw" name="ReliabilityAnalysis">
-      <modelElement href="Reliability.uml#_20uiBrhDEe2QK54y_oSyxw"/>
-      <keywords xmi:id="_9gTCKbhDEe2QK54y_oSyxw" keyword="create"/>
-      <visibility xmi:id="_9gTCKrhDEe2QK54y_oSyxw" label="+"/>
-      <cardinality xmi:id="_9gTCK7hDEe2QK54y_oSyxw" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_9gTCLLhDEe2QK54y_oSyxw">
-        <modelElement href="Reliability.uml#_20uiCrhDEe2QK54y_oSyxw"/>
-        <type xmi:id="_9gTCLbhDEe2QK54y_oSyxw" name="ReliabilityAnalysis">
-          <modelElement href="Reliability.uml#_2qExMLhDEe2QK54y_oSyxw"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_9gTCLrhDEe2QK54y_oSyxw" name="program">
-        <modelElement href="Reliability.uml#_20uiB7hDEe2QK54y_oSyxw"/>
-        <cardinality xmi:id="_9gTCL7hDEe2QK54y_oSyxw" label="1" max="1" min="1"/>
-        <type xmi:id="_9gTCMLhDEe2QK54y_oSyxw" name="Program">
-          <modelElement href="Reliability.uml#_2pzEYbhDEe2QK54y_oSyxw"/>
-        </type>
-      </parameters>
-    </operations>
-  </nodes>
   <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_9gWFcLhDEe2QK54y_oSyxw" name="ReliabilityTable">
     <modelElement href="Reliability.uml#_2qGmYLhDEe2QK54y_oSyxw"/>
     <visualProperties xmi:id="_9gWFcbhDEe2QK54y_oSyxw" position="13.0,954.0" size="-1.0,-1.0"/>
@@ -642,5 +607,51 @@
         <modelElement href="Reliability.uml#_2qExMLhDEe2QK54y_oSyxw"/>
       </type>
     </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_9gTCILhDEe2QK54y_oSyxw" comments="_9gSbELhDEe2QK54y_oSyxw" targetConnectionVisual="_9gSbEbhDEe2QK54y_oSyxw" name="ReliabilityAnalysis" associationsIn="_9geBQLhDEe2QK54y_oSyxw">
+    <modelElement href="Reliability.uml#_2qExMLhDEe2QK54y_oSyxw"/>
+    <visualProperties xmi:id="_9gTCIbhDEe2QK54y_oSyxw" position="1083.0,579.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_9gTCIrhDEe2QK54y_oSyxw" label="+"/>
+    <operations xmi:id="_9gTCI7hDEe2QK54y_oSyxw" name="verifyReliabilities">
+      <modelElement href="Reliability.uml#_2qExMbhDEe2QK54y_oSyxw"/>
+      <visibility xmi:id="_9gTCJLhDEe2QK54y_oSyxw" label="+"/>
+      <cardinality xmi:id="_9gTCJbhDEe2QK54y_oSyxw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9gTCJrhDEe2QK54y_oSyxw">
+        <modelElement href="Reliability.uml#_2qExMrhDEe2QK54y_oSyxw"/>
+        <type xmi:id="_9gTCJ7hDEe2QK54y_oSyxw" name="Boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_9gTCKLhDEe2QK54y_oSyxw" name="ReliabilityAnalysis">
+      <modelElement href="Reliability.uml#_20uiBrhDEe2QK54y_oSyxw"/>
+      <keywords xmi:id="_9gTCKbhDEe2QK54y_oSyxw" keyword="create"/>
+      <visibility xmi:id="_9gTCKrhDEe2QK54y_oSyxw" label="+"/>
+      <cardinality xmi:id="_9gTCK7hDEe2QK54y_oSyxw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_9gTCLLhDEe2QK54y_oSyxw">
+        <modelElement href="Reliability.uml#_20uiCrhDEe2QK54y_oSyxw"/>
+        <type xmi:id="_9gTCLbhDEe2QK54y_oSyxw" name="ReliabilityAnalysis">
+          <modelElement href="Reliability.uml#_2qExMLhDEe2QK54y_oSyxw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_9gTCLrhDEe2QK54y_oSyxw" name="program">
+        <modelElement href="Reliability.uml#_20uiB7hDEe2QK54y_oSyxw"/>
+        <cardinality xmi:id="_9gTCL7hDEe2QK54y_oSyxw" label="1" max="1" min="1"/>
+        <type xmi:id="_9gTCMLhDEe2QK54y_oSyxw" name="Program">
+          <modelElement href="Reliability.uml#_2pzEYbhDEe2QK54y_oSyxw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_f5EpILhEEe2QK54y_oSyxw" name="getReliabilities">
+      <modelElement href="Reliability.uml#_f5ECELhEEe2QK54y_oSyxw"/>
+      <visibility xmi:id="_f5EpIbhEEe2QK54y_oSyxw" label="+"/>
+      <cardinality xmi:id="_f5EpIrhEEe2QK54y_oSyxw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_f5EpI7hEEe2QK54y_oSyxw">
+        <modelElement href="Reliability.uml#_f5ECEbhEEe2QK54y_oSyxw"/>
+        <type xmi:id="_f5EpJLhEEe2QK54y_oSyxw" name="ReliabilityTable">
+          <modelElement href="Reliability.uml#_2qGmYLhDEe2QK54y_oSyxw"/>
+        </type>
+      </outParameters>
+    </operations>
   </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

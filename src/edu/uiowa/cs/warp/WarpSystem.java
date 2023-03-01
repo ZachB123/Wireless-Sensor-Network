@@ -26,17 +26,14 @@ public class WarpSystem {
     createProgram(workLoad, numChannels, choice);
   }
 
-  @Override
   public WorkLoad toWorkload() {
     return workLoad;
   }
 
-  @Override
   public Program toProgram() {
     return program;
   }
 
-  @Override
   public ReliabilityAnalysis toReliabilityAnalysis() {
     // TODO Auto-generated method stub
     ra = new ReliabilityAnalysis(program);
@@ -49,7 +46,6 @@ public class WarpSystem {
     return null;
   }
 
-  @Override
   public LatencyAnalysis toLatencyAnalysis() {
     // TODO Auto-generated method stub
     la = new LatencyAnalysis(this);
