@@ -14,26 +14,12 @@ import edu.uiowa.cs.utilities.Utilities;
 
 class WorkLoadTest {
 	
-	// notes
-	// add messages to all asserts
-	// add at least two tests per method testing different files if there
-	// is only one scenario to test
-	// remove the weird spacing after the last line of code and the bracket
-	// remove the fails at the end of some of the tests
-	
-	// on testAddFlow add a method to test that a flow is overwritten
-	// I would do that by having a flow with some value set like period that isnt the default
-	// then when overwrittten make sure that the values are now the default
-	
-	// on testAddNodeToFlow make a method to test if the workload doesn't have a node
-	
-	// on testGetFlowNames try it with an empty workload
-	
     
 	/**
 	 * Tests to see if a flow is correctly added to a workload
 	 */
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testAddFlow() {
 		
 		//Initialize new workload and flowname
@@ -44,27 +30,31 @@ class WorkLoadTest {
 		
 		//check flows in the created workload, and return true if flowName
 		//is in it
-		assertTrue(wld.getFlows().containsKey(flowName),String.format("Expected true but got false"));
+		assertTrue(wld.getFlows().containsKey(flowName), String.format("Expected true but got false"));
 	}
+	
 	/**
 	 * Tests if added flow with same name overwrites existing
 	 * flow
 	 */
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testAddFlowOverwritten() {
 		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
 		String flowName = "F0";
 		
 		wld.addFlow(flowName);
 		
-		assertTrue(wld.getFlows().containsKey(flowName),String.format("Expected true but got false"));
+		assertTrue(wld.getFlows().containsKey(flowName), String.format("Expected true but got false"));
 		
 	}
+	
     /**
      * Tests that a node can be correctly added to a flow
      * in a workload
      */
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testAddNodeToFlow() {
 		//Initialize new workload, flowname, and nodename
 		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
@@ -77,11 +67,13 @@ class WorkLoadTest {
 		//Checking to see if the added node is present in workload.
 		assertTrue(wld.getNodes().containsKey(nodeName),String.format("Expected true but got false"));
 	}
+	
 	/**
 	 * Tests to see if a node will successfully get added to a
 	 * flow in an empty workload
 	 */
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testAddNodeToFlowEmpty() {
 		WorkLoad wld = new WorkLoad(0.9,0.99,"EmptyWorkload.txt");
 		String flowName = "F0";
@@ -90,13 +82,15 @@ class WorkLoadTest {
 		wld.addFlow(flowName);
 		wld.addNodeToFlow(flowName, nodeName);
 		
-		assertTrue(wld.getNodes().containsKey(nodeName),String.format("Expected true but got false"));
+		assertTrue(wld.getNodes().containsKey(nodeName), String.format("Expected true but got false"));
 	}
+	
 	/**
 	 * Tests that a priority can be correctly set to
 	 * flowName.
 	 */
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testSetFlowPriority() {
 		//Initialize new workload, flowname, and priority
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example1a.txt");
@@ -108,11 +102,13 @@ class WorkLoadTest {
 		//checks to see if the priority has been correctly set to flowName
 		assertEquals(priority, actual,String.format("Expected %d Flow Priority but got %d.", priority, actual));
 	}
+	
     /**
      * Tests to see if the amount of flow transmission attempts
      * per link is successfully gathered.
      */
 	@Test 
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetFlowTxAttemptsPerLink() {
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "Example1a.txt");
 		String flowName = "F0";
@@ -123,12 +119,13 @@ class WorkLoadTest {
 		
 		assertEquals(expected,numAttempts, String.format("Expected %d transmission attempts but got %d.", expected, numAttempts));
 	}
+	
     /**
      * Expects to accurately get flow names in the order they are 
      * originally in 
      */
-	
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetFlowNames() {
 		WorkLoad wld = new WorkLoad(0.9,0.99, "Example1a.txt");
 		String[] flowNames = {"F0", "F1"};
@@ -139,11 +136,13 @@ class WorkLoadTest {
 		
 		assertEquals(expected, actual, String.format("Expected Flow names %s, but got %s", expected, actual));
 	}
+	
 	/**
 	 * Tests to see if any flow names are gotten in 
 	 * an empty workload
 	 */
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetFlowNamesEmpty() {
 		WorkLoad wld = new WorkLoad(0.9,0.99,"EmptyWorkload.txt");
 		String[] flowNames = {};
@@ -154,10 +153,12 @@ class WorkLoadTest {
 		
 		assertEquals(expected, actual, String.format("Expected Flow names %s, but got %s", expected, actual));
 	}
+	
 	/**
 	 * Tests to get index of a node that already exists 
 	 */
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetNodeIndexExisting() {
 		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
 		
@@ -168,11 +169,13 @@ class WorkLoadTest {
 		
 		assertEquals(expected,actual,String.format("Expected Node index %d but got %d.", expected, actual));
 	}
+	
 	/**
 	 * When testing for a node where the index doesn't exist
 	 * in the flow, it should return 0
 	 */
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetNodeIndexNonExisting() {
 		WorkLoad wld = new WorkLoad(0.9,0.99,"Example1a.txt");
 		
@@ -183,25 +186,29 @@ class WorkLoadTest {
 		
 		assertEquals(expected,actual,String.format("Expected node index %d but got %d.", expected, actual));
 	}
+	
 	/**
 	 * Tests if the number of transmission attempts per link
 	 * is accurate.
 	 */
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testGetNumTxAttemptsPerLink() {
 		WorkLoad wld = new WorkLoad(0.9,0.99, "Example1a.txt");
 		String flowName = "F0";
 		
-		
-		Integer[] expected = {3,3,0};	
-		System.out.print(wld.getNumTxAttemptsPerLink(flowName));
-		assertEquals(expected,wld.getNumTxAttemptsPerLink(flowName));
+		Integer[] expected = {3,3,0};
+		Integer[] actual = wld.getNumTxAttemptsPerLink(flowName);
+
+		assertArrayEquals(expected, actual, String.format("expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
 	}	
+	
 	/**
 	 * Tests to see if maxFlowLength accurately gets the right 
 	 * flow that has the most nodes
 	 */
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testMaxFlowLength() {
 		//initialize new workLoad
 		WorkLoad wld = new WorkLoad(0.9,0.99,"Example2.txt");
@@ -211,11 +218,13 @@ class WorkLoadTest {
 		
 		assertEquals(expected,actual);
 	}
+	
 	/**
 	 * Tests to see if 0 is gotten for the max length in
 	 * an empty workload.
 	 */
 	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	void testMaxFlowLengthEmpty() {
 		//initialize new workLoad
 		WorkLoad wld = new WorkLoad(0.9,0.99,"EmptyWorkload.txt");
@@ -626,7 +635,7 @@ class WorkLoadTest {
 		WorkLoad wld = new WorkLoad(0.9, 0.99, "MixedNodes.txt");
 		
 		// creating expected and actual values
-		String[] expected = {"1A", "A1", "1B", "B1"};
+		String[] expected = {"1A", "1B", "A1", "B1"};
 		String[] actual = wld.getNodeNamesOrderedAlphabetically();
 		
 		assertArrayEquals(expected, actual, String.format("Expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
