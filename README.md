@@ -50,4 +50,4 @@ What each team member documented.
 
 # Homework 4
 
-* Created UML Diagrams for S
+* Created UML Diagrams for SchedulableObject, Workload, and all Reliability files
