@@ -48,46 +48,6 @@ What each team member documented.
 
 * Tests a,b,e,f,i,j,m,n
 
+# Homework 4
 
-
-
-* -v (verbose)
-* -sch priority (priority scheduler)
-* --all (all options)
-* -i <input file>
-* -o <output folder>
-
-# Homework 1
-
-For homework 1 I handled a variety of edge cases
-
-1. empty lines at the beginning and of the file
-2. extra spaces around filename and final curly bracket
-3. empty lines scattered throughout the flows
-
-# Homework 2
-
-What each team member documented.
-
-## Zach
-
-* Flow.java
-* a through k in Workload.java
-* Warp.java
-* Program.java
-
-## Noah
-
-* ProgramVisualization.java
-* VisualizationImplementation.java
-* l through w in Workload.java
-
-# Homework 3
-
-## Zach
-
-* Tests c,d,g,h,k,l,o,p
-
-## Noah
-
-* Tests a,b,e,f,i,j,m,n
+* Created UML Diagrams for S
