@@ -1,0 +1,3 @@
+MixedNodes {
+Flow: 1A -> A1 -> 1B -> B1
+}

@@ -1,4 +1,5 @@
 /*
+<<<<<<< HEAD
  * Copyright (c) 2015, 2020, Oracle and/or its affiliates. All rights reserved.
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  *
@@ -21,6 +22,30 @@
  *
  *
  *
+=======
+ * Copyright (c) 2015, 2021, Oracle and/or its affiliates. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Oracle designates this
+ * particular file as subject to the "Classpath" exception as provided
+ * by Oracle in the LICENSE file that accompanied this code.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ * accompanied this code).
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+>>>>>>> HW3
  */
 
 var noResult = {l: "No results found"};
@@ -29,19 +54,40 @@ var catModules = "Modules";
 var catPackages = "Packages";
 var catTypes = "Types";
 var catMembers = "Members";
+<<<<<<< HEAD
 var catSearchTags = "SearchTags";
 var highlight = "<span class=\"result-highlight\">$&</span>";
 var searchPattern = "";
 var RANKING_THRESHOLD = 2;
 var NO_MATCH = 0xffff;
 var MAX_RESULTS_PER_CATEGORY = 500;
+=======
+var catSearchTags = "Search Tags";
+var highlight = "<span class=\"result-highlight\">$&</span>";
+var searchPattern = "";
+var fallbackPattern = "";
+var RANKING_THRESHOLD = 2;
+var NO_MATCH = 0xffff;
+var MIN_RESULTS = 3;
+var MAX_RESULTS = 500;
+>>>>>>> HW3
 var UNNAMED = "<Unnamed>";
 function escapeHtml(str) {
     return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
+<<<<<<< HEAD
 function getHighlightedText(item, matcher) {
     var escapedItem = escapeHtml(item);
     return escapedItem.replace(matcher, highlight);
+=======
+function getHighlightedText(item, matcher, fallbackMatcher) {
+    var escapedItem = escapeHtml(item);
+    var highlighted = escapedItem.replace(matcher, highlight);
+    if (highlighted === escapedItem) {
+        highlighted = escapedItem.replace(fallbackMatcher, highlight)
+    }
+    return highlighted;
+>>>>>>> HW3
 }
 function getURLPrefix(ui) {
     var urlPrefix="";
@@ -60,11 +106,18 @@ function getURLPrefix(ui) {
                 }
             });
         }
+<<<<<<< HEAD
         return urlPrefix;
     }
     return urlPrefix;
 }
 function makeCamelCaseRegex(term) {
+=======
+    }
+    return urlPrefix;
+}
+function createSearchPattern(term) {
+>>>>>>> HW3
     var pattern = "";
     var isWordToken = false;
     term.replace(/,\s*/g, ", ").trim().split(/\s+/).forEach(function(w, index) {
@@ -91,6 +144,7 @@ function createMatcher(pattern, flags) {
     var isCamelCase = /[A-Z]/.test(pattern);
     return new RegExp(pattern, flags + (isCamelCase ? "" : "i"));
 }
+<<<<<<< HEAD
 var watermark = 'Search';
 $(function() {
     $("#search").val('');
@@ -113,6 +167,18 @@ $(function() {
     });
     $("#search").focus();
     $("#search")[0].setSelectionRange(0, 0);
+=======
+$(function() {
+    var search = $("#search-input");
+    var reset = $("#reset-button");
+    search.val('');
+    search.prop("disabled", false);
+    reset.prop("disabled", false);
+    reset.click(function() {
+        search.val('').focus();
+    });
+    search.focus();
+>>>>>>> HW3
 });
 $.widget("custom.catcomplete", $.ui.autocomplete, {
     _create: function() {
@@ -142,6 +208,7 @@ $.widget("custom.catcomplete", $.ui.autocomplete, {
     _renderItem: function(ul, item) {
         var label = "";
         var matcher = createMatcher(escapeHtml(searchPattern), "g");
+<<<<<<< HEAD
         if (item.category === catModules) {
             label = getHighlightedText(item.l, matcher);
         } else if (item.category === catPackages) {
@@ -156,12 +223,33 @@ $.widget("custom.catcomplete", $.ui.autocomplete, {
                     : getHighlightedText(item.c + "." + item.l, matcher);
         } else if (item.category === catSearchTags) {
             label = getHighlightedText(item.l, matcher);
+=======
+        var fallbackMatcher = new RegExp(fallbackPattern, "gi")
+        if (item.category === catModules) {
+            label = getHighlightedText(item.l, matcher, fallbackMatcher);
+        } else if (item.category === catPackages) {
+            label = getHighlightedText(item.l, matcher, fallbackMatcher);
+        } else if (item.category === catTypes) {
+            label = (item.p && item.p !== UNNAMED)
+                    ? getHighlightedText(item.p + "." + item.l, matcher, fallbackMatcher)
+                    : getHighlightedText(item.l, matcher, fallbackMatcher);
+        } else if (item.category === catMembers) {
+            label = (item.p && item.p !== UNNAMED)
+                    ? getHighlightedText(item.p + "." + item.c + "." + item.l, matcher, fallbackMatcher)
+                    : getHighlightedText(item.c + "." + item.l, matcher, fallbackMatcher);
+        } else if (item.category === catSearchTags) {
+            label = getHighlightedText(item.l, matcher, fallbackMatcher);
+>>>>>>> HW3
         } else {
             label = item.l;
         }
         var li = $("<li/>").appendTo(ul);
         var div = $("<div/>").appendTo(li);
+<<<<<<< HEAD
         if (item.category === catSearchTags) {
+=======
+        if (item.category === catSearchTags && item.h) {
+>>>>>>> HW3
             if (item.d) {
                 div.html(label + "<span class=\"search-tag-holder-result\"> (" + item.h + ")</span><br><span class=\"search-tag-desc-result\">"
                                 + item.d + "</span><br>");
@@ -186,18 +274,31 @@ function rankMatch(match, category) {
     var input = match.input;
     var leftBoundaryMatch = 2;
     var periferalMatch = 0;
+<<<<<<< HEAD
     var delta = 0;
     // make sure match is anchored on a left word boundary
     if (index === 0 || /\W/.test(input[index - 1]) || "_" === input[index - 1] || "_" === input[index]) {
         leftBoundaryMatch = 0;
     } else if (input[index] === input[index].toUpperCase() && !/^[A-Z0-9_$]+$/.test(input)) {
+=======
+    // make sure match is anchored on a left word boundary
+    if (index === 0 || /\W/.test(input[index - 1]) || "_" === input[index]) {
+        leftBoundaryMatch = 0;
+    } else if ("_" === input[index - 1] || (input[index] === input[index].toUpperCase() && !/^[A-Z0-9_$]+$/.test(input))) {
+>>>>>>> HW3
         leftBoundaryMatch = 1;
     }
     var matchEnd = index + match[0].length;
     var leftParen = input.indexOf("(");
+<<<<<<< HEAD
     // exclude peripheral matches
     if (category !== catModules && category !== catSearchTags) {
         var endOfName = leftParen > -1 ? leftParen : input.length;
+=======
+    var endOfName = leftParen > -1 ? leftParen : input.length;
+    // exclude peripheral matches
+    if (category !== catModules && category !== catSearchTags) {
+>>>>>>> HW3
         var delim = category === catPackages ? "/" : ".";
         if (leftParen > -1 && leftParen < index) {
             periferalMatch += 2;
@@ -205,6 +306,10 @@ function rankMatch(match, category) {
             periferalMatch += 2;
         }
     }
+<<<<<<< HEAD
+=======
+    var delta = match[0].length === endOfName ? 0 : 1; // rank full match higher than partial match
+>>>>>>> HW3
     for (var i = 1; i < match.length; i++) {
         // lower ranking if parts of the name are missing
         if (match[i])
@@ -222,13 +327,19 @@ function rankMatch(match, category) {
 }
 function doSearch(request, response) {
     var result = [];
+<<<<<<< HEAD
     var newResults = [];
 
     searchPattern = makeCamelCaseRegex(request.term);
+=======
+    searchPattern = createSearchPattern(request.term);
+    fallbackPattern = createSearchPattern(request.term.toLowerCase());
+>>>>>>> HW3
     if (searchPattern === "") {
         return this.close();
     }
     var camelCaseMatcher = createMatcher(searchPattern, "");
+<<<<<<< HEAD
     var boundaryMatcher = createMatcher("\\b" + searchPattern, "");
 
     function concatResults(a1, a2) {
@@ -304,6 +415,54 @@ function doSearch(request, response) {
         });
         result = concatResults(result, newResults);
     }
+=======
+    var fallbackMatcher = new RegExp(fallbackPattern, "i");
+
+    function searchIndexWithMatcher(indexArray, matcher, category, nameFunc) {
+        if (indexArray) {
+            var newResults = [];
+            $.each(indexArray, function (i, item) {
+                item.category = category;
+                var ranking = rankMatch(matcher.exec(nameFunc(item)), category);
+                if (ranking < RANKING_THRESHOLD) {
+                    newResults.push({ranking: ranking, item: item});
+                }
+                return newResults.length <= MAX_RESULTS;
+            });
+            return newResults.sort(function(e1, e2) {
+                return e1.ranking - e2.ranking;
+            }).map(function(e) {
+                return e.item;
+            });
+        }
+        return [];
+    }
+    function searchIndex(indexArray, category, nameFunc) {
+        var primaryResults = searchIndexWithMatcher(indexArray, camelCaseMatcher, category, nameFunc);
+        result = result.concat(primaryResults);
+        if (primaryResults.length <= MIN_RESULTS && !camelCaseMatcher.ignoreCase) {
+            var secondaryResults = searchIndexWithMatcher(indexArray, fallbackMatcher, category, nameFunc);
+            result = result.concat(secondaryResults.filter(function (item) {
+                return primaryResults.indexOf(item) === -1;
+            }));
+        }
+    }
+
+    searchIndex(moduleSearchIndex, catModules, function(item) { return item.l; });
+    searchIndex(packageSearchIndex, catPackages, function(item) {
+        return (item.m && request.term.indexOf("/") > -1)
+            ? (item.m + "/" + item.l) : item.l;
+    });
+    searchIndex(typeSearchIndex, catTypes, function(item) {
+        return request.term.indexOf(".") > -1 ? item.p + "." + item.l : item.l;
+    });
+    searchIndex(memberSearchIndex, catMembers, function(item) {
+        return request.term.indexOf(".") > -1
+            ? item.p + "." + item.c + "." + item.l : item.l;
+    });
+    searchIndex(tagSearchIndex, catSearchTags, function(item) { return item.l; });
+
+>>>>>>> HW3
     if (!indexFilesLoaded()) {
         updateSearchResults = function() {
             doSearch(request, response);
@@ -315,7 +474,40 @@ function doSearch(request, response) {
     response(result);
 }
 $(function() {
+<<<<<<< HEAD
     $("#search").catcomplete({
+=======
+    var expanded = false;
+    var windowWidth;
+    function collapse() {
+        if (expanded) {
+            $("div#navbar-top").removeAttr("style");
+            $("button#navbar-toggle-button")
+                .removeClass("expanded")
+                .attr("aria-expanded", "false");
+            expanded = false;
+        }
+    }
+    $("button#navbar-toggle-button").click(function (e) {
+        if (expanded) {
+            collapse();
+        } else {
+            $("div#navbar-top").height($("#navbar-top").prop("scrollHeight"));
+            $("button#navbar-toggle-button")
+                .addClass("expanded")
+                .attr("aria-expanded", "true");
+            expanded = true;
+            windowWidth = window.innerWidth;
+        }
+    });
+    $("ul.sub-nav-list-small li a").click(collapse);
+    $("input#search-input").focus(collapse);
+    $("main").click(collapse);
+    $(window).on("orientationchange", collapse).on("resize", function(e) {
+        if (expanded && windowWidth !== window.innerWidth) collapse();
+    });
+    $("#search-input").catcomplete({
+>>>>>>> HW3
         minLength: 1,
         delay: 300,
         source: doSearch,
@@ -323,7 +515,11 @@ $(function() {
             if (!ui.content.length) {
                 ui.content.push(noResult);
             } else {
+<<<<<<< HEAD
                 $("#search").empty();
+=======
+                $("#search-input").empty();
+>>>>>>> HW3
             }
         },
         autoFocus: true,
@@ -371,7 +567,11 @@ $(function() {
                 } else {
                     window.location.href = pathtoroot + url;
                 }
+<<<<<<< HEAD
                 $("#search").focus();
+=======
+                $("#search-input").focus();
+>>>>>>> HW3
             }
         }
     });

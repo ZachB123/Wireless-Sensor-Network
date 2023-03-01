@@ -1,0 +1,5 @@
+CustomWorkloadByZach {
+SamePeriod1 (70, 20, 10, 2) : A -> C -> D -> B
+SamePeriod2 (48, 20, 0, 5) : C -> D -> A -> B
+SamePeriod3 (23, 20, 16, 17) : D -> C -> A
+}

@@ -9,7 +9,11 @@ import java.util.ArrayList;
  *
  */
 public class Flow extends SchedulableObject implements Comparable<Flow> {
+public class Flow extends SchedulableObject implements Comparable<Flow> {
 
+	/**
+	 * Integer that represents an undefined value.
+	 */
 	/**
 	 * Integer that represents an undefined value.
 	 */
@@ -160,6 +164,7 @@ public class Flow extends SchedulableObject implements Comparable<Flow> {
 		return nodes;
 	}
 
+
 	/**
 	 * <h1>Returns an ArrayList of all the edges in the flow.</h1>
 	 * 
@@ -187,6 +192,7 @@ public class Flow extends SchedulableObject implements Comparable<Flow> {
 		edgePredecessor = edge;
 	}
 
+
 	/**
 	 * <h1>Adds a node to the flow.</h1>
 	 * <p>
@@ -204,6 +210,7 @@ public class Flow extends SchedulableObject implements Comparable<Flow> {
 		/* update predecessor for next edge added */
 		nodePredecessor = node;
 	}
+
 
 	/**
 	 * <h1>Returns the linkTxAndTotalCost ArrayList.</h1>
@@ -259,8 +266,18 @@ public class Flow extends SchedulableObject implements Comparable<Flow> {
 	public void setLinkTxAndTotalCost(ArrayList<Integer> linkTxAndTotalCost) {
 		this.linkTxAndTotalCost = linkTxAndTotalCost;
 	}
+	
+	@Override
+	public int compareTo(Flow flow) {
+		// ascending order (0 is highest priority)
+		return flow.getPriority() > this.getPriority() ? -1 : 1;
+	}
 
 	@Override
+	public String toString() {
+		return getName();
+	}
+
 	public int compareTo(Flow flow) {
 		// ascending order (0 is highest priority)
 		return flow.getPriority() > this.getPriority() ? -1 : 1;
