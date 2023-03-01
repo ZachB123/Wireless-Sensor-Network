@@ -17,9 +17,9 @@ public class ChannelVisualization extends VisualizationObject {
   private static final String OBJECT_NAME = "Channel Analysis";
   private ChannelAnalysis ca;
 
-  ChannelVisualization(String/*No type specified*/ warp) {
-    super(new FileManager(), warp, SOURCE_SUFFIX);
-    this.warp = warp;
+  ChannelVisualization(WarpSystem/*No type specified*/ warp) {
+    super(new FileManager(), warp.toString(), SOURCE_SUFFIX);
+//    this.warp = warp;
     this.ca = warp.toChannelAnalysis();
   }
 }

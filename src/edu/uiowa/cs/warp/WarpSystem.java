@@ -3,6 +3,8 @@
  */
 package edu.uiowa.cs.warp;
 
+import edu.uiowa.cs.warp.SystemAttributes.ScheduleChoices;
+
 /**
  * @author sgoddard
  * @version 1.4
@@ -40,7 +42,6 @@ public class WarpSystem {
     return ra;
   }
 
-  @Override
   public SimulatorInput toSimulator() {
     // TODO Auto-generated method stub
     return null;
@@ -52,14 +53,12 @@ public class WarpSystem {
     return la;
   }
 
-  @Override
   public ChannelAnalysis toChannelAnalysis() {
     // TODO Auto-generated method stub
     ca = new ChannelAnalysis(this);
     return ca;
   }
 
-  @Override
   public Boolean reliabilitiesMet() {
     if (ra == null) {
       ra = new ReliabilityAnalysis(program);
@@ -67,7 +66,6 @@ public class WarpSystem {
     return ra.verifyReliabilities();
   }
 
-  @Override
   public Boolean deadlinesMet() {
     Boolean result = true;
     if (program.deadlineMisses().size() > 0) {
@@ -83,47 +81,38 @@ public class WarpSystem {
   }
 
 
-  @Override
   public Integer getNumChannels() {
     return numChannels;
   }
 
-  @Override
   public Integer getNumFaults() {
     return program.getNumFaults();
   }
 
-  @Override
   public Double getMinPacketReceptionRate() {
     return workLoad.getMinPacketReceptionRate();
   }
 
-  @Override
   public Double getE2e() {
     return workLoad.getE2e();
   }
 
-  @Override
   public String getName() {
     return workLoad.getName();
   }
 
-  @Override
   public String getSchedulerName() {
     return program.getSchedulerName();
   }
 
-  @Override
   public Integer getNumTransmissions() {
     return program.getNumTransmissions();
   }
 
-  @Override
   public Boolean getOptimizationFlag() {
     return program.getOptimizationFlag();
   }
 
-  @Override
   public void toSensorNetwork() {
     // TODO Auto-generated method stub
 

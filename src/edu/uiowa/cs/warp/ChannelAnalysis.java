@@ -11,7 +11,7 @@ public class ChannelAnalysis {
   private ProgramSchedule programTable;
   private Boolean conflictExists;
 
-  ChannelAnalysis(String/*No type specified*/ warp) {
+  ChannelAnalysis(WarpSystem/*No type specified*/ warp) {
     this.program = warp.toProgram();
     this.programTable = program.getSchedule();
     conflictExists = false;

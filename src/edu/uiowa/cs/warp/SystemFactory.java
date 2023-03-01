@@ -13,7 +13,7 @@ import edu.uiowa.cs.warp.SystemAttributes.ScheduleChoices;
  *
  */
 public class SystemFactory {
-	public static void create(WorkLoad workload, Integer numChannels, ScheduleChoices choice) {
-		return new WarpSystem(workload,numChannels, choice);
+	public static WarpSystem create(WorkLoad workload, Integer numChannels, ScheduleChoices choice) {
+		return new WarpSystem(workload, numChannels, choice);
 	}
 }

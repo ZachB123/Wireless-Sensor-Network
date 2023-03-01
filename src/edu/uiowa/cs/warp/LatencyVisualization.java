@@ -19,9 +19,9 @@ public class LatencyVisualization extends VisualizationObject {
   private static final String OBJECT_NAME = "Latency Analysis";
   private LatencyAnalysis la;
 
-  LatencyVisualization(String/*No type specified*/ warp) {
-    super(new FileManager(), warp, SOURCE_SUFFIX);
-    this.warp = warp;
+  LatencyVisualization(WarpSystem/*No type specified*/ warp) {
+    super(new FileManager(), warp.toString(), SOURCE_SUFFIX);
+//    this.warp = warp;
     this.la = warp.toLatencyAnalysis();
   }
 }
