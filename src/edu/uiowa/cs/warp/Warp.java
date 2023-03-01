@@ -1,17 +1,17 @@
 /**
  * WARP: On-the-fly Program Synthesis for Agile, Real-time, and Reliable Wireless Networks. This
- * system generates node communication programs WARP uses programs to specify a networkâ€™s behavior
+ * system generates node communication programs WARP uses programs to specify a network’s behavior
  * and includes a synthesis procedure to automatically generate such programs from a high-level
- * specification of the systemâ€™s workload and topology. WARP has three unique features: <br>
+ * specification of the system’s workload and topology. WARP has three unique features: <br>
  * (1) WARP uses a domain-specific language to specify stateful programs that include conditional
- * statements to control when a flowâ€™s packets are transmitted. The execution paths of programs
+ * statements to control when a flow’s packets are transmitted. The execution paths of programs
  * depend on the pattern of packet losses observed at run-time, thereby enabling WARP to readily
  * adapt to packet losses due to short-term variations in link quality. <br>
  * (2) Our synthesis technique uses heuristics to improve network performance by considering
  * multiple packet loss patterns and associated execution paths when determining the transmissions
  * performed by nodes. Furthermore, the generated programs ensure that the likelihood of a flow
  * delivering its packets by its deadline exceeds a user-specified threshold. <br>
- * (3) WARP can adapt to workload and topology changes without explicitly reconstructing a networkâ€™s
+ * (3) WARP can adapt to workload and topology changes without explicitly reconstructing a network’s
  * program based on the observation that nodes can independently synthesize the same program when
  * they share the same workload and topology information. Simulations show that WARP improves
  * network throughput for data collection, dissemination, and mixed workloads on two realistic
@@ -191,10 +191,6 @@ public class Warp {
 		if (verboseMode) {
 			printWarpParameters();
 		}
-		// and print out the values if in verbose mode
-		if (verboseMode) {
-			printWarpParameters();
-		}
 
 		// Create and visualize the workload
 		// inputFile string, which may be null,
@@ -244,56 +240,7 @@ public class Warp {
 				visualize(warp, SystemChoices.RELIABILITIES);
 			}
 		}
-		// Create and visualize the workload
-		// inputFile string, which may be null,
-		WorkLoad workLoad = new WorkLoad(numFaults, minLQ, e2e, inputFile);
-		if (allRequested) {
-			for (WorkLoadChoices choice : WorkLoadChoices.values()) {
-				visualize(workLoad, choice); // visualize all Program choices
-			}
-			// Create and visualize the Warp System
-			if (schedulerRequested) {
-				WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
-				verifyPerformanceRequirements(warp);
-				for (SystemChoices choice : SystemChoices.values()) {
-					visualize(warp, choice); // visualize all System choices
-				}
-			} else { // create a system for all scheduler choices
-				for (ScheduleChoices sch : ScheduleChoices.values()) {
-					schedulerSelected = sch;
-					WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
-					verifyPerformanceRequirements(warp);
-					for (SystemChoices choice : SystemChoices.values()) {
-						visualize(warp, choice); // visualize all System choices
-					}
-				}
-			}
-		} else { // visualize warp workload, source program and other requested items
-			visualize(workLoad, WorkLoadChoices.INPUT_GRAPH);
-			if (wfRequested) {
-				visualize(workLoad, WorkLoadChoices.COMUNICATION_GRAPH);
-			}
-			if (gvRequested) {
-				visualize(workLoad, WorkLoadChoices.GRAPHVIZ);
-			}
-			WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
-			verifyPerformanceRequirements(warp);
-			visualize(warp, SystemChoices.SOURCE);
-			if (caRequested) {
-				visualize(warp, SystemChoices.CHANNEL);
-			}
-			if (laRequested) {
-				visualize(warp, SystemChoices.LATENCY);
-			}
-			if (latencyRequested || laRequested) {
-				visualize(warp, SystemChoices.LATENCY_REPORT);
-			}
-			if (raRequested) {
-				visualize(warp, SystemChoices.RELIABILITIES);
-			}
-		}
 
-	}
 	}
 
 	/**
@@ -483,51 +430,7 @@ public class Warp {
 		BooleanHolder verbose = new BooleanHolder();
 		StringHolder input = new StringHolder();
 		StringHolder output = new StringHolder();
-		// create holder objects for storing results ...
-		// BooleanHolder debug = new BooleanHolder();
-		StringHolder schedulerSelected = new StringHolder();
-		IntHolder channels = new IntHolder();
-		IntHolder faults = new IntHolder();
-		DoubleHolder m = new DoubleHolder();
-		DoubleHolder end2end = new DoubleHolder();
-		BooleanHolder gui = new BooleanHolder();
-		BooleanHolder gv = new BooleanHolder();
-		BooleanHolder wf = new BooleanHolder();
-		BooleanHolder ra = new BooleanHolder();
-		BooleanHolder la = new BooleanHolder();
-		BooleanHolder ca = new BooleanHolder();
-		BooleanHolder s = new BooleanHolder();
-		BooleanHolder all = new BooleanHolder();
-		BooleanHolder latency = new BooleanHolder();
-		BooleanHolder verbose = new BooleanHolder();
-		StringHolder input = new StringHolder();
-		StringHolder output = new StringHolder();
 
-		// create the parser and specify the allowed options ...
-		ArgParser parser = new ArgParser("java -jar warp.jar");
-		parser.addOption("-sch, --schedule %s {priority,rm,dm,rtHart,poset} #scheduler options", schedulerSelected);
-		parser.addOption("-c, --channels %d {[1,16]} #number of wireless channels", channels);
-		parser.addOption("-m %f {[0.5,1.0]} #minimum link quality in the system", m);
-		parser.addOption("-e, --e2e %f {[0.5,1.0]} #global end-to-end communcation reliability for all flows", end2end);
-		parser.addOption("-f, --faults %d {[1,10]} #number of faults per edge in a flow (per period)", faults);
-		parser.addOption("-gui %v #create a gui visualizations", gui);
-		parser.addOption("-gv %v #create a graph visualization (.gv) file for GraphViz", gv);
-		parser.addOption(
-				"-wf  %v #create a WARP (.wf) file that shows the maximum number of transmissions on each segment of the flow needed to meet the end-to-end reliability",
-				wf);
-		parser.addOption("-ra  %v #create a reliability analysis file (tab delimited .csv) for the warp program", ra);
-		parser.addOption("-la  %v #create a latency analysis file (tab delimited .csv) for the warp program", la);
-		parser.addOption("-ca  %v #create a channel analysis file (tab delimited .csv) for the warp program", ca);
-		parser.addOption("-s  %v #create a simulator input file (.txt) for the warp program", s);
-		parser.addOption("-a, --all  %v #create all output files (activates -gv, -wf, -ra, -s)", all);
-		parser.addOption("-l, --latency  %v #generates end-to-end latency report file (.txt)", latency);
-		parser.addOption("-i, --input %s #<InputFile> of graph flows (workload)", input);
-		parser.addOption("-o, --output %s #<OutputDIRECTORY> where output files will be placed", output);
-		parser.addOption(
-				"-v, --verbose %v #Echo input file name and parsed contents. Then for each flow instance: show maximum E2E latency and min/max communication cost for that instance of the flow",
-				verbose);
-		// parser.addOption ("-d, -debug, --debug %v #Debug mode: base directory =
-		// $HOME/Documents/WARP/", debug);
 		// create the parser and specify the allowed options ...
 		ArgParser parser = new ArgParser("java -jar warp.jar");
 		parser.addOption("-sch, --schedule %s {priority,rm,dm,rtHart,poset} #scheduler options", schedulerSelected);
@@ -556,35 +459,7 @@ public class Warp {
 
 		// match the arguments ...
 		parser.matchAllArgs(args);
-		// match the arguments ...
-		parser.matchAllArgs(args);
 
-		// Set WARP system configuration options
-		if (channels.value > 0) {
-			nChannels = channels.value; // set option specified
-		} else {
-			nChannels = NUM_CHANNELS; // set to default
-		}
-		if (faults.value > 0) { // global variable for # of Faults tolerated per edge
-			numFaults = faults.value; // set option specified
-		} else {
-			numFaults = DEFAULT_FAULTS_TOLERATED; // set to default
-		}
-		if (m.value > 0.0) { // global variable for minimum Link Quality in system
-			minLQ = m.value; // set option specified
-		} else {
-			minLQ = MIN_LQ; // set to default
-		}
-		if (end2end.value > 0.0) { // global variable for minimum Link Quality in system
-			e2e = end2end.value; // set option specified
-		} else {
-			e2e = E2E; // set to default
-		}
-		if (output.value != null) { // default output subdirectory (from working directory)
-			outputSubDirectory = output.value; // set option specified
-		} else {
-			outputSubDirectory = DEFAULT_OUTPUT_SUB_DIRECTORY; // set to default
-		}
 		// Set WARP system configuration options
 		if (channels.value > 0) {
 			nChannels = channels.value; // set option specified
@@ -630,28 +505,7 @@ public class Warp {
 			case "priority":
 				Warp.schedulerSelected = ScheduleChoices.PRIORITY;
 				break;
-		guiRequested = gui.value; // GraphVis file requested flag
-		gvRequested = gv.value; // GraphVis file requested flag
-		wfRequested = wf.value; // WARP file requested flag
-		raRequested = ra.value; // Reliability Analysis file requested flag
-		laRequested = la.value; // Latency Analysis file requested flag
-		caRequested = ca.value; // Latency Analysis file requested flag
-		simRequested = s.value; // Simulation file requested flag
-		allRequested = all.value; // all out files requested flag
-		latencyRequested = latency.value; // latency report requested flag
-		verboseMode = verbose.value; // verbose mode flag (mainly for running in IDE)
-		// debugMode = debug.value; // debug mode flag (mainly for running in IDE)
-		inputFile = input.value; // input file specified
-		if (schedulerSelected.value != null) { // can't switch on a null value so check then switch
-			schedulerRequested = true;
-			switch (schedulerSelected.value) {
-			case "priority":
-				Warp.schedulerSelected = ScheduleChoices.PRIORITY;
-				break;
 
-			case "rm":
-				Warp.schedulerSelected = ScheduleChoices.RM;
-				break;
 			case "rm":
 				Warp.schedulerSelected = ScheduleChoices.RM;
 				break;
@@ -659,20 +513,11 @@ public class Warp {
 			case "dm":
 				Warp.schedulerSelected = ScheduleChoices.DM;
 				break;
-			case "dm":
-				Warp.schedulerSelected = ScheduleChoices.DM;
-				break;
 
 			case "rtHart":
 				Warp.schedulerSelected = ScheduleChoices.RTHART;
 				break;
-			case "rtHart":
-				Warp.schedulerSelected = ScheduleChoices.RTHART;
-				break;
 
-			case "poset":
-				Warp.schedulerSelected = ScheduleChoices.POSET_PRIORITY;
-				break;
 			case "poset":
 				Warp.schedulerSelected = ScheduleChoices.POSET_PRIORITY;
 				break;

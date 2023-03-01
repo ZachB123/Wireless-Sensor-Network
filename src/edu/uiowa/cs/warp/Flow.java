@@ -9,7 +9,6 @@ import java.util.ArrayList;
  *
  */
 public class Flow extends SchedulableObject implements Comparable<Flow> {
-public class Flow extends SchedulableObject implements Comparable<Flow> {
 
 	/**
 	 * Integer that represents an undefined value.
@@ -265,17 +264,6 @@ public class Flow extends SchedulableObject implements Comparable<Flow> {
 	 */
 	public void setLinkTxAndTotalCost(ArrayList<Integer> linkTxAndTotalCost) {
 		this.linkTxAndTotalCost = linkTxAndTotalCost;
-	}
-	
-	@Override
-	public int compareTo(Flow flow) {
-		// ascending order (0 is highest priority)
-		return flow.getPriority() > this.getPriority() ? -1 : 1;
-	}
-
-	@Override
-	public String toString() {
-		return getName();
 	}
 
 	public int compareTo(Flow flow) {
