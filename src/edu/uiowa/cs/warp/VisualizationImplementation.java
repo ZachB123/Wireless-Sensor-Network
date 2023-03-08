@@ -20,6 +20,7 @@ public class VisualizationImplementation implements Visualization {
 	private FileManager fm = null;
 	private WorkLoad workLoad = null;
 	private VisualizationObject visualizationObject;
+	private WarpSystem warp;
 
 	/**
 	 * Initializes a new visualization by taking a warp interface, Output Directory
@@ -32,7 +33,7 @@ public class VisualizationImplementation implements Visualization {
 	 * @param choice          the choice in which the user decides for creating the
 	 *                        visualization
 	 */
-	public VisualizationImplementation(String/*No type specified*/ warp, String outputDirectory, SystemChoices choice) {
+	public VisualizationImplementation(WarpSystem/*No type specified*/ warp, String outputDirectory, SystemChoices choice) {
 		this.fm = new FileManager();
 		this.warp = warp;
 		inputFileName = warp.toWorkload().getInputFileName();
@@ -125,11 +126,11 @@ public class VisualizationImplementation implements Visualization {
 
 		case LATENCY_REPORT:
 			createVisualization(
-					new ReportVisualization(fm, warp, new LatencyAnalysis(warp).latencyReport(), "Latency"));
+					new ReportVisualization(fm, (SystemAttributes) warp, new LatencyAnalysis(warp).latencyReport(), "Latency"));
 			break;
 
 		case DEADLINE_REPORT:
-			createVisualization(new ReportVisualization(fm, warp, warp.toProgram().deadlineMisses(), "DeadlineMisses"));
+			createVisualization(new ReportVisualization(fm, (SystemAttributes) warp, warp.toProgram().deadlineMisses(), "DeadlineMisses"));
 			break;
 
 		default:

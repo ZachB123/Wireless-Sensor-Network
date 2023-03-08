@@ -15,7 +15,7 @@ import edu.uiowa.cs.warp.Visualization.WorkLoadChoices;
  */
 public class VisualizationFactory {
 	
-	public static Visualization createProgramVisualization(String/*No type specified*/ warp, 
+	public static Visualization createProgramVisualization(WarpSystem/*No type specified*/ warp, 
 			String outputDirectory, SystemChoices choice) {
 		return new VisualizationImplementation(warp, outputDirectory, choice);
 	}
