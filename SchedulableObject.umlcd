@@ -53,6 +53,12 @@
     </sourceRole>
     <targetRole xmi:id="_NtaGwLhAEe2QK54y_oSyxw" aggregationKind="NONE" name="endTimes" navigable="true">
       <modelElement href="SchedulableObject.uml#_JkJLUbhAEe2QK54y_oSyxw"/>
+      <stereotypes xmi:id="_zL4IQM3JEe2aPrCP15OoQw" name="Generics">
+        <modelElement href="SchedulableObject.uml#_JkKZcLhAEe2QK54y_oSyxw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_zL4IQc3JEe2aPrCP15OoQw" name="LegacyStyledElement">
+        <modelElement href="SchedulableObject.uml#_JkKZcbhAEe2QK54y_oSyxw"/>
+      </stereotypes>
       <visibility xmi:id="_NtaGwbhAEe2QK54y_oSyxw" label="-"/>
       <cardinality xmi:id="_NtaGwrhAEe2QK54y_oSyxw" label="1" max="1" min="1"/>
     </targetRole>
@@ -70,6 +76,9 @@
     </sourceRole>
     <targetRole xmi:id="_NtbU4bhAEe2QK54y_oSyxw" aggregationKind="NONE" name="subObjects" navigable="true">
       <modelElement href="SchedulableObject.uml#_JkLAgLhAEe2QK54y_oSyxw"/>
+      <stereotypes xmi:id="_zL4IQs3JEe2aPrCP15OoQw" name="Generics">
+        <modelElement href="SchedulableObject.uml#_JkLnkLhAEe2QK54y_oSyxw"/>
+      </stereotypes>
       <visibility xmi:id="_NtbU4rhAEe2QK54y_oSyxw" label="+"/>
       <cardinality xmi:id="_NtbU47hAEe2QK54y_oSyxw" label="1" max="1" min="1"/>
     </targetRole>
@@ -261,12 +270,12 @@
     <attributes xmi:id="_Ntb8M7hAEe2QK54y_oSyxw" name="endTimes">
       <modelElement href="SchedulableObject.uml#_JkJLUbhAEe2QK54y_oSyxw"/>
       <visualProperties xmi:id="_i8JVY7hAEe2QK54y_oSyxw" visible="false"/>
-      <stereotypes xmi:id="_Ntb8NLhAEe2QK54y_oSyxw" name="Generics">
-        <modelElement href="SchedulableObject.uml#_JkKZcLhAEe2QK54y_oSyxw"/>
-      </stereotypes>
-      <stereotypes xmi:id="_Ntb8NbhAEe2QK54y_oSyxw" name="LegacyStyledElement">
-        <modelElement href="SchedulableObject.uml#_JkKZcbhAEe2QK54y_oSyxw"/>
-      </stereotypes>
+      <stereotypes xmi:id="_zL-18M3JEe2aPrCP15OoQw" name="Generics"/>
+      <stereotypes xmi:id="_zL-18c3JEe2aPrCP15OoQw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_zMBSMM3JEe2aPrCP15OoQw" name="Generics"/>
+      <stereotypes xmi:id="_zMB5QM3JEe2aPrCP15OoQw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_zME8kM3JEe2aPrCP15OoQw" name="Generics"/>
+      <stereotypes xmi:id="_zMFjoM3JEe2aPrCP15OoQw" name="LegacyStyledElement"/>
       <visibility xmi:id="_Ntb8NrhAEe2QK54y_oSyxw" label="-"/>
       <cardinality xmi:id="_Ntb8N7hAEe2QK54y_oSyxw" label="1" max="1" min="1"/>
       <type xmi:id="_Ntb8OLhAEe2QK54y_oSyxw" name="PriorityQueue">
@@ -275,9 +284,9 @@
     </attributes>
     <attributes xmi:id="_Ntb8ObhAEe2QK54y_oSyxw" name="subObjects">
       <modelElement href="SchedulableObject.uml#_JkLAgLhAEe2QK54y_oSyxw"/>
-      <stereotypes xmi:id="_Ntb8OrhAEe2QK54y_oSyxw" name="Generics">
-        <modelElement href="SchedulableObject.uml#_JkLnkLhAEe2QK54y_oSyxw"/>
-      </stereotypes>
+      <stereotypes xmi:id="_zMCgUM3JEe2aPrCP15OoQw" name="Generics"/>
+      <stereotypes xmi:id="_zMDHYM3JEe2aPrCP15OoQw" name="Generics"/>
+      <stereotypes xmi:id="_zMGKsM3JEe2aPrCP15OoQw" name="Generics"/>
       <visibility xmi:id="_Ntb8O7hAEe2QK54y_oSyxw" label="+"/>
       <cardinality xmi:id="_Ntb8PLhAEe2QK54y_oSyxw" label="1" max="1" min="1"/>
       <type xmi:id="_Ntb8PbhAEe2QK54y_oSyxw" name="Queue">

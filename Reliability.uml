@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_2DVhULhDEe2QK54y_oSyxw" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_2DWIYLhDEe2QK54y_oSyxw" source="codegen">
         <details xmi:id="_2DWIYbhDEe2QK54y_oSyxw" key="codegenDirectory" value="/cs2820-spring23/src"/>
-        <details xmi:id="_4bdPQLhDEe2QK54y_oSyxw" key="AssociatedSourceCode" value="/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelAnalysis.java;2515762246/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelVisualization.java;1070766624/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Edge.java;2557287305/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyAnalysis.java;3858478543/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyVisualization.java;145326839/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramVisualization.java;3133153523/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityVisualization.java;2761325077/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemAttributes.java;876440066/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Visualization.java;2548788944/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationFactory.java;2085415425/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationImplementation.java;2968985512/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Warp.java;890900797/1;/cs2820-spring23/src/edu/uiowa/cs/warp/AbstractMap.java;2633489473/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activation.java;3634548837/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activations.java;3305092594/1;/cs2820-spring23/src/edu/uiowa/cs/warp/BasicPoset.java;3238489715/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Channels.java;3701064188/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CodeFragment.java;1941462046/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CombinedActivation.java;3978818808/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CommunicationGraph.java;724670632/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ConnectivityPoset.java;3754377617/1;/cs2820-spring23/src/edu/uiowa/cs/warp/DeadlineComparator.java;492899634/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Description.java;2283427202/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FileManager.java;1791012323/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Flow.java;3359544952/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowMap.java;3735737588/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowNodeToActivationMap.java;4234899521/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphViz.java;1071888484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphVizListener.java;2126849807/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GuiVisualization.java;654882569/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InputGraphFile.java;937049578/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InstructionTimeSlot.java;3408505142/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatestReleaseTimeComparator.java;1106993157/1;/cs2820-spring23/src/edu/uiowa/cs/warp/MaxPhaseComparator.java;1745026972/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Node.java;229355987/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NodeMap.java;2177811796/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NonPreemptiveSchedule.java;387408079/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NotImplentedVisualization.java;3646556153/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PeriodComparator.java;3057078727/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Poset.java;4263200805/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PreemptiveSchedule.java;3080876127/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PriorityComparator.java;349151360/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Program.java;144940582/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramSchedule.java;1770485609/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeComparator.java;2065273961/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeQueue.java;1776494724/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityAnalysis.java;3990561827/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityParameters.java;1976749484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityRow.java;3195166460/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityTable.java;2918095589/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReportVisualization.java;2571131140/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Row.java;3413533457/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObjectQueue.java;3263525257/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Schedule.java;3152618411/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTable.java;970860350/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTime.java;2579980776/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SimulatorInput.java;3699590899/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SortedPeriodQueue.java;3537725478/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemFactory.java;2627106768/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Table.java;2577872269/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationObject.java;1154791723/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadListener.java;195958787/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpDSL.java;1986156920/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpPoset.java;4000167019/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpSystem.java;2607595153/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoad.java;227050543/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadDescription.java;1720498685/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadTest.java;576926662/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObject.java;2451757979/1;"/>
+        <details xmi:id="_4bdPQLhDEe2QK54y_oSyxw" key="AssociatedSourceCode" value="/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelAnalysis.java;2515762246/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelVisualization.java;1070766624/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Edge.java;2557287305/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyAnalysis.java;3858478543/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyVisualization.java;145326839/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramVisualization.java;3133153523/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityVisualization.java;2761325077/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemAttributes.java;876440066/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Visualization.java;2548788944/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationFactory.java;3929205082/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationImplementation.java;300473813/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Warp.java;2403022037/1;/cs2820-spring23/src/edu/uiowa/cs/warp/AbstractMap.java;2633489473/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activation.java;3634548837/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activations.java;3305092594/1;/cs2820-spring23/src/edu/uiowa/cs/warp/BasicPoset.java;3238489715/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Channels.java;3701064188/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CodeFragment.java;1941462046/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CombinedActivation.java;3978818808/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CommunicationGraph.java;724670632/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ConnectivityPoset.java;3754377617/1;/cs2820-spring23/src/edu/uiowa/cs/warp/DeadlineComparator.java;492899634/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Description.java;2283427202/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FileManager.java;1791012323/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Flow.java;3359544952/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowMap.java;3735737588/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowNodeToActivationMap.java;4234899521/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphViz.java;1071888484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphVizListener.java;2126849807/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GuiVisualization.java;654882569/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InputGraphFile.java;937049578/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InstructionTimeSlot.java;3408505142/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatestReleaseTimeComparator.java;1106993157/1;/cs2820-spring23/src/edu/uiowa/cs/warp/MaxPhaseComparator.java;1745026972/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Node.java;229355987/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NodeMap.java;2177811796/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NonPreemptiveSchedule.java;387408079/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NotImplentedVisualization.java;3646556153/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PeriodComparator.java;3057078727/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Poset.java;4263200805/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PreemptiveSchedule.java;3080876127/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PriorityComparator.java;349151360/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Program.java;144940582/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramSchedule.java;1770485609/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeComparator.java;2065273961/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeQueue.java;1776494724/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityAnalysis.java;3324546741/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityParameters.java;1976749484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityRow.java;3195166460/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityTable.java;2918095589/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReportVisualization.java;2571131140/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Row.java;3413533457/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObjectQueue.java;3263525257/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Schedule.java;3152618411/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTable.java;970860350/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTime.java;2579980776/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SimulatorInput.java;3699590899/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SortedPeriodQueue.java;3537725478/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemFactory.java;2627106768/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Table.java;2577872269/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationObject.java;1154791723/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadListener.java;195958787/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpDSL.java;1986156920/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpPoset.java;4000167019/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpSystem.java;2607595153/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoad.java;1306107233/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadDescription.java;1720498685/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadTest.java;3314002610/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObject.java;2451757979/1;"/>
       </contents>
       <contents xmi:type="ecore:EAnnotation" xmi:id="_CEnDYLhbEe2q6biPu3WW0g" source="preferences">
         <contents xmi:type="ecore:EAnnotation" xmi:id="_CEnDYbhbEe2q6biPu3WW0g" source="com.yattasolutions.codegen.reverse">
@@ -7070,7 +7070,7 @@ of the visualization&#xD;
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2qExMLhDEe2QK54y_oSyxw" name="ReliabilityAnalysis">
-              <ownedComment xmi:id="_C0UCBbhbEe2q6biPu3WW0g">
+              <ownedComment xmi:id="_DX5q8M3KEe2aPrCP15OoQw">
                 <body>ReliabilityAnalysis analyzes the end-to-end reliability of messages&#xD;
 transmitted in flows for the WARP system.&#xD;
 &lt;p>&#xD;
@@ -7109,16 +7109,38 @@ extract the src and snk nodes from the instruction string in a program&#xD;
 schedule time slot.&#xD;
 &#xD;
 @author sgoddard&#xD;
-@version 1.5&#xD;
- *</body>
+@version 1.5 *</body>
               </ownedComment>
+              <ownedAttribute xmi:id="_DXqaYM3KEe2aPrCP15OoQw" name="DEFAULT_E2E" visibility="private" isLeaf="true" isStatic="true" type="_21600rhDEe2QK54y_oSyxw" isReadOnly="true">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_DXqaYc3KEe2aPrCP15OoQw" value="0.99"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_DXrBcM3KEe2aPrCP15OoQw" name="DEFAULT_MINPACKETRECEPTIONRATE" visibility="private" isLeaf="true" isStatic="true" type="_21600rhDEe2QK54y_oSyxw" isReadOnly="true">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_DXrBcc3KEe2aPrCP15OoQw" value="0.9"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_DXrBcs3KEe2aPrCP15OoQw" name="program" visibility="private" type="_2pzEYbhDEe2QK54y_oSyxw" association="_DYFRIM3KEe2aPrCP15OoQw">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_DXrBc83KEe2aPrCP15OoQw" value="null"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_DXrBdc3KEe2aPrCP15OoQw" name="e2e" visibility="private" type="_21600rhDEe2QK54y_oSyxw">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_DXrogM3KEe2aPrCP15OoQw" value="DEFAULT_E2E"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_DXsPkM3KEe2aPrCP15OoQw" name="minPacketReceptionRate" visibility="private" type="_21600rhDEe2QK54y_oSyxw">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_DXsPkc3KEe2aPrCP15OoQw" value="DEFAULT_MINPACKETRECEPTIONRATE"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_DXsPk83KEe2aPrCP15OoQw" name="numFaults" visibility="private">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_DXsPlM3KEe2aPrCP15OoQw" value="0"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_DXs2oc3KEe2aPrCP15OoQw" name="fixed" visibility="private">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_DXs2os3KEe2aPrCP15OoQw" value="false"/>
+              </ownedAttribute>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23W_Q7hDEe2QK54y_oSyxw" name="ReliabilityAnalysis" specification="_20uiBrhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23W_RLhDEe2QK54y_oSyxw" name="program" type="_2pzEYbhDEe2QK54y_oSyxw"/>
                 <ownedParameter xmi:id="_23W_RbhDEe2QK54y_oSyxw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return">
                   <name xsi:nil="true"/>
                 </ownedParameter>
                 <language>java</language>
-                <body>// TODO Auto-generated constructor stub&#xD;
+                <body>this.program = program;&#xD;
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23W_RrhDEe2QK54y_oSyxw" name="verifyReliabilities" specification="_2qExMbhDEe2QK54y_oSyxw">
@@ -7131,7 +7153,183 @@ schedule time slot.&#xD;
 		return true;&#xD;
 	</body>
               </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXxIEM3KEe2aPrCP15OoQw" name="ReliabilityAnalysis" specification="_DWptwM3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXxIEc3KEe2aPrCP15OoQw" name="e2e" type="_21600rhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXxIEs3KEe2aPrCP15OoQw" name="minPacketReceptionRate" type="_21600rhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXxIE83KEe2aPrCP15OoQw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
+                <language>java</language>
+                <body>this.e2e = e2e;&#xD;
+		this.minPacketReceptionRate = minPacketReceptionRate;&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXxIFM3KEe2aPrCP15OoQw" name="ReliabilityAnalysis" specification="_DXZ7sM3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXxIFc3KEe2aPrCP15OoQw" name="numFaults">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_DXxIFs3KEe2aPrCP15OoQw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
+                <language>java</language>
+                <body>this.numFaults = numFaults;&#xD;
+		this.fixed = true;&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXxIF83KEe2aPrCP15OoQw" name="numTxPerLinkAndTotalTxCost" specification="_DWqU1c3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXxIGM3KEe2aPrCP15OoQw" name="flow" type="_2pTVILhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXxIGc3KEe2aPrCP15OoQw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
+                <language>java</language>
+                <body>if (fixed) {&#xD;
+//			return getFixedTxPerLinkAndTotalTxCost(flow);&#xD;
+			return getFixedTxPerLinkAndTotalTxCost(flow);&#xD;
+		}&#xD;
+//		return numTxAttemptsPerLinkAndTotalTxAttempts(flow);&#xD;
+		return getTxPerLinkAndTotalTxCost(flow);&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXxIGs3KEe2aPrCP15OoQw" name="getFixedTxPerLinkAndTotalTxCost" specification="_DWsKAM3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXxIG83KEe2aPrCP15OoQw" name="flow" type="_2pTVILhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXxIHM3KEe2aPrCP15OoQw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
+                <language>java</language>
+                <body>var nodesInFlow = flow.nodes;&#xD;
+		var nNodesInFlow = nodesInFlow.size();&#xD;
+		ArrayList&lt;Integer> txArrayList = new ArrayList&lt;Integer>();&#xD;
+		/*&#xD;
+		 * Each node will have at most numFaults+1 transmissions. Because we don't know&#xD;
+		 * which nodes will send the message over an edge, we give the cost to each&#xD;
+		 * node.&#xD;
+		 */&#xD;
+		for (int i = 0; i &lt; nNodesInFlow; i++) {&#xD;
+			txArrayList.add(numFaults + 1);&#xD;
+		}&#xD;
+		/*&#xD;
+		 * now compute the maximum # of TX, assuming at most numFaults occur on an edge&#xD;
+		 * per period, and each edge requires at least one successful TX.&#xD;
+		 */&#xD;
+		var numEdgesInFlow = nNodesInFlow - 1;&#xD;
+		var maxFaultsInFlow = numEdgesInFlow * numFaults;&#xD;
+		txArrayList.add(numEdgesInFlow + maxFaultsInFlow);&#xD;
+		return txArrayList;&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXxIHc3KEe2aPrCP15OoQw" name="getTxPerLinkAndTotalTxCost" specification="_DWsxEc3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXxIHs3KEe2aPrCP15OoQw" name="flow" type="_2pTVILhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXxIH83KEe2aPrCP15OoQw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
+                <language>java</language>
+                <body>// I have no idea what this should be set to and we can't take it in as a &#xD;
+		// parameter according to the homework&#xD;
+		Double M = 0.99;&#xD;
+		&#xD;
+		var nodesInFlow = flow.nodes;&#xD;
+		// The last entry will contain the worst-case cost of transmitting E2E in isolation&#xD;
+		var nNodesInFlow = nodesInFlow.size(); &#xD;
+		// var nPushes = Array(repeating: 0, count: nNodesInFlow+1);&#xD;
+		// Array to track nPushes for each node in this flow (same as nTx per link)&#xD;
+		// Collections.nCopies initalized to 0&#xD;
+		var nPushes = new ArrayList&lt;Integer>(Collections.nCopies(nNodesInFlow + 1, 0 ));  &#xD;
+		// deprecated&#xD;
+		//Arrays.fill(nPushes, 0); // initialize to all 0 values&#xD;
+		var nHops = nNodesInFlow - 1;&#xD;
+		// minLinkReliablityNeded is the minimum reliability needed per link in a flow&#xD;
+		// to hit E2E&#xD;
+		// reliability for the flow&#xD;
+		// use max to handle rounding error when e2e == 1.0&#xD;
+		Double minLinkReliablityNeded = Math.max(e2e, Math.pow(e2e, (1.0 / (double) nHops)));&#xD;
+		// Now compute reliability of packet reaching each node in the given time slot&#xD;
+		// Start with a 2-D reliability window that is a 2-D matrix of no size&#xD;
+		// each row is a time slot, stating at time 0&#xD;
+		// each column represents the reliability of the packet reaching that node at&#xD;
+		// the current time slot (i.e., the row it is in)&#xD;
+		// will add rows as we compute reliabilities until the final reliability is&#xD;
+		// reached for all nodes.&#xD;
+		var reliabilityWindow = new ReliabilityTable(); //Vector&lt;Vector&lt;Double>>();&#xD;
+		var newReliabilityRow = new ReliabilityRow();&#xD;
+		for (int i = 0; i &lt; nNodesInFlow; i++) {&#xD;
+			// create the the row initialized with 0.0 values&#xD;
+			newReliabilityRow.add(0.0); &#xD;
+		}&#xD;
+		// now add row to the reliability window, Time 0&#xD;
+		reliabilityWindow.add(newReliabilityRow); &#xD;
+//		ReliabilityRow tmpVector = reliabilityWindow.get(0);&#xD;
+		// could be an issue here as idk if this needs to be copied or not&#xD;
+		var currentReliabilityRow = reliabilityWindow.get(0); //tmpVector.toArray(new Double[tmpVector.size()]);&#xD;
+		// var currentReliabilityRow = (Double[]) reliabilityWindow.get(0).toArray();&#xD;
+		// Want reliabilityWindow[0][0] = 1.0 (i.e., P(packet@FlowSrc) = 1&#xD;
+		// but I din't want to mess with the newReliablityRow vector I use below&#xD;
+		// So, we initialize this first entry to 1.0, wich is reliabilityWindow[0][0]&#xD;
+		// We will then update this row with computed values for each node and put it&#xD;
+		// back in the matrix&#xD;
+		currentReliabilityRow.set(0, 1.0); // initialize (i.e., P(packet@FlowSrc) = 1&#xD;
+		// the analysis will end when the e2e reliability matrix is met, initially the state &#xD;
+		// is not met and will be 0 with this statement&#xD;
+		Double e2eReliabilityState = currentReliabilityRow.get(nNodesInFlow - 1); &#xD;
+		var timeSlot = 0; // start time at 0&#xD;
+		// change to while and increment increment timeSlot because we don't know how long this schedule window will last&#xD;
+		while (e2eReliabilityState &lt; e2e) { &#xD;
+			var prevReliabilityRow = currentReliabilityRow;&#xD;
+			// would be reliabilityWindow[timeSlot] if working through a schedule&#xD;
+			currentReliabilityRow = newReliabilityRow; //.toArray(new Double[newReliabilityRow.size()]); &#xD;
+			// Now use each flow:src->sink to update reliability computations&#xD;
+			// this is the update formula for the state probabilities&#xD;
+			// nextState = (1 - M) * prevState + M*NextHighestFlowState&#xD;
+			// use MinLQ for M in above equation&#xD;
+			// NewSinkNodeState = (1-M)*PrevSnkNodeState + M*PrevSrcNodeState&#xD;
+			// loop through each node in the flow and update the states for each line (i.e) sink->src pair&#xD;
+			for (int nodeIndex = 0; nodeIndex &lt; (nNodesInFlow - 1); nodeIndex++) { &#xD;
+				var flowSrcNodeindex = nodeIndex;&#xD;
+				var flowSnkNodeindex = nodeIndex + 1;&#xD;
+				var prevSrcNodeState = prevReliabilityRow.get(flowSrcNodeindex); //[flowSrcNodeindex];&#xD;
+				var prevSnkNodeState = prevReliabilityRow.get(flowSnkNodeindex); //[flowSnkNodeindex];&#xD;
+				Double nextSnkState;&#xD;
+				// do a push until PrevSnk state > e2e to ensure next node reaches target E2E BUT skip if&#xD;
+				// no chance of success (i.e, source doesn't have packet) &#xD;
+				if ((prevSnkNodeState &lt; minLinkReliablityNeded) &amp;&amp; prevSrcNodeState > 0) { &#xD;
+					// need to continue attempting to Tx, so update current state&#xD;
+					nextSnkState = ((1.0 - M) * prevSnkNodeState) + (M * prevSrcNodeState); &#xD;
+					// increment the number of pushes for for this node to snk node&#xD;
+					nPushes.set(nodeIndex, nPushes.get(nodeIndex) + 1); //[nodeIndex] += 1; &#xD;
+				} else {&#xD;
+					// snkNode has met its reliability. Thus move on to the next node and record the reliability met&#xD;
+					nextSnkState = prevSnkNodeState; &#xD;
+				}&#xD;
+				// probabilities are non-decreasing so update if we were higher by carrying old value forward&#xD;
+				if (currentReliabilityRow.get(flowSrcNodeindex) &lt; prevReliabilityRow.get(flowSrcNodeindex)) { &#xD;
+					// carry forward the previous state for the src node, which may get overwritten later&#xD;
+					// by another instruction in this slot&#xD;
+					currentReliabilityRow.set(flowSrcNodeindex, prevReliabilityRow.get(flowSrcNodeindex)); &#xD;
+				}&#xD;
+				currentReliabilityRow.set(flowSnkNodeindex, nextSnkState);&#xD;
+			}&#xD;
+&#xD;
+			e2eReliabilityState = currentReliabilityRow.get(nNodesInFlow - 1);&#xD;
+			// so I think since we just use this reliabilityVector as the same thing as the currentReliabilityRow&#xD;
+			// we don't need it at all and can just replace currentReliabiliyVector with current ReliabilityRow&#xD;
+			ReliabilityRow currentReliabilityVector = new ReliabilityRow();&#xD;
+			// convert the row to a vector so we can add it to the reliability window&#xD;
+//			Collections.addAll(currentReliabilityVector, currentReliabilityRow);&#xD;
+			if (timeSlot &lt; reliabilityWindow.size()) {&#xD;
+				reliabilityWindow.set(timeSlot, (currentReliabilityRow));&#xD;
+			} else {&#xD;
+				reliabilityWindow.add(currentReliabilityRow);&#xD;
+			}&#xD;
+			timeSlot += 1; // increase to next time slot&#xD;
+		}&#xD;
+		var size = reliabilityWindow.size();&#xD;
+		// The total (worst-case) cost to transmit E2E in isolation with specified reliability &#xD;
+		// target is the number of rows in the reliabilityWindow&#xD;
+		nPushes.set(nNodesInFlow, size); //[nNodesInFlow] = size; &#xD;
+		ArrayList&lt;Integer> nPushesArrayList = new ArrayList&lt;Integer>();&#xD;
+		nPushesArrayList.addAll(nPushes);&#xD;
+//		Collections.addAll(nPushesArrayList, nPushes);&#xD;
+		return nPushesArrayList;&#xD;
+	</body>
+              </ownedBehavior>
               <ownedOperation xmi:id="_2qExMbhDEe2QK54y_oSyxw" name="verifyReliabilities" method="_23W_RrhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX6SAM3KEe2aPrCP15OoQw">
+                  <body>This method declares whether all reliabilities are met&#xD;
+	 * &#xD;
+	 * I don't know if this should be changed or if its supposed to always return true &#xD;
+	 * if packets are always pushed again until the minimum link reliability is met?&#xD;
+	 * &#xD;
+	 * @return Boolean true</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_2qExMrhDEe2QK54y_oSyxw" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
                 </ownedParameter>
@@ -7140,11 +7338,91 @@ schedule time slot.&#xD;
                 <eAnnotations xmi:id="_20uiCLhDEe2QK54y_oSyxw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_20uiCbhDEe2QK54y_oSyxw" key="create"/>
                 </eAnnotations>
+                <ownedComment xmi:id="_DX5q8c3KEe2aPrCP15OoQw">
+                  <body>Class constructor specifying the program&#xD;
+	 * &#xD;
+	 * @param program is the program schedule with flows to use</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_20uiB7hDEe2QK54y_oSyxw" name="program" type="_2pzEYbhDEe2QK54y_oSyxw"/>
                 <ownedParameter xmi:id="_20uiCrhDEe2QK54y_oSyxw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_f5ECELhEEe2QK54y_oSyxw" name="getReliabilities">
+                <ownedComment xmi:id="_DX5q9M3KEe2aPrCP15OoQw">
+                  <body>This method was generated with UML Lab in HW4&#xD;
+	 * &#xD;
+	 * @return a ReliabilityTable containing reliabilities of a packet&#xD;
+	 *         reaching each node in a flow at each time slot</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_f5ECEbhEEe2QK54y_oSyxw" type="_2qGmYLhDEe2QK54y_oSyxw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DWptwM3KEe2aPrCP15OoQw" name="ReliabilityAnalysis" method="_DXxIEM3KEe2aPrCP15OoQw">
+                <eAnnotations xmi:id="_DWqU083KEe2aPrCP15OoQw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DWqU1M3KEe2aPrCP15OoQw" key="create"/>
+                </eAnnotations>
+                <ownedComment xmi:id="_DX5q8s3KEe2aPrCP15OoQw">
+                  <body>Class constructor specifying end-to-end reliability and minimum packet reception rate&#xD;
+	 * &#xD;
+	 * @param e2e is a double representing the end-to-end reliability&#xD;
+	 * @param minPacketReceptionRate is a double representing the minimum packet reception rate</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_DWqU0M3KEe2aPrCP15OoQw" name="e2e" type="_21600rhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DWqU0c3KEe2aPrCP15OoQw" name="minPacketReceptionRate" type="_21600rhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DWqU0s3KEe2aPrCP15OoQw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DWqU1c3KEe2aPrCP15OoQw" name="numTxPerLinkAndTotalTxCost" method="_DXxIF83KEe2aPrCP15OoQw">
+                <ownedComment xmi:id="_DX6SAc3KEe2aPrCP15OoQw">
+                  <body>This method calculates a flow's numTxPerLinkAndTotalTxCost based on whether its fault tolerance is fixed&#xD;
+	 * &#xD;
+	 * If fixed is true, calculates the maximum number of transmissions per link and maximum total transmissions&#xD;
+	 * If fixed is false, calculates the number of transmission attempts (pushes) per link and total transmission attempts&#xD;
+	 * &#xD;
+	 * @param flow is the specified flow to calculate transmissions and cost for&#xD;
+	 * @return an ArrayList containing the number of transmissions per link and total cost of the specified flow</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_DWqU1s3KEe2aPrCP15OoQw" name="flow" type="_2pTVILhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DWq74M3KEe2aPrCP15OoQw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DWsKAM3KEe2aPrCP15OoQw" name="getFixedTxPerLinkAndTotalTxCost" visibility="private" method="_DXxIGs3KEe2aPrCP15OoQw">
+                <ownedComment xmi:id="_DX6SAs3KEe2aPrCP15OoQw">
+                  <body>This method takes a flow and adds its transmissions to an ArrayList. Each&#xD;
+	 * node has a max of numFaults +1. Once these are all added to the ArrayList,&#xD;
+	 * put the sum of the number of edges of the flow and the max faults in a flow&#xD;
+	 * into the ArrayList&#xD;
+	 * Method moved from Workload class&#xD;
+	 * &#xD;
+	 * @param flow is a specified flow object&#xD;
+	 * @return an ArrayList containing number of edges and max faults in the&#xD;
+	 *         selected flow</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_DWsKAc3KEe2aPrCP15OoQw" name="flow" type="_2pTVILhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DWsKAs3KEe2aPrCP15OoQw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DWsxEc3KEe2aPrCP15OoQw" name="getTxPerLinkAndTotalTxCost" visibility="private" method="_DXxIHc3KEe2aPrCP15OoQw">
+                <ownedComment xmi:id="_DX6SA83KEe2aPrCP15OoQw">
+                  <body>This method takes in a flow and calculates the number of transmission attempts&#xD;
+	 * per link between nodes and the total transmission attempts&#xD;
+	 * Method moved from Workload class&#xD;
+	 * &#xD;
+	 * @param flow is a specified flow object&#xD;
+	 * &#xD;
+	 * @return an ArrayList of the number of pushes</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_DWsxEs3KEe2aPrCP15OoQw" name="flow" type="_2pTVILhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DWtYIM3KEe2aPrCP15OoQw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DXZ7sM3KEe2aPrCP15OoQw" name="ReliabilityAnalysis" method="_DXxIFM3KEe2aPrCP15OoQw">
+                <eAnnotations xmi:id="_DXZ7s83KEe2aPrCP15OoQw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DXaiwM3KEe2aPrCP15OoQw" key="create"/>
+                </eAnnotations>
+                <ownedComment xmi:id="_DX5q883KEe2aPrCP15OoQw">
+                  <body>Class constructor specifying the number of faults, sets fixed to true&#xD;
+	 * &#xD;
+	 * @param numFaults is an Integer representing the number of faults</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_DXZ7sc3KEe2aPrCP15OoQw" name="numFaults">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_DXZ7ss3KEe2aPrCP15OoQw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_2qExM7hDEe2QK54y_oSyxw" name="ReliabilityParameters" visibility="package">
@@ -8891,35 +9169,54 @@ types of schedules.&#xD;
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2qfA4bhDEe2QK54y_oSyxw" name="VisualizationFactory">
-              <ownedComment xmi:id="_23p6QbhDEe2QK54y_oSyxw">
+              <ownedComment xmi:id="_DX6SBM3KEe2aPrCP15OoQw">
                 <body>Factory Class to create a visualization instance.&#xD;
 This factory can be used to create different&#xD;
 types of visualizations.&#xD;
 @author sgoddard&#xD;
  *</body>
               </ownedComment>
-              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23ZbhLhDEe2QK54y_oSyxw" name="createWorkLoadVisualization" specification="_2012xLhDEe2QK54y_oSyxw">
-                <ownedParameter xmi:id="_23ZbhbhDEe2QK54y_oSyxw" name="workload" type="_2q5QkLhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_23ZbhrhDEe2QK54y_oSyxw" name="outputDirectory">
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXxIIM3KEe2aPrCP15OoQw" name="createProgramVisualization" specification="_DXbJ0M3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXxIIc3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXxIIs3KEe2aPrCP15OoQw" name="outputDirectory">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_23Zbh7hDEe2QK54y_oSyxw" name="choice" type="_2qdywrhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_23ZbiLhDEe2QK54y_oSyxw" type="_2qckobhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_DXxII83KEe2aPrCP15OoQw" name="choice" type="_2012wLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXxIJM3KEe2aPrCP15OoQw" type="_2qckobhDEe2QK54y_oSyxw" direction="return"/>
+                <language>java</language>
+                <body>return new VisualizationImplementation(warp, outputDirectory, choice);&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXyWMM3KEe2aPrCP15OoQw" name="createWorkLoadVisualization" specification="_DXbw4M3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXyWMc3KEe2aPrCP15OoQw" name="workload" type="_2q5QkLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXyWMs3KEe2aPrCP15OoQw" name="outputDirectory">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_DXyWM83KEe2aPrCP15OoQw" name="choice" type="_2012wrhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXyWNM3KEe2aPrCP15OoQw" type="_2qckobhDEe2QK54y_oSyxw" direction="return"/>
                 <language>java</language>
                 <body>return new VisualizationImplementation(workload, outputDirectory, choice);&#xD;
 	</body>
               </ownedBehavior>
-              <ownedOperation xmi:id="_2012xLhDEe2QK54y_oSyxw" name="createWorkLoadVisualization" isStatic="true" method="_23ZbhLhDEe2QK54y_oSyxw">
-                <ownedParameter xmi:id="_2012xbhDEe2QK54y_oSyxw" name="workload" type="_2q5QkLhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_2012xrhDEe2QK54y_oSyxw" name="outputDirectory">
+              <ownedOperation xmi:id="_DXbJ0M3KEe2aPrCP15OoQw" name="createProgramVisualization" isStatic="true" method="_DXxIIM3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXbJ0c3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXbJ0s3KEe2aPrCP15OoQw" name="outputDirectory">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_2012x7hDEe2QK54y_oSyxw" name="choice" type="_2qdywrhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_202d0LhDEe2QK54y_oSyxw" type="_2qckobhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_DXbJ083KEe2aPrCP15OoQw" name="choice" type="_2012wLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXbJ1M3KEe2aPrCP15OoQw" type="_2qckobhDEe2QK54y_oSyxw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DXbw4M3KEe2aPrCP15OoQw" name="createWorkLoadVisualization" isStatic="true" method="_DXyWMM3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXbw4c3KEe2aPrCP15OoQw" name="workload" type="_2q5QkLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXbw4s3KEe2aPrCP15OoQw" name="outputDirectory">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_DXbw483KEe2aPrCP15OoQw" name="choice" type="_2012wrhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXbw5M3KEe2aPrCP15OoQw" type="_2qckobhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2qfn8LhDEe2QK54y_oSyxw" name="VisualizationImplementation">
-              <ownedComment xmi:id="_23qhQLhDEe2QK54y_oSyxw">
+              <ownedComment xmi:id="_DX6SBc3KEe2aPrCP15OoQw">
                 <body>@author sgoddard&#xD;
 @version 1.5</body>
               </ownedComment>
@@ -8942,6 +9239,7 @@ types of visualizations.&#xD;
                 <defaultValue xmi:type="uml:LiteralString" xmi:id="_222B4rhDEe2QK54y_oSyxw" value="null"/>
               </ownedAttribute>
               <ownedAttribute xmi:id="_222B5LhDEe2QK54y_oSyxw" name="visualizationObject" visibility="private" type="_2qirQLhDEe2QK54y_oSyxw" association="_24GmJLhDEe2QK54y_oSyxw"/>
+              <ownedAttribute xmi:id="_DXtdsM3KEe2aPrCP15OoQw" name="warp" visibility="private" type="_2qwGoLhDEe2QK54y_oSyxw" association="_DYGfQM3KEe2aPrCP15OoQw"/>
               <interfaceRealization xmi:id="_202d0bhDEe2QK54y_oSyxw" client="_2qfn8LhDEe2QK54y_oSyxw" supplier="_2qckobhDEe2QK54y_oSyxw" contract="_2qckobhDEe2QK54y_oSyxw"/>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23ZbibhDEe2QK54y_oSyxw" name="VisualizationImplementation" specification="_22CwobhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23ZbirhDEe2QK54y_oSyxw" name="workLoad" type="_2q5QkLhDEe2QK54y_oSyxw"/>
@@ -8949,7 +9247,9 @@ types of visualizations.&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23ZbjLhDEe2QK54y_oSyxw" name="choice" type="_22CJkrhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_23ZbjbhDEe2QK54y_oSyxw" type="_2qfn8LhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_23ZbjbhDEe2QK54y_oSyxw" type="_2qfn8LhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.fm = new FileManager();&#xD;
 		this.workLoad = workLoad;&#xD;
@@ -8974,6 +9274,7 @@ types of visualizations.&#xD;
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23ZbkLhDEe2QK54y_oSyxw" name="toString" specification="_2qg2GLhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23ZbkbhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <language>java</language>
@@ -9010,11 +9311,11 @@ types of visualizations.&#xD;
 &#xD;
 		case LATENCY_REPORT:&#xD;
 			createVisualization(&#xD;
-					new ReportVisualization(fm, warp, new LatencyAnalysis(warp).latencyReport(), &quot;Latency&quot;));&#xD;
+					new ReportVisualization(fm, (SystemAttributes) warp, new LatencyAnalysis(warp).latencyReport(), &quot;Latency&quot;));&#xD;
 			break;&#xD;
 &#xD;
 		case DEADLINE_REPORT:&#xD;
-			createVisualization(new ReportVisualization(fm, warp, warp.toProgram().deadlineMisses(), &quot;DeadlineMisses&quot;));&#xD;
+			createVisualization(new ReportVisualization(fm, (SystemAttributes) warp, warp.toProgram().deadlineMisses(), &quot;DeadlineMisses&quot;));&#xD;
 			break;&#xD;
 &#xD;
 		default:&#xD;
@@ -9061,6 +9362,7 @@ types of visualizations.&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23ZbmrhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <language>java</language>
@@ -9077,6 +9379,22 @@ types of visualizations.&#xD;
 		return fileNameTemplate;&#xD;
 	</body>
               </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXyWNc3KEe2aPrCP15OoQw" name="VisualizationImplementation" specification="_DXcX8M3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXyWNs3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXyWN83KEe2aPrCP15OoQw" name="outputDirectory">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_DXyWOM3KEe2aPrCP15OoQw" name="choice" type="_22CJkLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXyWOc3KEe2aPrCP15OoQw" type="_2qfn8LhDEe2QK54y_oSyxw" direction="return"/>
+                <language>java</language>
+                <body>this.fm = new FileManager();&#xD;
+		this.warp = warp;&#xD;
+		inputFileName = warp.toWorkload().getInputFileName();&#xD;
+		this.fileNameTemplate = createFileNameTemplate(outputDirectory);&#xD;
+		visualizationObject = null;&#xD;
+		createVisualization(choice);&#xD;
+	</body>
+              </ownedBehavior>
               <ownedOperation xmi:id="_2qg2ELhDEe2QK54y_oSyxw" name="toDisplay" method="_23ZbjrhDEe2QK54y_oSyxw"/>
               <ownedOperation xmi:id="_2qg2FLhDEe2QK54y_oSyxw" name="toFile" method="_23Zbj7hDEe2QK54y_oSyxw"/>
               <ownedOperation xmi:id="_2qg2GLhDEe2QK54y_oSyxw" name="toString" method="_23ZbkLhDEe2QK54y_oSyxw">
@@ -9085,7 +9403,7 @@ types of visualizations.&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2qhdI7hDEe2QK54y_oSyxw" name="createFileNameTemplate" visibility="private" method="_23ZbmLhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23qhRLhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX6SCs3KEe2aPrCP15OoQw">
                   <body>&lt;h1>Creates a file name template.&lt;/h1>&#xD;
 	 * &lt;p>Uses a string outputDirectory to create a template for a filename that allows&#xD;
 	 * for easier formatting if the '/' is used in the file name.&lt;/p>&#xD;
@@ -9104,7 +9422,7 @@ types of visualizations.&#xD;
                 <eAnnotations xmi:id="_22CwpbhDEe2QK54y_oSyxw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_22CwprhDEe2QK54y_oSyxw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_23qhQbhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX6SB83KEe2aPrCP15OoQw">
                   <body>Initializes a new visualization by taking in a Workload, Output Directory,&#xD;
 	 * and a SystemChoices enum and uses them to create a file name and&#xD;
 	 * visualization.&#xD;
@@ -9123,7 +9441,7 @@ types of visualizations.&#xD;
                 <ownedParameter xmi:id="_22Cwp7hDEe2QK54y_oSyxw" type="_2qfn8LhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_22CwqLhDEe2QK54y_oSyxw" name="createVisualization" visibility="private" method="_23ZbkrhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23qhQrhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX6SCM3KEe2aPrCP15OoQw">
                   <body>&lt;h1>Creates a visualization based on the SystemChoice provided&lt;/h1>&#xD;
 	 * &#xD;
 	 * @param choice can be set to different requests to change how visualization is&#xD;
@@ -9132,7 +9450,7 @@ types of visualizations.&#xD;
                 <ownedParameter xmi:id="_22CwqbhDEe2QK54y_oSyxw" name="choice" type="_22CJkLhDEe2QK54y_oSyxw"/>
               </ownedOperation>
               <ownedOperation xmi:id="_22CwqrhDEe2QK54y_oSyxw" name="createVisualization" visibility="private" method="_23ZblLhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23qhQ7hDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX6SCc3KEe2aPrCP15OoQw">
                   <body>&lt;h1>Creates a visualization based on the WorkloadChoice provided&lt;/h1>&#xD;
 	 * &#xD;
 	 * @param choice user choice for how visualization is represented</body>
@@ -9141,6 +9459,28 @@ types of visualizations.&#xD;
               </ownedOperation>
               <ownedOperation xmi:id="_22DXsLhDEe2QK54y_oSyxw" name="createVisualization" visibility="private" method="_23ZblrhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_22DXsbhDEe2QK54y_oSyxw" name="obj" type="_21q9MbhDEe2QK54y_oSyxw"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DXcX8M3KEe2aPrCP15OoQw" name="VisualizationImplementation" method="_DXyWNc3KEe2aPrCP15OoQw">
+                <eAnnotations xmi:id="_DXcX9c3KEe2aPrCP15OoQw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_DXcX9s3KEe2aPrCP15OoQw" key="create"/>
+                </eAnnotations>
+                <ownedComment xmi:id="_DX6SBs3KEe2aPrCP15OoQw">
+                  <body>Initializes a new visualization by taking a warp interface, Output Directory&#xD;
+	 * and a SystemChoices enum and uses them to create a file name and&#xD;
+	 * visualization.&#xD;
+	 * &#xD;
+	 * @param warp            interface in which workload will be retrieved&#xD;
+	 * @param outputDirectory a string representing the output directory for file&#xD;
+	 *                        name&#xD;
+	 * @param choice          the choice in which the user decides for creating the&#xD;
+	 *                        visualization</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_DXcX8c3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXcX8s3KEe2aPrCP15OoQw" name="outputDirectory">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_DXcX883KEe2aPrCP15OoQw" name="choice" type="_22CJkLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXcX9M3KEe2aPrCP15OoQw" type="_2qfn8LhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2qirQLhDEe2QK54y_oSyxw" name="VisualizationObject" visibility="package" isAbstract="true">
@@ -10262,10 +10602,8 @@ coordinator&#xD;
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2q5QkLhDEe2QK54y_oSyxw" name="WorkLoad">
-              <ownedComment xmi:id="_23rIVbhDEe2QK54y_oSyxw">
-                <body>&lt;h1>Represents all the flows in a file.&lt;/h1>&#xD;
-&#xD;
-Build the nodes and flows for the workload described in the workload&#xD;
+              <ownedComment xmi:id="_DX65F83KEe2aPrCP15OoQw">
+                <body>Build the nodes and flows for the workload described in the workload&#xD;
 description file, whose name is passed into the Constructor via the parameter&#xD;
 inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
 0.99, and numFaults = 1 when the second constructor is used.&#xD;
@@ -10327,7 +10665,9 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 <ownedParameter xmi:id="_23dF47hDEe2QK54y_oSyxw" name="inputFileName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_23dF5LhDEe2QK54y_oSyxw" type="_2q5QkLhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_23dF5LhDEe2QK54y_oSyxw" type="_2q5QkLhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>super(inputFileName);&#xD;
 		setDefaultParameters();&#xD;
@@ -10349,7 +10689,9 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 <ownedParameter xmi:id="_23dF6bhDEe2QK54y_oSyxw" name="inputFileName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_23dF6rhDEe2QK54y_oSyxw" type="_2q5QkLhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_23dF6rhDEe2QK54y_oSyxw" type="_2q5QkLhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>super(inputFileName);&#xD;
 		setDefaultParameters();&#xD;
@@ -10376,13 +10718,16 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23dF7LhDEe2QK54y_oSyxw" name="getE2e" specification="_2q7FwLhDEe2QK54y_oSyxw">
-                <ownedParameter xmi:id="_23dF7bhDEe2QK54y_oSyxw" type="_21600rhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_23dF7bhDEe2QK54y_oSyxw" type="_21600rhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>return e2e;&#xD;
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23dF7rhDEe2QK54y_oSyxw" name="getIntForFlowNames" specification="_2q7FwbhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23dF77hDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10391,6 +10736,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23dF8LhDEe2QK54y_oSyxw" name="getName" specification="_2q7Fw7hDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23dF8bhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10405,6 +10751,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23dF9LhDEe2QK54y_oSyxw" name="getMaxPhase" specification="_2q7FxbhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23dF9bhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10414,6 +10761,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23dF9rhDEe2QK54y_oSyxw" name="getMinPeriod" specification="_2q7s0LhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23dF97hDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10461,6 +10809,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23dGA7hDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10499,6 +10848,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23ds8rhDEe2QK54y_oSyxw" name="isIntForNodeNames" specification="_2q868rhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23ds87hDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10508,6 +10858,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23ds9LhDEe2QK54y_oSyxw" name="isIntForFlowNames" specification="_2q869LhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23ds9bhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10559,6 +10910,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23ds_LhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10567,7 +10919,6 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
 		Iterator&lt;Node> nodes = flow.nodes.iterator();&#xD;
 		while (nodes.hasNext()) {&#xD;
 			var node = nodes.next();&#xD;
-			// why is == used?&#xD;
 			if (node.getName() == nodeName) {&#xD;
 				priority = node.getPriority(); // found the src node, set its index&#xD;
 				break;&#xD;
@@ -10629,6 +10980,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23dtC7hDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10641,6 +10993,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23dtDrhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10653,6 +11006,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23dtEbhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10665,6 +11019,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23dtFLhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10677,6 +11032,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23dtF7hDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10689,6 +11045,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23eUArhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10773,6 +11130,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23eUDLhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10790,6 +11148,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23eUELhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -10828,8 +11187,11 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
 			/* set numTxPerLink based on M, E2E, and flow length */&#xD;
 			flowNode.numTxPerLink = (int) Math.ceil(nTx);&#xD;
 			/* Now compute nTx per link to reach E2E requirement. */&#xD;
-			ArrayList&lt;Integer> linkTxAndTotalCost = numTxAttemptsPerLinkAndTotalTxAttempts(flowNode, e2e, m, true);&#xD;
-			flowNode.linkTxAndTotalCost = linkTxAndTotalCost;&#xD;
+			// use constructor that doesn't set numFaults so fixed = false &#xD;
+			// numTxPerLinkAndTotalTxCost will calculate numTxAttemptsPerLinkAndTotalTxAttempts&#xD;
+			ReliabilityAnalysis reliabilityAnalysisObj = new ReliabilityAnalysis(e2e, minPacketReceptionRate);&#xD;
+			ArrayList&lt;Integer> linkTxAndTotalCost = reliabilityAnalysisObj.numTxPerLinkAndTotalTxCost(flowNode);            &#xD;
+			flowNode.linkTxAndTotalCost = linkTxAndTotalCost;                                                               &#xD;
 			flows.put(flowName, flowNode); // update flow node in Flows array&#xD;
 		} else { // should never happen...&#xD;
 			System.out.printf(&quot;\n\tWarning! Bad situation: Flow %s doesn't exist but &quot;&#xD;
@@ -10847,7 +11209,10 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
 			/* set numTxPerLink based on numFaults */&#xD;
 			flowNode.numTxPerLink = numFaults + 1;&#xD;
 			/* Now compute nTx per link to reach E2E requirement. */&#xD;
-			ArrayList&lt;Integer> linkTxAndTotalCost = getFixedTxPerLinkAndTotalTxCost(flowNode);&#xD;
+			// use numFaults constructor so fixed = true&#xD;
+			// numTxPerLinkAndTotalTxCost will return getFixedTxPerLinkAndTotalTxCost&#xD;
+			ReliabilityAnalysis reliabilityAnalysisObj = new ReliabilityAnalysis(numFaults);&#xD;
+			ArrayList&lt;Integer> linkTxAndTotalCost = reliabilityAnalysisObj.numTxPerLinkAndTotalTxCost(flowNode);&#xD;
 			flowNode.linkTxAndTotalCost = linkTxAndTotalCost;&#xD;
 			flows.put(flowName, flowNode); // update flow node in Flows array&#xD;
 		} else { // should never happen...&#xD;
@@ -10856,199 +11221,9 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
 		}&#xD;
 	</body>
               </ownedBehavior>
-              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23eUFbhDEe2QK54y_oSyxw" name="getFixedTxPerLinkAndTotalTxCost" specification="_21J_0LhDEe2QK54y_oSyxw">
-                <ownedParameter xmi:id="_23eUFrhDEe2QK54y_oSyxw" name="flow" type="_2pTVILhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_23eUF7hDEe2QK54y_oSyxw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
-                <language>java</language>
-                <body>var nodesInFlow = flow.nodes;&#xD;
-		var nNodesInFlow = nodesInFlow.size();&#xD;
-		ArrayList&lt;Integer> txArrayList = new ArrayList&lt;Integer>();&#xD;
-		/*&#xD;
-		 * Each node will have at most numFaults+1 transmissions. Because we don't know&#xD;
-		 * which nodes will send the message over an edge, we give the cost to each&#xD;
-		 * node.&#xD;
-		 */&#xD;
-		for (int i = 0; i &lt; nNodesInFlow; i++) {&#xD;
-			txArrayList.add(numFaults + 1);&#xD;
-		}&#xD;
-		/*&#xD;
-		 * now compute the maximum # of TX, assuming at most numFaults occur on an edge&#xD;
-		 * per period, and each edge requires at least one successful TX.&#xD;
-		 */&#xD;
-		var numEdgesInFlow = nNodesInFlow - 1;&#xD;
-		var maxFaultsInFlow = numEdgesInFlow * numFaults;&#xD;
-		txArrayList.add(numEdgesInFlow + maxFaultsInFlow);&#xD;
-		return txArrayList;&#xD;
-	</body>
-              </ownedBehavior>
-              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23e7ELhDEe2QK54y_oSyxw" name="numTxAttemptsPerLinkAndTotalTxAttempts" specification="_22LTg7hDEe2QK54y_oSyxw">
-                <ownedParameter xmi:id="_23e7EbhDEe2QK54y_oSyxw" name="flow" type="_2pTVILhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_23e7ErhDEe2QK54y_oSyxw" name="e2e" type="_21600rhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_23e7E7hDEe2QK54y_oSyxw" name="M" type="_21600rhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_23e7FLhDEe2QK54y_oSyxw" name="optimizationRequested">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-                </ownedParameter>
-                <ownedParameter xmi:id="_23e7FbhDEe2QK54y_oSyxw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
-                <language>java</language>
-                <body>var nodesInFlow = flow.nodes;&#xD;
-		var nNodesInFlow = nodesInFlow.size(); // The last entry will contain the worst-case cost of&#xD;
-												// transmitting E2E in isolation&#xD;
-		// var nPushes = Array(repeating: 0, count: nNodesInFlow+1);&#xD;
-		var nPushes = new Integer[nNodesInFlow + 1]; // Array to track nPushes for each node in this&#xD;
-														// flow (same as nTx per link)&#xD;
-		Arrays.fill(nPushes, 0); // initialize to all 0 values&#xD;
-		var nHops = nNodesInFlow - 1;&#xD;
-		// minLinkReliablityNeded is the minimum reliability needed per link in a flow&#xD;
-		// to hit E2E&#xD;
-		// reliability for the flow&#xD;
-		Double minLinkReliablityNeded = Math.max(e2e, Math.pow(e2e, (1.0 / (double) nHops))); // use max&#xD;
-																								// to&#xD;
-																								// handle&#xD;
-																								// rounding&#xD;
-																								// error&#xD;
-																								// when&#xD;
-																								// e2e ==&#xD;
-																								// 1.0&#xD;
-		// Now compute reliability of packet reaching each node in the given time slot&#xD;
-		// Start with a 2-D reliability window that is a 2-D matrix of no size&#xD;
-		// each row is a time slot, stating at time 0&#xD;
-		// each column represents the reliability of the packet reaching that node at&#xD;
-		// the&#xD;
-		// current time slot (i.e., the row it is in)&#xD;
-		// will add rows as we compute reliabilities until the final reliability is&#xD;
-		// reached&#xD;
-		// for all nodes.&#xD;
-		var reliabilityWindow = new Vector&lt;Vector&lt;Double>>();&#xD;
-		var newReliabilityRow = new Vector&lt;Double>();&#xD;
-		for (int i = 0; i &lt; nNodesInFlow; i++) {&#xD;
-			newReliabilityRow.add(0.0); // create the the row initialized with 0.0 values&#xD;
-		}&#xD;
-		reliabilityWindow.add(newReliabilityRow); // now add row to the reliability window, Time 0&#xD;
-		Vector&lt;Double> tmpVector = reliabilityWindow.get(0);&#xD;
-		var currentReliabilityRow = tmpVector.toArray(new Double[tmpVector.size()]);&#xD;
-		// var currentReliabilityRow = (Double[]) reliabilityWindow.get(0).toArray();&#xD;
-		// Want reliabilityWindow[0][0] = 1.0 (i.e., P(packet@FlowSrc) = 1&#xD;
-		// but I din't want to mess with the newReliablityRow vector I use below&#xD;
-		// So, we initialize this first entry to 1.0, wich is reliabilityWindow[0][0]&#xD;
-		// We will then update this row with computed values for each node and put it&#xD;
-		// back in the matrix&#xD;
-		currentReliabilityRow[0] = 1.0; // initialize (i.e., P(packet@FlowSrc) = 1&#xD;
-		Double e2eReliabilityState = currentReliabilityRow[nNodesInFlow - 1]; // the analysis will end&#xD;
-																				// when the 2e2&#xD;
-																				// reliability metrix is&#xD;
-																				// met, initially the&#xD;
-																				// state is not met and&#xD;
-																				// will be 0 with this&#xD;
-																				// statement&#xD;
-		var timeSlot = 0; // start time at 0&#xD;
-		while (e2eReliabilityState &lt; e2e) { // change to while and increment increment timeSlot becuase&#xD;
-											// we don't know how long this schedule window will last&#xD;
-			var prevReliabilityRow = currentReliabilityRow;&#xD;
-			currentReliabilityRow = newReliabilityRow.toArray(new Double[newReliabilityRow.size()]); // would&#xD;
-																										// be&#xD;
-																										// reliabilityWindow[timeSlot]&#xD;
-																										// if&#xD;
-																										// working&#xD;
-																										// through&#xD;
-																										// a&#xD;
-																										// schedule&#xD;
-			// Now use each flow:src->sink to update reliability computations&#xD;
-			// this is the update formula for the state probabilities&#xD;
-			// nextState = (1 - M) * prevState + M*NextHighestFlowState&#xD;
-			// use MinLQ for M in above equation&#xD;
-			// NewSinkNodeState = (1-M)*PrevSnkNodeState + M*PrevSrcNodeState&#xD;
-&#xD;
-			for (int nodeIndex = 0; nodeIndex &lt; (nNodesInFlow - 1); nodeIndex++) { // loop through each&#xD;
-																					// node in the flow and&#xD;
-																					// update the sates for&#xD;
-																					// each link (i.e.,&#xD;
-																					// sink->src pair)&#xD;
-				var flowSrcNodeindex = nodeIndex;&#xD;
-				var flowSnkNodeindex = nodeIndex + 1;&#xD;
-				var prevSrcNodeState = prevReliabilityRow[flowSrcNodeindex];&#xD;
-				var prevSnkNodeState = prevReliabilityRow[flowSnkNodeindex];&#xD;
-				Double nextSnkState;&#xD;
-				if ((prevSnkNodeState &lt; minLinkReliablityNeded) &amp;&amp; prevSrcNodeState > 0) { // do a push&#xD;
-																							// until PrevSnk&#xD;
-																							// state > e2e to&#xD;
-																							// ensure next&#xD;
-																							// node reaches&#xD;
-																							// target E2E BUT&#xD;
-																							// skip if no&#xD;
-																							// chance of&#xD;
-																							// success (i.e.,&#xD;
-																							// source doesn't&#xD;
-																							// have packet)&#xD;
-					nextSnkState = ((1.0 - M) * prevSnkNodeState) + (M * prevSrcNodeState); // need to&#xD;
-																							// continue&#xD;
-																							// attempting to&#xD;
-																							// Tx, so update&#xD;
-																							// current state&#xD;
-					nPushes[nodeIndex] += 1; // increment the number of pushes for for this node to snk node&#xD;
-				} else {&#xD;
-					nextSnkState = prevSnkNodeState; // snkNode has met its reliability. Thus move on to the&#xD;
-														// next node and record the reliability met&#xD;
-				}&#xD;
-&#xD;
-				if (currentReliabilityRow[flowSrcNodeindex] &lt; prevReliabilityRow[flowSrcNodeindex]) { // probabilities&#xD;
-																										// are&#xD;
-																										// non-decreasing&#xD;
-																										// so&#xD;
-																										// update&#xD;
-																										// if&#xD;
-																										// we&#xD;
-																										// were&#xD;
-																										// higher&#xD;
-																										// by&#xD;
-																										// carring&#xD;
-																										// old&#xD;
-																										// value&#xD;
-																										// forward&#xD;
-					currentReliabilityRow[flowSrcNodeindex] = prevReliabilityRow[flowSrcNodeindex]; // carry&#xD;
-																									// forward&#xD;
-																									// the&#xD;
-																									// previous&#xD;
-																									// state&#xD;
-																									// for the&#xD;
-																									// src&#xD;
-																									// node,&#xD;
-																									// which&#xD;
-																									// may get&#xD;
-																									// over&#xD;
-																									// written&#xD;
-																									// later&#xD;
-																									// by&#xD;
-																									// another&#xD;
-																									// instruction&#xD;
-																									// in this&#xD;
-																									// slot&#xD;
-				}&#xD;
-				currentReliabilityRow[flowSnkNodeindex] = nextSnkState;&#xD;
-			}&#xD;
-&#xD;
-			e2eReliabilityState = currentReliabilityRow[nNodesInFlow - 1];&#xD;
-			Vector&lt;Double> currentReliabilityVector = new Vector&lt;Double>();&#xD;
-			// convert the row to a vector so we can add it to the reliability window&#xD;
-			Collections.addAll(currentReliabilityVector, currentReliabilityRow);&#xD;
-			if (timeSlot &lt; reliabilityWindow.size()) {&#xD;
-				reliabilityWindow.set(timeSlot, (currentReliabilityVector));&#xD;
-			} else {&#xD;
-				reliabilityWindow.add(currentReliabilityVector);&#xD;
-			}&#xD;
-			timeSlot += 1; // increase to next time slot&#xD;
-		}&#xD;
-		var size = reliabilityWindow.size();&#xD;
-		nPushes[nNodesInFlow] = size; // The total (worst-case) cost to transmit E2E in isolation with&#xD;
-										// specified reliability target is the number of rows in the&#xD;
-										// reliabilityWindow&#xD;
-		// Now convert the array to the ArrayList needed to return&#xD;
-		ArrayList&lt;Integer> nPushesArrayList = new ArrayList&lt;Integer>();&#xD;
-		Collections.addAll(nPushesArrayList, nPushes);&#xD;
-		return nPushesArrayList;&#xD;
-	</body>
-              </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23e7FrhDEe2QK54y_oSyxw" name="getNodeNamesOrderedAlphabetically" specification="_2rAlULhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23e7F7hDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_23e7GLhDEe2QK54y_oSyxw" value="*"/>
                 </ownedParameter>
@@ -11089,7 +11264,9 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 <ownedParameter xmi:id="_23e7GrhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_23e7G7hDEe2QK54y_oSyxw" type="_2pTVILhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_23e7G7hDEe2QK54y_oSyxw" type="_2pTVILhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>var flow = flows.get(flowName); // get the requested flow node&#xD;
 		if (flow == null) {// return empty node if not found&#xD;
@@ -11101,6 +11278,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23e7HLhDEe2QK54y_oSyxw" name="getFlowNames" specification="_2rBMYLhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23e7HbhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_23e7HrhDEe2QK54y_oSyxw" value="*"/>
                 </ownedParameter>
@@ -11115,11 +11293,11 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23e7IbhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
-                <body>// public function to return the dictionary of nodes&#xD;
-		var index = 0;&#xD;
+                <body>var index = 0;&#xD;
 		var node = nodes.get(nodeName); // could throw an exception if null, but just return 0 for now&#xD;
 		if (node != null) {&#xD;
 			index = node.getIndex();&#xD;
@@ -11132,6 +11310,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23e7JLhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_23e7JbhDEe2QK54y_oSyxw" value="*"/>
                 </ownedParameter>
@@ -11157,6 +11336,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23e7JrhDEe2QK54y_oSyxw" name="getHyperPeriod" specification="_2rBzcLhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23e7J7hDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -11177,6 +11357,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23e7KrhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -11192,6 +11373,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23e7LbhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_23e7LrhDEe2QK54y_oSyxw" value="*"/>
                 </ownedParameter>
@@ -11199,8 +11381,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 <body>var flow = getFlow(flowName);&#xD;
 		var linkTxAndTotalCost = new ArrayList&lt;Integer>(flow.getLinkTxAndTotalCost());&#xD;
 		var lastElement = linkTxAndTotalCost.size() - 1;&#xD;
-		linkTxAndTotalCost.remove(lastElement); // remove the last element, because that is the sum of&#xD;
-												// others&#xD;
+		linkTxAndTotalCost.remove(lastElement); // remove the last element, because that is the sum of others&#xD;
 		return linkTxAndTotalCost.toArray(new Integer[0]);&#xD;
 	</body>
               </ownedBehavior>
@@ -11216,6 +11397,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23fiI7hDEe2QK54y_oSyxw" name="maxFlowLength" specification="_2rCagbhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23fiJLhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
                 <language>java</language>
@@ -11228,13 +11410,13 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
               </ownedBehavior>
               <ownedOperation xmi:id="_2q6esLhDEe2QK54y_oSyxw" name="setDefaultParameters" visibility="private" method="_23dF67hDEe2QK54y_oSyxw"/>
               <ownedOperation xmi:id="_2q7FwLhDEe2QK54y_oSyxw" name="getE2e" method="_23dF7LhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvZLhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX65Gs3KEe2aPrCP15OoQw">
                   <body>@return the e2e</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_22KseLhDEe2QK54y_oSyxw" type="_21600rhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_2q7FwbhDEe2QK54y_oSyxw" name="getIntForFlowNames" method="_23dF7rhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvZbhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX65G83KEe2aPrCP15OoQw">
                   <body>@return the intForFlowNames</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q7FwrhDEe2QK54y_oSyxw" direction="return">
@@ -11242,7 +11424,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q7Fw7hDEe2QK54y_oSyxw" name="getName" method="_23dF8LhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvZrhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX65HM3KEe2aPrCP15OoQw">
                   <body>@return the name</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q7FxLhDEe2QK54y_oSyxw" direction="return">
@@ -11250,7 +11432,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q7FxbhDEe2QK54y_oSyxw" name="getMaxPhase" method="_23dF9LhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvaLhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX7gIM3KEe2aPrCP15OoQw">
                   <body>@return the maximum phase of all flows</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q7FxrhDEe2QK54y_oSyxw" direction="return">
@@ -11258,7 +11440,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q7s0LhDEe2QK54y_oSyxw" name="getMinPeriod" method="_23dF9rhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvabhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX7gIc3KEe2aPrCP15OoQw">
                   <body>@return the minimum period of all flows</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q7s0bhDEe2QK54y_oSyxw" direction="return">
@@ -11266,7 +11448,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q8T4LhDEe2QK54y_oSyxw" name="setIntForFlowNames" method="_23dF-rhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rva7hDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX7gI83KEe2aPrCP15OoQw">
                   <body>@param intForFlowNames the intForFlowNames to set</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q8T4bhDEe2QK54y_oSyxw" name="intForFlowNames">
@@ -11274,7 +11456,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q8T4rhDEe2QK54y_oSyxw" name="setName" method="_23dF_LhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvbLhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX7gJM3KEe2aPrCP15OoQw">
                   <body>@param name the name to set</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q8T47hDEe2QK54y_oSyxw" name="name">
@@ -11282,7 +11464,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q8T5LhDEe2QK54y_oSyxw" name="setNodeChannel" method="_23dF_rhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvbbhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX7gJc3KEe2aPrCP15OoQw">
                   <body>@param name    the node whose channel is to be set&#xD;
 	 * @param channel the channel to set</body>
                 </ownedComment>
@@ -11294,7 +11476,7 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q8T57hDEe2QK54y_oSyxw" name="getNodeChannel" method="_23dGAbhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvbrhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX7gJs3KEe2aPrCP15OoQw">
                   <body>@return the node channel</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q8T6LhDEe2QK54y_oSyxw" name="name">
@@ -11305,12 +11487,10 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q868LhDEe2QK54y_oSyxw" name="addFlow" method="_23ds8LhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvb7hDEe2QK54y_oSyxw">
-                  <body>&lt;h1>Add a new flow to the Flows dictionary&lt;/h1>&#xD;
-	 * &lt;p>&#xD;
-	 * If the flow name already exists it will be overwritten with the new one.&#xD;
-	 * If any flow name is not an integer, the intForFlowNames will be permanently set to false for this workload.&#xD;
-	 * &lt;/p>&#xD;
+                <ownedComment xmi:id="_DX7gJ83KEe2aPrCP15OoQw">
+                  <body>This method will add a new flow to the Flows dictionary. If the flow being&#xD;
+	 * added is already in the dictionary it will overwrite the current entry but&#xD;
+	 * also produce a warning so the user knows if a flow has already been added&#xD;
 	 * &#xD;
 	 * @param flowName</body>
                 </ownedComment>
@@ -11319,23 +11499,29 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q868rhDEe2QK54y_oSyxw" name="isIntForNodeNames" method="_23ds8rhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX7gKM3KEe2aPrCP15OoQw">
+                  <body>@return intForNodeNames</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_2q8687hDEe2QK54y_oSyxw" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q869LhDEe2QK54y_oSyxw" name="isIntForFlowNames" method="_23ds9LhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX7gKc3KEe2aPrCP15OoQw">
+                  <body>@return intForFlowNames</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_2q869bhDEe2QK54y_oSyxw" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q9iALhDEe2QK54y_oSyxw" name="addNodeToFlow" method="_23ds9rhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvcLhDEe2QK54y_oSyxw">
-                  <body>&lt;h1>Adds a node to the given flow.&lt;/h1>&#xD;
-	 * &lt;p>&#xD;
-	 * If the node already exists in the workload, it will only be added to the flow. Otherwise a new node will be created.&#xD;
-	 * &lt;/p>&#xD;
-	 * @param flowName Name of flow to add the node to.&#xD;
-	 * @param nodeName The node that will be added to the flow.</body>
+                <ownedComment xmi:id="_DX7gKs3KEe2aPrCP15OoQw">
+                  <body>This method takes a node name and adds that node to a flow corresponding to&#xD;
+	 * the flow name. The node is appended to the node array for the given flow&#xD;
+	 * name.&#xD;
+	 * &#xD;
+	 * @param flowName name of which flow nodeName will be added to&#xD;
+	 * @param nodeName name of the node to be added to flowName</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q9iAbhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11345,16 +11531,14 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q9iA7hDEe2QK54y_oSyxw" name="getFlowPriority" method="_23ds-bhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvcbhDEe2QK54y_oSyxw">
-                  <body>&lt;h1>Returns the priority of the node with nodeName belonging to the flow flowName&lt;/h1>&#xD;
-	 * &lt;p>Gets the flow by the flowName then uses an iterator from the flow's nodes to&#xD;
-	 * iterate through all the nodes until the node with name nodeName is found. Then that&#xD;
-	 * node's priority is returned&lt;/p>&#xD;
-	 * &lt;p>0 is returned if the node or flow is not found.&lt;/p>&#xD;
+                <ownedComment xmi:id="_DX7gK83KEe2aPrCP15OoQw">
+                  <body>This method returns the index priority of a node in a flow. It gets the nodes&#xD;
+	 * from a given flow name and then iterates through that set flows nodes in&#xD;
+	 * order to find the priority of a of the nodeName.&#xD;
 	 * &#xD;
-	 * @param flowName the name of the flow&#xD;
-	 * @param nodeName the node in the flow&#xD;
-	 * @return the priority of nodeName belonging to flowName</body>
+	 * @param flowName name of the flow that will contain the desired nodes&#xD;
+	 * @param nodeName name of the node in which the priority is desired&#xD;
+	 * @return the priority of a node in a specific flow</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q9iBLhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11407,6 +11591,13 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q-JGbhDEe2QK54y_oSyxw" name="getFlowPriority" method="_23dtDLhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX7gLM3KEe2aPrCP15OoQw">
+                  <body>This method takes in the name of a flow and retrieves the priority of the&#xD;
+	 * flow node&#xD;
+	 * &#xD;
+	 * @param flowName the name of the flow&#xD;
+	 * @return an Integer that represents the priority of the flow node</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_2q-JGrhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
@@ -11415,11 +11606,12 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q-wIbhDEe2QK54y_oSyxw" name="getFlowPeriod" method="_23dtD7hDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvcrhDEe2QK54y_oSyxw">
-                  <body>&lt;h1>Returns the period of the flow with flowName.&lt;/h1>&#xD;
+                <ownedComment xmi:id="_DX7gLc3KEe2aPrCP15OoQw">
+                  <body>This method takes in the name of a flow and retrieves the period from the&#xD;
+	 * flow node.&#xD;
 	 * &#xD;
-	 * @param flowName the name of the flow to find the period of&#xD;
-	 * @return the flow's period</body>
+	 * @param flowName the name of the flow.&#xD;
+	 * @return an Integer that is the period of a flow node.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q-wIrhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11429,11 +11621,12 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q-wJLhDEe2QK54y_oSyxw" name="getFlowDeadline" method="_23dtErhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvc7hDEe2QK54y_oSyxw">
-                  <body>&lt;h1>Returns the deadline of the flow with flowName.&lt;/h1>&#xD;
+                <ownedComment xmi:id="_DX7gLs3KEe2aPrCP15OoQw">
+                  <body>This method takes in the name of a flow and retrieves the deadline from the&#xD;
+	 * flow node.&#xD;
 	 * &#xD;
-	 * @param flowName the name of the flow to find the deadline of.&#xD;
-	 * @return the flow's deadline.</body>
+	 * @param flowName the name of the flow.&#xD;
+	 * @return an Integer that is the deadline of a flowNode.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q-wJbhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11443,11 +11636,12 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q-wJ7hDEe2QK54y_oSyxw" name="getFlowPhase" method="_23dtFbhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvdLhDEe2QK54y_oSyxw">
-                  <body>&lt;h1>Returns the phase of the flow with flowName.&lt;/h1>&#xD;
+                <ownedComment xmi:id="_DX7gL83KEe2aPrCP15OoQw">
+                  <body>This method takes in the name of a flow and retrieves the phase number of the&#xD;
+	 * flow node.&#xD;
 	 * &#xD;
-	 * @param flowName the name of the flow to find the phase of.&#xD;
-	 * @return the flow's phase.</body>
+	 * @param flowName the name of the flow.&#xD;
+	 * @return an Integer that represents the phase of the flow node.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q-wKLhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11457,11 +11651,12 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q_XMLhDEe2QK54y_oSyxw" name="getFlowTxAttemptsPerLink" method="_23eUALhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvdbhDEe2QK54y_oSyxw">
-                  <body>&lt;h1>Returns the flow tx attempts per link for the flow with name flowName.&lt;/h1> &#xD;
+                <ownedComment xmi:id="_DX7gMM3KEe2aPrCP15OoQw">
+                  <body>This method takes in the name of a flow and retrieves the number of tx per&#xD;
+	 * link in a flow node.&#xD;
 	 * &#xD;
-	 * @param flowName the name of the flow.&#xD;
-	 * @return number of tx per link.</body>
+	 * @param flowName the name of the flow&#xD;
+	 * @return and Integer to represent the number of tx per link.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2q_XMbhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11471,20 +11666,24 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q_XM7hDEe2QK54y_oSyxw" name="setFlowsInPriorityOrder" method="_23eUA7hDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvdrhDEe2QK54y_oSyxw">
-                  <body>public method that takes lists of flows that are unsorted, sorted by index, &#xD;
-	 * and sorted by priority, and proceeds to make a new Array List that&#xD;
-	 * contains the flow names in the order that has been requested</body>
+                <ownedComment xmi:id="_DX7gMc3KEe2aPrCP15OoQw">
+                  <body>When called this method sorts flows into priority order. First sort the flows&#xD;
+	 * by index and then sort them by priority. Creates a new ArrayList and adds the&#xD;
+	 * flows in the new priority order. no parameters or return value.</body>
                 </ownedComment>
               </ownedOperation>
               <ownedOperation xmi:id="_2q_XNLhDEe2QK54y_oSyxw" name="setFlowsInDMorder" method="_23eUBLhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvd7hDEe2QK54y_oSyxw">
-                  <body>public method that sorts flows in order of deadline</body>
+                <ownedComment xmi:id="_DX7gMs3KEe2aPrCP15OoQw">
+                  <body>When called this method sorts flows into deadline order. First sort the flows&#xD;
+	 * by priority and then sort them by deadline. Creates a new ArrayList and adds&#xD;
+	 * the flows in the new deadline order. no parameters or return value.</body>
                 </ownedComment>
               </ownedOperation>
               <ownedOperation xmi:id="_2q_XNbhDEe2QK54y_oSyxw" name="setFlowsInRMorder" method="_23eUBbhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rveLhDEe2QK54y_oSyxw">
-                  <body>public method that sorts flows in order of period.</body>
+                <ownedComment xmi:id="_DX7gM83KEe2aPrCP15OoQw">
+                  <body>When called this method sorts flows into priority order. First sort the flows&#xD;
+	 * by priority and then sort them by period. Creates a new ArrayList and adds&#xD;
+	 * the flows in the new period order. no parameters or return value.</body>
                 </ownedComment>
               </ownedOperation>
               <ownedOperation xmi:id="_2q_XNrhDEe2QK54y_oSyxw" name="setFlowsInRealTimeHARTorder" method="_23eUBrhDEe2QK54y_oSyxw"/>
@@ -11516,22 +11715,33 @@ inputFileName. Good default values for the constructors are m = 0.9, e2e =&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q_-RbhDEe2QK54y_oSyxw" name="finalizeFlowWithE2eParameters" visibility="private" method="_23eUEbhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX7gNM3KEe2aPrCP15OoQw">
+                  <body>This method calculates and sets the flow's linkTxAndTotalCost as the numTxAttemptsPerLinkAndTotalTxAttempts&#xD;
+	 * based on the E2E (end-to-end) reliability requirement&#xD;
+	 * &#xD;
+	 * @param flowName is a specified flow object</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_2q_-RrhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2q_-R7hDEe2QK54y_oSyxw" name="finalizeFlowWithFixedFaultTolerance" visibility="private" method="_23eUE7hDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX8HMM3KEe2aPrCP15OoQw">
+                  <body>This method calculates and sets the flow's linkTxAndTotalCost as the fixedTxPerLinkAndTotalTxCost&#xD;
+	 * with fixed fault tolerance based on the flow's number of faults (numFaults)&#xD;
+	 * &#xD;
+	 * @param flowName is a specified flow object</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_2q_-SLhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2rAlULhDEe2QK54y_oSyxw" name="getNodeNamesOrderedAlphabetically" method="_23e7FrhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rve7hDEe2QK54y_oSyxw">
-                  <body>public method that gets the nodes from a node map, and sorts them in alphabetical&#xD;
-order. If the names are strings of integers, then there must be an additional&#xD;
-step to sort them correctly. If all of the node names are ints, sort them in &#xD;
-ascending order, and then convert it to a string&#xD;
-@return a list of strings containing the names of the nodes in alphabetical order.</body>
+                <ownedComment xmi:id="_DX8HMc3KEe2aPrCP15OoQw">
+                  <body>This method shall sort the nodes alphabetically. Three different sorting&#xD;
+	 * processes are needed based on whether the nodes are integers or letters.&#xD;
+	 * &#xD;
+	 * @return a String Array of the node names in an alphabetically sorted order</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2rAlUbhDEe2QK54y_oSyxw" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11545,19 +11755,17 @@ ascending order, and then convert it to a string&#xD;
                 <ownedParameter xmi:id="_21Km4LhDEe2QK54y_oSyxw" type="_2pTVILhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_2rBMYLhDEe2QK54y_oSyxw" name="getFlowNames" method="_23e7HLhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX8HMs3KEe2aPrCP15OoQw">
+                  <body>This method returns the flow names in their original order.&#xD;
+	 * &#xD;
+	 * @return a String Array containing the flow names in their original order.</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_2rBMYbhDEe2QK54y_oSyxw" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2rBMYrhDEe2QK54y_oSyxw" value="*"/>
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2rBMZLhDEe2QK54y_oSyxw" name="getNodeIndex" method="_23e7H7hDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvfLhDEe2QK54y_oSyxw">
-                  <body>&lt;h1>Returns the index of the given node.&lt;/h1>&#xD;
-	 * &lt;p>A nodes index is an alternate name for the simulator input file.&lt;/p>&#xD;
-	 * &#xD;
-	 * @param nodeName the Name of the node&#xD;
-	 * @return the index of the node</body>
-                </ownedComment>
                 <ownedParameter xmi:id="_2rBMZbhDEe2QK54y_oSyxw" name="nodeName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
@@ -11566,12 +11774,12 @@ ascending order, and then convert it to a string&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2rBMZ7hDEe2QK54y_oSyxw" name="getNodesInFlow" method="_23e7IrhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23sWcLhDEe2QK54y_oSyxw">
-                  <body>Loops through a requested flow and obtains the nodes contained in the flow.&#xD;
-if not, return an empty array.&#xD;
-&#xD;
-@param flowName the flow in which nodes will be obtained from &#xD;
-@return an array of strings containing the nodes obtained from the selected flow.</body>
+                <ownedComment xmi:id="_DX8HM83KEe2aPrCP15OoQw">
+                  <body>This method takes in a flow name and retrieves the nodes in the given flow.&#xD;
+	 * If no nodes are present the method will return an empty array.&#xD;
+	 * &#xD;
+	 * @param flowName the name of the flow.&#xD;
+	 * @return a String Array of the nodes in the flow</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2rBMaLhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11582,21 +11790,23 @@ if not, return an empty array.&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2rBzcLhDEe2QK54y_oSyxw" name="getHyperPeriod" method="_23e7JrhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23sWcbhDEe2QK54y_oSyxw">
-                  <body>public method that obtains the least common multiple of every period, and &#xD;
-returns it.&#xD;
-@return an Integer hyperPeriod that represents the LCM of every period.</body>
+                <ownedComment xmi:id="_DX8HNM3KEe2aPrCP15OoQw">
+                  <body>This method computes the LCM of all periods and then updates the current&#xD;
+	 * hyperPeriod to new number.&#xD;
+	 * &#xD;
+	 * @return an Integer that represents the hyperPeriod</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2rBzcbhDEe2QK54y_oSyxw" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2rBzcrhDEe2QK54y_oSyxw" name="getTotalTxAttemptsInFlow" method="_23e7KLhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23sWcrhDEe2QK54y_oSyxw">
-                  <body>Public method that returns the amount of times that a transmission was &#xD;
-attempted in the flow&#xD;
-@param flowName String that will be checked to see amount of transmissions&#xD;
-@return Integer representing amount of transmissions attempted.</body>
+                <ownedComment xmi:id="_DX8HNc3KEe2aPrCP15OoQw">
+                  <body>This method takes in a flow name and calculates the total cost of the&#xD;
+	 * specified flow.&#xD;
+	 * &#xD;
+	 * @param flowName the name of the flow&#xD;
+	 * @return an Integer representing the total cost of the flow</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2rBzc7hDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11606,10 +11816,13 @@ attempted in the flow&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2rBzdbhDEe2QK54y_oSyxw" name="getNumTxAttemptsPerLink" method="_23e7K7hDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23sWc7hDEe2QK54y_oSyxw">
-                  <body>finds the amount of transmissions that is required for each link in the flow&#xD;
-	 * @param flowName flow in which amount of transmissions will be looked for&#xD;
-	 * @return the same array described in the lines below.</body>
+                <ownedComment xmi:id="_DX8HNs3KEe2aPrCP15OoQw">
+                  <body>This method takes in a flow name, gets the flow object and sets a new Array&#xD;
+	 * List to the link tx and total cost of the flow. Removes last element because&#xD;
+	 * it is just a sum of the others.&#xD;
+	 * &#xD;
+	 * @param flowName the name of the flow&#xD;
+	 * @return an Integer Array containing the link tx and total cost of a flow.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2rBzdrhDEe2QK54y_oSyxw" name="flowName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11620,33 +11833,23 @@ attempted in the flow&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2rCagbhDEe2QK54y_oSyxw" name="maxFlowLength" method="_23fiI7hDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23sWdbhDEe2QK54y_oSyxw">
-                  <body>Searches through all of the flows to find the one with the greatest length&#xD;
-@return an Integer representing the greatest length of a flow</body>
+                <ownedComment xmi:id="_DX8HOM3KEe2aPrCP15OoQw">
+                  <body>This method records the max flow length by looping through all flows and&#xD;
+	 * keeping track of the max value.&#xD;
+	 * &#xD;
+	 * @return an Integer that represents the max length of the flows</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2rCagrhDEe2QK54y_oSyxw" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
                 </ownedParameter>
               </ownedOperation>
-              <ownedOperation xmi:id="_21J_0LhDEe2QK54y_oSyxw" name="getFixedTxPerLinkAndTotalTxCost" visibility="private" method="_23eUFbhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvebhDEe2QK54y_oSyxw">
-                  <body>&lt;h1>Returns the fixed tx per link and the total tx cost of the given flow.&lt;/h1>&#xD;
-	 * &lt;p>The tx per link is defined as the number of faults allowed plus one since a node has to be used once to&#xD;
-	 * transmit a message. The return value is an ArrayList with link num nodes in flow + 1. The last element in &#xD;
-	 * the list is the maximum tx in the flow. all previous elements represent the tx per node of a flow and each&#xD;
-	 * correspond to node.&lt;/p>&#xD;
-	 * &#xD;
-	 * @param flow the flow object to find the tx of.&#xD;
-	 * @return an arraylist of integers with each entry corresponding to a node in the flow's tx. The last entry is the maximum tx.</body>
-                </ownedComment>
-                <ownedParameter xmi:id="_21J_0bhDEe2QK54y_oSyxw" name="flow" type="_2pTVILhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_22LTgrhDEe2QK54y_oSyxw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
-              </ownedOperation>
               <ownedOperation xmi:id="_21Km4bhDEe2QK54y_oSyxw" name="addEdge" method="_23fiILhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23sWdLhDEe2QK54y_oSyxw">
-                  <body>public method that adds an edge to the end of the specified node&#xD;
-@param nodeName node that will have edge added to it&#xD;
-@param edge edge to be added to node</body>
+                <ownedComment xmi:id="_DX8HN83KEe2aPrCP15OoQw">
+                  <body>This method adds an edge to a node by getting the node object a and adding an&#xD;
+	 * edge.&#xD;
+	 * &#xD;
+	 * @param nodeName name of the node.&#xD;
+	 * @param edge     name of the edge that will be added.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_21Km4rhDEe2QK54y_oSyxw" name="nodeName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11657,13 +11860,16 @@ attempted in the flow&#xD;
                 <eAnnotations xmi:id="_22KFZLhDEe2QK54y_oSyxw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_22KFZbhDEe2QK54y_oSyxw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_23rvYrhDEe2QK54y_oSyxw">
-                  <body>Initializes a Workload object.&#xD;
+                <ownedComment xmi:id="_DX65GM3KEe2aPrCP15OoQw">
+                  <body>This method takes the below parameters and constructs nodes and flows using&#xD;
+	 * the WorkloadListener build nodes and flows function.&#xD;
 	 * &#xD;
-	 * @param m             The minimum package reception rate (Double)&#xD;
-	 * @param e2e           The end to end reliability (Double)&#xD;
-	 * @param inputFileName The file that contains the flows to be processed&#xD;
-	 *                      (String)</body>
+	 * @param m             is a double that represents the minimum packet reception&#xD;
+	 *                      rate&#xD;
+	 * @param e2e           is a double that populates this flow object as the input&#xD;
+	 *                      is read&#xD;
+	 * @param inputFileName is a String that represents the name of the file used to&#xD;
+	 *                      create a flow.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_22KFYbhDEe2QK54y_oSyxw" name="m" type="_21600rhDEe2QK54y_oSyxw"/>
                 <ownedParameter xmi:id="_22KFYrhDEe2QK54y_oSyxw" name="e2e" type="_21600rhDEe2QK54y_oSyxw"/>
@@ -11676,14 +11882,18 @@ attempted in the flow&#xD;
                 <eAnnotations xmi:id="_22KsdbhDEe2QK54y_oSyxw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_22KsdrhDEe2QK54y_oSyxw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_23rvY7hDEe2QK54y_oSyxw">
-                  <body>Initializes a Workload Object.&#xD;
+                <ownedComment xmi:id="_DX65Gc3KEe2aPrCP15OoQw">
+                  <body>This method takes the below parameters and constructs nodes and flows using&#xD;
+	 * the WorkloadListener build nodes and flows function.&#xD;
 	 * &#xD;
-	 * @param numFaults     The number of faults in the workload. (Integer)&#xD;
-	 * @param m             The minimum package reception rate (Double)&#xD;
-	 * @param e2e           The end to end reliability (Double)&#xD;
-	 * @param inputFileName The file that contains the flows to be processed&#xD;
-	 *                      (String)</body>
+	 * @param numFaults     is an Integer that represents the number of faults in a&#xD;
+	 *                      flow.&#xD;
+	 * @param m             is a double that represents the minimum packet reception&#xD;
+	 *                      rate&#xD;
+	 * @param e2e           is a double that populates this flow object as the input&#xD;
+	 *                      is read&#xD;
+	 * @param inputFileName is a String that represents the name of the file used to&#xD;
+	 *                      create a flow.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_22KscbhDEe2QK54y_oSyxw" name="numFaults">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -11696,35 +11906,16 @@ attempted in the flow&#xD;
                 <ownedParameter xmi:id="_22Ksd7hDEe2QK54y_oSyxw" type="_2q5QkLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_22KsebhDEe2QK54y_oSyxw" name="setMinPacketReceptionRate" method="_23dF8rhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvZ7hDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX65Hc3KEe2aPrCP15OoQw">
                   <body>@param minPacketReceptionRate the minPacketReceptionRate to set</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_22KserhDEe2QK54y_oSyxw" name="minPacketReceptionRate" type="_21600rhDEe2QK54y_oSyxw"/>
               </ownedOperation>
               <ownedOperation xmi:id="_22LTgLhDEe2QK54y_oSyxw" name="setE2e" method="_23dF-LhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rvarhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX7gIs3KEe2aPrCP15OoQw">
                   <body>@param e2e the e2e to set</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_22LTgbhDEe2QK54y_oSyxw" name="e2e" type="_21600rhDEe2QK54y_oSyxw"/>
-              </ownedOperation>
-              <ownedOperation xmi:id="_22LTg7hDEe2QK54y_oSyxw" name="numTxAttemptsPerLinkAndTotalTxAttempts" visibility="private" method="_23e7ELhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23rverhDEe2QK54y_oSyxw">
-                  <body>private method creates a matrix that displays the reliability of transmitting &#xD;
-packets to nodes in an efficient manner using the source and sink of the &#xD;
-flow nodes&#xD;
-@param flow a flow object in which the nodes will be retrieved&#xD;
-@param e2e double to be used to set up matrix for transmission reliability&#xD;
-@param M Double used for computing reliability for source and sink&#xD;
-@param optimizationRequested boolean to verify if an optimization has been requested&#xD;
-@return an ArrayList of integers that represents the worst case cost of transmitting e2e</body>
-                </ownedComment>
-                <ownedParameter xmi:id="_22LThLhDEe2QK54y_oSyxw" name="flow" type="_2pTVILhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_22LThbhDEe2QK54y_oSyxw" name="e2e" type="_21600rhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_22LThrhDEe2QK54y_oSyxw" name="M" type="_21600rhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_22LTh7hDEe2QK54y_oSyxw" name="optimizationRequested">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-                </ownedParameter>
-                <ownedParameter xmi:id="_22L6kbhDEe2QK54y_oSyxw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2rGE4LhDEe2QK54y_oSyxw" name="WorkLoadDescription">
@@ -11859,7 +12050,7 @@ of the file is an entry (string) in the Description object.&#xD;
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2rJvQLhDEe2QK54y_oSyxw" name="Warp">
-              <ownedComment xmi:id="_23sWd7hDEe2QK54y_oSyxw">
+              <ownedComment xmi:id="_DX6SC83KEe2aPrCP15OoQw">
                 <body>&lt;h1>This is the entry point to the warp program.&lt;/h1>&#xD;
 &#xD;
 @author sgoddard&#xD;
@@ -11880,7 +12071,7 @@ of the file is an entry (string) in the Description object.&#xD;
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 <defaultValue xmi:type="uml:LiteralString" xmi:id="_23BBArhDEe2QK54y_oSyxw" value="&quot;OutputFiles/&quot;"/>
               </ownedAttribute>
-              <ownedAttribute xmi:id="_23BBA7hDEe2QK54y_oSyxw" name="DEFAULT_SCHEDULER" visibility="private" isLeaf="true" isStatic="true" type="_2qY6QbhDEe2QK54y_oSyxw" isReadOnly="true">
+              <ownedAttribute xmi:id="_23BBA7hDEe2QK54y_oSyxw" name="DEFAULT_SCHEDULER" visibility="private" isLeaf="true" isStatic="true" type="_201PsLhDEe2QK54y_oSyxw" isReadOnly="true">
                 <defaultValue xmi:type="uml:LiteralString" xmi:id="_23BBBLhDEe2QK54y_oSyxw" value="ScheduleChoices.PRIORITY"/>
               </ownedAttribute>
               <ownedAttribute xmi:id="_23BBBbhDEe2QK54y_oSyxw" name="DEFAULT_FAULTS_TOLERATED" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
@@ -11935,7 +12126,7 @@ of the file is an entry (string) in the Description object.&#xD;
               <ownedAttribute xmi:id="_23EEUbhDEe2QK54y_oSyxw" name="inputFile" visibility="private" isStatic="true">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedAttribute>
-              <ownedAttribute xmi:id="_23EEU7hDEe2QK54y_oSyxw" name="schedulerSelected" visibility="private" isStatic="true" type="_2qY6QbhDEe2QK54y_oSyxw"/>
+              <ownedAttribute xmi:id="_23EEU7hDEe2QK54y_oSyxw" name="schedulerSelected" visibility="private" isStatic="true" type="_201PsLhDEe2QK54y_oSyxw"/>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23gJObhDEe2QK54y_oSyxw" name="main" specification="_2rK9YLhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_23gJOrhDEe2QK54y_oSyxw" name="args">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -11959,7 +12150,7 @@ of the file is an entry (string) in the Description object.&#xD;
 			}&#xD;
 			// Create and visualize the Warp System&#xD;
 			if (schedulerRequested) {&#xD;
-				WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);&#xD;
+				WarpSystem warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);&#xD;
 				verifyPerformanceRequirements(warp);&#xD;
 				for (SystemChoices choice : SystemChoices.values()) {&#xD;
 					visualize(warp, choice); // visualize all System choices&#xD;
@@ -11967,7 +12158,7 @@ of the file is an entry (string) in the Description object.&#xD;
 			} else { // create a system for all scheduler choices&#xD;
 				for (ScheduleChoices sch : ScheduleChoices.values()) {&#xD;
 					schedulerSelected = sch;&#xD;
-					WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);&#xD;
+					WarpSystem warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);&#xD;
 					verifyPerformanceRequirements(warp);&#xD;
 					for (SystemChoices choice : SystemChoices.values()) {&#xD;
 						visualize(warp, choice); // visualize all System choices&#xD;
@@ -11982,7 +12173,7 @@ of the file is an entry (string) in the Description object.&#xD;
 			if (gvRequested) {&#xD;
 				visualize(workLoad, WorkLoadChoices.GRAPHVIZ);&#xD;
 			}&#xD;
-			WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);&#xD;
+			WarpSystem warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);&#xD;
 			verifyPerformanceRequirements(warp);&#xD;
 			visualize(warp, SystemChoices.SOURCE);&#xD;
 			if (caRequested) {&#xD;
@@ -11999,22 +12190,6 @@ of the file is an entry (string) in the Description object.&#xD;
 			}&#xD;
 		}&#xD;
 &#xD;
-	</body>
-              </ownedBehavior>
-              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23gJPLhDEe2QK54y_oSyxw" name="visualize" specification="_21O4UbhDEe2QK54y_oSyxw">
-                <ownedParameter xmi:id="_23gJPbhDEe2QK54y_oSyxw" name="workLoad" type="_2q5QkLhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_23gJPrhDEe2QK54y_oSyxw" name="choice" type="_2qdywrhDEe2QK54y_oSyxw"/>
-                <language>java</language>
-                <body>var viz = VisualizationFactory.createWorkLoadVisualization(workLoad, outputSubDirectory, choice);&#xD;
-		if (viz != null) {&#xD;
-			if (verboseMode) {&#xD;
-				System.out.println(viz.toString());&#xD;
-			}&#xD;
-			viz.toFile();&#xD;
-			if (guiRequested) {&#xD;
-				viz.toDisplay();&#xD;
-			}&#xD;
-		}&#xD;
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23gwQLhDEe2QK54y_oSyxw" name="setWarpParameters" specification="_2rLkcbhDEe2QK54y_oSyxw">
@@ -12175,8 +12350,88 @@ of the file is an entry (string) in the Description object.&#xD;
 		// System.out.println (&quot;\tdebug flag=&quot; + debugMode);&#xD;
 	</body>
               </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXy9QM3KEe2aPrCP15OoQw" name="visualize" specification="_DW3JIM3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXy9Qc3KEe2aPrCP15OoQw" name="workLoad" type="_2q5QkLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXy9Qs3KEe2aPrCP15OoQw" name="choice" type="_2012wrhDEe2QK54y_oSyxw"/>
+                <language>java</language>
+                <body>var viz = VisualizationFactory.createWorkLoadVisualization(workLoad, outputSubDirectory, choice);&#xD;
+		if (viz != null) {&#xD;
+			if (verboseMode) {&#xD;
+				System.out.println(viz.toString());&#xD;
+			}&#xD;
+			viz.toFile();&#xD;
+			if (guiRequested) {&#xD;
+				viz.toDisplay();&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXy9Q83KEe2aPrCP15OoQw" name="visualize" specification="_DW3wMM3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXy9RM3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DXy9Rc3KEe2aPrCP15OoQw" name="choice" type="_2012wLhDEe2QK54y_oSyxw"/>
+                <language>java</language>
+                <body>var viz = VisualizationFactory.createProgramVisualization(warp, outputSubDirectory, choice);&#xD;
+		if (viz != null) {&#xD;
+			viz.toFile();&#xD;
+			if (guiRequested &amp;&amp; schedulerRequested) {&#xD;
+				/* Only display window when a specific scheduler has been requested */&#xD;
+				viz.toDisplay();&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXy9Rs3KEe2aPrCP15OoQw" name="verifyPerformanceRequirements" specification="_DW3wM83KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXy9R83KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+                <language>java</language>
+                <body>verifyDeadlines(warp);&#xD;
+		verifyReliabilities(warp);&#xD;
+		verifyNoChannelConflicts(warp);&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXy9SM3KEe2aPrCP15OoQw" name="verifyReliabilities" specification="_DW3wNc3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXy9Sc3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+                <language>java</language>
+                <body>if (schedulerSelected != ScheduleChoices.RTHART) {&#xD;
+			/* RealTime HART doesn't adhere to reliability targets */&#xD;
+			if (!warp.reliabilitiesMet()) {&#xD;
+				System.err.printf(&#xD;
+						&quot;\n\tERROR: Not all flows meet the end-to-end &quot; + &quot;reliability of %s under %s scheduling.\n&quot;,&#xD;
+						String.valueOf(e2e), schedulerSelected.toString());&#xD;
+			} else if (verboseMode) {&#xD;
+				System.out.printf(&quot;\n\tAll flows meet the end-to-end reliability &quot; + &quot;of %s under %s scheduling.\n&quot;,&#xD;
+						String.valueOf(e2e), schedulerSelected.toString());&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXy9Ss3KEe2aPrCP15OoQw" name="verifyDeadlines" specification="_DW3wN83KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXy9S83KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+                <language>java</language>
+                <body>if (!warp.deadlinesMet()) {&#xD;
+			System.err.printf(&quot;\n\tERROR: Not all flows meet their deadlines under %s scheduling.\n&quot;,&#xD;
+					schedulerSelected.toString());&#xD;
+			visualize(warp, SystemChoices.DEADLINE_REPORT);&#xD;
+		} else if (verboseMode) {&#xD;
+			System.out.printf(&quot;\n\tAll flows meet their deadlines under %s scheduling.\n&quot;,&#xD;
+					schedulerSelected.toString());&#xD;
+		}&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXzkUM3KEe2aPrCP15OoQw" name="verifyNoChannelConflicts" specification="_DW3wOc3KEe2aPrCP15OoQw">
+                <ownedParameter xmi:id="_DXzkUc3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+                <language>java</language>
+                <body>if (warp.toChannelAnalysis().isChannelConflict()) {&#xD;
+			System.err.printf(&quot;\n\tERROR: Channel conficts exists. See Channel Visualization for details.\n&quot;);&#xD;
+			if (!caRequested) { // only need to create the visualization if not already requested&#xD;
+				visualize(warp, SystemChoices.CHANNEL);&#xD;
+			}&#xD;
+		} else if (verboseMode) {&#xD;
+			System.out.printf(&quot;\n\tNo channel conflicts detected.\n&quot;);&#xD;
+		}&#xD;
+	</body>
+              </ownedBehavior>
               <ownedOperation xmi:id="_2rK9YLhDEe2QK54y_oSyxw" name="main" isStatic="true" method="_23gJObhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23s9gLhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX6SDM3KEe2aPrCP15OoQw">
                   <body>&lt;h1>Entry point of the warp program.&lt;/h1>&#xD;
 	 * &lt;p>&#xD;
 	 * Sets up the warp parameters according to the command line arguments. The&#xD;
@@ -12193,7 +12448,7 @@ of the file is an entry (string) in the Description object.&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2rLkcbhDEe2QK54y_oSyxw" name="setWarpParameters" visibility="private" isStatic="true" method="_23gwQLhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23s9grhDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX65Fc3KEe2aPrCP15OoQw">
                   <body>&lt;h1>Sets the class attributes based on the command line arguments.&lt;/h1>&#xD;
 	 * &lt;p>&#xD;
 	 * If no value is given for an attribute the value will be set to the default.&#xD;
@@ -12236,12 +12491,12 @@ of the file is an entry (string) in the Description object.&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2rMLgrhDEe2QK54y_oSyxw" name="printWarpParameters" visibility="private" isStatic="true" method="_23gwQ7hDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23s9g7hDEe2QK54y_oSyxw">
+                <ownedComment xmi:id="_DX65Fs3KEe2aPrCP15OoQw">
                   <body>&lt;h1>Prints the warp system configuration parameters&lt;/h1></body>
                 </ownedComment>
               </ownedOperation>
-              <ownedOperation xmi:id="_21O4UbhDEe2QK54y_oSyxw" name="visualize" visibility="private" isStatic="true" method="_23gJPLhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_23s9gbhDEe2QK54y_oSyxw">
+              <ownedOperation xmi:id="_DW3JIM3KEe2aPrCP15OoQw" name="visualize" visibility="private" isStatic="true" method="_DXy9QM3KEe2aPrCP15OoQw">
+                <ownedComment xmi:id="_DX6SDc3KEe2aPrCP15OoQw">
                   <body>&lt;h1>Visualizes a workload.&lt;/h1>&#xD;
 	 * &lt;p>&#xD;
 	 * Puts the visualization in the the output folder directory. The type of&#xD;
@@ -12252,8 +12507,75 @@ of the file is an entry (string) in the Description object.&#xD;
 	 * @param choice   An item from the WorkLoadChoices enum that specifies what&#xD;
 	 *                 visualization to create.</body>
                 </ownedComment>
-                <ownedParameter xmi:id="_21O4UrhDEe2QK54y_oSyxw" name="workLoad" type="_2q5QkLhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_21O4U7hDEe2QK54y_oSyxw" name="choice" type="_2qdywrhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DW3JIc3KEe2aPrCP15OoQw" name="workLoad" type="_2q5QkLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DW3JIs3KEe2aPrCP15OoQw" name="choice" type="_2012wrhDEe2QK54y_oSyxw"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DW3wMM3KEe2aPrCP15OoQw" name="visualize" visibility="private" isStatic="true" method="_DXy9Q83KEe2aPrCP15OoQw">
+                <ownedComment xmi:id="_DX65EM3KEe2aPrCP15OoQw">
+                  <body>&lt;h1>Creates a visualization for a WarpInterface&lt;/h1>&#xD;
+	 * &lt;p>&#xD;
+	 * Puts the visualization in the the output folder directory. The type of&#xD;
+	 * visualization is determined by the choice object that is passed in.&#xD;
+	 * &lt;/p>&#xD;
+	 * &#xD;
+	 * @param warp   a WarpInteface probably a WarpSystem class&#xD;
+	 * @param choice An item from the SystemChoices enum that specifies what&#xD;
+	 *               visualization to create.</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_DW3wMc3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+                <ownedParameter xmi:id="_DW3wMs3KEe2aPrCP15OoQw" name="choice" type="_2012wLhDEe2QK54y_oSyxw"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DW3wM83KEe2aPrCP15OoQw" name="verifyPerformanceRequirements" visibility="private" isStatic="true" method="_DXy9Rs3KEe2aPrCP15OoQw">
+                <ownedComment xmi:id="_DX65Ec3KEe2aPrCP15OoQw">
+                  <body>&lt;h1>Verifies a WarpInterface's performance.&lt;/h1>&#xD;
+	 * &lt;p>&#xD;
+	 * Verifies the deadlines, reliabilities and if there are channel conflicts. If&#xD;
+	 * something is not verified a message will be printed to the console and in the&#xD;
+	 * case of a failure to verify the deadlines or the channel conflicts, a&#xD;
+	 * deadline/channel report will be created. If everything is successful a&#xD;
+	 * success message will be printed to the console.&#xD;
+	 * &lt;/p>&#xD;
+	 * &#xD;
+	 * @param warp The WarpInterface to verify.</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_DW3wNM3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DW3wNc3KEe2aPrCP15OoQw" name="verifyReliabilities" visibility="private" isStatic="true" method="_DXy9SM3KEe2aPrCP15OoQw">
+                <ownedComment xmi:id="_DX65Es3KEe2aPrCP15OoQw">
+                  <body>&lt;h1>Checks if the reliabilities are met on the WarpInterface.&lt;/h1>&#xD;
+	 * &lt;p>&#xD;
+	 * NOTE: the reliability check is currently not implemented and will always&#xD;
+	 * return true. Prints the result of the check to the console.&#xD;
+	 * &lt;/p>&#xD;
+	 * &#xD;
+	 * @param warp The WarpInterface to check the reliabilities of.</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_DW3wNs3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DW3wN83KEe2aPrCP15OoQw" name="verifyDeadlines" visibility="private" isStatic="true" method="_DXy9Ss3KEe2aPrCP15OoQw">
+                <ownedComment xmi:id="_DX65E83KEe2aPrCP15OoQw">
+                  <body>&lt;h1>Checks to see if the deadlines are met on the warp interface&lt;/h1>&#xD;
+	 * &lt;p>&#xD;
+	 * Returns false if there is at least one deadline missed. If a deadline is&#xD;
+	 * missed a deadline report file will be created. Result is printed to the&#xD;
+	 * console.&#xD;
+	 * &lt;/p>&#xD;
+	 * &#xD;
+	 * @param warp The WarpInterface to check the deadlines of.</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_DW3wOM3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_DW3wOc3KEe2aPrCP15OoQw" name="verifyNoChannelConflicts" visibility="private" isStatic="true" method="_DXzkUM3KEe2aPrCP15OoQw">
+                <ownedComment xmi:id="_DX65FM3KEe2aPrCP15OoQw">
+                  <body>&lt;h1>Checks if there is a channel conflict in the warp interface.&lt;/h1>&#xD;
+	 * &lt;p>&#xD;
+	 * The result is printed to the console. If a channel analysis file was not&#xD;
+	 * originally requested, one will be made.&#xD;
+	 * &lt;/p>&#xD;
+	 * &#xD;
+	 * @param warp The WarpInterface to check the channel conflicts of.</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_DW3wOs3KEe2aPrCP15OoQw" name="warp" type="_2qwGoLhDEe2QK54y_oSyxw"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2rOnwLhDEe2QK54y_oSyxw" name="WorkLoadTest" visibility="package">
@@ -12382,7 +12704,7 @@ of the file is an entry (string) in the Description object.&#xD;
                 <body>WorkLoad wld = new WorkLoad(0.9,0.99, &quot;Example1a.txt&quot;);&#xD;
 		String flowName = &quot;F0&quot;;&#xD;
 		&#xD;
-		Integer[] expected = {3,3,0};&#xD;
+		Integer[] expected = {2,2,0};&#xD;
 		Integer[] actual = wld.getNumTxAttemptsPerLink(flowName);&#xD;
 &#xD;
 		assertArrayEquals(expected, actual, String.format(&quot;expected %s but got %s&quot;, printArrayHelper(expected), printArrayHelper(actual)));&#xD;
@@ -12434,7 +12756,7 @@ of the file is an entry (string) in the Description object.&#xD;
 &#xD;
 		// Create expected and actual values&#xD;
 		System.out.println(String.format(&quot;Num: %d&quot;, wld.getTotalTxAttemptsInFlow(flowName)));&#xD;
-		int expected = 4;&#xD;
+		int expected = 2;&#xD;
 		int actual = wld.getTotalTxAttemptsInFlow(flowName);&#xD;
 &#xD;
 		assertSame(expected, actual, String.format(&quot;Expected %d transmission attempts but got %d.&quot;, expected, actual));&#xD;
@@ -12446,7 +12768,7 @@ of the file is an entry (string) in the Description object.&#xD;
 		String flowName = &quot;AF4&quot;;&#xD;
 &#xD;
 		// Create expected and actual values&#xD;
-		int expected = 11;&#xD;
+		int expected = 2;&#xD;
 		int actual = wld.getTotalTxAttemptsInFlow(flowName);&#xD;
 &#xD;
 		assertSame(expected, actual, String.format(&quot;Expected %d transmission attempts but got %d.&quot;, expected, actual));&#xD;
@@ -12854,6 +13176,7 @@ of the file is an entry (string) in the Description object.&#xD;
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_23h-cLhDEe2QK54y_oSyxw" value="*"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_23h-cbhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
                 <language>java</language>
@@ -13877,6 +14200,12 @@ of the file is an entry (string) in the Description object.&#xD;
             <packagedElement xmi:type="uml:Association" xmi:id="_24KQgbhDEe2QK54y_oSyxw" name="" memberEnd="_24KQgrhDEe2QK54y_oSyxw _23F5iLhDEe2QK54y_oSyxw">
               <ownedEnd xmi:id="_24KQgrhDEe2QK54y_oSyxw" name="" type="_2ra1ALhDEe2QK54y_oSyxw" association="_24KQgbhDEe2QK54y_oSyxw"/>
             </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_DYFRIM3KEe2aPrCP15OoQw" name="" memberEnd="_DYFRIc3KEe2aPrCP15OoQw _DXrBcs3KEe2aPrCP15OoQw">
+              <ownedEnd xmi:id="_DYFRIc3KEe2aPrCP15OoQw" name="" type="_2qExMLhDEe2QK54y_oSyxw" association="_DYFRIM3KEe2aPrCP15OoQw"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_DYGfQM3KEe2aPrCP15OoQw" name="" memberEnd="_DYGfQc3KEe2aPrCP15OoQw _DXtdsM3KEe2aPrCP15OoQw">
+              <ownedEnd xmi:id="_DYGfQc3KEe2aPrCP15OoQw" name="" type="_2qfn8LhDEe2QK54y_oSyxw" association="_DYGfQM3KEe2aPrCP15OoQw"/>
+            </packagedElement>
           </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="_2m6IcbhDEe2QK54y_oSyxw" name="warpdsls">
             <packagedElement xmi:type="uml:Class" xmi:id="_20VgcbhDEe2QK54y_oSyxw" name="WARPBaseListener"/>
@@ -14243,8 +14572,8 @@ of the file is an entry (string) in the Description object.&#xD;
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Array xmi:id="_2rAlU7hDEe2QK54y_oSyxw" base_Element="_2rAlULhDEe2QK54y_oSyxw"/>
   <UMLLabProfile:Array xmi:id="_2rBMY7hDEe2QK54y_oSyxw" base_Element="_2rBMYLhDEe2QK54y_oSyxw"/>
-  <UMLLabProfile:Array xmi:id="_2rBMa7hDEe2QK54y_oSyxw" dimensions="1" base_Element="_2rBMZ7hDEe2QK54y_oSyxw"/>
-  <UMLLabProfile:Array xmi:id="_2rCagLhDEe2QK54y_oSyxw" base_Element="_2rBzdbhDEe2QK54y_oSyxw"/>
+  <UMLLabProfile:Array xmi:id="_2rBMa7hDEe2QK54y_oSyxw" dimensions="0" base_Element="_2rBMZ7hDEe2QK54y_oSyxw"/>
+  <UMLLabProfile:Array xmi:id="_2rCagLhDEe2QK54y_oSyxw" dimensions="1" base_Element="_2rBzdbhDEe2QK54y_oSyxw"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_2rHTBLhDEe2QK54y_oSyxw" base_Element="_2rHTA7hDEe2QK54y_oSyxw"/>
   <UMLLabProfile:Annotations xmi:id="_2rH6ELhDEe2QK54y_oSyxw" base_Element="_2rHTA7hDEe2QK54y_oSyxw">
     <annotations xmi:id="_2rH6EbhDEe2QK54y_oSyxw" name="Override"/>
@@ -14258,16 +14587,16 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rIhJrhDEe2QK54y_oSyxw" name="Override"/>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:Array xmi:id="_2rLkcLhDEe2QK54y_oSyxw" dimensions="1" base_Element="_2rK9YbhDEe2QK54y_oSyxw"/>
-  <UMLLabProfile:Array xmi:id="_2rMLgbhDEe2QK54y_oSyxw" base_Element="_2rLkcrhDEe2QK54y_oSyxw"/>
+  <UMLLabProfile:Array xmi:id="_2rMLgbhDEe2QK54y_oSyxw" dimensions="1" base_Element="_2rLkcrhDEe2QK54y_oSyxw"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_2rPO0bhDEe2QK54y_oSyxw" base_Element="_2rPO0LhDEe2QK54y_oSyxw"/>
   <UMLLabProfile:Annotations xmi:id="_2rPO0rhDEe2QK54y_oSyxw" base_Element="_2rPO0LhDEe2QK54y_oSyxw">
     <annotations xmi:id="_2rPO07hDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rPO1LhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rPO1bhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9hLhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8HOc3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rPO1rhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9hbhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8HOs3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14276,10 +14605,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rP14rhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rP147hDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rP15LhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9hrhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8HO83KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rP15bhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9h7hDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uQM3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14288,10 +14617,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rP16bhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rP16rhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rP167hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9iLhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uQc3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rP17LhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9ibhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uQs3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14300,10 +14629,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rQc8rhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rQc87hDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rQc9LhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9irhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uQ83KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rQc9bhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9i7hDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uRM3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14312,10 +14641,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rQc-bhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rQc-rhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rQc-7hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9jLhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uRc3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rQc_LhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9jbhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uRs3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14324,10 +14653,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rREAbhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rREArhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rREA7hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9jrhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uR83KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rREBLhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9j7hDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uSM3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14336,10 +14665,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rRECLhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rRECbhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rRECrhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9kLhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uSc3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rREC7hDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9kbhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uSs3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14348,10 +14677,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rRrErhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rRrE7hDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rRrFLhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9krhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uS83KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rRrFbhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23s9k7hDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uTM3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14360,10 +14689,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rRrGbhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rSSILhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rSSIbhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkkLhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX8uTc3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rSSIrhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkkbhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VUM3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14372,10 +14701,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rSSJrhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rSSJ7hDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rSSKLhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkkrhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VUc3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rSSKbhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkk7hDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VUs3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14384,10 +14713,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rS5MLhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rS5MbhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rS5MrhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tklLhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VU83KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rS5M7hDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tklbhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VVM3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14396,10 +14725,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rS5N7hDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rS5OLhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rS5ObhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tklrhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VVc3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rS5OrhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkl7hDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VVs3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14408,10 +14737,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rTgQrhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rTgQ7hDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rTgRLhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkmLhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VV83KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rTgRbhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkmbhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VWM3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14420,10 +14749,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rTgSbhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rTgSrhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rUHULhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkmrhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VWc3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rUHUbhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkm7hDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VWs3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14432,10 +14761,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rUHVbhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rUHVrhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rUHV7hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tknLhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VW83KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rUHWLhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tknbhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VXM3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14444,10 +14773,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rUuYLhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rUuYbhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rUuYrhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tknrhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VXc3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rUuY7hDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkn7hDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX9VXs3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14456,10 +14785,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rUuZ7hDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rUuaLhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rUuabhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkoLhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98YM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rUuarhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkobhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98Yc3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14468,10 +14797,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rUubrhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rUub7hDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rUucLhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkorhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98Ys3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rUucbhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tko7hDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98Y83KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14480,10 +14809,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rVVcrhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rVVc7hDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rVVdLhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkpLhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98ZM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rVVdbhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkpbhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98Zc3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14492,10 +14821,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rVVebhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rVVerhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rVVe7hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23tkprhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98Zs3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rVVfLhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLoLhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98Z83KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14504,10 +14833,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rVVgLhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rVVgbhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rV8gLhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLobhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98aM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rV8gbhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLorhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98ac3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14516,10 +14845,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rV8hbhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rV8hrhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rV8h7hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLo7hDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98as3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rV8iLhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLpLhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98a83KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14528,10 +14857,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rV8jLhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rV8jbhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rV8jrhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLpbhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98bM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rV8j7hDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLprhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX98bc3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14540,10 +14869,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rWjkbhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rWjkrhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rWjk7hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLp7hDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jcM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rWjlLhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLqLhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jcc3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14552,10 +14881,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rWjmLhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rWjmbhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rWjmrhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLqbhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jcs3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rWjm7hDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLqrhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jc83KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14564,10 +14893,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rWjn7hDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rWjoLhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rWjobhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLq7hDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jdM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rWjorhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLrLhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jdc3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14576,10 +14905,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rXKorhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rXKo7hDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rXKpLhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLrbhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jds3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rXKpbhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLrrhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jd83KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14588,10 +14917,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rXKqbhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rXKqrhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rXKq7hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLr7hDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jeM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rXKrLhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLsLhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jec3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14600,10 +14929,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rXxsbhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rXxsrhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rXxs7hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLsbhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jes3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rXxtLhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLsrhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-je83KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14612,10 +14941,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rXxuLhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rXxubhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rXxurhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLs7hDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jfM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rXxu7hDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLtLhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX-jfc3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14624,10 +14953,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rXxv7hDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rYYwLhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rYYwbhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLtbhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_KgM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rYYwrhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLtrhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Kgc3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14636,10 +14965,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rYYxrhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rYYx7hDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rYYyLhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLt7hDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Kgs3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rYYybhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLuLhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Kg83KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14648,10 +14977,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rYYzbhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rYYzrhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rYYz7hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLubhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_KhM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rYY0LhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLurhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Khc3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14660,10 +14989,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rY_0rhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rY_07hDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rY_1LhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLu7hDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Khs3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rY_1bhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLvLhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Kh83KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14672,10 +15001,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rY_2bhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rY_2rhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rY_27hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLvbhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_KiM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rY_3LhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLvrhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Kic3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14684,10 +15013,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rZm4bhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rZm4rhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rZm47hDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLv7hDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Kis3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rZm5LhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLwLhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Ki83KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14696,10 +15025,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rZm6LhDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rZm6bhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rZm6rhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLwbhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_KjM3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rZm67hDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uLwrhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Kjc3KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14708,10 +15037,10 @@ of the file is an entry (string) in the Description object.&#xD;
     <annotations xmi:id="_2rZm77hDEe2QK54y_oSyxw" name="Test"/>
     <annotations xmi:id="_2rZm8LhDEe2QK54y_oSyxw" name="Timeout">
       <annotationParameters xmi:id="_2rZm8bhDEe2QK54y_oSyxw" name="value" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uysLhDEe2QK54y_oSyxw" value="2"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Kjs3KEe2aPrCP15OoQw" value="2"/>
       </annotationParameters>
       <annotationParameters xmi:id="_2rZm8rhDEe2QK54y_oSyxw" name="unit" skipArray="true">
-        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_23uysbhDEe2QK54y_oSyxw" value="TimeUnit.SECONDS"/>
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_DX_Kj83KEe2aPrCP15OoQw" value="TimeUnit.SECONDS"/>
       </annotationParameters>
     </annotations>
   </UMLLabProfile:Annotations>
@@ -14899,7 +15228,6 @@ of the file is an entry (string) in the Description object.&#xD;
   <UMLLabProfile:Reference xmi:id="_21IKorhDEe2QK54y_oSyxw" base_Element="_21IKobhDEe2QK54y_oSyxw"/>
   <UMLLabProfile:Reference xmi:id="_21IxsbhDEe2QK54y_oSyxw" base_Element="_21IxsLhDEe2QK54y_oSyxw"/>
   <UMLLabProfile:Reference xmi:id="_21Ixs7hDEe2QK54y_oSyxw" base_Element="_21IxsrhDEe2QK54y_oSyxw"/>
-  <UMLLabProfile:Generics xmi:id="_21J_0rhDEe2QK54y_oSyxw" genericsValue="Integer" base_Element="_21J_0LhDEe2QK54y_oSyxw"/>
   <UMLLabProfile:Reference xmi:id="_21NDIbhDEe2QK54y_oSyxw" base_Element="_21NDILhDEe2QK54y_oSyxw"/>
   <UMLLabProfile:Reference xmi:id="_21ORQLhDEe2QK54y_oSyxw" base_Element="_21NqMrhDEe2QK54y_oSyxw"/>
   <UMLLabProfile:Reference xmi:id="_21ORQrhDEe2QK54y_oSyxw" base_Element="_21ORQbhDEe2QK54y_oSyxw"/>
@@ -14990,7 +15318,6 @@ of the file is an entry (string) in the Description object.&#xD;
   <UMLLabProfile:Annotations xmi:id="_22IQMLhDEe2QK54y_oSyxw" base_Element="_22HpILhDEe2QK54y_oSyxw">
     <annotations xmi:id="_22IQMbhDEe2QK54y_oSyxw" name="Override"/>
   </UMLLabProfile:Annotations>
-  <UMLLabProfile:Generics xmi:id="_22L6kLhDEe2QK54y_oSyxw" genericsValue="Integer" base_Element="_22LTg7hDEe2QK54y_oSyxw"/>
   <UMLLabProfile:Reference xmi:id="_22Pk8LhDEe2QK54y_oSyxw" base_Element="_22O94LhDEe2QK54y_oSyxw"/>
   <UMLLabProfile:Generics xmi:id="_22Yu4LhDEe2QK54y_oSyxw" genericsValue="String" base_Element="_22YH0rhDEe2QK54y_oSyxw"/>
   <UMLLabProfile:Generics xmi:id="_22Yu4rhDEe2QK54y_oSyxw" genericsValue="Edge" base_Element="_22Yu4bhDEe2QK54y_oSyxw"/>
@@ -15219,7 +15546,16 @@ of the file is an entry (string) in the Description object.&#xD;
   <UMLLabProfile:Patch xmi:id="_9e5T8LhDEe2QK54y_oSyxw" base_Element="_2pka4LhDEe2QK54y_oSyxw" patchText="@@ -254,22 +254,25 @@&#xA; MISS%22;%0D%0A&#xA;-public&#xA;+  private&#xA;  static &#xA;" conflicting="false"/>
   <UMLLabProfile:Patch xmi:id="_9e8-ULhDEe2QK54y_oSyxw" base_Element="_2qY6QLhDEe2QK54y_oSyxw" patchText="@@ -113,18 +113,16 @@&#xA; eChoices&#xA;-()&#xA;  %7B%0D%0A%09   &#xA;" conflicting="false"/>
   <UMLLabProfile:Patch xmi:id="_9e9lYLhDEe2QK54y_oSyxw" base_Element="_2qckobhDEe2QK54y_oSyxw" patchText="@@ -145,26 +145,24 @@&#xA; ystemChoices&#xA;-()&#xA;  %7B%0D%0A    SOUR&#xA;@@ -284,18 +284,16 @@&#xA; dChoices&#xA;-()&#xA;  %7B%0D%0A    &#xA;" conflicting="false"/>
-  <UMLLabProfile:Patch xmi:id="_9e-McLhDEe2QK54y_oSyxw" base_Element="_2qfA4bhDEe2QK54y_oSyxw" patchText="@@ -357,16 +357,241 @@&#xA; ory %7B%0D%0A%09&#xA;+%0D%0A%09public static Visualization createProgramVisualization(String/*No type specified*/ warp, %0D%0A%09%09%09String outputDirectory, SystemChoices choice) %7B%0D%0A%09%09return new VisualizationImplementation(warp, outputDirectory, choice);%0D%0A%09%7D%0D%0A%09&#xA; public s&#xA;" conflicting="false"/>
-  <UMLLabProfile:Patch xmi:id="_9e-zgLhDEe2QK54y_oSyxw" base_Element="_2qfn8LhDEe2QK54y_oSyxw" patchText="@@ -500,24 +500,891 @@&#xA; nObject;%0D%0A%0D%0A&#xA;+%09/**%0D%0A%09 * Initializes a new visualization by taking a warp interface, Output Directory%0D%0A%09 * and a SystemChoices enum and uses them to create a file name and%0D%0A%09 * visualization.%0D%0A%09 * %0D%0A%09 * @param warp            interface in which workload will be retrieved%0D%0A%09 * @param outputDirectory a string representing the output directory for file%0D%0A%09 *                        name%0D%0A%09 * @param choice          the choice in which the user decides for creating the%0D%0A%09 *                        visualization%0D%0A%09 */%0D%0A%09public VisualizationImplementation(String/*No type specified*/ warp, String outputDirectory, SystemChoices choice) %7B%0D%0A%09%09this.fm = new FileManager();%0D%0A%09%09this.warp = warp;%0D%0A%09%09inputFileName = warp.toWorkload().getInputFileName();%0D%0A%09%09this.fileNameTemplate = createFileNameTemplate(outputDirectory);%0D%0A%09%09visualizationObject = null;%0D%0A%09%09createVisualization(choice);%0D%0A%09%7D%0D%0A%0D%0A&#xA; %09/**%0D%0A%09 * In&#xA;" conflicting="false"/>
-  <UMLLabProfile:Patch xmi:id="_9fDE8LhDEe2QK54y_oSyxw" base_Element="_2rJvQLhDEe2QK54y_oSyxw" patchText="@@ -8973,32 +8973,4060 @@&#xA; %09%09%7D%0D%0A%09%09%7D%0D%0A%09%7D%0D%0A%0D%0A&#xA;+%09/**%0D%0A%09 * %3Ch1%3ECreates a visualization for a WarpInterface%3C/h1%3E%0D%0A%09 * %3Cp%3E%0D%0A%09 * Puts the visualization in the the output folder directory. The type of%0D%0A%09 * visualization is determined by the choice object that is passed in.%0D%0A%09 * %3C/p%3E%0D%0A%09 * %0D%0A%09 * @param warp   a WarpInteface probably a WarpSystem class%0D%0A%09 * @param choice An item from the SystemChoices enum that specifies what%0D%0A%09 *               visualization to create.%0D%0A%09 */%0D%0A%09private static void visualize(String/*No type specified*/ warp, SystemChoices choice) %7B%0D%0A%09%09var viz = VisualizationFactory.createProgramVisualization(warp, outputSubDirectory, choice);%0D%0A%09%09if (viz != null) %7B%0D%0A%09%09%09viz.toFile();%0D%0A%09%09%09if (guiRequested &amp;&amp; schedulerRequested) %7B%0D%0A%09%09%09%09/* Only display window when a specific scheduler has been requested */%0D%0A%09%09%09%09viz.toDisplay();%0D%0A%09%09%09%7D%0D%0A%09%09%7D%0D%0A%09%7D%0D%0A%0D%0A%09/**%0D%0A%09 * %3Ch1%3EVerifies a WarpInterface's performance.%3C/h1%3E%0D%0A%09 * %3Cp%3E%0D%0A%09 * Verifies the deadlines, reliabilities and if there are channel conflicts. If%0D%0A%09 * something is not verified a message will be printed to the console and in the%0D%0A%09 * case of a failure to verify the deadlines or the channel conflicts, a%0D%0A%09 * deadline/channel report will be created. If everything is successful a%0D%0A%09 * success message will be printed to the console.%0D%0A%09 * %3C/p%3E%0D%0A%09 * %0D%0A%09 * @param warp The WarpInterface to verify.%0D%0A%09 */%0D%0A%09private static void verifyPerformanceRequirements(String/*No type specified*/ warp) %7B%0D%0A%09%09verifyDeadlines(warp);%0D%0A%09%09verifyReliabilities(warp);%0D%0A%09%09verifyNoChannelConflicts(warp);%0D%0A%09%7D%0D%0A%0D%0A%09/**%0D%0A%09 * %3Ch1%3EChecks if the reliabilities are met on the WarpInterface.%3C/h1%3E%0D%0A%09 * %3Cp%3E%0D%0A%09 * NOTE: the reliability check is currently not implemented and will always%0D%0A%09 * return true. Prints the result of the check to the console.%0D%0A%09 * %3C/p%3E%0D%0A%09 * %0D%0A%09 * @param warp The WarpInterface to check the reliabilities of.%0D%0A%09 */%0D%0A%09private static void verifyReliabilities(String/*No type specified*/ warp) %7B%0D%0A%09%09if (schedulerSelected != ScheduleChoices.RTHART) %7B%0D%0A%09%09%09/* RealTime HART doesn't adhere to reliability targets */%0D%0A%09%09%09if (!warp.reliabilitiesMet()) %7B%0D%0A%09%09%09%09System.err.printf(%0D%0A%09%09%09%09%09%09%22%5Cn%5CtERROR: Not all flows meet the end-to-end %22 + %22reliability of %25s under %25s scheduling.%5Cn%22,%0D%0A%09%09%09%09%09%09String.valueOf(e2e), schedulerSelected.toString());%0D%0A%09%09%09%7D else if (verboseMode) %7B%0D%0A%09%09%09%09System.out.printf(%22%5Cn%5CtAll flows meet the end-to-end reliability %22 + %22of %25s under %25s scheduling.%5Cn%22,%0D%0A%09%09%09%09%09%09String.valueOf(e2e), schedulerSelected.toString());%0D%0A%09%09%09%7D%0D%0A%09%09%7D%0D%0A%09%7D%0D%0A%0D%0A%09/**%0D%0A%09 * %3Ch1%3EChecks to see if the deadlines are met on the warp interface%3C/h1%3E%0D%0A%09 * %3Cp%3E%0D%0A%09 * Returns false if there is at least one deadline missed. If a deadline is%0D%0A%09 * missed a deadline report file will be created. Result is printed to the%0D%0A%09 * console.%0D%0A%09 * %3C/p%3E%0D%0A%09 * %0D%0A%09 * @param warp The WarpInterface to check the deadlines of.%0D%0A%09 */%0D%0A%09private static void verifyDeadlines(String/*No type specified*/ warp) %7B%0D%0A%09%09if (!warp.deadlinesMet()) %7B%0D%0A%09%09%09System.err.printf(%22%5Cn%5CtERROR: Not all flows meet their deadlines under %25s scheduling.%5Cn%22,%0D%0A%09%09%09%09%09schedulerSelected.toString());%0D%0A%09%09%09visualize(warp, SystemChoices.DEADLINE_REPORT);%0D%0A%09%09%7D else if (verboseMode) %7B%0D%0A%09%09%09System.out.printf(%22%5Cn%5CtAll flows meet their deadlines under %25s scheduling.%5Cn%22,%0D%0A%09%09%09%09%09schedulerSelected.toString());%0D%0A%09%09%7D%0D%0A%09%7D%0D%0A%0D%0A%09/**%0D%0A%09 * %3Ch1%3EChecks if there is a channel conflict in the warp interface.%3C/h1%3E%0D%0A%09 * %3Cp%3E%0D%0A%09 * The result is printed to the console. If a channel analysis file was not%0D%0A%09 * originally requested, one will be made.%0D%0A%09 * %3C/p%3E%0D%0A%09 * %0D%0A%09 * @param warp The WarpInterface to check the channel conflicts of.%0D%0A%09 */%0D%0A%09private static void verifyNoChannelConflicts(String/*No type specified*/ warp) %7B%0D%0A%09%09if (warp.toChannelAnalysis().isChannelConflict()) %7B%0D%0A%09%09%09System.err.printf(%22%5Cn%5CtERROR: Channel conficts exists. See Channel Visualization for details.%5Cn%22);%0D%0A%09%09%09if (!caRequested) %7B // only need to create the visualization if not already requested%0D%0A%09%09%09%09visualize(warp, SystemChoices.CHANNEL);%0D%0A%09%09%09%7D%0D%0A%09%09%7D else if (verboseMode) %7B%0D%0A%09%09%09System.out.printf(%22%5Cn%5CtNo channel conflicts detected.%5Cn%22);%0D%0A%09%09%7D%0D%0A%09%7D%0D%0A%0D%0A&#xA; %09/**%0D%0A%09 * %3Ch1%3ESe&#xA;" conflicting="false"/>
+  <UMLLabProfile:Patch xmi:id="_9e-McLhDEe2QK54y_oSyxw" base_Element="_2qfA4bhDEe2QK54y_oSyxw" patchText="@@ -357,16 +357,19 @@&#xA; ory %7B%0D%0A%09&#xA;+%0D%0A%09&#xA; public s&#xA;" conflicting="false"/>
+  <UMLLabProfile:Generics xmi:id="_DWri8M3KEe2aPrCP15OoQw" genericsValue="Integer" base_Element="_DWqU1c3KEe2aPrCP15OoQw"/>
+  <UMLLabProfile:Generics xmi:id="_DWsxEM3KEe2aPrCP15OoQw" genericsValue="Integer" base_Element="_DWsKAM3KEe2aPrCP15OoQw"/>
+  <UMLLabProfile:Generics xmi:id="_DWtYIc3KEe2aPrCP15OoQw" genericsValue="Integer" base_Element="_DWsxEc3KEe2aPrCP15OoQw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DXrBdM3KEe2aPrCP15OoQw" base_Element="_DXrBcs3KEe2aPrCP15OoQw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DXrogc3KEe2aPrCP15OoQw" base_Element="_DXrBdc3KEe2aPrCP15OoQw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DXsPks3KEe2aPrCP15OoQw" base_Element="_DXsPkM3KEe2aPrCP15OoQw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DXs2oM3KEe2aPrCP15OoQw" base_Element="_DXsPk83KEe2aPrCP15OoQw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DXs2o83KEe2aPrCP15OoQw" base_Element="_DXs2oc3KEe2aPrCP15OoQw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DXuEwM3KEe2aPrCP15OoQw" base_Element="_DXtdsM3KEe2aPrCP15OoQw"/>
+  <UMLLabProfile:Reference xmi:id="_DYF4MM3KEe2aPrCP15OoQw" base_Element="_DYFRIM3KEe2aPrCP15OoQw"/>
+  <UMLLabProfile:Reference xmi:id="_DYHGUM3KEe2aPrCP15OoQw" base_Element="_DYGfQM3KEe2aPrCP15OoQw"/>
 </xmi:XMI>
