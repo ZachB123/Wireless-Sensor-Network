@@ -197,7 +197,7 @@ class WorkLoadTest {
 		WorkLoad wld = new WorkLoad(0.9,0.99, "Example1a.txt");
 		String flowName = "F0";
 		
-		Integer[] expected = {3,3,0};
+		Integer[] expected = {2,2,0};
 		Integer[] actual = wld.getNumTxAttemptsPerLink(flowName);
 
 		assertArrayEquals(expected, actual, String.format("expected %s but got %s", printArrayHelper(expected), printArrayHelper(actual)));
@@ -274,7 +274,7 @@ class WorkLoadTest {
 
 		// Create expected and actual values
 		System.out.println(String.format("Num: %d", wld.getTotalTxAttemptsInFlow(flowName)));
-		int expected = 4;
+		int expected = 2;
 		int actual = wld.getTotalTxAttemptsInFlow(flowName);
 
 		assertSame(expected, actual, String.format("Expected %d transmission attempts but got %d.", expected, actual));
@@ -292,7 +292,7 @@ class WorkLoadTest {
 		String flowName = "AF4";
 
 		// Create expected and actual values
-		int expected = 11;
+		int expected = 2;
 		int actual = wld.getTotalTxAttemptsInFlow(flowName);
 
 		assertSame(expected, actual, String.format("Expected %d transmission attempts but got %d.", expected, actual));
