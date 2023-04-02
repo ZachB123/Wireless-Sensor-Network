@@ -201,7 +201,7 @@ public class Warp {
 			}
 			// Create and visualize the Warp System
 			if (schedulerRequested) {
-				WarpSystem warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
+				WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
 				verifyPerformanceRequirements(warp);
 				for (SystemChoices choice : SystemChoices.values()) {
 					visualize(warp, choice); // visualize all System choices
@@ -209,7 +209,7 @@ public class Warp {
 			} else { // create a system for all scheduler choices
 				for (ScheduleChoices sch : ScheduleChoices.values()) {
 					schedulerSelected = sch;
-					WarpSystem warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
+					WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
 					verifyPerformanceRequirements(warp);
 					for (SystemChoices choice : SystemChoices.values()) {
 						visualize(warp, choice); // visualize all System choices
@@ -224,7 +224,7 @@ public class Warp {
 			if (gvRequested) {
 				visualize(workLoad, WorkLoadChoices.GRAPHVIZ);
 			}
-			WarpSystem warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
+			WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
 			verifyPerformanceRequirements(warp);
 			visualize(warp, SystemChoices.SOURCE);
 			if (caRequested) {
@@ -278,7 +278,7 @@ public class Warp {
 	 * @param choice An item from the SystemChoices enum that specifies what
 	 *               visualization to create.
 	 */
-	private static void visualize(WarpSystem/*No type specified*/ warp, SystemChoices choice) {
+	private static void visualize(WarpInterface warp, SystemChoices choice) {
 		var viz = VisualizationFactory.createProgramVisualization(warp, outputSubDirectory, choice);
 		if (viz != null) {
 			viz.toFile();
@@ -301,7 +301,7 @@ public class Warp {
 	 * 
 	 * @param warp The WarpInterface to verify.
 	 */
-	private static void verifyPerformanceRequirements(WarpSystem/*No type specified*/ warp) {
+	private static void verifyPerformanceRequirements(WarpInterface warp) {
 		verifyDeadlines(warp);
 		verifyReliabilities(warp);
 		verifyNoChannelConflicts(warp);
@@ -316,7 +316,7 @@ public class Warp {
 	 * 
 	 * @param warp The WarpInterface to check the reliabilities of.
 	 */
-	private static void verifyReliabilities(WarpSystem/*No type specified*/ warp) {
+	private static void verifyReliabilities(WarpInterface warp) {
 		if (schedulerSelected != ScheduleChoices.RTHART) {
 			/* RealTime HART doesn't adhere to reliability targets */
 			if (!warp.reliabilitiesMet()) {
@@ -340,7 +340,7 @@ public class Warp {
 	 * 
 	 * @param warp The WarpInterface to check the deadlines of.
 	 */
-	private static void verifyDeadlines(WarpSystem/*No type specified*/ warp) {
+	private static void verifyDeadlines(WarpInterface warp) {
 		if (!warp.deadlinesMet()) {
 			System.err.printf("\n\tERROR: Not all flows meet their deadlines under %s scheduling.\n",
 					schedulerSelected.toString());
@@ -360,7 +360,7 @@ public class Warp {
 	 * 
 	 * @param warp The WarpInterface to check the channel conflicts of.
 	 */
-	private static void verifyNoChannelConflicts(WarpSystem/*No type specified*/ warp) {
+	private static void verifyNoChannelConflicts(WarpInterface warp) {
 		if (warp.toChannelAnalysis().isChannelConflict()) {
 			System.err.printf("\n\tERROR: Channel conficts exists. See Channel Visualization for details.\n");
 			if (!caRequested) { // only need to create the visualization if not already requested
@@ -409,10 +409,10 @@ public class Warp {
 	 * @param args An array of strings of the command line arguments
 	 */
 	private static void setWarpParameters(String[] args) { // move command line parsing into this
-															// function--need to set up globals?
+		// function--need to set up globals?
 
-		// create holder objects for storing results ...
-		// BooleanHolder debug = new BooleanHolder();
+// create holder objects for storing results ...
+// BooleanHolder debug = new BooleanHolder();
 		StringHolder schedulerSelected = new StringHolder();
 		IntHolder channels = new IntHolder();
 		IntHolder faults = new IntHolder();
@@ -431,7 +431,7 @@ public class Warp {
 		StringHolder input = new StringHolder();
 		StringHolder output = new StringHolder();
 
-		// create the parser and specify the allowed options ...
+// create the parser and specify the allowed options ...
 		ArgParser parser = new ArgParser("java -jar warp.jar");
 		parser.addOption("-sch, --schedule %s {priority,rm,dm,rtHart,poset} #scheduler options", schedulerSelected);
 		parser.addOption("-c, --channels %d {[1,16]} #number of wireless channels", channels);
@@ -454,13 +454,13 @@ public class Warp {
 		parser.addOption(
 				"-v, --verbose %v #Echo input file name and parsed contents. Then for each flow instance: show maximum E2E latency and min/max communication cost for that instance of the flow",
 				verbose);
-		// parser.addOption ("-d, -debug, --debug %v #Debug mode: base directory =
-		// $HOME/Documents/WARP/", debug);
+// parser.addOption ("-d, -debug, --debug %v #Debug mode: base directory =
+// $HOME/Documents/WARP/", debug);
 
-		// match the arguments ...
+// match the arguments ...
 		parser.matchAllArgs(args);
 
-		// Set WARP system configuration options
+// Set WARP system configuration options
 		if (channels.value > 0) {
 			nChannels = channels.value; // set option specified
 		} else {
@@ -497,7 +497,7 @@ public class Warp {
 		allRequested = all.value; // all out files requested flag
 		latencyRequested = latency.value; // latency report requested flag
 		verboseMode = verbose.value; // verbose mode flag (mainly for running in IDE)
-		// debugMode = debug.value; // debug mode flag (mainly for running in IDE)
+// debugMode = debug.value; // debug mode flag (mainly for running in IDE)
 		inputFile = input.value; // input file specified
 		if (schedulerSelected.value != null) { // can't switch on a null value so check then switch
 			schedulerRequested = true;

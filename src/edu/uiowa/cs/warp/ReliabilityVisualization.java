@@ -16,11 +16,12 @@ public class ReliabilityVisualization  extends VisualizationObject {
 	
 	private static final String SOURCE_SUFFIX = ".ra";
 	private static final String OBJECT_NAME = "Reliability Analysis";
+	private WarpInterface warp;
 	private ReliabilityAnalysis ra;
 	
-	ReliabilityVisualization(WarpSystem/*No type specified*/ warp) {
-		super(new FileManager(), warp.toString(), SOURCE_SUFFIX);
-//		this.warp = warp;
+	ReliabilityVisualization(WarpInterface warp) {
+		super(new FileManager(), warp, SOURCE_SUFFIX);
+		this.warp = warp;
 		this.ra = warp.toReliabilityAnalysis();
 	}
 	
@@ -138,3 +139,4 @@ F0:A	F0:B	F0:C	F1:C	F1:B	F1:A
 1.0	0.999	0.9963	1.0	0.999	0.9963
 */
 }
+

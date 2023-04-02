@@ -17,11 +17,13 @@ public class LatencyVisualization extends VisualizationObject {
 
   private static final String SOURCE_SUFFIX = ".la";
   private static final String OBJECT_NAME = "Latency Analysis";
+  private WarpInterface warp;
   private LatencyAnalysis la;
 
-  LatencyVisualization(WarpSystem/*No type specified*/ warp) {
-    super(new FileManager(), warp.toString(), SOURCE_SUFFIX);
-//    this.warp = warp;
+  LatencyVisualization(WarpInterface warp) {
+    super(new FileManager(), warp, SOURCE_SUFFIX);
+    this.warp = warp;
     this.la = warp.toLatencyAnalysis();
   }
 }
+

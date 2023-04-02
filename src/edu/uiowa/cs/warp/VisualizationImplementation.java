@@ -18,22 +18,11 @@ public class VisualizationImplementation implements Visualization {
 	private String inputFileName;
 	private String fileNameTemplate;
 	private FileManager fm = null;
+	private WarpInterface warp = null;
 	private WorkLoad workLoad = null;
 	private VisualizationObject visualizationObject;
-	private WarpSystem warp;
 
-	/**
-	 * Initializes a new visualization by taking a warp interface, Output Directory
-	 * and a SystemChoices enum and uses them to create a file name and
-	 * visualization.
-	 * 
-	 * @param warp            interface in which workload will be retrieved
-	 * @param outputDirectory a string representing the output directory for file
-	 *                        name
-	 * @param choice          the choice in which the user decides for creating the
-	 *                        visualization
-	 */
-	public VisualizationImplementation(WarpSystem/*No type specified*/ warp, String outputDirectory, SystemChoices choice) {
+	public VisualizationImplementation(WarpInterface warp, String outputDirectory, SystemChoices choice) {
 		this.fm = new FileManager();
 		this.warp = warp;
 		inputFileName = warp.toWorkload().getInputFileName();
@@ -42,17 +31,6 @@ public class VisualizationImplementation implements Visualization {
 		createVisualization(choice);
 	}
 
-	/**
-	 * Initializes a new visualization by taking in a Workload, Output Directory,
-	 * and a SystemChoices enum and uses them to create a file name and
-	 * visualization.
-	 * 
-	 * @param workLoad        workLoad that will be used to get data for
-	 *                        visualization
-	 * @param outputDirectory string representing output directory for file name
-	 * @param choice          choice that is decided by user in how to create
-	 *                        implementation
-	 */
 	public VisualizationImplementation(WorkLoad workLoad, String outputDirectory, WorkLoadChoices choice) {
 		this.fm = new FileManager();
 		this.workLoad = workLoad;
@@ -62,9 +40,6 @@ public class VisualizationImplementation implements Visualization {
 		createVisualization(choice);
 	}
 
-	/**
-	 * <h1>If a visualization exists it will be displayed</h1>
-	 */
 	@Override
 	public void toDisplay() {
 		// System.out.println(displayContent.toString());
@@ -74,30 +49,16 @@ public class VisualizationImplementation implements Visualization {
 		}
 	}
 
-	/*
-	 * <h1>Writes the description of the visualization to a file</h1>
-	 */
 	@Override
 	public void toFile() {
 		fm.writeFile(fileName, fileContent.toString());
 	}
 
-	/*
-	 * <h1>Converts a visualization to a string in a readable manner.</h1>
-	 * 
-	 * @return a String containing the visualization content
-	 */
 	@Override
 	public String toString() {
 		return visualization.toString();
 	}
 
-	/**
-	 * <h1>Creates a visualization based on the SystemChoice provided</h1>
-	 * 
-	 * @param choice can be set to different requests to change how visualization is
-	 *               implemented
-	 */
 	private void createVisualization(SystemChoices choice) {
 		switch (choice) { // select the requested visualization
 		case SOURCE:
@@ -126,11 +87,11 @@ public class VisualizationImplementation implements Visualization {
 
 		case LATENCY_REPORT:
 			createVisualization(
-					new ReportVisualization(fm, (SystemAttributes) warp, new LatencyAnalysis(warp).latencyReport(), "Latency"));
+					new ReportVisualization(fm, warp, new LatencyAnalysis(warp).latencyReport(), "Latency"));
 			break;
 
 		case DEADLINE_REPORT:
-			createVisualization(new ReportVisualization(fm, (SystemAttributes) warp, warp.toProgram().deadlineMisses(), "DeadlineMisses"));
+			createVisualization(new ReportVisualization(fm, warp, warp.toProgram().deadlineMisses(), "DeadlineMisses"));
 			break;
 
 		default:
@@ -139,11 +100,6 @@ public class VisualizationImplementation implements Visualization {
 		}
 	}
 
-	/**
-	 * <h1>Creates a visualization based on the WorkloadChoice provided</h1>
-	 * 
-	 * @param choice user choice for how visualization is represented
-	 */
 	private void createVisualization(WorkLoadChoices choice) {
 		switch (choice) { // select the requested visualization
 		case COMUNICATION_GRAPH:
@@ -165,12 +121,6 @@ public class VisualizationImplementation implements Visualization {
 		}
 	}
 
-	/**
-	 * <h1>Creates a visualization based off a existing VisualizationObject</h1>
-	 * 
-	 * @param <T> Any object extending a Visualization object
-	 * @param obj object of type T to be used for visualization
-	 */
 	private <T extends VisualizationObject> void createVisualization(T obj) {
 		visualization = obj.visualization();
 		fileContent = obj.fileVisualization();
@@ -179,14 +129,6 @@ public class VisualizationImplementation implements Visualization {
 		visualizationObject = obj;
 	}
 
-	/**
-	 * <h1>Creates a file name template.</h1>
-	 * <p>Uses a string outputDirectory to create a template for a filename that allows
-	 * for easier formatting if the '/' is used in the file name.</p>
-	 * 
-	 * @param outputDirectory string used to make template for file name
-	 * @return new template for created file name
-	 */
 	private String createFileNameTemplate(String outputDirectory) {
 		String fileNameTemplate;
 		var workingDirectory = fm.getBaseDirectory();

@@ -3,120 +3,132 @@
  */
 package edu.uiowa.cs.warp;
 
-import edu.uiowa.cs.warp.SystemAttributes.ScheduleChoices;
-
 /**
  * @author sgoddard
  * @version 1.4
  */
-public class WarpSystem {
+public class WarpSystem implements WarpInterface {
 
-  // private static final String SOURCE_SUFFIX = ".dsl";
+	// private static final String SOURCE_SUFFIX = ".dsl";
 
-  private Program program;
-  private WorkLoad workLoad;
-  private ReliabilityAnalysis ra;
-  private LatencyAnalysis la;
-  private ChannelAnalysis ca;
-  private Integer numChannels;
-  private Boolean verboseMode = false;
-  private Boolean latencyRequested = false;
+	private Program program;
+	private WorkLoad workLoad;
+	private ReliabilityAnalysis ra;
+	private LatencyAnalysis la;
+	private ChannelAnalysis ca;
+	private Integer numChannels;
+	private Boolean verboseMode = false;
+	private Boolean latencyRequested = false;
 
-  public WarpSystem(WorkLoad workLoad, Integer numChannels, ScheduleChoices choice) {
-    this.workLoad = workLoad;
-    this.numChannels = numChannels;
-    createProgram(workLoad, numChannels, choice);
-  }
+	public WarpSystem(WorkLoad workLoad, Integer numChannels, ScheduleChoices choice) {
+		this.workLoad = workLoad;
+		this.numChannels = numChannels;
+		createProgram(workLoad, numChannels, choice);
+	}
 
-  public WorkLoad toWorkload() {
-    return workLoad;
-  }
+	@Override
+	public WorkLoad toWorkload() {
+		return workLoad;
+	}
 
-  public Program toProgram() {
-    return program;
-  }
+	@Override
+	public Program toProgram() {
+		return program;
+	}
 
-  public ReliabilityAnalysis toReliabilityAnalysis() {
-    // TODO Auto-generated method stub
-    ra = new ReliabilityAnalysis(program);
-    return ra;
-  }
+	@Override
+	public ReliabilityAnalysis toReliabilityAnalysis() {
+		// TODO Auto-generated method stub
+		ra = new ReliabilityAnalysis(program);
+		return ra;
+	}
 
-  public SimulatorInput toSimulator() {
-    // TODO Auto-generated method stub
-    return null;
-  }
+	@Override
+	public SimulatorInput toSimulator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-  public LatencyAnalysis toLatencyAnalysis() {
-    // TODO Auto-generated method stub
-    la = new LatencyAnalysis(this);
-    return la;
-  }
+	@Override
+	public LatencyAnalysis toLatencyAnalysis() {
+		// TODO Auto-generated method stub
+		la = new LatencyAnalysis(this);
+		return la;
+	}
 
-  public ChannelAnalysis toChannelAnalysis() {
-    // TODO Auto-generated method stub
-    ca = new ChannelAnalysis(this);
-    return ca;
-  }
+	@Override
+	public ChannelAnalysis toChannelAnalysis() {
+		// TODO Auto-generated method stub
+		ca = new ChannelAnalysis(this);
+		return ca;
+	}
 
-  public Boolean reliabilitiesMet() {
-    if (ra == null) {
-      ra = new ReliabilityAnalysis(program);
-    }
-    return ra.verifyReliabilities();
-  }
+	@Override
+	public Boolean reliabilitiesMet() {
+		if (ra == null) {
+			ra = new ReliabilityAnalysis(program);
+		}
+		return ra.verifyReliabilities();
+	}
 
-  public Boolean deadlinesMet() {
-    Boolean result = true;
-    if (program.deadlineMisses().size() > 0) {
-      result = false;
-    }
-    return result;
-  }
+	@Override
+	public Boolean deadlinesMet() {
+		Boolean result = true;
+		if (program.deadlineMisses().size() > 0) {
+			result = false;
+		}
+		return result;
+	}
 
+	private void createProgram(WorkLoad workLoad, Integer numChannels, ScheduleChoices choice) {
+		program = new Program(workLoad, numChannels, choice, verboseMode, latencyRequested);
 
-  private void createProgram(WorkLoad workLoad, Integer numChannels, ScheduleChoices choice) {
-    program = new Program(workLoad, numChannels, choice, verboseMode, latencyRequested);
+	}
 
-  }
+	@Override
+	public Integer getNumChannels() {
+		return numChannels;
+	}
 
+	@Override
+	public Integer getNumFaults() {
+		return program.getNumFaults();
+	}
 
-  public Integer getNumChannels() {
-    return numChannels;
-  }
+	@Override
+	public Double getMinPacketReceptionRate() {
+		return workLoad.getMinPacketReceptionRate();
+	}
 
-  public Integer getNumFaults() {
-    return program.getNumFaults();
-  }
+	@Override
+	public Double getE2e() {
+		return workLoad.getE2e();
+	}
 
-  public Double getMinPacketReceptionRate() {
-    return workLoad.getMinPacketReceptionRate();
-  }
+	@Override
+	public String getName() {
+		return workLoad.getName();
+	}
 
-  public Double getE2e() {
-    return workLoad.getE2e();
-  }
+	@Override
+	public String getSchedulerName() {
+		return program.getSchedulerName();
+	}
 
-  public String getName() {
-    return workLoad.getName();
-  }
+	@Override
+	public Integer getNumTransmissions() {
+		return program.getNumTransmissions();
+	}
 
-  public String getSchedulerName() {
-    return program.getSchedulerName();
-  }
+	@Override
+	public Boolean getOptimizationFlag() {
+		return program.getOptimizationFlag();
+	}
 
-  public Integer getNumTransmissions() {
-    return program.getNumTransmissions();
-  }
+	@Override
+	public void toSensorNetwork() {
+		// TODO Auto-generated method stub
 
-  public Boolean getOptimizationFlag() {
-    return program.getOptimizationFlag();
-  }
-
-  public void toSensorNetwork() {
-    // TODO Auto-generated method stub
-
-  }
-
+	}
 
 }

@@ -15,11 +15,13 @@ public class ChannelVisualization extends VisualizationObject {
 
   private static final String SOURCE_SUFFIX = ".ch";
   private static final String OBJECT_NAME = "Channel Analysis";
+  private WarpInterface warp;
   private ChannelAnalysis ca;
 
-  ChannelVisualization(WarpSystem/*No type specified*/ warp) {
-    super(new FileManager(), warp.toString(), SOURCE_SUFFIX);
-//    this.warp = warp;
+  ChannelVisualization(WarpInterface warp) {
+    super(new FileManager(), warp, SOURCE_SUFFIX);
+    this.warp = warp;
     this.ca = warp.toChannelAnalysis();
   }
 }
+

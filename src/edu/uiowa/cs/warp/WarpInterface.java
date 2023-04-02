@@ -6,22 +6,22 @@ package edu.uiowa.cs.warp;
  */
 public interface WarpInterface extends SystemAttributes {
 
-  public WorkLoad toWorkload();
+	public WorkLoad toWorkload();
 
-  public Program toProgram();
+	public Program toProgram();
 
-  public ReliabilityAnalysis toReliabilityAnalysis();
+	public ReliabilityAnalysis toReliabilityAnalysis();
 
-  public SimulatorInput toSimulator();
+	public SimulatorInput toSimulator();
 
-  public LatencyAnalysis toLatencyAnalysis();
+	public LatencyAnalysis toLatencyAnalysis();
 
-  public ChannelAnalysis toChannelAnalysis();
+	public ChannelAnalysis toChannelAnalysis();
 
-  public void toSensorNetwork(); // deploys code
+	public void toSensorNetwork(); // deploys code
 
-  public boolean reliabilitiesMet();
+	public Boolean reliabilitiesMet();
 
-  public boolean deadlinesMet();
+	public Boolean deadlinesMet();
 
 }
