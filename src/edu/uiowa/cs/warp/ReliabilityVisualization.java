@@ -25,6 +25,10 @@ public class ReliabilityVisualization  extends VisualizationObject {
 		this.ra = warp.toReliabilityAnalysis();
 	}
 	
+	public Description visualization() {
+		return null;
+	}
+	
 /* File Visualization for workload defined in Example.txt follows. Note
  * that your Authentication tag will be different from this example. The
  * rest of your output in the file ExamplePriority-0.9M-0.99E2E.ra
