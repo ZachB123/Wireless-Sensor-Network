@@ -121,6 +121,8 @@ public class ReliabilityAnalysis {
 	 */
 	public ReliabilityTable getReliabilities() {
 		// TODO implement this operation
+		System.out.printf("Cols %d\n", program.scheduleBuilt.getNumColumns());
+		System.out.printf("Rows: %d\n", program.scheduleBuilt.getNumRows());
 		return null;
 //		throw new UnsupportedOperationException("not implemented");
 	}

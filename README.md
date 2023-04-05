@@ -64,7 +64,7 @@ Tasks:
 * Regenerate UML diagrams (Evan) (to make sure diagrams are correct after HW4)
 
 Documents added: 
-* Sequence Diagram of Warp program
+* Sequence Diagram of Warp program. you can view the code in SequenceDiagramCode.txt and find the link there as well.
 * Project Plan describing the team's initial plan for each sprint
 
 Collaboration:
