@@ -51,3 +51,24 @@ What each team member documented.
 # Homework 4
 
 * Created UML Diagrams for SchedulableObject, Workload, and all Reliability files
+
+# Project - Team Flamingo
+The objective of the project is to update the existing Warp codebase to add calculations and analysis of the reliabilities of flows in the program. We will develop code and add to the ReliabilityAnalysis and ReliabilityVisualization classes to create this functionality.
+
+## Sprint 1
+Tasks:
+* Understand the problem (All)
+* Create project plan (All)
+* Create sequence diagram (Zach), check diagram (Wei Ching)
+* Update ReadMe (Abby)
+* Regenerate UML diagrams (Evan) (to make sure diagrams are correct after HW4)
+
+Documents added: 
+* Sequence Diagram of Warp program
+* Project Plan describing the team's initial plan for each sprint
+
+Collaboration:
+* The team met on April 3rd to create the project plan, work through the transmission probability formula and understand the program, and discuss what/how we will add to the Warp code to meet the project requirements.
+
+
+
