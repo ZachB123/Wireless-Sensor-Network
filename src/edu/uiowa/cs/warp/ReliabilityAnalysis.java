@@ -50,7 +50,7 @@ public class ReliabilityAnalysis {
 	/**
 	 * Default end-to-end reliability
 	 */
-	private static final Double DEFAULT_E2E = 0.99; 
+	private static final Double DEFAULT_E2E = 0.99;
 	/**
 	 * Default minimum packet reception rate
 	 */
@@ -71,15 +71,15 @@ public class ReliabilityAnalysis {
 	 * Number of faults in flow
 	 */
 	private Integer numFaults = 0;
-	
+
 	/**
 	 * Status of the fault model (fixed or not)
 	 * 
-	 * Set to true if we use the numFaults constructor
-	 * Used to determine how to calculate numTxPerLinkAndTotalTxCost
+	 * Set to true if we use the numFaults constructor Used to determine how to
+	 * calculate numTxPerLinkAndTotalTxCost
 	 */
 	private boolean fixed = false;
-	
+
 	/**
 	 * Class constructor specifying the program
 	 * 
@@ -88,18 +88,21 @@ public class ReliabilityAnalysis {
 	public ReliabilityAnalysis(Program program) {
 		this.program = program;
 	}
-	
+
 	/**
-	 * Class constructor specifying end-to-end reliability and minimum packet reception rate
+	 * Class constructor specifying end-to-end reliability and minimum packet
+	 * reception rate
 	 * 
-	 * @param e2e is a double representing the end-to-end reliability
-	 * @param minPacketReceptionRate is a double representing the minimum packet reception rate
+	 * @param e2e                    is a double representing the end-to-end
+	 *                               reliability
+	 * @param minPacketReceptionRate is a double representing the minimum packet
+	 *                               reception rate
 	 */
 	public ReliabilityAnalysis(Double e2e, Double minPacketReceptionRate) {
 		this.e2e = e2e;
 		this.minPacketReceptionRate = minPacketReceptionRate;
 	}
-	
+
 	/**
 	 * Class constructor specifying the number of faults, sets fixed to true
 	 * 
@@ -109,23 +112,25 @@ public class ReliabilityAnalysis {
 		this.numFaults = numFaults;
 		this.fixed = true;
 	}
-	
+
 	/**
 	 * This method was generated with UML Lab in HW4
 	 * 
-	 * @return a ReliabilityTable containing reliabilities of a packet
-	 *         reaching each node in a flow at each time slot
+	 * @return a ReliabilityTable containing reliabilities of a packet reaching each
+	 *         node in a flow at each time slot
 	 */
 	public ReliabilityTable getReliabilities() {
 		// TODO implement this operation
-		throw new UnsupportedOperationException("not implemented");
+		return null;
+//		throw new UnsupportedOperationException("not implemented");
 	}
 
 	/**
 	 * This method declares whether all reliabilities are met
 	 * 
-	 * I don't know if this should be changed or if its supposed to always return true 
-	 * if packets are always pushed again until the minimum link reliability is met?
+	 * I don't know if this should be changed or if its supposed to always return
+	 * true if packets are always pushed again until the minimum link reliability is
+	 * met?
 	 * 
 	 * @return Boolean true
 	 */
@@ -133,15 +138,49 @@ public class ReliabilityAnalysis {
 		// TODO Auto-generated method stub
 		return true;
 	}
+	
+	public String getHeader() {
+		// should be private
+		return String.format("Reliability Analysis for graph %s\n", program.workLoad.getName());
+	}
+	
+	public String getScheduler() {
+		// should be private
+		return String.format("Scheduler Name: %s\n", program.schedulerName);
+	}
+	
+	public String getM() {
+		// should be private
+		return String.format("M: %.2f\n", this.minPacketReceptionRate);
+	}
+	
+	public String getE2E() {
+		// should be private
+		return String.format("E2E: %.2f\n", this.e2e);
+	}
+	
+	public String getnChannels() {
+		// should be private
+		return String.format("nChannels: %d\n", program.nChannels);
+	}
+	
+	public String getFlows() {
+		//should be private
+		// doesnt work yet
+		return String.format("%s\n", String.join(" ", program.workLoad.getFlowNames()));
+	}
 
 	/**
-	 * This method calculates a flow's numTxPerLinkAndTotalTxCost based on whether its fault tolerance is fixed
+	 * This method calculates a flow's numTxPerLinkAndTotalTxCost based on whether
+	 * its fault tolerance is fixed
 	 * 
-	 * If fixed is true, calculates the maximum number of transmissions per link and maximum total transmissions
-	 * If fixed is false, calculates the number of transmission attempts (pushes) per link and total transmission attempts
+	 * If fixed is true, calculates the maximum number of transmissions per link and
+	 * maximum total transmissions If fixed is false, calculates the number of
+	 * transmission attempts (pushes) per link and total transmission attempts
 	 * 
 	 * @param flow is the specified flow to calculate transmissions and cost for
-	 * @return an ArrayList containing the number of transmissions per link and total cost of the specified flow
+	 * @return an ArrayList containing the number of transmissions per link and
+	 *         total cost of the specified flow
 	 */
 	public ArrayList<Integer> numTxPerLinkAndTotalTxCost(Flow flow) {
 		if (fixed) {
@@ -151,13 +190,12 @@ public class ReliabilityAnalysis {
 //		return numTxAttemptsPerLinkAndTotalTxAttempts(flow);
 		return getTxPerLinkAndTotalTxCost(flow);
 	}
-	
+
 	/**
 	 * This method takes a flow and adds its transmissions to an ArrayList. Each
 	 * node has a max of numFaults +1. Once these are all added to the ArrayList,
 	 * put the sum of the number of edges of the flow and the max faults in a flow
-	 * into the ArrayList
-	 * Method moved from Workload class
+	 * into the ArrayList Method moved from Workload class
 	 * 
 	 * @param flow is a specified flow object
 	 * @return an ArrayList containing number of edges and max faults in the
@@ -186,28 +224,29 @@ public class ReliabilityAnalysis {
 	}
 
 	/**
-	 * This method takes in a flow and calculates the number of transmission attempts
-	 * per link between nodes and the total transmission attempts
-	 * Method moved from Workload class
+	 * This method takes in a flow and calculates the number of transmission
+	 * attempts per link between nodes and the total transmission attempts Method
+	 * moved from Workload class
 	 * 
 	 * @param flow is a specified flow object
 	 * 
 	 * @return an ArrayList of the number of pushes
 	 */
 	private ArrayList<Integer> getTxPerLinkAndTotalTxCost(Flow flow) {
-		// I have no idea what this should be set to and we can't take it in as a 
+		// I have no idea what this should be set to and we can't take it in as a
 		// parameter according to the homework
 		Double M = 0.99;
-		
+
 		var nodesInFlow = flow.nodes;
-		// The last entry will contain the worst-case cost of transmitting E2E in isolation
-		var nNodesInFlow = nodesInFlow.size(); 
+		// The last entry will contain the worst-case cost of transmitting E2E in
+		// isolation
+		var nNodesInFlow = nodesInFlow.size();
 		// var nPushes = Array(repeating: 0, count: nNodesInFlow+1);
 		// Array to track nPushes for each node in this flow (same as nTx per link)
 		// Collections.nCopies initalized to 0
-		var nPushes = new ArrayList<Integer>(Collections.nCopies(nNodesInFlow + 1, 0 ));  
+		var nPushes = new ArrayList<Integer>(Collections.nCopies(nNodesInFlow + 1, 0));
 		// deprecated
-		//Arrays.fill(nPushes, 0); // initialize to all 0 values
+		// Arrays.fill(nPushes, 0); // initialize to all 0 values
 		var nHops = nNodesInFlow - 1;
 		// minLinkReliablityNeded is the minimum reliability needed per link in a flow
 		// to hit E2E
@@ -221,17 +260,17 @@ public class ReliabilityAnalysis {
 		// the current time slot (i.e., the row it is in)
 		// will add rows as we compute reliabilities until the final reliability is
 		// reached for all nodes.
-		var reliabilityWindow = new ReliabilityTable(); //Vector<Vector<Double>>();
+		var reliabilityWindow = new ReliabilityTable(); // Vector<Vector<Double>>();
 		var newReliabilityRow = new ReliabilityRow();
 		for (int i = 0; i < nNodesInFlow; i++) {
 			// create the the row initialized with 0.0 values
-			newReliabilityRow.add(0.0); 
+			newReliabilityRow.add(0.0);
 		}
 		// now add row to the reliability window, Time 0
-		reliabilityWindow.add(newReliabilityRow); 
+		reliabilityWindow.add(newReliabilityRow);
 //		ReliabilityRow tmpVector = reliabilityWindow.get(0);
 		// could be an issue here as idk if this needs to be copied or not
-		var currentReliabilityRow = reliabilityWindow.get(0); //tmpVector.toArray(new Double[tmpVector.size()]);
+		var currentReliabilityRow = reliabilityWindow.get(0); // tmpVector.toArray(new Double[tmpVector.size()]);
 		// var currentReliabilityRow = (Double[]) reliabilityWindow.get(0).toArray();
 		// Want reliabilityWindow[0][0] = 1.0 (i.e., P(packet@FlowSrc) = 1
 		// but I din't want to mess with the newReliablityRow vector I use below
@@ -239,50 +278,59 @@ public class ReliabilityAnalysis {
 		// We will then update this row with computed values for each node and put it
 		// back in the matrix
 		currentReliabilityRow.set(0, 1.0); // initialize (i.e., P(packet@FlowSrc) = 1
-		// the analysis will end when the e2e reliability matrix is met, initially the state 
+		// the analysis will end when the e2e reliability matrix is met, initially the
+		// state
 		// is not met and will be 0 with this statement
-		Double e2eReliabilityState = currentReliabilityRow.get(nNodesInFlow - 1); 
+		Double e2eReliabilityState = currentReliabilityRow.get(nNodesInFlow - 1);
 		var timeSlot = 0; // start time at 0
-		// change to while and increment increment timeSlot because we don't know how long this schedule window will last
-		while (e2eReliabilityState < e2e) { 
+		// change to while and increment increment timeSlot because we don't know how
+		// long this schedule window will last
+		while (e2eReliabilityState < e2e) {
 			var prevReliabilityRow = currentReliabilityRow;
 			// would be reliabilityWindow[timeSlot] if working through a schedule
-			currentReliabilityRow = newReliabilityRow; //.toArray(new Double[newReliabilityRow.size()]); 
+			currentReliabilityRow = newReliabilityRow; // .toArray(new Double[newReliabilityRow.size()]);
 			// Now use each flow:src->sink to update reliability computations
 			// this is the update formula for the state probabilities
 			// nextState = (1 - M) * prevState + M*NextHighestFlowState
 			// use MinLQ for M in above equation
 			// NewSinkNodeState = (1-M)*PrevSnkNodeState + M*PrevSrcNodeState
-			// loop through each node in the flow and update the states for each line (i.e) sink->src pair
-			for (int nodeIndex = 0; nodeIndex < (nNodesInFlow - 1); nodeIndex++) { 
+			// loop through each node in the flow and update the states for each line (i.e)
+			// sink->src pair
+			for (int nodeIndex = 0; nodeIndex < (nNodesInFlow - 1); nodeIndex++) {
 				var flowSrcNodeindex = nodeIndex;
 				var flowSnkNodeindex = nodeIndex + 1;
-				var prevSrcNodeState = prevReliabilityRow.get(flowSrcNodeindex); //[flowSrcNodeindex];
-				var prevSnkNodeState = prevReliabilityRow.get(flowSnkNodeindex); //[flowSnkNodeindex];
+				var prevSrcNodeState = prevReliabilityRow.get(flowSrcNodeindex); // [flowSrcNodeindex];
+				var prevSnkNodeState = prevReliabilityRow.get(flowSnkNodeindex); // [flowSnkNodeindex];
 				Double nextSnkState;
-				// do a push until PrevSnk state > e2e to ensure next node reaches target E2E BUT skip if
-				// no chance of success (i.e, source doesn't have packet) 
-				if ((prevSnkNodeState < minLinkReliablityNeded) && prevSrcNodeState > 0) { 
+				// do a push until PrevSnk state > e2e to ensure next node reaches target E2E
+				// BUT skip if
+				// no chance of success (i.e, source doesn't have packet)
+				if ((prevSnkNodeState < minLinkReliablityNeded) && prevSrcNodeState > 0) {
 					// need to continue attempting to Tx, so update current state
-					nextSnkState = ((1.0 - M) * prevSnkNodeState) + (M * prevSrcNodeState); 
+					nextSnkState = ((1.0 - M) * prevSnkNodeState) + (M * prevSrcNodeState);
 					// increment the number of pushes for for this node to snk node
-					nPushes.set(nodeIndex, nPushes.get(nodeIndex) + 1); //[nodeIndex] += 1; 
+					nPushes.set(nodeIndex, nPushes.get(nodeIndex) + 1); // [nodeIndex] += 1;
 				} else {
-					// snkNode has met its reliability. Thus move on to the next node and record the reliability met
-					nextSnkState = prevSnkNodeState; 
+					// snkNode has met its reliability. Thus move on to the next node and record the
+					// reliability met
+					nextSnkState = prevSnkNodeState;
 				}
-				// probabilities are non-decreasing so update if we were higher by carrying old value forward
-				if (currentReliabilityRow.get(flowSrcNodeindex) < prevReliabilityRow.get(flowSrcNodeindex)) { 
-					// carry forward the previous state for the src node, which may get overwritten later
+				// probabilities are non-decreasing so update if we were higher by carrying old
+				// value forward
+				if (currentReliabilityRow.get(flowSrcNodeindex) < prevReliabilityRow.get(flowSrcNodeindex)) {
+					// carry forward the previous state for the src node, which may get overwritten
+					// later
 					// by another instruction in this slot
-					currentReliabilityRow.set(flowSrcNodeindex, prevReliabilityRow.get(flowSrcNodeindex)); 
+					currentReliabilityRow.set(flowSrcNodeindex, prevReliabilityRow.get(flowSrcNodeindex));
 				}
 				currentReliabilityRow.set(flowSnkNodeindex, nextSnkState);
 			}
 
 			e2eReliabilityState = currentReliabilityRow.get(nNodesInFlow - 1);
-			// so I think since we just use this reliabilityVector as the same thing as the currentReliabilityRow
-			// we don't need it at all and can just replace currentReliabiliyVector with current ReliabilityRow
+			// so I think since we just use this reliabilityVector as the same thing as the
+			// currentReliabilityRow
+			// we don't need it at all and can just replace currentReliabiliyVector with
+			// current ReliabilityRow
 			ReliabilityRow currentReliabilityVector = new ReliabilityRow();
 			// convert the row to a vector so we can add it to the reliability window
 //			Collections.addAll(currentReliabilityVector, currentReliabilityRow);
@@ -294,14 +342,14 @@ public class ReliabilityAnalysis {
 			timeSlot += 1; // increase to next time slot
 		}
 		var size = reliabilityWindow.size();
-		// The total (worst-case) cost to transmit E2E in isolation with specified reliability 
+		// The total (worst-case) cost to transmit E2E in isolation with specified
+		// reliability
 		// target is the number of rows in the reliabilityWindow
-		nPushes.set(nNodesInFlow, size); //[nNodesInFlow] = size; 
+		nPushes.set(nNodesInFlow, size); // [nNodesInFlow] = size;
 		ArrayList<Integer> nPushesArrayList = new ArrayList<Integer>();
 		nPushesArrayList.addAll(nPushes);
 //		Collections.addAll(nPushesArrayList, nPushes);
 		return nPushesArrayList;
 	}
-
 
 }

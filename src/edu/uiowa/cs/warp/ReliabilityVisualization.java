@@ -26,7 +26,65 @@ public class ReliabilityVisualization  extends VisualizationObject {
 	}
 	
 	public Description visualization() {
-		return null;
+		// need to add \n to create new lines in the description
+		// Reliability Analysis for graph <name>
+		// Scheduler Name: <name>
+		// M: <float>
+		// E2E: <float>
+		// nChannels: <int>
+		// flows with nodes i.e F0:A F0:B F1:A ...
+		// probabilities at each time 
+		Description content = new Description();
+		content.add(getHeader());
+		content.add(getScheduler());
+		content.add(getM());
+		content.add(getE2E());
+		content.add(getnChannels());
+		content.add(getFlows());
+		content.addAll(reliabiltyTableToDescription(getReliabilities()));
+		return content;
+	}
+	
+	public String getHeader() {
+		// should be private
+		return ra.getHeader();
+	}
+	
+	public String getScheduler() {
+		// should be private
+		return ra.getScheduler();
+	}
+	
+	public String getM() {
+		// should be private
+		return ra.getM();
+	}
+	
+	public String getE2E() {
+		// should be private
+		return ra.getE2E();
+	}
+	
+	public String getnChannels() {
+		// should be private
+		return ra.getnChannels();
+	}
+	
+	public String getFlows() {
+		//should be private
+		return ra.getFlows();
+	}
+	
+	public Description reliabiltyTableToDescription(ReliabilityTable r) {
+		// should be private
+		Description content = new Description();
+		content.add("Here is the content\n");
+		return content;
+	}
+	
+	public ReliabilityTable getReliabilities() {
+		// should be private
+		return ra.getReliabilities();
 	}
 	
 /* File Visualization for workload defined in Example.txt follows. Note
