@@ -18,11 +18,13 @@ public class ReliabilityVisualization  extends VisualizationObject {
 	private static final String OBJECT_NAME = "Reliability Analysis";
 	private WarpInterface warp;
 	private ReliabilityAnalysis ra;
+	private Program program;
 	
 	ReliabilityVisualization(WarpInterface warp) {
 		super(new FileManager(), warp, SOURCE_SUFFIX);
 		this.warp = warp;
 		this.ra = warp.toReliabilityAnalysis();
+		this.program = ra.getProgram();
 	}
 	
 	public Description visualization() {
@@ -47,32 +49,33 @@ public class ReliabilityVisualization  extends VisualizationObject {
 	
 	public String getHeader() {
 		// should be private
-		return ra.getHeader();
+		return String.format("Reliability Analysis for graph %s\n", program.workLoad.getName());
 	}
 	
 	public String getScheduler() {
 		// should be private
-		return ra.getScheduler();
+		return String.format("Scheduler Name: %s\n", program.schedulerName);
 	}
 	
 	public String getM() {
 		// should be private
-		return ra.getM();
+		return String.format("M: %.2f\n", this.ra.getM());
 	}
 	
 	public String getE2E() {
 		// should be private
-		return ra.getE2E();
+		return String.format("E2E: %.2f\n", this.ra.getE2E());
 	}
 	
 	public String getnChannels() {
 		// should be private
-		return ra.getnChannels();
+		return String.format("nChannels: %d\n", program.nChannels);
 	}
 	
 	public String getFlows() {
 		//should be private
-		return ra.getFlows();
+		// doesnt work yet
+		return String.format("%s\n", String.join(" ", program.workLoad.getFlowNames()));
 	}
 	
 	public Description reliabiltyTableToDescription(ReliabilityTable r) {

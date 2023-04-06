@@ -141,36 +141,20 @@ public class ReliabilityAnalysis {
 		return true;
 	}
 	
-	public String getHeader() {
-		// should be private
-		return String.format("Reliability Analysis for graph %s\n", program.workLoad.getName());
+	public Program getProgram() {
+		return this.program;
 	}
 	
-	public String getScheduler() {
+	public Double getM() {
 		// should be private
-		return String.format("Scheduler Name: %s\n", program.schedulerName);
+		return this.minPacketReceptionRate;
 	}
 	
-	public String getM() {
+	public Double getE2E() {
 		// should be private
-		return String.format("M: %.2f\n", this.minPacketReceptionRate);
+		return this.e2e;
 	}
 	
-	public String getE2E() {
-		// should be private
-		return String.format("E2E: %.2f\n", this.e2e);
-	}
-	
-	public String getnChannels() {
-		// should be private
-		return String.format("nChannels: %d\n", program.nChannels);
-	}
-	
-	public String getFlows() {
-		//should be private
-		// doesnt work yet
-		return String.format("%s\n", String.join(" ", program.workLoad.getFlowNames()));
-	}
 
 	/**
 	 * This method calculates a flow's numTxPerLinkAndTotalTxCost based on whether

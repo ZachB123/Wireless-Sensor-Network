@@ -122,6 +122,7 @@ public class VisualizationImplementation implements Visualization {
 	}
 
 	private <T extends VisualizationObject> void createVisualization(T obj) {
+		// THE NEXT TWO LINES ARE WHY getReliabilities is called twice
 		visualization = obj.visualization();
 		fileContent = obj.fileVisualization();
 		/* display is file content printed to console */
