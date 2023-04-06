@@ -709,21 +709,21 @@ public class WorkLoad extends WorkLoadDescription implements ReliabilityParamete
 	 * @param flowName the name of the flow.
 	 * @return a String Array of the nodes in the flow
 	 */
-	public String[] getNodesInFlow(String flowName) {
+	public List<String> getNodesInFlow(String flowName) {
 		// get the flow node for requested Flow and then loop through the
 		// nodes in the flow to create an array of the node names in
 		// the same order as they exist in the flow specification (i.e., Graph file)
 		var flow = flows.get(flowName);
-		String[] nodes;
+		List<String> nodes;
 		if (flow != null) {
-			nodes = new String[flow.nodes.size()];
-			for (int i = 0; i < nodes.length; i++) {
+			nodes = new ArrayList<>(flow.nodes.size());
+			for (int i = 0; i < nodes.size(); i++) {
 				var node = flow.nodes.get(i); // get the node from the arrayList
-				nodes[i] = node.getName(); // get the name and store it in the array
+				nodes.add(node.getName()); // get the name and store it in the array
 			}
 
 		} else {
-			nodes = new String[0]; // return empty array
+			nodes = new ArrayList<>(); // return empty array
 			System.out.printf("\n\t Warning! No Flow with name %s.\n", flowName);
 		}
 		return nodes;
