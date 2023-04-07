@@ -3,5 +3,5 @@ Scheduler Name: Priority
 M: 0.90
 E2E: 0.99
 nChannels: 16
-F0 F1
+F0:A	F0:B	F0:C	F1:C	F1:B	F1:A
 Here is the content

@@ -1,5 +1,13 @@
 package edu.uiowa.cs.warp;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * ReliabilityVisualization creates the visualizations for
  * the reliability analysis of the WARP program. <p>
@@ -42,7 +50,7 @@ public class ReliabilityVisualization  extends VisualizationObject {
 		content.add(getM());
 		content.add(getE2E());
 		content.add(getnChannels());
-		content.add(getFlows());
+		content.add(getFlowsWithNodes());
 		content.addAll(reliabiltyTableToDescription(getReliabilities()));
 		return content;
 	}
@@ -72,10 +80,49 @@ public class ReliabilityVisualization  extends VisualizationObject {
 		return String.format("nChannels: %d\n", program.nChannels);
 	}
 	
-	public String getFlows() {
+	public String getFlowsWithNodes() {
 		//should be private
-		// doesnt work yet
-		return String.format("%s\n", String.join(" ", program.workLoad.getFlowNames()));
+		// returns the a string of flows with nodesseperated by tabs in order like F1:A F2:D ... F9:C F10:A F11:B
+		List<String> flows = Arrays.asList(program.workLoad.getFlowNames());
+		sortFlows(flows);
+		List<String> flowsWithNodes = getFlowsAndNodes(flows);
+		return listToString(flowsWithNodes);
+	}
+	
+	public List<String> getFlowsAndNodes(List<String> flows) {
+		List<String> flowsWithNodes = new ArrayList<>();
+		for (String flow : flows) {
+			for (String node : program.workLoad.getNodesInFlow(flow)) {
+				flowsWithNodes.add(String.format("%s:%s", flow, node));
+			}
+		}
+		return flowsWithNodes;
+	}
+	
+	public void sortFlows(List<String> flows) {
+		// should be private, ensures proper order of numbers
+		Collections.sort(flows, new Comparator<String>() {
+			public int compare(String str1, String str2) {
+				int val1 = Integer.parseInt(str1.substring(1));
+				int val2 = Integer.parseInt(str2.substring(1));
+				return val1 - val2;
+			}
+		});
+	}
+	
+	public String listToString(String[] arr) {
+		// should be private formats items with \t in between
+		return listToString(Arrays.asList(arr));
+	}
+	
+	public String listToString(List<String> arr) {
+		// should be private formats items with \t in between
+		String content = "";
+		for (String str : arr) {
+			content += String.format("%s\t", str);
+		}
+		content += "\n";
+		return content;
 	}
 	
 	public Description reliabiltyTableToDescription(ReliabilityTable r) {
