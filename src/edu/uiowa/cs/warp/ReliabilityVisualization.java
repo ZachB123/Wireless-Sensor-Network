@@ -82,7 +82,7 @@ public class ReliabilityVisualization  extends VisualizationObject {
 	
 	public String getFlowsWithNodes() {
 		//should be private
-		// returns the a string of flows with nodesseperated by tabs in order like F1:A F2:D ... F9:C F10:A F11:B
+		// returns the a string of flows with nodes seperated by tabs in order like F1:A F2:D ... F9:C F10:A F11:B
 		List<String> flows = Arrays.asList(program.workLoad.getFlowNames());
 		sortFlows(flows);
 		List<String> flowsWithNodes = getFlowsAndNodes(flows);
@@ -127,14 +127,38 @@ public class ReliabilityVisualization  extends VisualizationObject {
 	
 	public Description reliabiltyTableToDescription(ReliabilityTable r) {
 		// should be private
-		Description content = new Description();
-		content.add("Here is the content\n");
-		return content;
+		r = getFakeDataTable();
+		Description data = new Description();
+		for (ReliabilityRow row : r) {
+			String content = "";
+			for (Double value : row) {
+				content += String.format("%.2f\t", value);
+			}
+			content += "\n";
+			data.add(content);
+		}
+		return data;
 	}
 	
 	public ReliabilityTable getReliabilities() {
 		// should be private
 		return ra.getReliabilities();
+	}
+	
+	public ReliabilityTable getFakeDataTable() {
+		List<String> flows = Arrays.asList(program.workLoad.getFlowNames());
+		sortFlows(flows);
+		int numColumns = getFlowsAndNodes(flows).size();
+		int numRows = program.scheduleBuilt.size();
+		ReliabilityTable data = new ReliabilityTable();
+		for (int i = 0; i < numRows; i++) {
+			ReliabilityRow dataRow = new ReliabilityRow();
+			for (int j = 0; j < numColumns; j++) {
+				dataRow.add((double) (((int) (Math.random() * 100)) / 100.0));
+			}
+			data.add(dataRow);
+		}
+		return data;
 	}
 	
 /* File Visualization for workload defined in Example.txt follows. Note
