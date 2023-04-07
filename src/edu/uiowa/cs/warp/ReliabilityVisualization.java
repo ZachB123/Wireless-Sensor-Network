@@ -127,7 +127,6 @@ public class ReliabilityVisualization  extends VisualizationObject {
 	
 	public Description reliabiltyTableToDescription(ReliabilityTable r) {
 		// should be private
-		r = getFakeDataTable();
 		Description data = new Description();
 		for (ReliabilityRow row : r) {
 			String content = "";
@@ -142,7 +141,8 @@ public class ReliabilityVisualization  extends VisualizationObject {
 	
 	public ReliabilityTable getReliabilities() {
 		// should be private
-		return ra.getReliabilities();
+//		return ra.getReliabilities(); THIS IS WHAT NORMALLY SHOULD HAPPEN
+		return getFakeDataTable();
 	}
 	
 	public ReliabilityTable getFakeDataTable() {
