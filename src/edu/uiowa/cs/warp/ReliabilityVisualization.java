@@ -160,6 +160,7 @@ public class ReliabilityVisualization extends VisualizationObject {
 	}
 	
 	public ReliabilityTable getFakeDataTable() {
+		// don't need to test this because this will never be used when Reliability Analysis is implemented
 		List<String> flows = program.workLoad.getFlowNamesInOriginalOrder();
 		if (inStandardForm(flows)) {
 			sortFlows(flows);

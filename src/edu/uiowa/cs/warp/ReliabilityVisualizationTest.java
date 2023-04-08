@@ -21,6 +21,7 @@ public class ReliabilityVisualizationTest {
 	
 	
 	private static final String HEADER_BOILERPLATE = "Reliability Analysis for graph ";
+	private static final String SCHEDULER_BOILERPLATE = "Scheduler Name: ";
 	private static final String[] FILE_NAMES = {"CustomWorkloadByZach", "EmptyWorkload", "Example", "Example1a", "Example2", "Example3", "Example4", "ISPN2021figure2", "ISPN2021figure4", "ExampleX", "LongChain", "MixedNodes", "NumberedNodes", "Preempt1", "SamePeriod", "SeeSpray", "StressTest", "StressTest4", "Test1", "WARP_MIX_Schedule0-WarpInput", "WARP_MIX_Schedule1-WarpInput", "WARP-WAHU-MIX"}; 
 	
 	// Note to self on creating the ReliabilityVisualization
@@ -39,6 +40,7 @@ public class ReliabilityVisualizationTest {
 		return new ReliabilityVisualization(new WarpSystem(new WorkLoad(numFaults, m, e2e, inputFileName), numChannels, choice));
 	}
 	
+	// TESTING getHeader
 	@Test
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	public void testGetHeaderExample() {
@@ -84,7 +86,45 @@ public class ReliabilityVisualizationTest {
 		assertEquals(expected, actual, message);
 	}
 	
+	//TESTING getScheduler
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	public void testGetScheulerPriority() {
+		ScheduleChoices choice = ScheduleChoices.PRIORITY;
+		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "ExampleX.txt", 16, choice);
+		
+		String expected = SCHEDULER_BOILERPLATE + "Priority\n";
+		String actual = viz.getScheduler();
+		String message = String.format("ERROR Schedulers do not match. Expected %s but it was actual %s", expected, actual);
+		
+		assertEquals(expected, actual, message);
+	}
 	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	public void testGetScheulerRM() {
+		ScheduleChoices choice = ScheduleChoices.RM;
+		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "MixedNodes.txt", 16, choice);
+		
+		String expected = SCHEDULER_BOILERPLATE + "RateMonotonic\n";
+		String actual = viz.getScheduler();
+		String message = String.format("ERROR Schedulers do not match. Expected %s but it was actual %s", expected, actual);
+		
+		assertEquals(expected, actual, message);
+	}
+	
+	@Test
+	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	public void testGetScheulerDM() {
+		ScheduleChoices choice = ScheduleChoices.DM;
+		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "StressTest4.txt", 16, choice);
+		
+		String expected = SCHEDULER_BOILERPLATE + "DeadlineMonotonic\n";
+		String actual = viz.getScheduler();
+		String message = String.format("ERROR Schedulers do not match. Expected %s but it was actual %s", expected, actual);
+		
+		assertEquals(expected, actual, message);
+	}
 	
 	
 	
