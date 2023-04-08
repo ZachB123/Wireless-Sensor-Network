@@ -83,8 +83,10 @@ public class ReliabilityVisualization extends VisualizationObject {
 	public String getFlowsWithNodes() {
 		//should be private
 		// returns the a string of flows with nodes seperated by tabs in order like F1:A F2:D ... F9:C F10:A F11:B
-		List<String> flows = Arrays.asList(program.workLoad.getFlowNames());
-		sortFlows(flows);
+		List<String> flows = program.workLoad.getFlowNamesInOriginalOrder();
+		if (inStandardForm(flows)) {
+			sortFlows(flows);	
+		}
 		List<String> flowsWithNodes = getFlowsAndNodes(flows);
 		return listToString(flowsWithNodes);
 	}
@@ -97,6 +99,18 @@ public class ReliabilityVisualization extends VisualizationObject {
 			}
 		}
 		return flowsWithNodes;
+	}
+	
+	public boolean inStandardForm(List<String> flows) {
+		// returns true if all the flow names are in the form F<int>
+		for (String flow : flows) {
+			try {
+				Integer.parseInt(flow.substring(1));
+			} catch(Exception e) {
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	public void sortFlows(List<String> flows) {
@@ -146,8 +160,10 @@ public class ReliabilityVisualization extends VisualizationObject {
 	}
 	
 	public ReliabilityTable getFakeDataTable() {
-		List<String> flows = Arrays.asList(program.workLoad.getFlowNames());
-		sortFlows(flows);
+		List<String> flows = program.workLoad.getFlowNamesInOriginalOrder();
+		if (inStandardForm(flows)) {
+			sortFlows(flows);
+		}
 		int numColumns = getFlowsAndNodes(flows).size();
 		int numRows = program.scheduleBuilt.size();
 		ReliabilityTable data = new ReliabilityTable();
