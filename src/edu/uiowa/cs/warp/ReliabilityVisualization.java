@@ -18,7 +18,7 @@ import java.util.Map;
  * @author sgoddard
  *
  */
-public class ReliabilityVisualization  extends VisualizationObject {
+public class ReliabilityVisualization extends VisualizationObject {
 
 	// TODO Auto-generated class stub for unimplemented visualization
 	
