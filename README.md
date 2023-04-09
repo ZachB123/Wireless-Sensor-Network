@@ -55,6 +55,12 @@ What each team member documented.
 # Project - Team Flamingo
 The objective of the project is to update the existing Warp codebase to add calculations and analysis of the reliabilities of flows in the program. We will develop code and add to the ReliabilityAnalysis and ReliabilityVisualization classes to create this functionality.
 
+## Team Members
+* Zach Buchholz (zbuchholz)
+* Evan Frankmann (efrankmann)
+* Abby Hawken (ahawken)
+* Wei Ching Lim (weilim)
+
 ## Sprint 1
 Tasks:
 * Understand the problem (All)
@@ -64,11 +70,9 @@ Tasks:
 * Regenerate UML diagrams (Evan) (to make sure diagrams are correct after HW4)
 
 Documents added: 
-* Sequence Diagram of Warp program. you can view the code in SequenceDiagramCode.txt and find the link there as well.
+* Sequence Diagram of Warp program, _"WarpSequenceDiagram.pdf"_ . You can also view the code in SequenceDiagramCode.txt and SequenceDiagramCode2.txt.
 * Project Plan describing the team's initial plan for each sprint
 
 Collaboration:
 * The team met on April 3rd to create the project plan, work through the transmission probability formula and understand the program, and discuss what/how we will add to the Warp code to meet the project requirements.
-
-
 
