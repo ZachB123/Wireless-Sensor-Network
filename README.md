@@ -70,8 +70,8 @@ Tasks:
 * Regenerate UML diagrams (Evan) (to make sure diagrams are correct after HW4)
 
 Documents added: 
-* Sequence Diagram of Warp program, _"WarpSequenceDiagram.pdf"_ . You can also view the code in SequenceDiagramCode.txt and SequenceDiagramCode2.txt.
-* Project Plan describing the team's initial plan for each sprint
+* Sequence Diagram of Warp program,  _WarpSequenceDiagram.pdf_ . You can also view the code in SequenceDiagramCode.txt and SequenceDiagramCode2.txt.
+* Project Plan describing the team's initial plan for each sprint,  _WarpProjectPlans.pdf_ .
 
 Collaboration:
 * The team met on April 3rd to create the project plan, work through the transmission probability formula and understand the program, and discuss what/how we will add to the Warp code to meet the project requirements.
