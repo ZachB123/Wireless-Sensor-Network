@@ -1,0 +1,251 @@
+// link
+// https://sequencediagram.org/index.html#initialData=C4S2BsFMAIFoWgZWAJ0gZ3QFQ8AdMAB7BwD2SADiiAHbACMAIpAEYCuA5gPJvAW8AxEFHRx0AYwAW0KiFLVgATziwAhuHAAoTRVUpQ4kLrrQA6noo69Bo6pMA1EOjbqQAL1WhSNAavHB5RSt9EENjEkdnVw8vGgBJAFsKKATIOk85GmCbcOghKABZO1UOSBRs0NsTU3kAa3BSVQATCrC7CKcXcHcM7y4WACtIf1aqkkRFdGBIBN9-QNHc8xQKCamZxfboAAUUUg4UVQTNk139w4TEKUgmtigTkgBhSTsaSHB0B+hmCWoKWK+ACV3iBVCxhGBFABBGjqSZOL7PV7vGFw9AIzSqXiNfwgABuvRo0FIADMSdoANqwAB8ywoAC5oAlVLQABTIag0DgUgC60D0HHQAEptH5QATpmYLNpNHSaXTGehIMA6ds9EdlWV0KyBcLMbiJTA6Zp0LpxDB6JompAxfjPEbpZoaKRJaQ8WUpStGTUUPVGk1oAB3OoNZrQAC80DegbMIf9rJobFmWPAwHQABombQADIARUzkAATJBM7R+MB8pAhQBuTQNUgUIPyJrZ-3PUihDDQKQd83euPNdud9B4AngNgYVkigD00+g2a4XG20DiWAAooCoVg4lwAHLQPdr2UWeUWRl4zrRSCs4O+0NNTM+v2DyS9rs9zsi22Gz2WOXUyIuh6WI5gCFBFEZQDokJUDAjwcQ0HtJ9W2aKDuhiTIbwHB9oAAIkQWQ6CYVhOB4PhBGEDBcMfOoUKaIdzVED9zRrfVxXtaA0OAzJYPAzQuIw7xeMUGkBMJRJkhmNJgEJSDL3Q8SkhSaTCSwu9-UzfDCIYZh2G4Xhy0rdBqNjX06IY99X0-Wtvw4sTYgk5T0gBezMkcqTnMyGlKyKWFShQRlozySjfJKMopxsg0OJ84p-M0GK-LKWBRPk7jvHc1JPO8RkErClAD0GYZgCtG0oslXK4tc9KlI8mTYnlbDGVKYA4hoQzKN3DUIrYu1JSfe9ZWw5KANSwT4hqzK6syRl8NQDBsFwAhiFwkrbL67D+NGxTJMmwkUqiBSHImlTYkZBCbWmStOtSHAlPtVktM5HSSP08iK0o4zWLWmAqvGnaTsyTaDrSv6nKm7xvJC2Kyia5UACFVCVRgQDQeZwO677gsKaHygqpL9qAsaMoB7K8MeekAB0KYAVSVFB0CpvAmaptgQCp8R0ELAAOQsAAYVutTG8fKX7iaymhIexxKAu7RDpmR1GwMUB7yap2mtUZvAWbZimOe5vmTIIp7iL0sj2pEL6ypgYX4qh6XhtF47xZm1X1fpimma11ndc5nneYpo3aGe02DIokQBdK9jyrtvKgcJ7awb2gnoKO-7negV26YZjwpBYD28QkUhrQp729b9gPtJN0jQ-ekQA7mzAcCmJbisFq3OK21PE5czu3Kd8GJZG4Gif72TZYuyBftZZC2ysxjuznqsep-R204HuOU77te9qH+Ou9qsfzvtKfb2fJpLajn7e+q7ee+HhOD-q3fN76Qr-HPa+aCnZe7M--ohhGL9f+RUHafzFgPRkAAeDk80m74CIE8bw0w6DoGpKtduQC37FVXt3LyydDqZGAe-aAJJKJTy-Bgv+WCN4ENfgA4AoD77712qdaA0CG4LWbggjOSDpKoPQZfDuTDCHULboInBj9AZiN6lfYRN9cHeAETIoRe8t4KKyL9YSw0FQqJfkSIhrdI7KM0WKBY-4JEsOmtAAIlYMaULkaDSRiiLEk0HsLRkgYFCQFsbhTOGtPYlzZmXPmFdja6Wrm9Iy9c0CN0WoGcATQTLsJiZw+BxAeF0GktSC+yibamj8BaJRP4bbSJXmA0eAJSkcWNLOaAa5dyMHnIuZcq4Nxbh3PuTQaQWjHhWDSNY0xkxowguPe6p97yZi5vQTM2xAQ7jmVgAAmhQwRAyZjCU0GsoZStTwrC2d6CwWy1Jn0mdMnYcyuALOWZFQRdItm9NWJMQZuzHnrASGdOWkAzgHCOMciZ0ApkzIuVcnJP47lPI2OCt5NJvkXECpAGMsLfnjI0gCs5uw5AKEUJmEk6glQ4rxVWG5yikXHFJTCvYPz3nQCVMAZguK7jADVBcTU9M-mosBSQwlBKPhL0xqSzQ5LqSkquJIG4dxIDwsRZSi4orxVQCnNAVkwBJBOGgGqgYbApjQEgMQbpog7ABihCgQ4ihsxOGACsklMqjiCptZca4twoDDVJYyEVjqJXElEUYn8Ar3ViqdZABq6lmiKmVAIBogZ0CtQxfISEXAUDWhQN-TG-V-QmjNIUqp60Q0tCFUiGgbwPhSozi8Qt7xtSctxby0FHEC1Fs+PWitLr7WMibR8Aq9Cil1rLQ2u15wjg0h+AhIwrCgrDr+LEOxgiJ2jsBrO-4eDhWtu+BgEdi7vCdqKt2yUC7Kk+o4gK-J5poCWiFa66A7BhBNFJayWZ8zVzLJ-pKP19qKUDupUqKA-hY1YpTe3V9H731UrDcAOVgbEDvCKjcdkHqoAWRHPey5j6rW+vtf2ql4GJXBrPqBiNpAo0xuoHGpQCak3-tuRtY9WaD05rPjumAArs2MfQ+eldV6EkJpABwWg6hb2ocPeh50rp3T5VdVgMVNK4MwDVUfaYAYxVoDwBmgpp6GM7HQ8xjTH71NMdow6PZELjhaahYMzZRmtEvIOSsVq0wUC4pPQY9TWyNm1IEHEXccREAAAk1yNNMKubz84PNrmgHzAALAeAQZgoSAm2E6F0MA3QegVHSWzZQHMwEDBYCMSALOmPAvBT5xy6KnKBQ+pZNYKZEk1dq0hNAnABp1YQYYvBaAcGgIpyAyn-w6NEyAEkihtgZfkMyGg5pgQAEdWZoEmtqbLKxa19WlL1s80B+uDeYM0bobx5sWCWwZv8J5aSHKM4yQWTQdsYAKMqadyjTOQtO9C5dH7zs2ku7QSABQnBKm1Ad7TVKMMXG0U9wZUC1xJCUNAY1przVTDQVpgVD2Egg69Fy3l6nkeY+lNRtTq20cbcUMCboYIISgEnAtigAnlsrAeS8-Z0A0Ak-BN0cn6ACipGAHdsFoPHuGee8T0ELPISonAPCdAJbBek9Z9CWEYv0TaioB+6nMApfC6UKL8Xmg1dk9l2iJwqPXlg+gIL9Xev5dqqc1pnXMvNcK4eVsmkNuRdy-F+eMoA2icgml2AEAk4Vcm+92bu3CJnca9dwrw3DPUATnU2H83WvkdWesSgWPJnefGf07+OnJ2Cce8G7uUg7bHjeBJN0fwe3FvPsOzn5HHiLAECL72lEEenAUfuxnh3RmaTtpDxLqMCLS3InAH35Vqq9SY1763xtzeR-T-p2doMDeAj8er7+e5See+z7726+1W6Rjp-52Zqf+v0DAbhTIe1eBmpYYVQHwDVLhon4t-3-18qYBW6zwK5-4uo+L5-wrvvoYpPtvtPl3s9hek4MXqXuXlzgHgAQiAgWfgvm8oyNWkqOpkgdjkfhsIfpYHgXWKQA2E2ImuZIvExIvP2LmghqOOoBOH9rXmtheMPNeJTpmMxESmvsaOYp-MJB8hPKSifBYJpIHEROEq9ObFROwYvAHiYsMjQiDFos-LQo4pYqTEFC4uLDeMIXhKIcHBEpIcZNIW+LIeUrfIDLUmCMljSjJPoAoSPOYRDNSO4gPjGMLNztFDHHFMLIwqovIk4jQDlF4R6J-kLMESLGYeojhveLDC1G1GHJANdNeP9mms0INLmr4XouAmPLNCknAi3BHKmhtJoQPPgiDNkawnJt4h1BqLdMkPdI9EHFXBIQkZ9MSmUg4hUYDCUTvC4c1AjEjCjEVIEB4dHFLLHD4WUQ4eoi7JTDTFnJrFrIEuzL7AbOpjbD0U-C4VUQrMMejL4nMW7AzB7Esd7D7PrPzJmHoc0WbK0f9jbJMcoeURUlYgcfMf4szKXKsf7NceIbcbXFROseEfYQ-GoRLFMaCa4m2pTEcRTDnJIHnKOIXMXF8RcaEk0X8TXFEjArElwsQOppsd0ZEQERCcwlCaMtMFPFsghgvCYWvoSc4sSWCaSWogEfwcfJ-Oys0P9gyRokya4iyXQkVB-A4u3h0X4TQE5pgvQpkSoV0aTMkrAotNwiXpkiggjlntKdurybKSDAYmgWQpyaYQ4lKVQjKYKaoeSYqbiWkogmqWmBqZjFqSMLOFYe6DqjQC0DqRaXwbonKS8ZuqEfYhKfKVkFpnIUrDnryR-G4I3rYjyfyeLCCWSeLJLF9jjB4l4j4n4u7AEsEj8ZXJiZEh9NEkqVML+pCLALzHgAAJwFBVm1k1lriFhrh4BNDoDgBJISYwBihdBSYBqeriC8IoJCjQBr55KZpqZaYlKamJnrwEHdLYGWCaBAA
+
+
+
+
+title -i StressTest.txt -o Sprint1DebugOutputFiles -sch priority --all
+
+participant Warp
+participant VisualizationFactory
+participant VisualizationImplementation
+participant FileManager
+participant Workload
+participant VisualizationObject
+participant SystemFactory
+participant WarpSystem
+participant Program
+participant ProgramSchedule
+participant Channels
+participant Description
+participant ReliabilityAnalysis
+participant ChannelAnalysis
+
+autoactivation off
+
+[->Warp: main(String[] args)
+
+activate Warp
+
+
+Warp->Warp: setWarpParameters(args)
+activate Warp
+space 1
+deactivate Warp
+
+note over Warp: Workload workload = new Workload(numFaults, minLQ, e2e, inputFile);
+loop wordLoadChoices choice: WorkloadChoices.values()
+// LOOP ITERATION ONE
+Warp->Warp: visualize(workload, WorkloadChoices choice)
+activate Warp
+Warp->VisualizationFactory: VisualizationFactory.createWorkLoadVisualization(workload, "Sprint1DebugOutputFiles", WorkLoadChoices choice);
+activate VisualizationFactory
+VisualizationFactory->VisualizationImplementation: VisualizationImplementation(workload, "Sprint1DebugOutputFiles", WorkLoadChoices choice);
+activate VisualizationImplementation
+VisualizationImplementation->FileManager: new FileManager();
+activate FileManager
+FileManager-->VisualizationImplementation: FileManager Object
+deactivate FileManager
+VisualizationImplementation->Workload: getInputFileName();
+activate Workload
+Workload-->VisualizationImplementation: "StressTest.txt"
+deactivate Workload
+VisualizationImplementation->VisualizationImplementation: createFileNameTemplate("Sprint1DebugOutputFiles");
+activate VisualizationImplementation
+VisualizationImplementation->FileManager: getBaseDirectory();
+activate FileManager
+FileManager-->VisualizationImplementation: "C:\\Users\\...\\ui\\cs2820"
+deactivate FileManager
+VisualizationImplementation->FileManager: createDirectory("C:\\Users\\..\\ui\\cs2820", Sprint1DebugOutputFiles);
+activate FileManager
+FileManager-->VisualizationImplementation: "C:\Users\...\ui\cs2820\Sprint1DebugOutputFiles"
+deactivate FileManager
+VisualizationImplementation-->VisualizationImplementation: C:\Users\zachb\.vscode\ui\cs2820\Sprint1DebugOutputFiles\StressTest.txt
+deactivate VisualizationImplementation
+VisualizationImplementation->VisualizationImplementation: createVisualization(WorkLoadChoices choice)
+activate VisualizationImplementation
+VisualizationImplementation->VisualizationImplementation: createVisualization(workload);
+activate VisualizationImplementation
+VisualizationImplementation->VisualizationObject: visualization()
+activate VisualizationObject
+VisualizationObject-->VisualizationImplementation: <StressTest.txt Contents>
+deactivate VisualizationObject
+VisualizationImplementation-->VisualizationObject: fileVisualization()
+activate VisualizationObject
+VisualizationObject-->VisualizationImplementation: <StressTest.txt Contents>
+deactivate VisualizationObject
+deactivate VisualizationImplementation
+deactivate VisualizationImplementation
+deactivate VisualizationImplementation
+VisualizationFactory-->Warp: Visualization Object
+deactivate VisualizationFactory
+Warp->VisualizationImplementation: toFile();
+activate VisualizationImplementation
+VisualizationImplementation->FileManager: writeFile("C:\Users\...\ui\cs2820\Sprint1DebugOutputFiles\StressTest.wld", <StressTest.txt Content>);
+activate FileManager
+space 1
+deactivate FileManager
+deactivate VisualizationImplementation
+deactivate Warp
+// END LOOP ITERATION 
+end
+
+Warp->SystemFactory: create(workload, 81, PRIORITY)
+activate SystemFactory
+SystemFactory->WarpSystem: WarpSystem(workload, 81, PRIORITY);
+activate WarpSystem
+WarpSystem->WarpSystem: createProgram(workload, 81, PRIORITY);
+activate WarpSystem
+WarpSystem->Program: new Program(workload, 81, Priority, false, false);
+activate Program
+Program->Program: setDefaultParameters(workload, 81, false, false)
+activate Program
+Program->ProgramSchedule: new ProgramSchedule() (this is just extends and ArrayList)
+activate Program
+ProgramSchedule-->Program: ProgramSchedule object
+deactivate Program
+ProgramSchedule->Workload: setFlowsInPriorityOrder()
+activate Workload
+space 1
+deactivate Workload
+Program->Channels: new Channels(81, false);
+activate Channels
+Channels-->Program: Channels Object
+deactivate Channels
+Program->Description: new Description();
+activate Description
+Description-->Program: Description Object
+deactivate Description
+deactivate Program
+space 1
+Program->Program: buildProgram(PRIORITY)
+activate Program
+Program->Program: selectPriority()
+activate Program
+Program->Program: setScheduleSelected(ScheduleChoices.PRIORITY)
+activate Program
+ProgramSchedule->Workload: setFlowsInPriorityOrder()
+activate Workload
+space 1
+deactivate Workload
+deactivate Program
+deactivate Program
+Program->Program: buildOriginalProgram()
+activate Program
+note over Program:The schedule is created here.
+space 1
+deactivate Program
+deactivate Program
+deactivate Program
+deactivate WarpSystem
+deactivate WarpSystem
+SystemFactory-->Warp: WarpInterface Object
+deactivate SystemFactory
+// FINISHED WITH LINE 204 OF WARP
+note over Warp:WarpInterface warp = SystemFactory.create(workLoad, 81, PRIORITY);\n just finished executing here.
+Warp->Warp: verifyPerformanceRequirements(warp);
+activate Warp
+Warp->Warp: verifyDeadlines(warp);
+activate Warp
+Warp->WarpSystem: deadlinesMet();
+activate WarpSystem
+WarpSystem->Program: deadlineMisses();
+activate Program
+Program-->WarpSystem: <Empty ArrayList>
+deactivate Program
+WarpSystem-->Warp: false
+deactivate WarpSystem
+deactivate Warp
+space 1
+Warp->Warp: verifyReliabilities(warp)
+activate Warp
+Warp->WarpSystem: reliabilitiesMmet();
+activate WarpSystem
+WarpSystem->ReliabilityAnalysis: new ReliabilityAnalysis(program)
+activate ReliabilityAnalysis
+ReliabilityAnalysis-->WarpSystem: RelibilityAnalysis Object
+deactivate ReliabilityAnalysis
+WarpSystem->ReliabilityAnalysis: verifyReliabilities()
+activate ReliabilityAnalysis
+ReliabilityAnalysis-->WarpSystem: true
+deactivate ReliabilityAnalysis
+WarpSystem->Warp: true
+deactivate WarpSystem
+deactivate Warp
+Warp->Warp: verifyNoChannelConflicts(warp)
+activate Warp
+Warp->WarpSystem: warp.toChannelAnalysis()
+activate WarpSystem
+WarpSystem->ChannelAnalysis: new ChannelAnalysis(this)
+activate ChannelAnalysis
+ChannelAnalysis->WarpSystem: warp.toProgram()
+activate WarpSystem
+WarpSystem-->ChannelAnalysis: Program Object
+deactivate WarpSystem
+ChannelAnalysis->Program: program.getSchedule()
+activate Program
+Program-->ChannelAnalysis: ProgramSchedule Object
+deactivate Program
+ChannelAnalysis-->WarpSystem: ChannelAnalysis Object
+deactivate ChannelAnalysis
+WarpSystem->Program: isChannelConflict()
+activate ChannelAnalysis
+ChannelAnalysis-->WarpSystem: false
+deactivate ChannelAnalysis
+deactivate WarpSystem
+deactivate Warp
+deactivate Warp
+loop wordLoadChoices choice: WorkloadChoices.values()
+Warp->Warp: visualize(warp, choice);
+activate Warp
+Warp->VisualizationFactory: createProgramVisualization(warp, "Sprint1DebugOutputFiles", choice)
+activate VisualizationFactory
+VisualizationFactory->VisualizationImplementation: new VisualizationImplementation(warp, "Sprint1DebugOutputFiles", choice)
+activate VisualizationImplementation
+// above start
+VisualizationImplementation->FileManager: new FileManager();
+activate FileManager
+FileManager-->VisualizationImplementation: FileManager Object
+deactivate FileManager
+VisualizationImplementation->Workload: getInputFileName();
+activate Workload
+Workload-->VisualizationImplementation: "StressTest.txt"
+deactivate Workload
+VisualizationImplementation->VisualizationImplementation: createFileNameTemplate("Sprint1DebugOutputFiles");
+activate VisualizationImplementation
+VisualizationImplementation->FileManager: getBaseDirectory();
+activate FileManager
+FileManager-->VisualizationImplementation: "C:\\Users\\...\\ui\\cs2820"
+deactivate FileManager
+VisualizationImplementation->FileManager: createDirectory("C:\\Users\\..\\ui\\cs2820", Sprint1DebugOutputFiles);
+activate FileManager
+FileManager-->VisualizationImplementation: "C:\Users\...\ui\cs2820\Sprint1DebugOutputFiles"
+deactivate FileManager
+VisualizationImplementation-->VisualizationImplementation: C:\Users\zachb\.vscode\ui\cs2820\Sprint1DebugOutputFiles\StressTest.txt
+deactivate VisualizationImplementation
+VisualizationImplementation->VisualizationImplementation: createVisualization(SystemChoices choice)
+activate VisualizationImplementation
+VisualizationImplementation->VisualizationImplementation: createVisualization(workload);
+activate VisualizationImplementation
+VisualizationImplementation->VisualizationObject: visualization()
+activate VisualizationObject
+VisualizationObject-->VisualizationImplementation: <StressTest.txt Contents>
+deactivate VisualizationObject
+VisualizationImplementation-->VisualizationObject: fileVisualization()
+activate VisualizationObject
+VisualizationObject-->VisualizationImplementation: <StressTest.txt Contents>
+deactivate VisualizationObject
+//above end
+VisualizationImplementation-->VisualizationFactory: VisualizationImplementation Object
+deactivate VisualizationImplementation
+deactivate VisualizationFactory
+Warp->VisualizationImplementation: viz.toFile();
+activate VisualizationImplementation
+VisualizationImplementation->FileManager: writeFile("C:\Users\...\cs2820\Sprint1DebugOutputFiles\StressTestPriority-0.9M-0.99E2E.dsl", <The actual schedule contents) 
+activate FileManager
+space 1
+deactivate FileManager
+deactivate VisualizationImplementation
+deactivate Warp
+end
+deactivate Warp
