@@ -2,7 +2,9 @@ package edu.uiowa.cs.warp;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.extension.*;
@@ -259,14 +261,160 @@ public class ReliabilityVisualizationTest {
 		String message = String.format("ERROR E2E does not match. Expected %s but was actually %s", expected, actual);
 	}
 	
+	/**
+	 * 
+	 */
+    @Test
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testGetnChannels() {
+        Integer numChannels = 3;
+        ReliabilityVisualization visualization = getReliabilityVisualization(1.0, 1.0, "Example.txt", numChannels, ScheduleChoices.PRIORITY);
+        String expectedNChannels = String.format("nChannels: %d\n", numChannels);
+        String actualNChannels = visualization.getnChannels();
+        assertEquals(expectedNChannels, actualNChannels, "Message");
+    }
 	
+    /**
+     * 
+     */
+    @Test
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testGetFlowsWithNodes() {
+        WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
+        WarpSystem customWarpSystem = new WarpSystem(wld, 1, ScheduleChoices.PRIORITY);
+        ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
+        String expectedFlowsWithNodes = "F0:A\tF0:B\tF0:C\tF1:C\tF1:B\tF1:A\t\n";
+        String actualFlowsWithNodes = visualization.getFlowsWithNodes();
+        assertEquals(expectedFlowsWithNodes, actualFlowsWithNodes, "Message");
+    }
+
+    /**
+     * 
+     */
+    @Test
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testGetFlowsAndNodes() {
+        WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
+        WarpSystem customWarpSystem = new WarpSystem(wld, 1, ScheduleChoices.PRIORITY);
+        ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
+        List<String> expectedFlowsAndNodes = Arrays.asList("F1:C", "F1:B", "F1:A");
+        List<String> actualFlowsAndNodes = visualization.getFlowsAndNodes(Arrays.asList("F1"));
+        assertEquals(expectedFlowsAndNodes, actualFlowsAndNodes, "Message");
+    }
 	
-	
-	
-	
-	
-	
-	
+    /**
+     * 
+     */
+    @Test
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testInStandardForm() {
+		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+    	
+        List<String> flowsInStandardForm = Arrays.asList("F1", "F2", "F3");
+        List<String> flowsNotInStandardForm = Arrays.asList("F1", "Flow2", "F3");
+
+        assertTrue(visualization.inStandardForm(flowsInStandardForm), "Message");
+        assertFalse(visualization.inStandardForm(flowsNotInStandardForm), "Message");
+    }
+
+    /**
+     * 
+     */
+    @Test
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testSortFlows() {
+		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+
+        List<String> unsortedFlows = Arrays.asList("F5", "F2", "F10", "F1");
+        List<String> sortedFlows = Arrays.asList("F1", "F2", "F5", "F10");
+
+        visualization.sortFlows(unsortedFlows);
+        assertEquals(sortedFlows, unsortedFlows, "Message");
+    }
+
+    /**
+     * 
+     */
+    @Test
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testListToStringArray() {
+		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+
+        String[] inputArray = {"A", "B", "C"};
+        String expectedOutput = "A\tB\tC\t\n";
+        String actualOutput = visualization.listToString(inputArray);
+
+        assertEquals(expectedOutput, actualOutput, "Message");
+    }
+
+    /**
+     * 
+     */
+    @Test
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testListToStringList() {
+		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+
+        List<String> inputList = Arrays.asList("A", "B", "C");
+        String expectedOutput = "A\tB\tC\t\n";
+        String actualOutput = visualization.listToString(inputList);
+
+        assertEquals(expectedOutput, actualOutput, "Message");
+    }
+
+    /**
+     * 
+     */
+    @Test
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testReliabiltyTableToDescription() {
+		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+
+        ReliabilityTable table = new ReliabilityTable();
+        ReliabilityRow row1 = new ReliabilityRow();
+        row1.add(0.90);
+        row1.add(0.85);
+        ReliabilityRow row2 = new ReliabilityRow();
+        row2.add(0.80);
+        row2.add(0.95);
+        table.add(row1);
+        table.add(row2);
+
+        Description expected = new Description();
+        expected.add("0.90\t0.85\t\n");
+        expected.add("0.80\t0.95\t\n");
+
+        Description actual = visualization.reliabiltyTableToDescription(table);
+        assertEquals(expected, actual, "Message");
+    }
+
+    /**
+     * 
+     */
+    @Test
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testGetReliabilities() {
+		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+
+        ReliabilityTable table = visualization.getReliabilities();
+
+        assertNotNull(table, "Message");
+        assertFalse(table.isEmpty(), "Message");
+    }
+
+    /**
+     * 
+     */
+    @Test
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testGetFakeDataTable() {
+		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+
+        ReliabilityTable table = visualization.getFakeDataTable();
+
+        assertNotNull(table, "Message");
+        assertFalse(table.isEmpty(), "Message");
+    }
 	
 	
 	
