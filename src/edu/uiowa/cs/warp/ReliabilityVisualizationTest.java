@@ -21,9 +21,24 @@ import edu.uiowa.cs.warp.SystemAttributes.ScheduleChoices;
 
 public class ReliabilityVisualizationTest {
 	
-	
+	/**
+	 *The default timeout value for all test cases
+	 */
+	private static final int DEFAULT_TIMEOUT = 2;
+
+	/**
+	 * The header of reliability analysis .ra files
+	 */
 	private static final String HEADER_BOILERPLATE = "Reliability Analysis for graph ";
+	
+	/**
+	 * The name of the schedule choice selected
+	 */
 	private static final String SCHEDULER_BOILERPLATE = "Scheduler Name: ";
+	
+	/**
+	 * The names of file used to test the methods
+	 */
 	private static final String[] FILE_NAMES = {"CustomWorkloadByZach", "EmptyWorkload", "Example", "Example1a", "Example2", "Example3", "Example4", "ISPN2021figure2", "ISPN2021figure4", "ExampleX", "LongChain", "MixedNodes", "NumberedNodes", "Preempt1", "SamePeriod", "SeeSpray", "StressTest", "StressTest4", "Test1", "WARP_MIX_Schedule0-WarpInput", "WARP_MIX_Schedule1-WarpInput", "WARP-WAHU-MIX"}; 
 	
 	// Note to self on creating the ReliabilityVisualization
@@ -66,7 +81,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getHeader method with Example.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetHeaderExample() {
 		String fileName = "Example";
 		String filePath = fileName + ".txt";
@@ -83,7 +98,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getHeader method with numFaults defined and StressTest4.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetHeaderStressTest4WithNumFaults() {
 		String fileName = "StressTest4";
 		String filePath = fileName + ".txt";
@@ -101,7 +116,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getHeader method using different graph names
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetHeaderDiffer() {
 		String fileName = "Example1a";
 		String filePath = fileName + ".txt";
@@ -121,7 +136,7 @@ public class ReliabilityVisualizationTest {
 	 */
 	//TESTING getScheduler
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetScheulerPriority() {
 		ScheduleChoices choice = ScheduleChoices.PRIORITY;
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "ExampleX.txt", 16, choice);
@@ -137,7 +152,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getScheduler method for the RateMonotonic scheduler
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetScheulerRM() {
 		ScheduleChoices choice = ScheduleChoices.RM;
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "MixedNodes.txt", 16, choice);
@@ -153,7 +168,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getScheduler method for the DeadlineMonotonic scheduler
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetScheulerDM() {
 		ScheduleChoices choice = ScheduleChoices.DM;
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "StressTest4.txt", 16, choice);
@@ -169,7 +184,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getM method with Example.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetMExample() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "M: 0.90\n";
@@ -184,7 +199,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getM method with StressTest4.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetMStressTest4() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.99, "StressTest4.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "M: 0.90\n";
@@ -199,7 +214,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getM method with numFaults defined
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetMWithNumFaults() {
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "M: 0.90\n";
@@ -214,7 +229,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getM method with a non-standard M
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetMOther() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.5, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "M: 0.90\n";
@@ -229,7 +244,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getE2E method with Example.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetE2EExample() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "E2E: 0.99\n";
@@ -244,7 +259,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getE2E method with StressTest4.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetE2EStressTest4() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.99, "StressTest4.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "E2E: 0.99\n";
@@ -259,7 +274,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getE2E method with numFaults defined
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetE2EWithNumFaults() {
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "E2E: 0.99\n";
@@ -274,7 +289,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getE2E method with a non-standard E2E
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetE2EOther() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "E2E: 0.99\n";
@@ -289,7 +304,7 @@ public class ReliabilityVisualizationTest {
 	 * 
 	 */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testGetnChannels() {
         Integer numChannels = 3;
         ReliabilityVisualization visualization = getReliabilityVisualization(1.0, 1.0, "Example.txt", numChannels, ScheduleChoices.PRIORITY);
@@ -302,7 +317,7 @@ public class ReliabilityVisualizationTest {
      * 
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testGetFlowsWithNodes() {
         WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
         WarpSystem customWarpSystem = new WarpSystem(wld, 1, ScheduleChoices.PRIORITY);
@@ -316,7 +331,7 @@ public class ReliabilityVisualizationTest {
      * 
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testGetFlowsAndNodes() {
         WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
         WarpSystem customWarpSystem = new WarpSystem(wld, 1, ScheduleChoices.PRIORITY);
@@ -330,7 +345,7 @@ public class ReliabilityVisualizationTest {
      * 
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testInStandardForm() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
     	
@@ -345,7 +360,7 @@ public class ReliabilityVisualizationTest {
      * 
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testSortFlows() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
@@ -360,7 +375,7 @@ public class ReliabilityVisualizationTest {
      * 
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testListToStringArray() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
@@ -375,7 +390,7 @@ public class ReliabilityVisualizationTest {
      * 
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testListToStringList() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
@@ -390,7 +405,7 @@ public class ReliabilityVisualizationTest {
      * 
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testReliabiltyTableToDescription() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
@@ -416,7 +431,7 @@ public class ReliabilityVisualizationTest {
      * 
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testGetReliabilities() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
@@ -430,7 +445,7 @@ public class ReliabilityVisualizationTest {
      * 
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testGetFakeDataTable() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
