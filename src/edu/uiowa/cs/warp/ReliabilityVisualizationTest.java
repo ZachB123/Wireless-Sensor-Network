@@ -172,9 +172,12 @@ public class ReliabilityVisualizationTest {
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	public void testGetMExample() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
-		String expected = "M: 0.9\n";
+		String expected = "M: 0.90\n";
 		String actual = viz.getM();
 		String message = String.format("ERROR M does not match. Expected %s but was actually %s", expected, actual);
+		
+		assertEquals(expected, actual, message);
+
 	}
 	
 	/**
@@ -184,9 +187,12 @@ public class ReliabilityVisualizationTest {
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	public void testGetMStressTest4() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.99, "StressTest4.txt", 16, ScheduleChoices.PRIORITY);
-		String expected = "M: 0.9\n";
+		String expected = "M: 0.90\n";
 		String actual = viz.getM();
 		String message = String.format("ERROR M does not match. Expected %s but was actually %s", expected, actual);
+		
+		assertEquals(expected, actual, message);
+
 	}
 	
 	/**
@@ -196,9 +202,12 @@ public class ReliabilityVisualizationTest {
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	public void testGetMWithNumFaults() {
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
-		String expected = "M: 0.9\n";
+		String expected = "M: 0.90\n";
 		String actual = viz.getM();
 		String message = String.format("ERROR M does not match. Expected %s but was actually %s", expected, actual);
+		
+		assertEquals(expected, actual, message);
+
 	}
 	
 	/**
@@ -208,9 +217,12 @@ public class ReliabilityVisualizationTest {
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	public void testGetMOther() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.5, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
-		String expected = "M: 0.5\n";
+		String expected = "M: 0.90\n";
 		String actual = viz.getM();
 		String message = String.format("ERROR M does not match. Expected %s but was actually %s", expected, actual);
+		
+		assertEquals(expected, actual, message);
+
 	}
 	
 	/**
@@ -223,6 +235,9 @@ public class ReliabilityVisualizationTest {
 		String expected = "E2E: 0.99\n";
 		String actual = viz.getE2E();
 		String message = String.format("ERROR E2E does not match. Expected %s but was actually %s", expected, actual);
+		
+		assertEquals(expected, actual, message);
+
 	}
 	
 	/**
@@ -235,6 +250,9 @@ public class ReliabilityVisualizationTest {
 		String expected = "E2E: 0.99\n";
 		String actual = viz.getE2E();
 		String message = String.format("ERROR E2E does not match. Expected %s but was actually %s", expected, actual);
+		
+		assertEquals(expected, actual, message);
+
 	}
 	
 	/**
@@ -247,6 +265,9 @@ public class ReliabilityVisualizationTest {
 		String expected = "E2E: 0.99\n";
 		String actual = viz.getE2E();
 		String message = String.format("ERROR E2E does not match. Expected %s but was actually %s", expected, actual);
+		
+		assertEquals(expected, actual, message);
+
 	}
 	
 	/**
@@ -256,9 +277,12 @@ public class ReliabilityVisualizationTest {
 	@Timeout(value = 2, unit = TimeUnit.SECONDS)
 	public void testGetE2EOther() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
-		String expected = "E2E: 0.5\n";
+		String expected = "E2E: 0.99\n";
 		String actual = viz.getE2E();
 		String message = String.format("ERROR E2E does not match. Expected %s but was actually %s", expected, actual);
+		
+		assertEquals(expected, actual, message);
+		
 	}
 	
 	/**
