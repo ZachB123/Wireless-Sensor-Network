@@ -28,6 +28,10 @@ public class ReliabilityVisualization extends VisualizationObject {
 	private ReliabilityAnalysis ra;
 	private Program program;
 	
+	/**
+	 * This constructor calls the VisualizationObject constructor and creates a ReliabilityAnalysis object 
+	 * @param warp the WarpInterface to use
+	 */
 	ReliabilityVisualization(WarpInterface warp) {
 		super(new FileManager(), warp, SOURCE_SUFFIX);
 		this.warp = warp;
@@ -35,6 +39,12 @@ public class ReliabilityVisualization extends VisualizationObject {
 		this.program = ra.getProgram();
 	}
 	
+	/**
+	 * This method creates a Description object for the visualization and adds a header and the WorkLoad's 
+	 * information (scheduler, minimum packet reception rate, end-to-end reliability, number of channels,
+	 * and flows), then adds the reliability probabilities for each flow
+	 * @return a Description with all the program and reliability information
+	 */
 	public Description visualization() {
 		// need to add \n to create new lines in the description
 		// Reliability Analysis for graph <name>
@@ -55,31 +65,56 @@ public class ReliabilityVisualization extends VisualizationObject {
 		return content;
 	}
 	
+	/**
+	 * This method creates a header for the Reliability Analysis with the program's name
+	 * @return header for the description
+	 */
 	public String getHeader() {
 		// should be private
 		return String.format("Reliability Analysis for graph %s\n", program.workLoad.getName());
 	}
 	
+	/**
+	 * This method creates a string indicating the program's scheduler name
+	 * @return scheduler name string
+	 */
 	public String getScheduler() {
 		// should be private
 		return String.format("Scheduler Name: %s\n", program.schedulerName);
 	}
 	
+	/**
+	 * This method creates a string indicating the program's minimum packet reception rate (M)
+	 * @return M string
+	 */
 	public String getM() {
 		// should be private
 		return String.format("M: %.2f\n", this.ra.getM());
 	}
 	
+	/**
+	 * This method creates a string indicating the program's end-to-end reliability (E2E)
+	 * @return E2E string
+	 */
 	public String getE2E() {
 		// should be private
 		return String.format("E2E: %.2f\n", this.ra.getE2E());
 	}
 	
+	/**
+	 * This method creates a string indicating the program's number of channels (nChannels)
+	 * @return nChannels string
+	 */
 	public String getnChannels() {
 		// should be private
 		return String.format("nChannels: %d\n", program.nChannels);
 	}
 	
+	/**
+	 * This method creates a string of the program's flows and their nodes, 
+	 * in order of flow and separated by tabs
+	 * @return formatted string with flows and nodes
+	 */
 	public String getFlowsWithNodes() {
 		//should be private
 		// returns the a string of flows with nodes seperated by tabs in order like F1:A F2:D ... F9:C F10:A F11:B
@@ -91,6 +126,11 @@ public class ReliabilityVisualization extends VisualizationObject {
 		return listToString(flowsWithNodes);
 	}
 	
+	/**
+	 * This method creates an ArrayList of the program's flows and their nodes
+	 * @param flows is a list of the program's flows
+	 * @return flows and nodes ArrayList
+	 */
 	public List<String> getFlowsAndNodes(List<String> flows) {
 		List<String> flowsWithNodes = new ArrayList<>();
 		for (String flow : flows) {
@@ -101,6 +141,12 @@ public class ReliabilityVisualization extends VisualizationObject {
 		return flowsWithNodes;
 	}
 	
+	/**
+	 * This method returns a boolean indicating whether the names of the program's flows 
+	 * are in the form "F<int>" (standard naming convention for flows)
+	 * @param flows is a list of the program's flows
+	 * @return true if all flow names are in standard form, false if not
+	 */
 	public boolean inStandardForm(List<String> flows) {
 		// returns true if all the flow names are in the form F<int>
 		for (String flow : flows) {
@@ -113,6 +159,10 @@ public class ReliabilityVisualization extends VisualizationObject {
 		return true;
 	}
 	
+	/**
+	 * This method sorts the flows by number in increasing order
+	 * @param flows is a list of the program's flows
+	 */
 	public void sortFlows(List<String> flows) {
 		// should be private, ensures proper order of numbers
 		Collections.sort(flows, new Comparator<String>() {
@@ -124,11 +174,21 @@ public class ReliabilityVisualization extends VisualizationObject {
 		});
 	}
 	
+	/**
+	 * This method creates a string from a string array, formatted with tabs between each array element
+	 * @param arr is the array to convert
+	 * @return a formatted string of the array elements
+	 */
 	public String listToString(String[] arr) {
 		// should be private formats items with \t in between
 		return listToString(Arrays.asList(arr));
 	}
 	
+	/**
+	 * This method creates a string from a list of strings, formatted with tabs between list element
+	 * @param arr is the list to convert 
+	 * @return a formatted string of the list elements
+	 */
 	public String listToString(List<String> arr) {
 		// should be private formats items with \t in between
 		String content = "";
@@ -139,6 +199,11 @@ public class ReliabilityVisualization extends VisualizationObject {
 		return content;
 	}
 	
+	/**
+	 * This method converts a ReliabilityTable to a Description object
+	 * @param r the ReliabilityTable to convert
+	 * @return a Description with the information from the ReliabilityTable
+	 */
 	public Description reliabiltyTableToDescription(ReliabilityTable r) {
 		// should be private
 		Description data = new Description();
@@ -153,12 +218,20 @@ public class ReliabilityVisualization extends VisualizationObject {
 		return data;
 	}
 	
+	/**
+	 * This method creates a ReliabilityTable object with the reliabilities from the ReliabilityAnalysis
+	 * @return table of reliabilities
+	 */
 	public ReliabilityTable getReliabilities() {
 		// should be private
 //		return ra.getReliabilities(); THIS IS WHAT NORMALLY SHOULD HAPPEN
 		return getFakeDataTable();
 	}
 	
+	/**
+	 * For debugging?
+	 * @return ReliabilityTable
+	 */
 	public ReliabilityTable getFakeDataTable() {
 		// don't need to test this because this will never be used when Reliability Analysis is implemented
 		List<String> flows = program.workLoad.getFlowNamesInOriginalOrder();
