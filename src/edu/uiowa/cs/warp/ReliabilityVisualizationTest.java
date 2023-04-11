@@ -286,7 +286,7 @@ public class ReliabilityVisualizationTest {
 	}
 	
 	/**
-	 * 
+	 * Tests the getnChannels method.
 	 */
     @Test
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -295,11 +295,12 @@ public class ReliabilityVisualizationTest {
         ReliabilityVisualization visualization = getReliabilityVisualization(1.0, 1.0, "Example.txt", numChannels, ScheduleChoices.PRIORITY);
         String expectedNChannels = String.format("nChannels: %d\n", numChannels);
         String actualNChannels = visualization.getnChannels();
-        assertEquals(expectedNChannels, actualNChannels, "Message");
+        String message = "The actual number of channels does not match the expected value.";
+        assertEquals(expectedNChannels, actualNChannels, message);
     }
 	
     /**
-     * 
+     * Tests getting the flows with nodes.
      */
     @Test
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -309,11 +310,12 @@ public class ReliabilityVisualizationTest {
         ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
         String expectedFlowsWithNodes = "F0:A\tF0:B\tF0:C\tF1:C\tF1:B\tF1:A\t\n";
         String actualFlowsWithNodes = visualization.getFlowsWithNodes();
-        assertEquals(expectedFlowsWithNodes, actualFlowsWithNodes, "Message");
+        String message = "The actual flows with nodes do not match the expected flows.";
+        assertEquals(expectedFlowsWithNodes, actualFlowsWithNodes, message);
     }
 
     /**
-     * 
+     * Tests getting the flows and nodes.
      */
     @Test
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -323,11 +325,12 @@ public class ReliabilityVisualizationTest {
         ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
         List<String> expectedFlowsAndNodes = Arrays.asList("F1:C", "F1:B", "F1:A");
         List<String> actualFlowsAndNodes = visualization.getFlowsAndNodes(Arrays.asList("F1"));
-        assertEquals(expectedFlowsAndNodes, actualFlowsAndNodes, "Message");
+        String message = "The actual flows and nodes do not match the expected flows and nodes.";
+        assertEquals(expectedFlowsAndNodes, actualFlowsAndNodes, message);
     }
 	
     /**
-     * 
+     * Tests if the flows are in standard form.
      */
     @Test
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -337,12 +340,12 @@ public class ReliabilityVisualizationTest {
         List<String> flowsInStandardForm = Arrays.asList("F1", "F2", "F3");
         List<String> flowsNotInStandardForm = Arrays.asList("F1", "Flow2", "F3");
 
-        assertTrue(visualization.inStandardForm(flowsInStandardForm), "Message");
-        assertFalse(visualization.inStandardForm(flowsNotInStandardForm), "Message");
+        assertTrue(visualization.inStandardForm(flowsInStandardForm), "All flows should be in standard form.");
+        assertFalse(visualization.inStandardForm(flowsNotInStandardForm), "Not all flows are in standard form");
     }
 
     /**
-     * 
+     * Tests sorting of the flows.
      */
     @Test
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -353,11 +356,13 @@ public class ReliabilityVisualizationTest {
         List<String> sortedFlows = Arrays.asList("F1", "F2", "F5", "F10");
 
         visualization.sortFlows(unsortedFlows);
-        assertEquals(sortedFlows, unsortedFlows, "Message");
+        String message = "The sorted flows do not match the expected sorted flows.";
+
+        assertEquals(sortedFlows, unsortedFlows, message);
     }
 
     /**
-     * 
+     * Tests list to string conversion for arrays.
      */
     @Test
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -367,12 +372,13 @@ public class ReliabilityVisualizationTest {
         String[] inputArray = {"A", "B", "C"};
         String expectedOutput = "A\tB\tC\t\n";
         String actualOutput = visualization.listToString(inputArray);
+        String message = "The converted string from the array does not match the expected output.";
 
-        assertEquals(expectedOutput, actualOutput, "Message");
+        assertEquals(expectedOutput, actualOutput, message);
     }
 
     /**
-     * 
+     * Tests list to string conversion for lists.
      */
     @Test
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -382,12 +388,13 @@ public class ReliabilityVisualizationTest {
         List<String> inputList = Arrays.asList("A", "B", "C");
         String expectedOutput = "A\tB\tC\t\n";
         String actualOutput = visualization.listToString(inputList);
+        String message = "The converted string from the list does not match the expected output.";
 
-        assertEquals(expectedOutput, actualOutput, "Message");
+        assertEquals(expectedOutput, actualOutput, message);
     }
 
     /**
-     * 
+     * Tests the conversion of a reliability table to a description.
      */
     @Test
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -409,11 +416,13 @@ public class ReliabilityVisualizationTest {
         expected.add("0.80\t0.95\t\n");
 
         Description actual = visualization.reliabiltyTableToDescription(table);
-        assertEquals(expected, actual, "Message");
+        String message = "The actual description does not match the expected description.";
+
+        assertEquals(expected, actual, message);
     }
 
     /**
-     * 
+     * Tests getting the reliabilities.
      */
     @Test
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -422,12 +431,12 @@ public class ReliabilityVisualizationTest {
 
         ReliabilityTable table = visualization.getReliabilities();
 
-        assertNotNull(table, "Message");
-        assertFalse(table.isEmpty(), "Message");
+        assertNotNull(table, "The reliability table should not be null.");
+        assertFalse(table.isEmpty(), "The reliability table should not be empty.");
     }
 
     /**
-     * 
+     * Tests getting the fake data table.
      */
     @Test
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
@@ -436,8 +445,8 @@ public class ReliabilityVisualizationTest {
 
         ReliabilityTable table = visualization.getFakeDataTable();
 
-        assertNotNull(table, "Message");
-        assertFalse(table.isEmpty(), "Message");
+        assertNotNull(table, "The fake data table should not be null.");
+        assertFalse(table.isEmpty(), "The fake data table should not be empty.");
     }
 	
 	
