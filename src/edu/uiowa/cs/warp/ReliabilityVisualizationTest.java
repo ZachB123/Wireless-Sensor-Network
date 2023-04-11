@@ -301,7 +301,8 @@ public class ReliabilityVisualizationTest {
 	}
 	
 	/**
-	 * 
+	 * Tests the getnChannels method with a non-standard M and E2E and with Example.txt as the input file 
+	 * to get the number of channels of the program
 	 */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -310,11 +311,14 @@ public class ReliabilityVisualizationTest {
         ReliabilityVisualization visualization = getReliabilityVisualization(1.0, 1.0, "Example.txt", numChannels, ScheduleChoices.PRIORITY);
         String expectedNChannels = String.format("nChannels: %d\n", numChannels);
         String actualNChannels = visualization.getnChannels();
-        assertEquals(expectedNChannels, actualNChannels, "Message");
+        String message = String.format("ERROR Number of channels does not match. Expected %s but was actually %s", expectedNChannels, expectedNChannels);
+        
+        assertEquals(expectedNChannels, actualNChannels, message);
     }
 	
     /**
-     * 
+     * Tests the getFlowsWithNodes method with a standard M and E2E and with Example.txt as the input file
+     * to get the flows and its flow nodes
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -324,11 +328,15 @@ public class ReliabilityVisualizationTest {
         ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
         String expectedFlowsWithNodes = "F0:A\tF0:B\tF0:C\tF1:C\tF1:B\tF1:A\t\n";
         String actualFlowsWithNodes = visualization.getFlowsWithNodes();
-        assertEquals(expectedFlowsWithNodes, actualFlowsWithNodes, "Message");
+        String message = String.format("ERROR Flows with nodes does not match. Expected %s but was actually %s", 
+        		expectedFlowsWithNodes, actualFlowsWithNodes);
+        
+        assertEquals(expectedFlowsWithNodes, actualFlowsWithNodes, message);
     }
 
     /**
-     * 
+     * Tests the getFlowsAndNodes method with a standard M and E2E and with Example.txt as the input file
+     * to return an array list representing the flows and its nodes
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -338,11 +346,18 @@ public class ReliabilityVisualizationTest {
         ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
         List<String> expectedFlowsAndNodes = Arrays.asList("F1:C", "F1:B", "F1:A");
         List<String> actualFlowsAndNodes = visualization.getFlowsAndNodes(Arrays.asList("F1"));
-        assertEquals(expectedFlowsAndNodes, actualFlowsAndNodes, "Message");
+        String message = String.format("ERROR Flows and nodes does not match. Expected %s but was actually %s", 
+        		expectedFlowsAndNodes.toString(), actualFlowsAndNodes.toString());
+
+        
+        assertEquals(expectedFlowsAndNodes, actualFlowsAndNodes, message);
     }
 	
     /**
-     * 
+     * Tests the inStandardForm method with a non-standard E2E and with Example.txt as the input file
+     * to return a boolean indicating whether the program's flow names are named in the standard naming convention.
+     * The standard naming convention of flows should be "F<int>". 
+     * The method should return true if flows are in the standard naming form and false otherwise
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -357,7 +372,8 @@ public class ReliabilityVisualizationTest {
     }
 
     /**
-     * 
+     * Tests the sortFlows method with a non-standard E2E and with Example.txt as the input file
+     * to return an array list of flows whereby the flow numbers are sorted in increasing order
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -372,6 +388,8 @@ public class ReliabilityVisualizationTest {
     }
 
     /**
+     * Tests the listToStringArray method with a non-standard E2E and with Example.txt as the input file
+     * to get a string of flow elements formatted with tabs in between each element that is converted from a string array.
      * 
      */
     @Test
@@ -387,7 +405,8 @@ public class ReliabilityVisualizationTest {
     }
 
     /**
-     * 
+     * Tests the listToStringList method with a non-standard E2E and with Example.txt as the input file
+     * to get a string of flow elements formatted with tabs in between each element that is converted from a list.
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -402,7 +421,8 @@ public class ReliabilityVisualizationTest {
     }
 
     /**
-     * 
+     * Tests the reliabilityTableToDescription method with a non-standard E2E and with Example.txt as the input file
+     * to get the correct description of reliabilities information that is converted from the ReliabilityTable
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -428,7 +448,8 @@ public class ReliabilityVisualizationTest {
     }
 
     /**
-     * 
+     * Tests the getReliabilities method with a non-standard E2E and with Example.txt as the input file
+     * to get the reliabilities table containing the correct reliability values
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -442,7 +463,7 @@ public class ReliabilityVisualizationTest {
     }
 
     /**
-     * 
+     * Tests the getFakeDtaTable method with a non-standard E2E and with Example.txt as the input file
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
