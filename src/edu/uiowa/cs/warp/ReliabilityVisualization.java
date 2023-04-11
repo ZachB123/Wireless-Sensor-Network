@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * ReliabilityVisualization creates the visualizations for
- * the reliability analysis of the WARP program. <p>
+ * the reliability analysis of the WARP program.
  * 
  * CS2820 Spring 2023 Project: Implement this class to create
  * the file visualization that is requested in Warp.
@@ -36,7 +36,17 @@ public class ReliabilityVisualization extends VisualizationObject {
 		super(new FileManager(), warp, SOURCE_SUFFIX);
 		this.warp = warp;
 		this.ra = warp.toReliabilityAnalysis();
-		this.program = ra.getProgram();
+		this.program = warp.toProgram(); //ra.getProgram();
+	}
+	
+	public Description createHeader() {
+		Description header = new Description();
+		header.add(getTitle());
+		header.add(getScheduler());
+		header.add(getM());
+		header.add(getE2E());
+		header.add(getnChannels());
+		return header;
 	}
 	
 	/**
@@ -55,11 +65,11 @@ public class ReliabilityVisualization extends VisualizationObject {
 		// flows with nodes i.e F0:A F0:B F1:A ...
 		// probabilities at each time 
 		Description content = new Description();
-		content.add(getHeader());
-		content.add(getScheduler());
-		content.add(getM());
-		content.add(getE2E());
-		content.add(getnChannels());
+//		content.add(getTitle());
+//		content.add(getScheduler());
+//		content.add(getM());
+//		content.add(getE2E());
+//		content.add(getnChannels());
 		content.add(getFlowsWithNodes());
 		content.addAll(reliabiltyTableToDescription(getReliabilities()));
 		return content;
@@ -69,7 +79,7 @@ public class ReliabilityVisualization extends VisualizationObject {
 	 * This method creates a header for the Reliability Analysis with the program's name
 	 * @return header for the description
 	 */
-	public String getHeader() {
+	public String getTitle() {
 		// should be private
 		return String.format("Reliability Analysis for graph %s\n", program.workLoad.getName());
 	}
@@ -109,6 +119,7 @@ public class ReliabilityVisualization extends VisualizationObject {
 		// should be private
 		return String.format("nChannels: %d\n", program.nChannels);
 	}
+	
 	
 	/**
 	 * This method creates a string of the program's flows and their nodes, 

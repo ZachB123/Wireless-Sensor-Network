@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_2DVhULhDEe2QK54y_oSyxw" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_2DWIYLhDEe2QK54y_oSyxw" source="codegen">
         <details xmi:id="_2DWIYbhDEe2QK54y_oSyxw" key="codegenDirectory" value="/cs2820-spring23/src"/>
-        <details xmi:id="_4bdPQLhDEe2QK54y_oSyxw" key="AssociatedSourceCode" value="/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelAnalysis.java;2515762246/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelVisualization.java;3549530263/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Edge.java;2557287305/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyAnalysis.java;982524150/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyVisualization.java;3638017576/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramVisualization.java;1367527794/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityVisualization.java;1279026655/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemAttributes.java;876440066/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Visualization.java;2548788944/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationFactory.java;923113377/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationImplementation.java;3055860927/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Warp.java;1246636550/1;/cs2820-spring23/src/edu/uiowa/cs/warp/AbstractMap.java;2633489473/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activation.java;3634548837/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activations.java;3305092594/1;/cs2820-spring23/src/edu/uiowa/cs/warp/BasicPoset.java;3238489715/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Channels.java;3701064188/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CodeFragment.java;1941462046/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CombinedActivation.java;3978818808/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CommunicationGraph.java;724670632/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ConnectivityPoset.java;3754377617/1;/cs2820-spring23/src/edu/uiowa/cs/warp/DeadlineComparator.java;492899634/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Description.java;2283427202/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FileManager.java;1791012323/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Flow.java;3359544952/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowMap.java;3735737588/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowNodeToActivationMap.java;4234899521/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphViz.java;1071888484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphVizListener.java;2126849807/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GuiVisualization.java;654882569/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InputGraphFile.java;937049578/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InstructionTimeSlot.java;3408505142/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatestReleaseTimeComparator.java;1106993157/1;/cs2820-spring23/src/edu/uiowa/cs/warp/MaxPhaseComparator.java;1745026972/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Node.java;229355987/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NodeMap.java;2177811796/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NonPreemptiveSchedule.java;387408079/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NotImplentedVisualization.java;3646556153/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PeriodComparator.java;3057078727/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Poset.java;4263200805/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PreemptiveSchedule.java;3080876127/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PriorityComparator.java;349151360/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Program.java;144940582/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramSchedule.java;1770485609/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeComparator.java;2065273961/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeQueue.java;1776494724/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityAnalysis.java;4224526319/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityParameters.java;1976749484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityRow.java;3195166460/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityTable.java;2918095589/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReportVisualization.java;2571131140/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Row.java;3413533457/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObjectQueue.java;3263525257/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Schedule.java;3152618411/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTable.java;970860350/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTime.java;2579980776/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SimulatorInput.java;3699590899/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SortedPeriodQueue.java;3537725478/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemFactory.java;3225025894/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Table.java;2577872269/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationObject.java;1154791723/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadListener.java;195958787/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpDSL.java;1986156920/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpPoset.java;4000167019/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpSystem.java;2193779250/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoad.java;1306107233/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadDescription.java;1720498685/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadTest.java;3314002610/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObject.java;2451757979/1;"/>
+        <details xmi:id="_4bdPQLhDEe2QK54y_oSyxw" key="AssociatedSourceCode" value="/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelAnalysis.java;2515762246/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelVisualization.java;3549530263/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Edge.java;2557287305/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyAnalysis.java;982524150/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyVisualization.java;3638017576/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramVisualization.java;1367527794/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityVisualization.java;1279026655/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemAttributes.java;876440066/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Visualization.java;2548788944/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationFactory.java;923113377/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationImplementation.java;3055860927/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Warp.java;1246636550/1;/cs2820-spring23/src/edu/uiowa/cs/warp/AbstractMap.java;2633489473/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activation.java;3634548837/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activations.java;3305092594/1;/cs2820-spring23/src/edu/uiowa/cs/warp/BasicPoset.java;3238489715/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Channels.java;3701064188/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CodeFragment.java;1941462046/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CombinedActivation.java;3978818808/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CommunicationGraph.java;724670632/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ConnectivityPoset.java;3754377617/1;/cs2820-spring23/src/edu/uiowa/cs/warp/DeadlineComparator.java;492899634/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Description.java;2283427202/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FileManager.java;1791012323/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Flow.java;3359544952/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowMap.java;3735737588/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowNodeToActivationMap.java;4234899521/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphViz.java;1071888484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphVizListener.java;2126849807/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GuiVisualization.java;654882569/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InputGraphFile.java;937049578/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InstructionTimeSlot.java;3408505142/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatestReleaseTimeComparator.java;1106993157/1;/cs2820-spring23/src/edu/uiowa/cs/warp/MaxPhaseComparator.java;1745026972/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Node.java;229355987/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NodeMap.java;2177811796/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NonPreemptiveSchedule.java;387408079/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NotImplentedVisualization.java;3646556153/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PeriodComparator.java;3057078727/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Poset.java;4263200805/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PreemptiveSchedule.java;3080876127/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PriorityComparator.java;349151360/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Program.java;144940582/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramSchedule.java;1770485609/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeComparator.java;2065273961/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeQueue.java;1776494724/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityAnalysis.java;517141582/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityParameters.java;1976749484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityRow.java;3195166460/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityTable.java;2918095589/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReportVisualization.java;2571131140/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Row.java;3413533457/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObjectQueue.java;3263525257/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Schedule.java;3152618411/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTable.java;970860350/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTime.java;2579980776/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SimulatorInput.java;3699590899/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SortedPeriodQueue.java;3537725478/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemFactory.java;3225025894/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Table.java;2577872269/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationObject.java;1154791723/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadListener.java;195958787/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpDSL.java;1986156920/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpPoset.java;4000167019/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpSystem.java;2193779250/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoad.java;1306107233/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadDescription.java;1720498685/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadTest.java;3314002610/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObject.java;2451757979/1;"/>
       </contents>
       <contents xmi:type="ecore:EAnnotation" xmi:id="_CEnDYLhbEe2q6biPu3WW0g" source="preferences">
         <contents xmi:type="ecore:EAnnotation" xmi:id="_CEnDYbhbEe2q6biPu3WW0g" source="com.yattasolutions.codegen.reverse">
@@ -7298,7 +7298,7 @@ priority schedule for the Poset using numChannels. &#xD;
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2qExMLhDEe2QK54y_oSyxw" name="ReliabilityAnalysis">
-              <ownedComment xmi:id="_5mywsNeiEe2IjMkQsyA0cQ">
+              <ownedComment xmi:id="_7okuQNh-Ee2uB9aKpFs5kw">
                 <body>ReliabilityAnalysis analyzes the end-to-end reliability of messages&#xD;
 transmitted in flows for the WARP system.&#xD;
 &lt;p>&#xD;
@@ -7424,8 +7424,8 @@ schedule time slot.&#xD;
                   <name xsi:nil="true"/>
                 </ownedParameter>
                 <language>java</language>
-                <body>var nodesInFlow = flow.nodes;&#xD;
-		var nNodesInFlow = nodesInFlow.size();&#xD;
+                <body>ArrayList&lt;Node> nodesInFlow = flow.nodes;&#xD;
+		int nNodesInFlow = nodesInFlow.size();&#xD;
 		ArrayList&lt;Integer> txArrayList = new ArrayList&lt;Integer>();&#xD;
 		/*&#xD;
 		 * Each node will have at most numFaults+1 transmissions. Because we don't know&#xD;
@@ -7439,8 +7439,8 @@ schedule time slot.&#xD;
 		 * now compute the maximum # of TX, assuming at most numFaults occur on an edge&#xD;
 		 * per period, and each edge requires at least one successful TX.&#xD;
 		 */&#xD;
-		var numEdgesInFlow = nNodesInFlow - 1;&#xD;
-		var maxFaultsInFlow = numEdgesInFlow * numFaults;&#xD;
+		int numEdgesInFlow = nNodesInFlow - 1;&#xD;
+		int maxFaultsInFlow = numEdgesInFlow * numFaults;&#xD;
 		txArrayList.add(numEdgesInFlow + maxFaultsInFlow);&#xD;
 		return txArrayList;&#xD;
 	</body>
@@ -7455,17 +7455,17 @@ schedule time slot.&#xD;
 		// parameter according to the homework&#xD;
 		Double M = 0.99;&#xD;
 &#xD;
-		var nodesInFlow = flow.nodes;&#xD;
+		ArrayList&lt;Node> nodesInFlow = flow.nodes;&#xD;
 		// The last entry will contain the worst-case cost of transmitting E2E in&#xD;
 		// isolation&#xD;
-		var nNodesInFlow = nodesInFlow.size();&#xD;
+		int nNodesInFlow = nodesInFlow.size();&#xD;
 		// var nPushes = Array(repeating: 0, count: nNodesInFlow+1);&#xD;
 		// Array to track nPushes for each node in this flow (same as nTx per link)&#xD;
 		// Collections.nCopies initalized to 0&#xD;
-		var nPushes = new ArrayList&lt;Integer>(Collections.nCopies(nNodesInFlow + 1, 0));&#xD;
+		ArrayList&lt;Integer> nPushes = new ArrayList&lt;Integer>(Collections.nCopies(nNodesInFlow + 1, 0));&#xD;
 		// deprecated&#xD;
 		// Arrays.fill(nPushes, 0); // initialize to all 0 values&#xD;
-		var nHops = nNodesInFlow - 1;&#xD;
+		int nHops = nNodesInFlow - 1;&#xD;
 		// minLinkReliablityNeded is the minimum reliability needed per link in a flow&#xD;
 		// to hit E2E&#xD;
 		// reliability for the flow&#xD;
@@ -7478,8 +7478,8 @@ schedule time slot.&#xD;
 		// the current time slot (i.e., the row it is in)&#xD;
 		// will add rows as we compute reliabilities until the final reliability is&#xD;
 		// reached for all nodes.&#xD;
-		var reliabilityWindow = new ReliabilityTable(); // Vector&lt;Vector&lt;Double>>();&#xD;
-		var newReliabilityRow = new ReliabilityRow();&#xD;
+		ReliabilityTable reliabilityWindow = new ReliabilityTable(); // Vector&lt;Vector&lt;Double>>();&#xD;
+		ReliabilityRow newReliabilityRow = new ReliabilityRow();&#xD;
 		for (int i = 0; i &lt; nNodesInFlow; i++) {&#xD;
 			// create the the row initialized with 0.0 values&#xD;
 			newReliabilityRow.add(0.0);&#xD;
@@ -7488,7 +7488,7 @@ schedule time slot.&#xD;
 		reliabilityWindow.add(newReliabilityRow);&#xD;
 //		ReliabilityRow tmpVector = reliabilityWindow.get(0);&#xD;
 		// could be an issue here as idk if this needs to be copied or not&#xD;
-		var currentReliabilityRow = reliabilityWindow.get(0); // tmpVector.toArray(new Double[tmpVector.size()]);&#xD;
+		ReliabilityRow currentReliabilityRow = reliabilityWindow.get(0); // tmpVector.toArray(new Double[tmpVector.size()]);&#xD;
 		// var currentReliabilityRow = (Double[]) reliabilityWindow.get(0).toArray();&#xD;
 		// Want reliabilityWindow[0][0] = 1.0 (i.e., P(packet@FlowSrc) = 1&#xD;
 		// but I din't want to mess with the newReliablityRow vector I use below&#xD;
@@ -7500,11 +7500,11 @@ schedule time slot.&#xD;
 		// state&#xD;
 		// is not met and will be 0 with this statement&#xD;
 		Double e2eReliabilityState = currentReliabilityRow.get(nNodesInFlow - 1);&#xD;
-		var timeSlot = 0; // start time at 0&#xD;
+		int timeSlot = 0; // start time at 0&#xD;
 		// change to while and increment increment timeSlot because we don't know how&#xD;
 		// long this schedule window will last&#xD;
 		while (e2eReliabilityState &lt; e2e) {&#xD;
-			var prevReliabilityRow = currentReliabilityRow;&#xD;
+			ReliabilityRow prevReliabilityRow = currentReliabilityRow;&#xD;
 			// would be reliabilityWindow[timeSlot] if working through a schedule&#xD;
 			currentReliabilityRow = newReliabilityRow; // .toArray(new Double[newReliabilityRow.size()]);&#xD;
 			// Now use each flow:src->sink to update reliability computations&#xD;
@@ -7515,10 +7515,10 @@ schedule time slot.&#xD;
 			// loop through each node in the flow and update the states for each line (i.e)&#xD;
 			// sink->src pair&#xD;
 			for (int nodeIndex = 0; nodeIndex &lt; (nNodesInFlow - 1); nodeIndex++) {&#xD;
-				var flowSrcNodeindex = nodeIndex;&#xD;
-				var flowSnkNodeindex = nodeIndex + 1;&#xD;
-				var prevSrcNodeState = prevReliabilityRow.get(flowSrcNodeindex); // [flowSrcNodeindex];&#xD;
-				var prevSnkNodeState = prevReliabilityRow.get(flowSnkNodeindex); // [flowSnkNodeindex];&#xD;
+				int flowSrcNodeindex = nodeIndex;&#xD;
+				int flowSnkNodeindex = nodeIndex + 1;&#xD;
+				Double prevSrcNodeState = prevReliabilityRow.get(flowSrcNodeindex); // [flowSrcNodeindex];&#xD;
+				Double prevSnkNodeState = prevReliabilityRow.get(flowSnkNodeindex); // [flowSnkNodeindex];&#xD;
 				Double nextSnkState;&#xD;
 				// do a push until PrevSnk state > e2e to ensure next node reaches target E2E&#xD;
 				// BUT skip if&#xD;
@@ -7559,7 +7559,7 @@ schedule time slot.&#xD;
 			}&#xD;
 			timeSlot += 1; // increase to next time slot&#xD;
 		}&#xD;
-		var size = reliabilityWindow.size();&#xD;
+		int size = reliabilityWindow.size();&#xD;
 		// The total (worst-case) cost to transmit E2E in isolation with specified&#xD;
 		// reliability&#xD;
 		// target is the number of rows in the reliabilityWindow&#xD;
@@ -7581,21 +7581,25 @@ schedule time slot.&#xD;
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OWT2ZNO2Ee2O0cjNcmYJpQ" name="getM" specification="_OThoIdO2Ee2O0cjNcmYJpQ">
-                <ownedParameter xmi:id="_5mvtYNeiEe2IjMkQsyA0cQ" type="_21600rhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_5mvtYNeiEe2IjMkQsyA0cQ" type="_21600rhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>// should be private&#xD;
 		return this.minPacketReceptionRate;&#xD;
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OWT2ZtO2Ee2O0cjNcmYJpQ" name="getE2E" specification="_OThoItO2Ee2O0cjNcmYJpQ">
-                <ownedParameter xmi:id="_5mvtYdeiEe2IjMkQsyA0cQ" type="_21600rhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_5mvtYdeiEe2IjMkQsyA0cQ" type="_21600rhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>// should be private&#xD;
 		return this.e2e;&#xD;
 	</body>
               </ownedBehavior>
               <ownedOperation xmi:id="_2qExMbhDEe2QK54y_oSyxw" name="verifyReliabilities" method="_23W_RrhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_5mywtdeiEe2IjMkQsyA0cQ">
+                <ownedComment xmi:id="_7ol8Yth-Ee2uB9aKpFs5kw">
                   <body>This method declares whether all reliabilities are met&#xD;
 	 * &#xD;
 	 * I don't know if this should be changed or if its supposed to always return&#xD;
@@ -7612,7 +7616,7 @@ schedule time slot.&#xD;
                 <eAnnotations xmi:id="_20uiCLhDEe2QK54y_oSyxw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_20uiCbhDEe2QK54y_oSyxw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_5mywsdeiEe2IjMkQsyA0cQ">
+                <ownedComment xmi:id="_7olVUNh-Ee2uB9aKpFs5kw">
                   <body>Class constructor specifying the program&#xD;
 	 * &#xD;
 	 * @param program is the program schedule with flows to use</body>
@@ -7621,7 +7625,7 @@ schedule time slot.&#xD;
                 <ownedParameter xmi:id="_20uiCrhDEe2QK54y_oSyxw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_f5ECELhEEe2QK54y_oSyxw" name="getReliabilities" method="_OWTPU9O2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_5mywtNeiEe2IjMkQsyA0cQ">
+                <ownedComment xmi:id="_7ol8Ydh-Ee2uB9aKpFs5kw">
                   <body>This method was generated with UML Lab in HW4&#xD;
 	 * &#xD;
 	 * @return a ReliabilityTable containing reliabilities of a packet reaching each&#xD;
@@ -7633,21 +7637,20 @@ schedule time slot.&#xD;
                 <eAnnotations xmi:id="_DWqU083KEe2aPrCP15OoQw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_DWqU1M3KEe2aPrCP15OoQw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_5mywsteiEe2IjMkQsyA0cQ">
+                <ownedComment xmi:id="_7olVUdh-Ee2uB9aKpFs5kw">
                   <body>Class constructor specifying end-to-end reliability and minimum packet&#xD;
 	 * reception rate&#xD;
 	 * &#xD;
-	 * @param e2e                    is a double representing the end-to-end&#xD;
-	 *                               reliability&#xD;
-	 * @param minPacketReceptionRate is a double representing the minimum packet&#xD;
-	 *                               reception rate</body>
+	 * @param e2e is a double representing the end-to-end reliability&#xD;
+	 * @param minPacketReceptionRate is a double representing the minimum packet &#xD;
+	 * reception rate</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_DWqU0M3KEe2aPrCP15OoQw" name="e2e" type="_21600rhDEe2QK54y_oSyxw"/>
                 <ownedParameter xmi:id="_DWqU0c3KEe2aPrCP15OoQw" name="minPacketReceptionRate" type="_21600rhDEe2QK54y_oSyxw"/>
                 <ownedParameter xmi:id="_DWqU0s3KEe2aPrCP15OoQw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_DWqU1c3KEe2aPrCP15OoQw" name="numTxPerLinkAndTotalTxCost" method="_DXxIF83KEe2aPrCP15OoQw">
-                <ownedComment xmi:id="_5mywtteiEe2IjMkQsyA0cQ">
+                <ownedComment xmi:id="_7omjcth-Ee2uB9aKpFs5kw">
                   <body>This method calculates a flow's numTxPerLinkAndTotalTxCost based on whether&#xD;
 	 * its fault tolerance is fixed&#xD;
 	 * &#xD;
@@ -7663,7 +7666,7 @@ schedule time slot.&#xD;
                 <ownedParameter xmi:id="_DWq74M3KEe2aPrCP15OoQw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_DWsKAM3KEe2aPrCP15OoQw" name="getFixedTxPerLinkAndTotalTxCost" visibility="private" method="_DXxIGs3KEe2aPrCP15OoQw">
-                <ownedComment xmi:id="_5mywt9eiEe2IjMkQsyA0cQ">
+                <ownedComment xmi:id="_7omjc9h-Ee2uB9aKpFs5kw">
                   <body>This method takes a flow and adds its transmissions to an ArrayList. Each&#xD;
 	 * node has a max of numFaults +1. Once these are all added to the ArrayList,&#xD;
 	 * put the sum of the number of edges of the flow and the max faults in a flow&#xD;
@@ -7677,7 +7680,7 @@ schedule time slot.&#xD;
                 <ownedParameter xmi:id="_DWsKAs3KEe2aPrCP15OoQw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_DWsxEc3KEe2aPrCP15OoQw" name="getTxPerLinkAndTotalTxCost" visibility="private" method="_DXxIHc3KEe2aPrCP15OoQw">
-                <ownedComment xmi:id="_5mywuNeiEe2IjMkQsyA0cQ">
+                <ownedComment xmi:id="_7onKgNh-Ee2uB9aKpFs5kw">
                   <body>This method takes in a flow and calculates the number of transmission&#xD;
 	 * attempts per link between nodes and the total transmission attempts Method&#xD;
 	 * moved from Workload class&#xD;
@@ -7693,7 +7696,7 @@ schedule time slot.&#xD;
                 <eAnnotations xmi:id="_DXZ7s83KEe2aPrCP15OoQw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_DXaiwM3KEe2aPrCP15OoQw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_5myws9eiEe2IjMkQsyA0cQ">
+                <ownedComment xmi:id="_7ol8YNh-Ee2uB9aKpFs5kw">
                   <body>Class constructor specifying the number of faults, sets fixed to true&#xD;
 	 * &#xD;
 	 * @param numFaults is an Integer representing the number of faults</body>
@@ -7704,9 +7707,19 @@ schedule time slot.&#xD;
                 <ownedParameter xmi:id="_DXZ7ss3KEe2aPrCP15OoQw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_OThoIdO2Ee2O0cjNcmYJpQ" name="getM" method="_OWT2ZNO2Ee2O0cjNcmYJpQ">
+                <ownedComment xmi:id="_7omjcNh-Ee2uB9aKpFs5kw">
+                  <body>This method gets the minimum packet reception rate on an edge in a flow&#xD;
+	 * &#xD;
+	 * @return the double of minimum packet reception rate of the edge in a flow</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_OULIYdO2Ee2O0cjNcmYJpQ" type="_21600rhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_OThoItO2Ee2O0cjNcmYJpQ" name="getE2E" method="_OWT2ZtO2Ee2O0cjNcmYJpQ">
+                <ownedComment xmi:id="_7omjcdh-Ee2uB9aKpFs5kw">
+                  <body>This methods gets the end-to-end reliability of each flow&#xD;
+	 * &#xD;
+	 * @return the double of the end-to-end reliability value of each flow</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_OULIYtO2Ee2O0cjNcmYJpQ" type="_21600rhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
             </packagedElement>
