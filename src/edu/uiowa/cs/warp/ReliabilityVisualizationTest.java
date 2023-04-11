@@ -21,9 +21,24 @@ import edu.uiowa.cs.warp.SystemAttributes.ScheduleChoices;
 
 public class ReliabilityVisualizationTest {
 	
-	
+	/**
+	 *The default timeout value for all test cases
+	 */
+	private static final int DEFAULT_TIMEOUT = 2;
+
+	/**
+	 * The header of reliability analysis .ra files
+	 */
 	private static final String HEADER_BOILERPLATE = "Reliability Analysis for graph ";
+	
+	/**
+	 * The name of the schedule choice selected
+	 */
 	private static final String SCHEDULER_BOILERPLATE = "Scheduler Name: ";
+	
+	/**
+	 * The names of file used to test the methods
+	 */
 	private static final String[] FILE_NAMES = {"CustomWorkloadByZach", "EmptyWorkload", "Example", "Example1a", "Example2", "Example3", "Example4", "ISPN2021figure2", "ISPN2021figure4", "ExampleX", "LongChain", "MixedNodes", "NumberedNodes", "Preempt1", "SamePeriod", "SeeSpray", "StressTest", "StressTest4", "Test1", "WARP_MIX_Schedule0-WarpInput", "WARP_MIX_Schedule1-WarpInput", "WARP-WAHU-MIX"}; 
 	
 	// Note to self on creating the ReliabilityVisualization
@@ -66,7 +81,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getHeader method with Example.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetHeaderExample() {
 		String fileName = "Example";
 		String filePath = fileName + ".txt";
@@ -83,7 +98,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getHeader method with numFaults defined and StressTest4.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetHeaderStressTest4WithNumFaults() {
 		String fileName = "StressTest4";
 		String filePath = fileName + ".txt";
@@ -101,7 +116,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getHeader method using different graph names
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetHeaderDiffer() {
 		String fileName = "Example1a";
 		String filePath = fileName + ".txt";
@@ -121,7 +136,7 @@ public class ReliabilityVisualizationTest {
 	 */
 	//TESTING getScheduler
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetScheulerPriority() {
 		ScheduleChoices choice = ScheduleChoices.PRIORITY;
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "ExampleX.txt", 16, choice);
@@ -137,7 +152,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getScheduler method for the RateMonotonic scheduler
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetScheulerRM() {
 		ScheduleChoices choice = ScheduleChoices.RM;
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "MixedNodes.txt", 16, choice);
@@ -153,7 +168,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getScheduler method for the DeadlineMonotonic scheduler
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetScheulerDM() {
 		ScheduleChoices choice = ScheduleChoices.DM;
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "StressTest4.txt", 16, choice);
@@ -169,7 +184,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getM method with Example.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetMExample() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "M: 0.90\n";
@@ -184,7 +199,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getM method with StressTest4.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetMStressTest4() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.99, "StressTest4.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "M: 0.90\n";
@@ -199,7 +214,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getM method with numFaults defined
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetMWithNumFaults() {
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "M: 0.90\n";
@@ -214,7 +229,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getM method with a non-standard M
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetMOther() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.5, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "M: 0.90\n";
@@ -229,7 +244,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getE2E method with Example.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetE2EExample() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "E2E: 0.99\n";
@@ -244,7 +259,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getE2E method with StressTest4.txt as the input file
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetE2EStressTest4() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.99, "StressTest4.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "E2E: 0.99\n";
@@ -259,7 +274,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getE2E method with numFaults defined
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetE2EWithNumFaults() {
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "E2E: 0.99\n";
@@ -274,7 +289,7 @@ public class ReliabilityVisualizationTest {
 	 * Tests the getE2E method with a non-standard E2E
 	 */
 	@Test
-	@Timeout(value = 2, unit = TimeUnit.SECONDS)
+	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 	public void testGetE2EOther() {
 		ReliabilityVisualization viz = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 		String expected = "E2E: 0.99\n";
@@ -286,69 +301,82 @@ public class ReliabilityVisualizationTest {
 	}
 	
 	/**
-	 * Tests the getnChannels method.
+	 * Tests the getnChannels method with a non-standard M and E2E and with Example.txt as the input file 
+	 * to get the number of channels of the program
 	 */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testGetnChannels() {
         Integer numChannels = 3;
         ReliabilityVisualization visualization = getReliabilityVisualization(1.0, 1.0, "Example.txt", numChannels, ScheduleChoices.PRIORITY);
         String expectedNChannels = String.format("nChannels: %d\n", numChannels);
         String actualNChannels = visualization.getnChannels();
-        String message = "The actual number of channels does not match the expected value.";
+        String message = String.format("ERROR Number of channels does not match. Expected %s but was actually %s", expectedNChannels, expectedNChannels);
+        
         assertEquals(expectedNChannels, actualNChannels, message);
     }
 	
     /**
-     * Tests getting the flows with nodes.
+     * Tests the getFlowsWithNodes method with a standard M and E2E and with Example.txt as the input file
+     * to get the flows and its flow nodes
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testGetFlowsWithNodes() {
         WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
         WarpSystem customWarpSystem = new WarpSystem(wld, 1, ScheduleChoices.PRIORITY);
         ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
         String expectedFlowsWithNodes = "F0:A\tF0:B\tF0:C\tF1:C\tF1:B\tF1:A\t\n";
         String actualFlowsWithNodes = visualization.getFlowsWithNodes();
-        String message = "The actual flows with nodes do not match the expected flows.";
+        String message = String.format("ERROR Flows with nodes does not match. Expected %s but was actually %s", 
+        		expectedFlowsWithNodes, actualFlowsWithNodes);
+        
         assertEquals(expectedFlowsWithNodes, actualFlowsWithNodes, message);
     }
 
     /**
-     * Tests getting the flows and nodes.
+     * Tests the getFlowsAndNodes method with a standard M and E2E and with Example.txt as the input file
+     * to return an array list representing the flows and its nodes
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testGetFlowsAndNodes() {
         WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
         WarpSystem customWarpSystem = new WarpSystem(wld, 1, ScheduleChoices.PRIORITY);
         ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
         List<String> expectedFlowsAndNodes = Arrays.asList("F1:C", "F1:B", "F1:A");
         List<String> actualFlowsAndNodes = visualization.getFlowsAndNodes(Arrays.asList("F1"));
-        String message = "The actual flows and nodes do not match the expected flows and nodes.";
+        String message = String.format("ERROR Flows and nodes does not match. Expected %s but was actually %s", 
+        		expectedFlowsAndNodes.toString(), actualFlowsAndNodes.toString());
+
+        
         assertEquals(expectedFlowsAndNodes, actualFlowsAndNodes, message);
     }
 	
     /**
-     * Tests if the flows are in standard form.
+     * Tests the inStandardForm method with a non-standard E2E and with Example.txt as the input file
+     * to return a boolean indicating whether the program's flow names are named in the standard naming convention.
+     * The standard naming convention of flows should be "F<int>". 
+     * The method should return true if flows are in the standard naming form and false otherwise
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testInStandardForm() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
     	
         List<String> flowsInStandardForm = Arrays.asList("F1", "F2", "F3");
         List<String> flowsNotInStandardForm = Arrays.asList("F1", "Flow2", "F3");
 
-        assertTrue(visualization.inStandardForm(flowsInStandardForm), "All flows should be in standard form.");
-        assertFalse(visualization.inStandardForm(flowsNotInStandardForm), "Not all flows are in standard form");
+        assertTrue(visualization.inStandardForm(flowsInStandardForm), "Message");
+        assertFalse(visualization.inStandardForm(flowsNotInStandardForm), "Message");
     }
 
     /**
-     * Tests sorting of the flows.
+     * Tests the sortFlows method with a non-standard E2E and with Example.txt as the input file
+     * to return an array list of flows whereby the flow numbers are sorted in increasing order
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testSortFlows() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
@@ -356,48 +384,48 @@ public class ReliabilityVisualizationTest {
         List<String> sortedFlows = Arrays.asList("F1", "F2", "F5", "F10");
 
         visualization.sortFlows(unsortedFlows);
-        String message = "The sorted flows do not match the expected sorted flows.";
-
-        assertEquals(sortedFlows, unsortedFlows, message);
+        assertEquals(sortedFlows, unsortedFlows, "Message");
     }
 
     /**
-     * Tests list to string conversion for arrays.
+     * Tests the listToStringArray method with a non-standard E2E and with Example.txt as the input file
+     * to get a string of flow elements formatted with tabs in between each element that is converted from a string array.
+     * 
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testListToStringArray() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
         String[] inputArray = {"A", "B", "C"};
         String expectedOutput = "A\tB\tC\t\n";
         String actualOutput = visualization.listToString(inputArray);
-        String message = "The converted string from the array does not match the expected output.";
 
-        assertEquals(expectedOutput, actualOutput, message);
+        assertEquals(expectedOutput, actualOutput, "Message");
     }
 
     /**
-     * Tests list to string conversion for lists.
+     * Tests the listToStringList method with a non-standard E2E and with Example.txt as the input file
+     * to get a string of flow elements formatted with tabs in between each element that is converted from a list.
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testListToStringList() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
         List<String> inputList = Arrays.asList("A", "B", "C");
         String expectedOutput = "A\tB\tC\t\n";
         String actualOutput = visualization.listToString(inputList);
-        String message = "The converted string from the list does not match the expected output.";
 
-        assertEquals(expectedOutput, actualOutput, message);
+        assertEquals(expectedOutput, actualOutput, "Message");
     }
 
     /**
-     * Tests the conversion of a reliability table to a description.
+     * Tests the reliabilityTableToDescription method with a non-standard E2E and with Example.txt as the input file
+     * to get the correct description of reliabilities information that is converted from the ReliabilityTable
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testReliabiltyTableToDescription() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
@@ -416,40 +444,40 @@ public class ReliabilityVisualizationTest {
         expected.add("0.80\t0.95\t\n");
 
         Description actual = visualization.reliabiltyTableToDescription(table);
-        String message = "The actual description does not match the expected description.";
-
-        assertEquals(expected, actual, message);
+        assertEquals(expected, actual, "Message");
     }
 
     /**
-     * Tests getting the reliabilities.
+     * Tests the getReliabilities method with a non-standard E2E and with Example.txt as the input file
+     * to get the reliabilities table containing the correct reliability values
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testGetReliabilities() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
         ReliabilityTable table = visualization.getReliabilities();
 
-        assertNotNull(table, "The reliability table should not be null.");
-        assertFalse(table.isEmpty(), "The reliability table should not be empty.");
+        assertNotNull(table, "Message");
+        assertFalse(table.isEmpty(), "Message");
     }
 
     /**
-     * Tests getting the fake data table.
+     * Tests the getFakeDtaTable method with a non-standard E2E and with Example.txt as the input file
      */
     @Test
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     void testGetFakeDataTable() {
 		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
 
         ReliabilityTable table = visualization.getFakeDataTable();
 
-        assertNotNull(table, "The fake data table should not be null.");
-        assertFalse(table.isEmpty(), "The fake data table should not be empty.");
+        assertNotNull(table, "Message");
+        assertFalse(table.isEmpty(), "Message");
     }
 	
 	
 	
 	
 }
+
