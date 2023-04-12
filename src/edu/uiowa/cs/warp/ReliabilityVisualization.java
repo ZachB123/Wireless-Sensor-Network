@@ -62,9 +62,9 @@ public class ReliabilityVisualization extends VisualizationObject {
 	
 	public String[] createColumnHeader() {
 		List<String> flows = program.workLoad.getFlowNamesInPriorityOrder();
-		if (inStandardForm(flows)) {
-			sortFlows(flows);	
-		}
+//		if (inStandardForm(flows)) {
+//			sortFlows(flows);	
+//		}
 		List<String> listForm = getFlowsAndNodes(flows);
 		String[] retVal = new String[listForm.size()];
 		for (int i = 0; i < retVal.length; i++) {
@@ -72,7 +72,160 @@ public class ReliabilityVisualization extends VisualizationObject {
 		}
 		return retVal;
 	}
-
+	
+	/**
+	 * This method creates a string of the program's flows and their nodes, 
+	 * in order of flow and separated by tabs
+	 * @return formatted string with flows and nodes
+	 */
+//	public String getFlowsWithNodes() {
+//		//should be private
+//		// returns the a string of flows with nodes seperated by tabs in order like F1:A F2:D ... F9:C F10:A F11:B
+//		List<String> flows = program.workLoad.getFlowNamesInPriorityOrder();
+//		if (inStandardForm(flows)) {
+//			sortFlows(flows);	
+//		}
+//		List<String> flowsWithNodes = getFlowsAndNodes(flows);
+//		return listToString(flowsWithNodes);
+//	}
+	
+	/**
+	 * This method creates an ArrayList of the program's flows and their nodes
+	 * @param flows is a list of the program's flows
+	 * @return flows and nodes ArrayList
+	 */
+	public List<String> getFlowsAndNodes(List<String> flows) {
+		List<String> flowsWithNodes = new ArrayList<>();
+		for (String flow : flows) {
+			for (String node : program.workLoad.getNodesInFlow(flow)) {
+				flowsWithNodes.add(String.format("%s:%s", flow, node));
+			}
+		}
+		return flowsWithNodes;
+	}
+	
+	/**
+	 * This method returns a boolean indicating whether the names of the program's flows 
+	 * are in the form "F<int>" (standard naming convention for flows)
+	 * @param flows is a list of the program's flows
+	 * @return true if all flow names are in standard form, false if not
+	 */
+//	public boolean inStandardForm(List<String> flows) {
+//		// returns true if all the flow names are in the form F<int>
+//		for (String flow : flows) {
+//			try {
+//				Integer.parseInt(flow.substring(1));
+//			} catch(Exception e) {
+//				return false;
+//			}
+//		}
+//		return true;
+//	}
+	
+	/**
+	 * This method sorts the flows by number in increasing order
+	 * @param flows is a list of the program's flows
+	 */
+//	public void sortFlows(List<String> flows) {
+//		// should be private, ensures proper order of numbers
+//		Collections.sort(flows, new Comparator<String>() {
+//			public int compare(String str1, String str2) {
+//				int val1 = Integer.parseInt(str1.substring(1));
+//				int val2 = Integer.parseInt(str2.substring(1));
+//				return val1 - val2;
+//			}
+//		});
+//	}
+	
+	/**
+	 * This method creates a string from a string array, formatted with tabs between each array element
+	 * @param arr is the array to convert
+	 * @return a formatted string of the array elements
+	 */
+//	public String listToString(String[] arr) {
+//		// should be private formats items with \t in between
+//		return listToString(Arrays.asList(arr));
+//	}
+	
+	/**
+	 * This method creates a string from a list of strings, formatted with tabs between list element
+	 * @param arr is the list to convert 
+	 * @return a formatted string of the list elements
+	 */
+//	public String listToString(List<String> arr) {
+//		// should be private formats items with \t in between
+//		String content = "";
+//		for (String str : arr) {
+//			content += String.format("%s\t", str);
+//		}
+//		content += "\n";
+//		return content;
+//	}
+	
+	/**
+	 * This method converts a ReliabilityTable to a Description object
+	 * @param r the ReliabilityTable to convert
+	 * @return a Description with the information from the ReliabilityTable
+	 */
+//	public Description reliabiltyTableToDescription(ReliabilityTable r) {
+//		// should be private
+//		Description data = new Description();
+//		for (ReliabilityRow row : r) {
+//			String content = "";
+//			for (Double value : row) {
+//				content += String.format("%.2f\t", value);
+//			}
+//			content += "\n";
+//			data.add(content);
+//		}
+//		return data;
+//	}
+	
+	public String[][] reliabilityTableTo2dArray(ReliabilityTable table) {
+		int rows = table.getNumRows();
+		int cols = table.getNumColumns();
+		String[][] stringArr = new String[rows][cols];
+		for (int i = 0; i < rows; i++) {
+			ReliabilityRow row = table.get(i);
+			for (int j = 0; j < cols; j++) {
+				stringArr[i][j] = row.get(j).toString();
+			}
+		}
+		return stringArr;
+	}
+	
+	/**
+	 * This method creates a ReliabilityTable object with the reliabilities from the ReliabilityAnalysis
+	 * @return table of reliabilities
+	 */
+	public ReliabilityTable getReliabilities() {
+		// should be private
+//		return ra.getReliabilities(); THIS IS WHAT NORMALLY SHOULD HAPPEN
+		return getFakeDataTable();
+	}
+	
+	/**
+	 * For debugging?
+	 * @return ReliabilityTable
+	 */
+	public ReliabilityTable getFakeDataTable() {
+		// don't need to test this because this will never be used when Reliability Analysis is implemented
+		List<String> flows = program.workLoad.getFlowNamesInPriorityOrder();
+//		if (inStandardForm(flows)) {
+//			sortFlows(flows);
+//		}
+		int numColumns = getFlowsAndNodes(flows).size();
+		int numRows = program.scheduleBuilt.size();
+		ReliabilityTable data = new ReliabilityTable();
+		for (int i = 0; i < numRows; i++) {
+			ReliabilityRow dataRow = new ReliabilityRow();
+			for (int j = 0; j < numColumns; j++) {
+				dataRow.add((double) (((int) (Math.random() * 100)) / 100.0));
+			}
+			data.add(dataRow);
+		}
+		return data;
+	}
 	
 	/**
 	 * This method creates a header for the Reliability Analysis with the program's name
@@ -117,161 +270,6 @@ public class ReliabilityVisualization extends VisualizationObject {
 	public String getnChannels() {
 		// should be private
 		return String.format("nChannels: %d\n", program.nChannels);
-	}
-	
-	
-	/**
-	 * This method creates a string of the program's flows and their nodes, 
-	 * in order of flow and separated by tabs
-	 * @return formatted string with flows and nodes
-	 */
-	public String getFlowsWithNodes() {
-		//should be private
-		// returns the a string of flows with nodes seperated by tabs in order like F1:A F2:D ... F9:C F10:A F11:B
-		List<String> flows = program.workLoad.getFlowNamesInPriorityOrder();
-		if (inStandardForm(flows)) {
-			sortFlows(flows);	
-		}
-		List<String> flowsWithNodes = getFlowsAndNodes(flows);
-		return listToString(flowsWithNodes);
-	}
-	
-	/**
-	 * This method creates an ArrayList of the program's flows and their nodes
-	 * @param flows is a list of the program's flows
-	 * @return flows and nodes ArrayList
-	 */
-	public List<String> getFlowsAndNodes(List<String> flows) {
-		List<String> flowsWithNodes = new ArrayList<>();
-		for (String flow : flows) {
-			for (String node : program.workLoad.getNodesInFlow(flow)) {
-				flowsWithNodes.add(String.format("%s:%s", flow, node));
-			}
-		}
-		return flowsWithNodes;
-	}
-	
-	/**
-	 * This method returns a boolean indicating whether the names of the program's flows 
-	 * are in the form "F<int>" (standard naming convention for flows)
-	 * @param flows is a list of the program's flows
-	 * @return true if all flow names are in standard form, false if not
-	 */
-	public boolean inStandardForm(List<String> flows) {
-		// returns true if all the flow names are in the form F<int>
-		for (String flow : flows) {
-			try {
-				Integer.parseInt(flow.substring(1));
-			} catch(Exception e) {
-				return false;
-			}
-		}
-		return true;
-	}
-	
-	/**
-	 * This method sorts the flows by number in increasing order
-	 * @param flows is a list of the program's flows
-	 */
-	public void sortFlows(List<String> flows) {
-		// should be private, ensures proper order of numbers
-		Collections.sort(flows, new Comparator<String>() {
-			public int compare(String str1, String str2) {
-				int val1 = Integer.parseInt(str1.substring(1));
-				int val2 = Integer.parseInt(str2.substring(1));
-				return val1 - val2;
-			}
-		});
-	}
-	
-	/**
-	 * This method creates a string from a string array, formatted with tabs between each array element
-	 * @param arr is the array to convert
-	 * @return a formatted string of the array elements
-	 */
-	public String listToString(String[] arr) {
-		// should be private formats items with \t in between
-		return listToString(Arrays.asList(arr));
-	}
-	
-	/**
-	 * This method creates a string from a list of strings, formatted with tabs between list element
-	 * @param arr is the list to convert 
-	 * @return a formatted string of the list elements
-	 */
-	public String listToString(List<String> arr) {
-		// should be private formats items with \t in between
-		String content = "";
-		for (String str : arr) {
-			content += String.format("%s\t", str);
-		}
-		content += "\n";
-		return content;
-	}
-	
-	/**
-	 * This method converts a ReliabilityTable to a Description object
-	 * @param r the ReliabilityTable to convert
-	 * @return a Description with the information from the ReliabilityTable
-	 */
-	public Description reliabiltyTableToDescription(ReliabilityTable r) {
-		// should be private
-		Description data = new Description();
-		for (ReliabilityRow row : r) {
-			String content = "";
-			for (Double value : row) {
-				content += String.format("%.2f\t", value);
-			}
-			content += "\n";
-			data.add(content);
-		}
-		return data;
-	}
-	
-	public String[][] reliabilityTableTo2dArray(ReliabilityTable table) {
-		int rows = table.getNumRows();
-		int cols = table.getNumColumns();
-		String[][] stringArr = new String[rows][cols];
-		for (int i = 0; i < rows; i++) {
-			ReliabilityRow row = table.get(i);
-			for (int j = 0; j < cols; j++) {
-				stringArr[i][j] = row.get(j).toString();
-			}
-		}
-		return stringArr;
-	}
-	
-	/**
-	 * This method creates a ReliabilityTable object with the reliabilities from the ReliabilityAnalysis
-	 * @return table of reliabilities
-	 */
-	public ReliabilityTable getReliabilities() {
-		// should be private
-//		return ra.getReliabilities(); THIS IS WHAT NORMALLY SHOULD HAPPEN
-		return getFakeDataTable();
-	}
-	
-	/**
-	 * For debugging?
-	 * @return ReliabilityTable
-	 */
-	public ReliabilityTable getFakeDataTable() {
-		// don't need to test this because this will never be used when Reliability Analysis is implemented
-		List<String> flows = program.workLoad.getFlowNamesInOriginalOrder();
-		if (inStandardForm(flows)) {
-			sortFlows(flows);
-		}
-		int numColumns = getFlowsAndNodes(flows).size();
-		int numRows = program.scheduleBuilt.size();
-		ReliabilityTable data = new ReliabilityTable();
-		for (int i = 0; i < numRows; i++) {
-			ReliabilityRow dataRow = new ReliabilityRow();
-			for (int j = 0; j < numColumns; j++) {
-				dataRow.add((double) (((int) (Math.random() * 100)) / 100.0));
-			}
-			data.add(dataRow);
-		}
-		return data;
 	}
 	
 /* File Visualization for workload defined in Example.txt follows. Note
