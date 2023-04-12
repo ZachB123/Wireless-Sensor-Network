@@ -367,8 +367,8 @@ public class ReliabilityVisualizationTest {
         List<String> flowsInStandardForm = Arrays.asList("F1", "F2", "F3");
         List<String> flowsNotInStandardForm = Arrays.asList("F1", "Flow2", "F3");
 
-        assertTrue(visualization.inStandardForm(flowsInStandardForm), "Message");
-        assertFalse(visualization.inStandardForm(flowsNotInStandardForm), "Message");
+        assertTrue(visualization.inStandardForm(flowsInStandardForm), "Expected flows in standard form to return true");
+        assertFalse(visualization.inStandardForm(flowsNotInStandardForm), "Expected flows not in standard form to return false");
     }
 
     /**
@@ -384,7 +384,7 @@ public class ReliabilityVisualizationTest {
         List<String> sortedFlows = Arrays.asList("F1", "F2", "F5", "F10");
 
         visualization.sortFlows(unsortedFlows);
-        assertEquals(sortedFlows, unsortedFlows, "Message");
+        assertEquals(sortedFlows, unsortedFlows, "Expected sorted flows to match the expected order");
     }
 
     /**
@@ -401,7 +401,7 @@ public class ReliabilityVisualizationTest {
         String expectedOutput = "A\tB\tC\t\n";
         String actualOutput = visualization.listToString(inputArray);
 
-        assertEquals(expectedOutput, actualOutput, "Message");
+        assertEquals(expectedOutput, actualOutput, "Expected output string to match the formatted input array");
     }
 
     /**
@@ -417,7 +417,7 @@ public class ReliabilityVisualizationTest {
         String expectedOutput = "A\tB\tC\t\n";
         String actualOutput = visualization.listToString(inputList);
 
-        assertEquals(expectedOutput, actualOutput, "Message");
+        assertEquals(expectedOutput, actualOutput, "Expected output string to match the formatted input list");
     }
 
     /**
@@ -444,7 +444,7 @@ public class ReliabilityVisualizationTest {
         expected.add("0.80\t0.95\t\n");
 
         Description actual = visualization.reliabiltyTableToDescription(table);
-        assertEquals(expected, actual, "Message");
+        assertEquals(expected, actual, "Expected description to match the formatted reliability table");
     }
 
     /**
@@ -458,8 +458,8 @@ public class ReliabilityVisualizationTest {
 
         ReliabilityTable table = visualization.getReliabilities();
 
-        assertNotNull(table, "Message");
-        assertFalse(table.isEmpty(), "Message");
+        assertNotNull(table, "Expected reliability table to not be null");
+        assertFalse(table.isEmpty(), "Expected reliability table to not be empty");
     }
 
     /**
@@ -472,12 +472,106 @@ public class ReliabilityVisualizationTest {
 
         ReliabilityTable table = visualization.getFakeDataTable();
 
-        assertNotNull(table, "Message");
-        assertFalse(table.isEmpty(), "Message");
+        assertNotNull(table, "Expected fake data table to not be null");
+        assertFalse(table.isEmpty(), "Expected fake data table to not be empty");
     }
 	
-	
-	
-	
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    void testGetnChannelsLargeNumberEdgeCase() {
+        Integer numChannels = 1000;
+        ReliabilityVisualization visualization = getReliabilityVisualization(1.0, 1.0, "Example.txt", numChannels, ScheduleChoices.PRIORITY);
+        String expectedNChannels = String.format("nChannels: %d\n", numChannels);
+        String actualNChannels = visualization.getnChannels();
+        String message = String.format("ERROR Number of channels does not match. Expected %s but was actually %s", expectedNChannels, actualNChannels);
+
+        assertEquals(expectedNChannels, actualNChannels, message);
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    void testGetFlowsWithNodesEmptyInput() {
+        WorkLoad wld = new WorkLoad(0.9, 0.99, "EmptyWorkload.txt");
+        WarpSystem customWarpSystem = new WarpSystem(wld, 1, ScheduleChoices.PRIORITY);
+        ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
+        String expectedFlowsWithNodes = "\n";
+        String actualFlowsWithNodes = visualization.getFlowsWithNodes();
+        String message = String.format("ERROR Flows with nodes does not match. Expected a newline character but was actually %s", actualFlowsWithNodes);
+        
+        assertEquals(expectedFlowsWithNodes, actualFlowsWithNodes, message);
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    void testGetFlowsAndNodesInvalidFlow() {
+        WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
+        WarpSystem customWarpSystem = new WarpSystem(wld, 1, ScheduleChoices.PRIORITY);
+        ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
+        List<String> actualFlowsAndNodes = visualization.getFlowsAndNodes(Arrays.asList("InvalidFlow"));
+        assertTrue(actualFlowsAndNodes.isEmpty(), "ERROR Invalid flow should result in an empty list");
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    void testInStandardFormEdgeCase() {
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+        List<String> emptyList = new ArrayList<>();
+        assertTrue(visualization.inStandardForm(emptyList), "ERROR Empty list should be considered in standard form");
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    void testSortFlowsEdgeCase() {
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+        List<String> emptyList = new ArrayList<>();
+        visualization.sortFlows(emptyList);
+        assertTrue(emptyList.isEmpty(), "ERROR Sorting an empty list should result in an empty list");
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    void testListToStringArrayEdgeCase() {
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+        String[] emptyArray = {};
+        String expectedOutput = "\n";
+        String actualOutput = visualization.listToString(emptyArray);
+        assertEquals(expectedOutput, actualOutput, "ERROR Empty input array should result in an empty string");
+    }
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    void testListToStringListEdgeCase() {
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+        List<String> emptyList = new ArrayList<>();
+        String expectedOutput = "\n";
+        String actualOutput = visualization.listToString(emptyList);
+        assertEquals(expectedOutput, actualOutput, "ERROR Empty input list should result in an empty string");
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    void testReliabiltyTableToDescriptionEdgeCase() {
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+        ReliabilityTable emptyTable = new ReliabilityTable();
+        Description expected = new Description();
+        Description actual = visualization.reliabiltyTableToDescription(emptyTable);
+        assertEquals(expected, actual, "ERROR Empty reliability table should result in an empty description");
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    void testGetReliabilitiesEdgeCase() {
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "EmptyWorkload.txt", 16, ScheduleChoices.PRIORITY);
+        ReliabilityTable table = visualization.getReliabilities();
+        assertNotNull(table, "Expected reliability table with empty workload to not be null");
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    void testGetFakeDataTableEdgeCase() {
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "EmptyWorkload.txt", 16, ScheduleChoices.PRIORITY);
+        ReliabilityTable table = visualization.getFakeDataTable();
+        assertNotNull(table, "Expected fake data table with empty workload to not be null");
+    }
+
 }
 
