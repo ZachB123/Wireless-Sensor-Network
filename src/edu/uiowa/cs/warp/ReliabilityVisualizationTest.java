@@ -376,8 +376,8 @@ public class ReliabilityVisualizationTest {
         List<String> flowsInStandardForm = Arrays.asList("F1", "F2", "F3");
         List<String> flowsNotInStandardForm = Arrays.asList("F1", "Flow2", "F3");
 
-        assertTrue(visualization.inStandardForm(flowsInStandardForm), "Expected flows in standard form to return true");
-        assertFalse(visualization.inStandardForm(flowsNotInStandardForm), "Expected flows not in standard form to return false");
+        assertTrue(visualization.inStandardForm(flowsInStandardForm), "Message");
+        assertFalse(visualization.inStandardForm(flowsNotInStandardForm), "Message");
     }
 
     /**
@@ -393,7 +393,7 @@ public class ReliabilityVisualizationTest {
         List<String> sortedFlows = Arrays.asList("F1", "F2", "F5", "F10");
 
         visualization.sortFlows(unsortedFlows);
-        assertEquals(sortedFlows, unsortedFlows, "Expected sorted flows to match the expected order");
+        assertEquals(sortedFlows, unsortedFlows, "Message");
     }
 
     /**
@@ -410,7 +410,7 @@ public class ReliabilityVisualizationTest {
         String expectedOutput = "A\tB\tC\t\n";
         String actualOutput = visualization.listToString(inputArray);
 
-        assertEquals(expectedOutput, actualOutput, "Expected output string to match the formatted input array");
+        assertEquals(expectedOutput, actualOutput, "Message");
     }
 
     /**
@@ -426,7 +426,7 @@ public class ReliabilityVisualizationTest {
         String expectedOutput = "A\tB\tC\t\n";
         String actualOutput = visualization.listToString(inputList);
 
-        assertEquals(expectedOutput, actualOutput, "Expected output string to match the formatted input list");
+        assertEquals(expectedOutput, actualOutput, "Message");
     }
 
     /**
@@ -453,7 +453,7 @@ public class ReliabilityVisualizationTest {
         expected.add("0.80\t0.95\t\n");
 
         Description actual = visualization.reliabiltyTableToDescription(table);
-        assertEquals(expected, actual, "Expected description to match the formatted reliability table");
+        assertEquals(expected, actual, "Message");
     }
 
     /**
@@ -467,8 +467,8 @@ public class ReliabilityVisualizationTest {
 
         ReliabilityTable table = visualization.getReliabilities();
 
-        assertNotNull(table, "Expected reliability table to not be null");
-        assertFalse(table.isEmpty(), "Expected reliability table to not be empty");
+        assertNotNull(table, "Message");
+        assertFalse(table.isEmpty(), "Message");
     }
 
     /**
@@ -481,9 +481,10 @@ public class ReliabilityVisualizationTest {
 
         ReliabilityTable table = visualization.getFakeDataTable();
 
-        assertNotNull(table, "Expected fake data table to not be null");
-        assertFalse(table.isEmpty(), "Expected fake data table to not be empty");
+        assertNotNull(table, "Message");
+        assertFalse(table.isEmpty(), "Message");
     }
+
 	
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
