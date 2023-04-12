@@ -56,20 +56,7 @@ public class ReliabilityVisualization extends VisualizationObject {
 	 * @return a Description with all the program and reliability information
 	 */
 	public Description visualization() {
-		// need to add \n to create new lines in the description
-		// Reliability Analysis for graph <name>
-		// Scheduler Name: <name>
-		// M: <float>
-		// E2E: <float>
-		// nChannels: <int>
-		// flows with nodes i.e F0:A F0:B F1:A ...
-		// probabilities at each time 
 		Description content = new Description();
-//		content.add(getTitle());
-//		content.add(getScheduler());
-//		content.add(getM());
-//		content.add(getE2E());
-//		content.add(getnChannels());
 		content.add(getFlowsWithNodes());
 		content.addAll(reliabiltyTableToDescription(getReliabilities()));
 		return content;
@@ -129,7 +116,7 @@ public class ReliabilityVisualization extends VisualizationObject {
 	public String getFlowsWithNodes() {
 		//should be private
 		// returns the a string of flows with nodes seperated by tabs in order like F1:A F2:D ... F9:C F10:A F11:B
-		List<String> flows = program.workLoad.getFlowNamesInOriginalOrder();
+		List<String> flows = program.workLoad.getFlowNamesInPriorityOrder();
 		if (inStandardForm(flows)) {
 			sortFlows(flows);	
 		}
