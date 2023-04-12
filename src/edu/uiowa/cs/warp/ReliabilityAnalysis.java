@@ -87,6 +87,8 @@ public class ReliabilityAnalysis {
 	 */
 	public ReliabilityAnalysis(Program program) {
 		this.program = program;
+		this.e2e = program.getE2e();
+		this.minPacketReceptionRate = program.getMinPacketReceptionRate();
 	}
 
 	/**
