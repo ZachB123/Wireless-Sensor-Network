@@ -76,7 +76,7 @@ abstract class VisualizationObject {
 	// Not implemented
 	public Description visualization() {
 		Description content = new Description();
-		var data = createVisualizationData();
+		String[][] data = createVisualizationData();
 
 		if (data != null) {
 			String nodeString = String.join("\t", createColumnHeader()) + "\n";

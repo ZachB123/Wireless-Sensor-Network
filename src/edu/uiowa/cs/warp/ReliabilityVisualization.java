@@ -55,12 +55,24 @@ public class ReliabilityVisualization extends VisualizationObject {
 	 * and flows), then adds the reliability probabilities for each flow
 	 * @return a Description with all the program and reliability information
 	 */
-	public Description visualization() {
-		Description content = new Description();
-		content.add(getFlowsWithNodes());
-		content.addAll(reliabiltyTableToDescription(getReliabilities()));
-		return content;
+	public String[][] createVisualizationData() {
+		return reliabilityTableTo2dArray(getReliabilities());
+		
 	}
+	
+	public String[] createColumnHeader() {
+		List<String> flows = program.workLoad.getFlowNamesInPriorityOrder();
+		if (inStandardForm(flows)) {
+			sortFlows(flows);	
+		}
+		List<String> listForm = getFlowsAndNodes(flows);
+		String[] retVal = new String[listForm.size()];
+		for (int i = 0; i < retVal.length; i++) {
+			retVal[i] = listForm.get(i);
+		}
+		return retVal;
+	}
+
 	
 	/**
 	 * This method creates a header for the Reliability Analysis with the program's name
@@ -214,6 +226,19 @@ public class ReliabilityVisualization extends VisualizationObject {
 			data.add(content);
 		}
 		return data;
+	}
+	
+	public String[][] reliabilityTableTo2dArray(ReliabilityTable table) {
+		int rows = table.getNumRows();
+		int cols = table.getNumColumns();
+		String[][] stringArr = new String[rows][cols];
+		for (int i = 0; i < rows; i++) {
+			ReliabilityRow row = table.get(i);
+			for (int j = 0; j < cols; j++) {
+				stringArr[i][j] = row.get(j).toString();
+			}
+		}
+		return stringArr;
 	}
 	
 	/**

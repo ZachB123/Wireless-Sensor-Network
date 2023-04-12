@@ -1,5 +1,0 @@
-CustomWorkloadByZach {
-RandomFlow1 (70, 5, 180, 2) : A -> C -> D -> B
-RandomFlow2 (48, 12, 120, 5) : C -> D -> A -> B
-RandomFlow3 (23, 9, 220, 17) : D -> C -> A
-}
