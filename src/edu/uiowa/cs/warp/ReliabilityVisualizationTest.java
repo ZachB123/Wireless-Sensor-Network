@@ -325,23 +325,6 @@ public class ReliabilityVisualizationTest {
         assertEquals(expectedNChannels, actualNChannels, message);
     }
 	
-    /**
-     * Tests the getFlowsWithNodes method with a standard M and E2E and with Example.txt as the input file
-     * to get the flows and its flow nodes
-     */
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testGetFlowsWithNodes() {
-        WorkLoad wld = new WorkLoad(0.9, 0.99, "Example.txt");
-        WarpSystem customWarpSystem = new WarpSystem(wld, 1, ScheduleChoices.PRIORITY);
-        ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
-        String expectedFlowsWithNodes = "F0:A\tF0:B\tF0:C\tF1:C\tF1:B\tF1:A\t\n";
-        String actualFlowsWithNodes = visualization.getFlowsWithNodes();
-        String message = String.format("ERROR Flows with nodes does not match. Expected %s but was actually %s", 
-        		expectedFlowsWithNodes, actualFlowsWithNodes);
-        
-        assertEquals(expectedFlowsWithNodes, actualFlowsWithNodes, message);
-    }
 
     /**
      * Tests the getFlowsAndNodes method with a standard M and E2E and with Example.txt as the input file
@@ -359,105 +342,7 @@ public class ReliabilityVisualizationTest {
         		expectedFlowsAndNodes.toString(), actualFlowsAndNodes.toString());
         
         assertEquals(expectedFlowsAndNodes, actualFlowsAndNodes, message);
-    }
-	
-    /**
-     * Tests the inStandardForm method with a non-standard E2E and with Example.txt as the input file
-     * to return a boolean indicating whether the program's flow names are named in the standard naming convention.
-     * The standard naming convention of flows should be "F<int>". 
-     * The method should return true if flows are in the standard naming form and false otherwise
-     */
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testInStandardForm() {
-		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
-    	
-        List<String> flowsInStandardForm = Arrays.asList("F1", "F2", "F3");
-        List<String> flowsNotInStandardForm = Arrays.asList("F1", "Flow2", "F3");
-
-        assertTrue(visualization.inStandardForm(flowsInStandardForm), "ERROR Flow names should be in standard form of F<int>");
-        assertFalse(visualization.inStandardForm(flowsNotInStandardForm), "ERROR Flow names are not in standard form");
-    }
-
-    /**
-     * Tests the sortFlows method with a non-standard E2E and with Example.txt as the input file
-     * to return an array list of flows whereby the flow numbers are sorted in increasing order
-     */
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testSortFlows() {
-		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
-
-        List<String> unsortedFlows = Arrays.asList("F5", "F2", "F10", "F1");
-        List<String> sortedFlows = Arrays.asList("F1", "F2", "F5", "F10");
-
-        visualization.sortFlows(unsortedFlows);
-        assertEquals(sortedFlows, unsortedFlows, "ERROR Flows in the array list should be sorted in increasing order of flow numbers");
-    }
-
-    /**
-     * Tests the listToStringArray method with a non-standard E2E and with Example.txt as the input file
-     * to get a string of flow elements formatted with tabs in between each element that is converted from a string array.
-     * 
-     */
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testListToStringArray() {
-		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
-
-        String[] inputArray = {"A", "B", "C"};
-        String expectedOutput = "A\tB\tC\t\n";
-        String actualOutput = visualization.listToString(inputArray);
-        String message = String.format("ERROR The string of flow elements converted from a string array does not match. Expected %s but was actually %s", 
-        		expectedOutput, actualOutput);
-        
-        assertEquals(expectedOutput, actualOutput, message);
-    }
-
-    /**
-     * Tests the listToStringList method with a non-standard E2E and with Example.txt as the input file
-     * to get a string of flow elements formatted with tabs in between each element that is converted from a list.
-     */
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testListToStringList() {
-		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
-
-        List<String> inputList = Arrays.asList("A", "B", "C");
-        String expectedOutput = "A\tB\tC\t\n";
-        String actualOutput = visualization.listToString(inputList);
-        String message = String.format("ERROR The string of flow elements converted from a list does not match. Expected %s but was actually %s", 
-        		expectedOutput, actualOutput);
-
-        assertEquals(expectedOutput, actualOutput, message);
-    }
-
-    /**
-     * Tests the reliabilityTableToDescription method with a non-standard E2E and with Example.txt as the input file
-     * to get the correct description of reliabilities information that is converted from the ReliabilityTable
-     */
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testReliabiltyTableToDescription() {
-		ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
-
-        ReliabilityTable table = new ReliabilityTable();
-        ReliabilityRow row1 = new ReliabilityRow();
-        row1.add(0.90);
-        row1.add(0.85);
-        ReliabilityRow row2 = new ReliabilityRow();
-        row2.add(0.80);
-        row2.add(0.95);
-        table.add(row1);
-        table.add(row2);
-
-        Description expected = new Description();
-        expected.add("0.90\t0.85\t\n");
-        expected.add("0.80\t0.95\t\n");
-
-        Description actual = visualization.reliabiltyTableToDescription(table);
-        assertEquals(expected, actual, "ERROR String description from reliability table does not match");
-    }
+    }	
 
     /**
      * Tests the getReliabilities method with a non-standard E2E and with Example.txt as the input file
@@ -505,23 +390,6 @@ public class ReliabilityVisualizationTest {
     }
 
     /**
-     * Tests the getFlowsWithNodesEmptyInput method with EmptyWorkload.txt as the input file 
-     * to return a newline character when the input file has zero flows.
-     */
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testGetFlowsWithNodesEmptyInput() {
-        WorkLoad wld = new WorkLoad(0.9, 0.99, "EmptyWorkload.txt");
-        WarpSystem customWarpSystem = new WarpSystem(wld, 1, ScheduleChoices.PRIORITY);
-        ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
-        String expectedFlowsWithNodes = "\n";
-        String actualFlowsWithNodes = visualization.getFlowsWithNodes();
-        String message = String.format("ERROR Flows with nodes does not match. Expected a newline character but was actually %s", actualFlowsWithNodes);
-        
-        assertEquals(expectedFlowsWithNodes, actualFlowsWithNodes, message);
-    }
-
-    /**
      * Tests the getFlowsAndNodesInvalidFlow method with Example.txt as the input file 
      * to return an empty array list if getFlowsAndNodes method has an "InvalidFlow".
      */
@@ -534,57 +402,6 @@ public class ReliabilityVisualizationTest {
         List<String> actualFlowsAndNodes = visualization.getFlowsAndNodes(Arrays.asList("InvalidFlow"));
         
         assertTrue(actualFlowsAndNodes.isEmpty(), "ERROR Invalid flow should result in an empty list");
-    }
-
-    /**
-     * Tests the inStandardFormEdgeCase method with non standard E2E and with Example.txt as the input file
-     * to return True when using inStandardForm method on an empty array list
-     */
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testInStandardFormEdgeCase() {
-        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
-        List<String> emptyList = new ArrayList<>();
-        
-        assertTrue(visualization.inStandardForm(emptyList), "ERROR Empty list should be considered in standard form");
-    }
-
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testSortFlowsEdgeCase() {
-        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
-        List<String> emptyList = new ArrayList<>();
-        visualization.sortFlows(emptyList);
-        assertTrue(emptyList.isEmpty(), "ERROR Sorting an empty list should result in an empty list");
-    }
-
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testListToStringArrayEdgeCase() {
-        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
-        String[] emptyArray = {};
-        String expectedOutput = "\n";
-        String actualOutput = visualization.listToString(emptyArray);
-        assertEquals(expectedOutput, actualOutput, "ERROR Empty input array should result in an empty string");
-    }
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testListToStringListEdgeCase() {
-        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
-        List<String> emptyList = new ArrayList<>();
-        String expectedOutput = "\n";
-        String actualOutput = visualization.listToString(emptyList);
-        assertEquals(expectedOutput, actualOutput, "ERROR Empty input list should result in an empty string");
-    }
-
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testReliabiltyTableToDescriptionEdgeCase() {
-        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
-        ReliabilityTable emptyTable = new ReliabilityTable();
-        Description expected = new Description();
-        Description actual = visualization.reliabiltyTableToDescription(emptyTable);
-        assertEquals(expected, actual, "ERROR Empty reliability table should result in an empty description");
     }
 
     @Test
@@ -601,6 +418,68 @@ public class ReliabilityVisualizationTest {
         ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "EmptyWorkload.txt", 16, ScheduleChoices.PRIORITY);
         ReliabilityTable table = visualization.getFakeDataTable();
         assertNotNull(table, "Expected fake data table with empty workload to not be null");
+    }
+    
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testReliabilityTableTo2dArray() {
+        ReliabilityTable table = new ReliabilityTable();
+
+        // Populate the table with data
+        ReliabilityRow row1 = new ReliabilityRow();
+        row1.add(0.5);
+        row1.add(0.7);
+        table.add(row1);
+
+        ReliabilityRow row2 = new ReliabilityRow();
+        row2.add(0.6);
+        row2.add(0.8);
+        table.add(row2);
+
+        String[][] expectedArray = {
+            {"0.5", "0.7"},
+            {"0.6", "0.8"}
+        };
+
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+        String[][] actualArray = visualization.reliabilityTableTo2dArray(table);
+        assertArrayEquals(expectedArray, actualArray);
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testCreateHeader() {
+        Description expectedHeader = new Description();
+        expectedHeader.add("Reliability Analysis for graph Example\n");
+        expectedHeader.add("Scheduler Name: Priority\n");
+        expectedHeader.add("M: 0.90\n");
+        expectedHeader.add("E2E: 0.50\n");
+        expectedHeader.add("nChannels: 16\n");
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+        Description actualHeader = visualization.createHeader();
+        assertEquals(expectedHeader, actualHeader);
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testCreateVisualizationData() {
+        int expectedSize = 100;
+        String[][] expectedData = new String[expectedSize][];
+
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+        String[][] actualData = visualization.createVisualizationData();
+
+        assertEquals(expectedData.length, actualData.length, "The size of the actual data does not match the expected size.");
+    }
+
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testCreateColumnHeader() {
+    	String[] expectedColumnHeader = {"F0:A", "F0:B", "F0:C", "F1:C", "F1:B", "F1:A"};
+    	ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+        String[] actualColumnHeader = visualization.createColumnHeader();
+        assertArrayEquals(expectedColumnHeader, actualColumnHeader, "The actual column header does not match the expected column header.");
     }
 
 }
