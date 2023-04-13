@@ -379,7 +379,7 @@ public class ReliabilityVisualizationTest {
 	 */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testGetnChannelsLargeNumberEdgeCase() {
+    void testGetnChannelsWithLargeNumberOfChannelsAndNonStandardParamaters() {
         Integer numChannels = 1000;
         ReliabilityVisualization visualization = getReliabilityVisualization(1.0, 1.0, "Example.txt", numChannels, ScheduleChoices.PRIORITY);
         String expectedNChannels = String.format("nChannels: %d\n", numChannels);
@@ -400,26 +400,37 @@ public class ReliabilityVisualizationTest {
         WarpSystem customWarpSystem = new WarpSystem(wld, 1, ScheduleChoices.PRIORITY);
         ReliabilityVisualization visualization = new ReliabilityVisualization(customWarpSystem);
         List<String> actualFlowsAndNodes = visualization.getFlowsAndNodes(Arrays.asList("InvalidFlow"));
-        
-        assertTrue(actualFlowsAndNodes.isEmpty(), "ERROR Invalid flow should result in an empty list");
+        String message = "ERROR Invalid flow should result in an empty list";
+        assertTrue(actualFlowsAndNodes.isEmpty(), message);
     }
 
+    /**
+     * Test the behavior of the getReliabilities() method with an empty workload.
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testGetReliabilitiesEdgeCase() {
+    void testGetReliabilitiesWithEmptyWorkload() {
         ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "EmptyWorkload.txt", 16, ScheduleChoices.PRIORITY);
         ReliabilityTable table = visualization.getReliabilities();
-        assertNotNull(table, "Expected reliability table with empty workload to not be null");
+        String message = "ERROR Reliability table with empty workload should not be null";
+        assertNotNull(table, message);
     }
 
+    /**
+     * Test the behavior of the getFakeDataTable() method with an empty workload.
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    void testGetFakeDataTableEdgeCase() {
+    void testGetFakeDataTableWithEmptyWorkload() {
         ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "EmptyWorkload.txt", 16, ScheduleChoices.PRIORITY);
         ReliabilityTable table = visualization.getFakeDataTable();
-        assertNotNull(table, "Expected fake data table with empty workload to not be null");
+        String message = "ERROR Fake data table with empty workload should not be null";
+        assertNotNull(table, message);    
     }
     
+    /**
+     * Tests the conversion of a populated ReliabilityTable to a 2D array of Strings.
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testReliabilityTableTo2dArray() {
@@ -443,9 +454,14 @@ public class ReliabilityVisualizationTest {
 
         ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
         String[][] actualArray = visualization.reliabilityTableTo2dArray(table);
-        assertArrayEquals(expectedArray, actualArray);
+        String message = String.format("ERROR Number of channels does not match. Expected %s but was actually %s",
+                Arrays.deepToString(expectedArray), Arrays.deepToString(actualArray));
+        assertArrayEquals(expectedArray, actualArray, message);    
     }
 
+    /**
+     * Tests the creation of a header for the ReliabilityVisualization with a given file name.
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testCreateHeader() {
@@ -457,9 +473,14 @@ public class ReliabilityVisualizationTest {
         expectedHeader.add("nChannels: 16\n");
         ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
         Description actualHeader = visualization.createHeader();
-        assertEquals(expectedHeader, actualHeader);
+        String message = String.format("ERROR Headers do not match. Expected %s but was actually %s",
+                expectedHeader, actualHeader);
+        assertEquals(expectedHeader, actualHeader, message);    
     }
 
+    /**
+     * Tests the creation of visualization data for a given input file.
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testCreateVisualizationData() {
@@ -469,17 +490,92 @@ public class ReliabilityVisualizationTest {
         ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
         String[][] actualData = visualization.createVisualizationData();
 
-        assertEquals(expectedData.length, actualData.length, "The size of the actual data does not match the expected size.");
+        String message = String.format("ERROR The size of the actual data does not match the expected size. Expected %s but was actually %s",
+                expectedData.length, actualData.length);
+        assertEquals(expectedData.length, actualData.length, message);
     }
 
 
+    /**
+     * Tests the creation of a column header for the ReliabilityVisualization with a given file name.
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testCreateColumnHeader() {
     	String[] expectedColumnHeader = {"F0:A", "F0:B", "F0:C", "F1:C", "F1:B", "F1:A"};
     	ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
         String[] actualColumnHeader = visualization.createColumnHeader();
-        assertArrayEquals(expectedColumnHeader, actualColumnHeader, "The actual column header does not match the expected column header.");
+        String message = String.format("ERROR The actual column header does not match the expected column header. Expected %s but was actually %s",
+                Arrays.toString(expectedColumnHeader), Arrays.toString(actualColumnHeader));
+        assertArrayEquals(expectedColumnHeader, actualColumnHeader, message);    
+    }
+
+    /**
+     * Tests the conversion of an empty ReliabilityTable to a 2D array of Strings.
+     */
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testReliabilityTableTo2dArrayEmptyTable() {
+        ReliabilityTable table = new ReliabilityTable();
+        String[][] expectedArray = {};
+
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "Example.txt", 16, ScheduleChoices.PRIORITY);
+        String[][] actualArray = visualization.reliabilityTableTo2dArray(table);
+        String message = String.format("ERROR Number of channels does not match. Expected %s but was actually %s",
+                Arrays.deepToString(expectedArray), Arrays.deepToString(actualArray));
+        assertArrayEquals(expectedArray, actualArray, message);
+    }
+
+    /**
+     * Tests the creation of a header for the ReliabilityVisualization with an empty file name.
+     */
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testCreateHeaderEmptyFileName() {
+        Description expectedHeader = new Description();
+        expectedHeader.add("Reliability Analysis for graph\n");
+        expectedHeader.add("Scheduler Name: Priority\n");
+        expectedHeader.add("M: 0.90\n");
+        expectedHeader.add("E2E: 0.50\n");
+        expectedHeader.add("nChannels: 16\n");
+
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "", 16, ScheduleChoices.PRIORITY);
+        Description actualHeader = visualization.createHeader();
+        String message = String.format("ERROR Headers do not match. Expected %s but was actually %s",
+                expectedHeader, actualHeader);
+        assertEquals(expectedHeader, actualHeader, message);    
+    }
+
+    /**
+     * Tests the creation of visualization data for an empty input file.
+     */
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testCreateVisualizationDataEmptyFile() {
+        String[][] expectedData = {{}};
+
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "EmptyWorkload.txt", 16, ScheduleChoices.PRIORITY);
+        String[][] actualData = visualization.createVisualizationData();
+
+        String message = String.format("ERROR The size of the actual data does not match the expected size. Expected %s but was actually %s",
+                Arrays.deepToString(expectedData), Arrays.deepToString(actualData));
+        assertArrayEquals(expectedData, actualData, message);    
+    }
+
+    /**
+     * Tests the creation of a column header for the ReliabilityVisualization with an empty input file.
+     */
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testCreateColumnHeaderEmptyFile() {
+        String[] expectedColumnHeader = {};
+
+        ReliabilityVisualization visualization = getReliabilityVisualization(0.9, 0.5, "EmptyWorkload.txt", 16, ScheduleChoices.PRIORITY);
+        String[] actualColumnHeader = visualization.createColumnHeader();
+
+        String message = String.format("ERROR The actual column header does not match the expected column header. Expected %s but was actually %s",
+                Arrays.toString(expectedColumnHeader), Arrays.toString(actualColumnHeader));
+        assertArrayEquals(expectedColumnHeader, actualColumnHeader, message);    
     }
 
 }
