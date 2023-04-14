@@ -17,7 +17,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import edu.uiowa.cs.warp.SystemAttributes.ScheduleChoices;
 
-
+/**
+ * JUnit tests for the methods in ReliabilityVisualization
+ */
 
 public class ReliabilityVisualizationTest {
 	
