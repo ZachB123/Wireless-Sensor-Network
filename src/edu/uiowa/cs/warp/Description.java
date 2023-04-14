@@ -23,6 +23,9 @@ public class Description extends ArrayList<String> {
 
 	public Description(String descriptionString) {
 		super();
+		if (descriptionString == null) {
+			return;
+		}
 		String[] lines = descriptionString.split("\\r?\\n");
 		for (String line : lines) {
 			this.add(line+"\n");

@@ -113,11 +113,11 @@ public class ReliabilityVisualizationTest {
 	}
 	
 	/**
-	 * Tests the getHeader method using different graph names
+	 * Tests the getTitle method using different graph names
 	 */
 	@Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-	public void testGetHeaderDiffer() {
+	public void testGetTitleDiffer() {
 		String fileName = "Example1a";
 		String filePath = fileName + ".txt";
 		ReliabilityVisualization viz = getReliabilityVisualization(5, 0.9, 0.99, filePath, 16, ScheduleChoices.PRIORITY);
@@ -533,7 +533,7 @@ public class ReliabilityVisualizationTest {
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testCreateHeaderEmptyFileName() {
         Description expectedHeader = new Description();
-        expectedHeader.add("Reliability Analysis for graph\n");
+        expectedHeader.add("Reliability Analysis for graph null\n");
         expectedHeader.add("Scheduler Name: Priority\n");
         expectedHeader.add("M: 0.90\n");
         expectedHeader.add("E2E: 0.50\n");

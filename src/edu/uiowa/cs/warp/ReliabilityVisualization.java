@@ -19,8 +19,6 @@ import java.util.Map;
  *
  */
 public class ReliabilityVisualization extends VisualizationObject {
-
-	// TODO Auto-generated class stub for unimplemented visualization
 	
 	private static final String SOURCE_SUFFIX = ".ra";
 	private static final String OBJECT_NAME = "Reliability Analysis";
@@ -82,8 +80,6 @@ public class ReliabilityVisualization extends VisualizationObject {
 		return retVal;
 	}
 	
-
-	
 	/**
 	 * This method takes in a list of flows then adds the nodes to each flow
 	 * in the format <flowname>:<nodeinflow> this is done for every node in
@@ -92,6 +88,7 @@ public class ReliabilityVisualization extends VisualizationObject {
 	 * @return a list in the format <flowname>:<nodeinflow>
 	 */
 	public List<String> getFlowsAndNodes(List<String> flows) {
+		// should be private
 		List<String> flowsWithNodes = new ArrayList<>();
 		for (String flow : flows) {
 			for (String node : program.workLoad.getNodesInFlow(flow)) {
@@ -108,6 +105,7 @@ public class ReliabilityVisualization extends VisualizationObject {
 	 * @return String[][]
 	 */
 	public String[][] reliabilityTableTo2dArray(ReliabilityTable table) {
+		// should be private
 		int rows = table.getNumRows();
 		int cols = table.getNumColumns();
 		String[][] stringArr = new String[rows][cols];
@@ -138,6 +136,7 @@ public class ReliabilityVisualization extends VisualizationObject {
 	 * @return ReliabilityTable of random data
 	 */
 	public ReliabilityTable getFakeDataTable() {
+		// should be private
 		// don't need to test this because this will never be used when Reliability Analysis is implemented
 		List<String> flows = program.workLoad.getFlowNamesInPriorityOrder();
 		int numColumns = getFlowsAndNodes(flows).size();
