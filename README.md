@@ -86,6 +86,10 @@ Tasks:
 * Update the UML Diagrams to reflect all the latest changes 
 * Plan for Sprint 3 (All)
 
+Documents add:
+* The sequence diagram was updated to show the visualization of the file
+* Warp-Sprint2
+
 
 
 
