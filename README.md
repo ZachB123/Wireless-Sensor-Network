@@ -77,4 +77,15 @@ Collaboration:
 * The team met on April 3rd to create the project plan, work through the transmission probability formula and understand the program, and discuss what/how we will add to the Warp code to meet the project requirements.
 
 ## Sprint 2
+Tasks: 
+* Update Readme with plans for Sprint 2 (Abby)
+* JUnit tests for ReliabilityVisualization (Evan)
+* Implement the ReliabilityVisualization class (Zach and Wei Ching)
+* Document the ReliabilityVisualization class (Zach and Wei Ching)
+* Update sequence Diagram to include ReliabilityVisualization (Abby)
+* Update the UML Diagrams to reflect all the latest changes 
+* Plan for Sprint 3 (All)
+
+
+
 
