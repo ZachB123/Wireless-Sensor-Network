@@ -83,7 +83,7 @@ Tasks:
 * Implement the ReliabilityVisualization class (Zach and Wei Ching)
 * Document the ReliabilityVisualization class (Zach and Wei Ching)
 * Update sequence Diagram to include ReliabilityVisualization (Abby)
-* Update the UML Diagrams to reflect all the latest changes 
+* Update the UML Diagrams to reflect all the latest changes (Evan) 
 * Plan for Sprint 3 (All)
 
 
