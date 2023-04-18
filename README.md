@@ -88,7 +88,10 @@ Tasks:
 
 Documents add:
 * The sequence diagram was updated to show the visualization of the file
-* Warp-Sprint2
+* Warp-Sprint2 was added documenting our plans
+
+Collaboration:
+* The team met on April 16 to work on the tasks and finish the sprint
 
 
 
