@@ -272,6 +272,7 @@ deactivate Table
 ReliabilityVisualization<--ReliabilityTable:integer
 deactivate ReliabilityTable
 // loop here
+loop
 ReliabilityVisualization->ReliabilityTable:row = table.get(i)
 activate ReliabilityTable
 ReliabilityTable->Table:get(i)
@@ -281,10 +282,13 @@ deactivate Table
 ReliabilityVisualization<--ReliabilityTable:ReliabilityRow object
 deactivate ReliabilityTable
 // loop here
+loop
 ReliabilityVisualization->ReliabilityRow:get(j).toString(i)
 activate ReliabilityRow
 ReliabilityVisualization<--ReliabilityRow:2d string array
 deactivate ReliabilityRow
+end
+end
 // end loop
 // end loop
 ReliabilityVisualization<--ReliabilityVisualization:2d string array
@@ -304,11 +308,13 @@ activate Description
 VisualizationObject<--Description:Description object
 deactivate Description
 // loop here
+loop
 VisualizationObject->Description:content.add(rowString)
 activate Description
 VisualizationObject<--Description:Description object
 deactivate Description
 // end loop
+end
 ReliabilityVisualization<--VisualizationObject:Description object
 deactivate VisualizationObject
 ReliabilityVisualization->ReliabilityVisualization:fileVisualization()
@@ -402,6 +408,7 @@ deactivate Table
 ReliabilityVisualization<--ReliabilityTable:integer
 deactivate ReliabilityTable
 // loop here
+loop
 ReliabilityVisualization->ReliabilityTable:row = table.get(i)
 activate ReliabilityTable
 ReliabilityTable->Table:get(i)
@@ -411,10 +418,13 @@ deactivate Table
 ReliabilityVisualization<--ReliabilityTable:ReliabilityRow object
 deactivate ReliabilityTable
 // loop here
+loop
 ReliabilityVisualization->ReliabilityRow:get(j).toString(i)
 activate ReliabilityRow
 ReliabilityVisualization<--ReliabilityRow:2d string array
 deactivate ReliabilityRow
+end
+end
 // end loop
 // end loop
 ReliabilityVisualization<--ReliabilityVisualization:2d string array
@@ -433,12 +443,14 @@ activate Description
 VisualizationObject<--Description:Description object
 deactivate Description
 // loop here
+loop
 VisualizationObject->Description:content.add(rowString)
 activate Description
 VisualizationObject<--Description:Description object
 deactivate Description
 deactivate Description
 // end loop
+end
 deactivate VisualizationObject
 activate ReliabilityVisualization
 ReliabilityVisualization->VisualizationImplementation:createFile(fileNameTempate)
