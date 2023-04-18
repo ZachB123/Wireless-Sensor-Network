@@ -17,6 +17,7 @@ participant ChannelAnalysis
 
 autoactivation off
 
+entryspacing 0.5
 [->Warp: main(String[] args)
 
 activate Warp
@@ -272,7 +273,7 @@ deactivate Table
 ReliabilityVisualization<--ReliabilityTable:integer
 deactivate ReliabilityTable
 // loop here
-loop
+loop int i = 0; i < rows; i++
 ReliabilityVisualization->ReliabilityTable:row = table.get(i)
 activate ReliabilityTable
 ReliabilityTable->Table:get(i)
@@ -282,7 +283,7 @@ deactivate Table
 ReliabilityVisualization<--ReliabilityTable:ReliabilityRow object
 deactivate ReliabilityTable
 // loop here
-loop
+loop int j = 0; j < cols; j++
 ReliabilityVisualization->ReliabilityRow:get(j).toString(i)
 activate ReliabilityRow
 ReliabilityVisualization<--ReliabilityRow:2d string array
@@ -408,7 +409,7 @@ deactivate Table
 ReliabilityVisualization<--ReliabilityTable:integer
 deactivate ReliabilityTable
 // loop here
-loop
+loop int i = 0; i < rows; i++
 ReliabilityVisualization->ReliabilityTable:row = table.get(i)
 activate ReliabilityTable
 ReliabilityTable->Table:get(i)
@@ -418,7 +419,7 @@ deactivate Table
 ReliabilityVisualization<--ReliabilityTable:ReliabilityRow object
 deactivate ReliabilityTable
 // loop here
-loop
+loop int j = 0; j < cols; j++
 ReliabilityVisualization->ReliabilityRow:get(j).toString(i)
 activate ReliabilityRow
 ReliabilityVisualization<--ReliabilityRow:2d string array
@@ -443,7 +444,7 @@ activate Description
 VisualizationObject<--Description:Description object
 deactivate Description
 // loop here
-loop
+loop rowIndex = 0; rowIndex < data.length; rowIndex++
 VisualizationObject->Description:content.add(rowString)
 activate Description
 VisualizationObject<--Description:Description object
@@ -472,5 +473,3 @@ deactivate VisualizationImplementation
 deactivate Warp
 end
 deactivate Warp
-
-
