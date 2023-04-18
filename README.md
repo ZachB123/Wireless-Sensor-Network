@@ -86,9 +86,11 @@ Tasks:
 * Update the UML Diagrams to reflect all the latest changes (Evan) 
 * Plan for Sprint 3 (All)
 
-Documents add:
+Documents added:
 * The sequence diagram was updated to show the visualization of the file
 * Warp-Sprint2 was added documenting our plans
+* SequenceDiagramCode.txt
+* SequenceDiagram2.txt
 
 Collaboration:
 * The team met on April 16 to work on the tasks and finish the sprint
