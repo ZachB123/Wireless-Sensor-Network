@@ -3,7 +3,13 @@ package edu.uiowa.cs.warp;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Vector;
+
+import edu.uiowa.cs.warp.SystemAttributes.ScheduleChoices;
+import edu.uiowa.cs.warp.WarpDSL.InstructionParameters;
+
 
 /**
  * ReliabilityAnalysis analyzes the end-to-end reliability of messages
@@ -113,6 +119,21 @@ public class ReliabilityAnalysis {
 		this.numFaults = numFaults;
 		this.fixed = true;
 	}
+	
+	// for testing the implementation
+	public static void main(String[] args) {
+		double m = 0.75;
+		double e2e = 0.99;
+		String inputFileName = "Example1a.txt";
+		int numChannels = 16;
+		ScheduleChoices choice = ScheduleChoices.PRIORITY;
+		WarpSystem warp = new WarpSystem(new WorkLoad(m, e2e, inputFileName), numChannels, choice);
+		ReliabilityAnalysis ra = new ReliabilityAnalysis(warp.toProgram());
+		ReliabilityTable reliabilities = ra.getReliabilities();
+		for (ReliabilityRow row : reliabilities) {
+			System.out.println(row);
+		}
+	}
 
 	/**
 	 * This method was generated with UML Lab in HW4
@@ -122,8 +143,87 @@ public class ReliabilityAnalysis {
 	 */
 	public ReliabilityTable getReliabilities() {
 		// TODO implement this operation
-		return null;
-//		throw new UnsupportedOperationException("not implemented");
+		int numRows = getNumRows();
+		int numColumns = getNumColumns();
+		Double M = this.minPacketReceptionRate;
+		WarpDSL dsl = new WarpDSL();
+		ProgramSchedule programSchedule = program.getSchedule();
+		ReliabilityTable reliabilities = new ReliabilityTable(getNumRows(), getNumColumns());
+		HashMap<String, Integer> flowNodeToColumnIndex = getFlowNodeToColumnAssociation();
+		initializeReliabilityTable(reliabilities, flowNodeToColumnIndex);
+		for (int row = 0; row < numRows; row++) {
+			ReliabilityRow oldRow = reliabilities.get(row == 0 ? row : row - 1);
+			ReliabilityRow newRow = new ReliabilityRow(oldRow.toArray(new Double[oldRow.size()]));
+			InstructionTimeSlot instructionSlot = programSchedule.get(row);
+			for (String instruction : instructionSlot) {
+				List<InstructionParameters> instructionParams = dsl.getInstructionParameters(instruction);
+				for (InstructionParameters instructionParam : instructionParams) {
+					String name = instructionParam.getName();
+					if (!(name.equals("pull") || name.equals("push"))) {
+						continue;
+					}
+					String flow = instructionParam.getFlow();
+					String src = instructionParam.getSrc();
+					int srcColIndex = flowNodeToColumnIndex.get(String.format("%s:%s", flow, src));
+					String snk = instructionParam.getSnk();
+					int snkColIndex = flowNodeToColumnIndex.get(String.format("%s:%s", flow, snk));
+					Double prevSrcNodeState = oldRow.get(srcColIndex);
+					Double prevSnkNodeState = oldRow.get(snkColIndex);
+					// THE FORUMULA!!!
+					Double newSinkNodeState = (1-M) * prevSnkNodeState + M * prevSrcNodeState;
+					newRow.set(snkColIndex, newSinkNodeState);
+				}
+			}
+			reliabilities.set(row, newRow);
+		}
+		
+		return reliabilities;
+	}
+	
+	
+	public void initializeReliabilityTable(ReliabilityTable table, HashMap<String, Integer> map) {
+		// makes it so the src nodes have a probability of 1
+		List<String> flows = this.program.workLoad.getFlowNamesInPriorityOrder();
+		List<Integer> columnIndicesOfSrcNodes = new ArrayList<Integer>();
+		for (String flow : flows) {
+			columnIndicesOfSrcNodes.add(
+					map.get(String.format("%s:%s", flow, 
+							this.program.workLoad.getFlows().get(flow).getNodes().get(0))));
+		}
+		System.out.println(columnIndicesOfSrcNodes);
+		for (ReliabilityRow row : table) {
+			for (int index : columnIndicesOfSrcNodes) {
+				row.set(index, 1.0);
+			}
+		}
+	}
+	
+	public HashMap<String, Integer> getFlowNodeToColumnAssociation() {
+		// this returns a hashmap that maps <flowname>:<nodeinflow> to its corresponding column in the reliability table
+		// should be private
+		HashMap<String, Integer> association = new HashMap<String, Integer>();
+		int columnIndex = 0;
+		for (String flow : this.program.workLoad.getFlowNamesInPriorityOrder()) {
+			for (String node : program.workLoad.getNodesInFlow(flow)) {
+				association.put(String.format("%s:%s", flow, node), columnIndex);
+				columnIndex++;
+			}
+		}
+		return association;
+	}
+	
+	public int getNumRows() {
+		// should be private
+		return this.program.getSchedule().size();
+	}
+	
+	public int getNumColumns() {
+		// should be private
+		int num = 0;
+		for (String flow : program.workLoad.getFlowNamesInPriorityOrder()) {
+			num += program.workLoad.getNodesInFlow(flow).length;
+		}
+		return num;
 	}
 
 	/**

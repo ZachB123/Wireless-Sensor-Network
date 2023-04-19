@@ -126,8 +126,8 @@ public class ReliabilityVisualization extends VisualizationObject {
 	 */
 	public ReliabilityTable getReliabilities() {
 		// should be private
-//		return ra.getReliabilities(); THIS IS WHAT NORMALLY SHOULD HAPPEN
-		return getFakeDataTable();
+		return ra.getReliabilities(); //THIS IS WHAT NORMALLY SHOULD HAPPEN
+//		return getFakeDataTable();
 	}
 	
 	/**
