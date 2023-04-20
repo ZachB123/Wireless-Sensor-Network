@@ -163,7 +163,7 @@ public class ReliabilityAnalysis {
 	 *         node in a flow at each time slot
 	 */
 	public ReliabilityTable getReliabilities() {
-		// TODO implement this operation
+		
 		int numRows = getNumRows();
 		int numColumns = getNumColumns();
 		Double M = this.minPacketReceptionRate;
@@ -171,19 +171,22 @@ public class ReliabilityAnalysis {
 		ProgramSchedule programSchedule = program.getSchedule();
 		ReliabilityTable reliabilities = new ReliabilityTable(getNumRows(), getNumColumns());
 		HashMap<String, Integer> flowNodeToColumnIndex = getFlowNodeToColumnAssociation();
-		initializeReliabilityTable(reliabilities, flowNodeToColumnIndex);
 		for (int row = 0; row < numRows; row++) {
-			ReliabilityRow oldRow = reliabilities.get(row == 0 ? row : row - 1);
+			if (row == 9) {
+				int breakpoint = 0;
+				breakpoint += 1;
+			}
+			ReliabilityRow oldRow = getOldRow(row, flowNodeToColumnIndex, reliabilities); //reliabilities.get(row == 0 ? row : row - 1);
 			ReliabilityRow newRow = new ReliabilityRow(oldRow.toArray(new Double[oldRow.size()]));
 			InstructionTimeSlot instructionSlot = programSchedule.get(row);
 			for (String instruction : instructionSlot) {
 				List<InstructionParameters> instructionParams = dsl.getInstructionParameters(instruction);
-				for (InstructionParameters instructionParam : instructionParams) {
+				for (InstructionParameters instructionParam : instructionParams) { 
 					String name = instructionParam.getName();
 					if (!(name.equals("pull") || name.equals("push"))) {
 						continue;
 					}
-					String flow = instructionParam.getFlow();
+					String flow = instructionParam.getFlow();                                                                                                        
 					String src = instructionParam.getSrc();
 					int srcColIndex = flowNodeToColumnIndex.get(String.format("%s:%s", flow, src));
 					String snk = instructionParam.getSnk();
@@ -201,6 +204,45 @@ public class ReliabilityAnalysis {
 		return reliabilities;
 	}
 	
+	public List<Integer> getColumnIndicesOfFlow(String flow, HashMap<String, Integer> map) {
+		// first position is the src and last is the snk
+		List<Integer> columnIndices = new ArrayList<>();
+		Flow flowObj = this.program.workLoad.getFlows().get(flow);
+		if (flowObj == null) {return columnIndices;}
+		List<Node> nodes = flowObj.getNodes();
+		for (Node node : nodes) {
+			columnIndices.add(map.get(String.format("%s:%s", flow, node.getName())));
+		}
+		return columnIndices;
+	}
+	
+	public ReliabilityRow getOldRow(int row, HashMap<String, Integer> map, ReliabilityTable reliabilities) {
+		int numCols = reliabilities.getNumColumns();
+		List<String> resend = getFlowNamesToResend(row);
+		if (resend.isEmpty()) { return reliabilities.get(row - 1); }
+		ReliabilityRow oldRow = row == 0 ? new ReliabilityRow(numCols, 0.0) : new ReliabilityRow(reliabilities.get(row-1).toArray(new Double[numCols]));
+		for (String flow : resend) {
+			List<Integer> columnIndices = getColumnIndicesOfFlow(flow, map);
+			for (int col : columnIndices) {
+				oldRow.set(col, 0.0);
+			}
+			oldRow.set(columnIndices.get(0), 1.0);
+		}
+		return oldRow;
+	}
+	
+	// return an arraylist of the flows that need to be reset give a row
+	public List<String> getFlowNamesToResend(int row) {
+		// if flow X has a period of 10 then it needs to be reset at row 9, 19, 29 etc
+		List<String> flows = this.program.workLoad.getFlowNamesInPriorityOrder();
+		List<String> resendList = new ArrayList<String>();
+		for (String flow : flows) {
+			if (row % this.program.workLoad.getFlows().get(flow).getPeriod() == 0) {
+				resendList.add(flow);
+			}
+		}
+		return resendList;
+	}
 	
 	public void initializeReliabilityTable(ReliabilityTable table, HashMap<String, Integer> map) {
 		// makes it so the src nodes have a probability of 1
@@ -211,7 +253,6 @@ public class ReliabilityAnalysis {
 					map.get(String.format("%s:%s", flow, 
 							this.program.workLoad.getFlows().get(flow).getNodes().get(0))));
 		}
-		System.out.println(columnIndicesOfSrcNodes);
 		for (ReliabilityRow row : table) {
 			for (int index : columnIndicesOfSrcNodes) {
 				row.set(index, 1.0);
@@ -484,3 +525,4 @@ public class ReliabilityAnalysis {
 
 
 }
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

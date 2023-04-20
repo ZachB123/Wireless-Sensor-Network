@@ -176,7 +176,7 @@ public class ReliabilityVisualization extends VisualizationObject {
 	 */
 	public String getM() {
 		// should be private
-		return String.format("M: %.2f\n", this.ra.getM());
+		return String.format("M: %s\n", this.ra.getM());
 	}
 	
 	/**
@@ -185,7 +185,7 @@ public class ReliabilityVisualization extends VisualizationObject {
 	 */
 	public String getE2E() {
 		// should be private
-		return String.format("E2E: %.2f\n", this.ra.getE2E());
+		return String.format("E2E: %s\n", this.ra.getE2E());
 	}
 	
 	/**
