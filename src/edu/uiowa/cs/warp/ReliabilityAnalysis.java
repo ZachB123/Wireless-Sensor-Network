@@ -163,19 +163,13 @@ public class ReliabilityAnalysis {
 	 *         node in a flow at each time slot
 	 */
 	public ReliabilityTable getReliabilities() {
-		
 		int numRows = getNumRows();
-		int numColumns = getNumColumns();
 		Double M = this.minPacketReceptionRate;
 		WarpDSL dsl = new WarpDSL();
 		ProgramSchedule programSchedule = program.getSchedule();
 		ReliabilityTable reliabilities = new ReliabilityTable(getNumRows(), getNumColumns());
 		HashMap<String, Integer> flowNodeToColumnIndex = getFlowNodeToColumnAssociation();
 		for (int row = 0; row < numRows; row++) {
-			if (row == 9) {
-				int breakpoint = 0;
-				breakpoint += 1;
-			}
 			ReliabilityRow oldRow = getOldRow(row, flowNodeToColumnIndex, reliabilities); //reliabilities.get(row == 0 ? row : row - 1);
 			ReliabilityRow newRow = new ReliabilityRow(oldRow.toArray(new Double[oldRow.size()]));
 			InstructionTimeSlot instructionSlot = programSchedule.get(row);
@@ -242,22 +236,6 @@ public class ReliabilityAnalysis {
 			}
 		}
 		return resendList;
-	}
-	
-	public void initializeReliabilityTable(ReliabilityTable table, HashMap<String, Integer> map) {
-		// makes it so the src nodes have a probability of 1
-		List<String> flows = this.program.workLoad.getFlowNamesInPriorityOrder();
-		List<Integer> columnIndicesOfSrcNodes = new ArrayList<Integer>();
-		for (String flow : flows) {
-			columnIndicesOfSrcNodes.add(
-					map.get(String.format("%s:%s", flow, 
-							this.program.workLoad.getFlows().get(flow).getNodes().get(0))));
-		}
-		for (ReliabilityRow row : table) {
-			for (int index : columnIndicesOfSrcNodes) {
-				row.set(index, 1.0);
-			}
-		}
 	}
 	
 	public HashMap<String, Integer> getFlowNodeToColumnAssociation() {

@@ -34,7 +34,7 @@ public class ReliabilityVisualization extends VisualizationObject {
 		super(new FileManager(), warp, SOURCE_SUFFIX);
 		this.warp = warp;
 		this.ra = warp.toReliabilityAnalysis();
-		this.program = warp.toProgram(); //ra.getProgram();
+		this.program = warp.toProgram(); 
 	}
 	
 	/**
@@ -126,13 +126,13 @@ public class ReliabilityVisualization extends VisualizationObject {
 	 */
 	public ReliabilityTable getReliabilities() {
 		// should be private
-		return ra.getReliabilities(); //THIS IS WHAT NORMALLY SHOULD HAPPEN
-//		return getFakeDataTable();
+		return ra.getReliabilities(); 
 	}
 	
 	/**
 	 * This method is for testing purposes since we have not yet implemented
 	 * the method to calculate the proper reliabilities
+	 * DEPRECATED
 	 * @return ReliabilityTable of random data
 	 */
 	public ReliabilityTable getFakeDataTable() {
