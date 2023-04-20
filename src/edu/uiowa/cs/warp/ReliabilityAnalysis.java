@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Vector;
 
 import edu.uiowa.cs.warp.SystemAttributes.ScheduleChoices;
@@ -157,7 +158,9 @@ public class ReliabilityAnalysis {
 	}
 
 	/**
-	 * This method was generated with UML Lab in HW4
+	 * This method calculates the probability that a package has made it to a node
+	 * in the workload at every time slot and return a tables of these probabilities
+	 * with the columns corresponding to a flow with a node and the rows a time slot
 	 * 
 	 * @return a ReliabilityTable containing reliabilities of a packet reaching each
 	 *         node in a flow at each time slot
@@ -198,7 +201,18 @@ public class ReliabilityAnalysis {
 		return reliabilities;
 	}
 	
+	/**
+	 * This method takes in a flow and returns a list of integers that represent indicies
+	 * for columns in the reliability table where each index corresponds to a node in the flow
+	 * the list is ordered such that the first element is the index for src node and last
+	 * element is the index for the snk node
+	 * 
+	 * @param flow name of the flow to get the ColumnIndicies of
+	 * @param map a map from <flowname>:<nodename> to the index of that column in the reliability table
+	 * @return the indicies of all columns that have a node in the flow, the first entry will be the src
+	 */
 	public List<Integer> getColumnIndicesOfFlow(String flow, HashMap<String, Integer> map) {
+		// should be private
 		// first position is the src and last is the snk
 		List<Integer> columnIndices = new ArrayList<>();
 		Flow flowObj = this.program.workLoad.getFlows().get(flow);
@@ -210,7 +224,20 @@ public class ReliabilityAnalysis {
 		return columnIndices;
 	}
 	
+	/**
+	 * Normally this method just returns the previous row in the reliabilities table to calculate the
+	 * next set of probabilities. However, because sometimes a flow will resend its package the next
+	 * set of calculations will have to be done with all the probabilities reset to 1 for the src node
+	 * and 0 for all other nodes. This method also handles the case at the very beginning of the program
+	 * and returns a row containg 1 for all src nodes and 0 everywhere else.
+	 * 
+	 * @param row row in the Scheulde
+	 * @param map association from <flowname>:<nodename> to the index of that column
+	 * @param reliabilities ReliabilityTable that is being created
+	 * @return ReliabilityRow to use for the next probability calculations
+	 */
 	public ReliabilityRow getOldRow(int row, HashMap<String, Integer> map, ReliabilityTable reliabilities) {
+		// should be private
 		int numCols = reliabilities.getNumColumns();
 		List<String> resend = getFlowNamesToResend(row);
 		if (resend.isEmpty()) { return reliabilities.get(row - 1); }
@@ -225,8 +252,17 @@ public class ReliabilityAnalysis {
 		return oldRow;
 	}
 	
-	// return an arraylist of the flows that need to be reset give a row
+	/**
+	 * Since each flow has a period, sometimes a flow is able to send multiple messages
+	 * during one program cycle since other flows have much longer periods. This method
+	 * takes in the time slot of the program and calculates what flows should resend their
+	 * message.
+	 * 
+	 * @param row the index of row in the Reliabilities table
+	 * @return List<String> of flow names that are going to be resent
+	 */
 	public List<String> getFlowNamesToResend(int row) {
+		// should be private
 		// if flow X has a period of 10 then it needs to be reset at row 9, 19, 29 etc
 		List<String> flows = this.program.workLoad.getFlowNamesInPriorityOrder();
 		List<String> resendList = new ArrayList<String>();
@@ -238,7 +274,15 @@ public class ReliabilityAnalysis {
 		return resendList;
 	}
 	
-	public HashMap<String, Integer> getFlowNodeToColumnAssociation() {
+	
+	/**
+	 * This method creates a Map that will pair each <flowname>:<nodename> association to a column
+	 * index for the ReliabilityTable such that the columns will match up with the column header created
+	 * in the ReliabilityVisualization class
+	 * 
+	 * @return Map<String, Integer> representing the association from <flowname>:<nodename> to column index
+	 */
+	public Map<String, Integer> getFlowNodeToColumnAssociation() {
 		// this returns a hashmap that maps <flowname>:<nodeinflow> to its corresponding column in the reliability table
 		// should be private
 		HashMap<String, Integer> association = new HashMap<String, Integer>();
@@ -252,11 +296,24 @@ public class ReliabilityAnalysis {
 		return association;
 	}
 	
+	/**
+	 * This method returns an integer representing the number of rows in the
+	 * getReliabilities table. It is found by calculating the number of time slots
+	 * in the program.
+	 * 
+	 * @return int number of rows
+	 */
 	public int getNumRows() {
 		// should be private
 		return this.program.getSchedule().size();
 	}
 	
+	/**
+	 * This method returns an integer representing the number of columns in the
+	 * getReliabilities table. It is found by adding up all the nodes in each flow
+	 * 
+	 * @return int number of columns
+	 */
 	public int getNumColumns() {
 		// should be private
 		int num = 0;
