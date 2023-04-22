@@ -171,7 +171,7 @@ public class ReliabilityAnalysis {
 		WarpDSL dsl = new WarpDSL();
 		ProgramSchedule programSchedule = program.getSchedule();
 		ReliabilityTable reliabilities = new ReliabilityTable(getNumRows(), getNumColumns());
-		HashMap<String, Integer> flowNodeToColumnIndex = getFlowNodeToColumnAssociation();
+		Map<String, Integer> flowNodeToColumnIndex = getFlowNodeToColumnAssociation();
 		for (int row = 0; row < numRows; row++) {
 			ReliabilityRow oldRow = getOldRow(row, flowNodeToColumnIndex, reliabilities); //reliabilities.get(row == 0 ? row : row - 1);
 			ReliabilityRow newRow = new ReliabilityRow(oldRow.toArray(new Double[oldRow.size()]));
@@ -211,7 +211,7 @@ public class ReliabilityAnalysis {
 	 * @param map a map from <flowname>:<nodename> to the index of that column in the reliability table
 	 * @return the indicies of all columns that have a node in the flow, the first entry will be the src
 	 */
-	public List<Integer> getColumnIndicesOfFlow(String flow, HashMap<String, Integer> map) {
+	public List<Integer> getColumnIndicesOfFlow(String flow, Map<String, Integer> map) {
 		// should be private
 		// first position is the src and last is the snk
 		List<Integer> columnIndices = new ArrayList<>();
@@ -236,7 +236,7 @@ public class ReliabilityAnalysis {
 	 * @param reliabilities ReliabilityTable that is being created
 	 * @return ReliabilityRow to use for the next probability calculations
 	 */
-	public ReliabilityRow getOldRow(int row, HashMap<String, Integer> map, ReliabilityTable reliabilities) {
+	public ReliabilityRow getOldRow(int row, Map<String, Integer> map, ReliabilityTable reliabilities) {
 		// should be private
 		int numCols = reliabilities.getNumColumns();
 		List<String> resend = getFlowNamesToResend(row);
