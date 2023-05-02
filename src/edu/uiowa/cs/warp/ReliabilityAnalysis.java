@@ -88,14 +88,15 @@ public class ReliabilityAnalysis {
 	 */
 	private Integer numFaults = 0;
 
-	/**
+	/*
 	 * Status of the fault model (fixed or not)
 	 * 
 	 * Set to true if we use the numFaults constructor Used to determine how to
 	 * calculate numTxPerLinkAndTotalTxCost
 	 */
-//	private boolean fixed = false;
-	/**
+	// private boolean fixed = false;
+	
+	/** 
 	 * Sets True for calculating transmission cost using specified number of faults constructor and
 	 * False when using specified e2e and minimum packet reception rate constructor.
 	 */
@@ -208,14 +209,14 @@ public class ReliabilityAnalysis {
 	}
 	
 	/**
-	 * This method takes in a flow and returns a list of integers that represent indicies
+	 * This method takes in a flow and returns a list of integers that represent indices
 	 * for columns in the reliability table where each index corresponds to a node in the flow
 	 * the list is ordered such that the first element is the index for src node and last
 	 * element is the index for the snk node
 	 * 
 	 * @param flow name of the flow to get the ColumnIndicies of
 	 * @param map a map from <flowname>:<nodename> to the index of that column in the reliability table
-	 * @return the indicies of all columns that have a node in the flow, the first entry will be the src
+	 * @return the indices of all columns that have a node in the flow, the first entry will be the src
 	 */
 	public List<Integer> getColumnIndicesOfFlow(String flow, Map<String, Integer> map) {
 		// should be private
@@ -235,9 +236,9 @@ public class ReliabilityAnalysis {
 	 * next set of probabilities. However, because sometimes a flow will resend its package the next
 	 * set of calculations will have to be done with all the probabilities reset to 1 for the src node
 	 * and 0 for all other nodes. This method also handles the case at the very beginning of the program
-	 * and returns a row containg 1 for all src nodes and 0 everywhere else.
+	 * and returns a row containing 1 for all src nodes and 0 everywhere else.
 	 * 
-	 * @param row row in the Scheulde
+	 * @param row row in the Schedule
 	 * @param map association from <flowname>:<nodename> to the index of that column
 	 * @param reliabilities ReliabilityTable that is being created
 	 * @return ReliabilityRow to use for the next probability calculations
@@ -431,21 +432,15 @@ public class ReliabilityAnalysis {
 
 	/**
 	 * This method calculates a flow's numTxPerLinkAndTotalTxCost based on whether
-	 * its fault tolerance is fixed
+	 * its fault tolerance is fixed.
 	 * 
-	 * If fixed is true, calculates the maximum number of transmissions per link and
-	 * maximum total transmissions If fixed is false, calculates the number of
-	 * transmission attempts (pushes) per link and total transmission attempts
+	 * If useFixedTx is true, it calculates the maximum number of transmissions per link and
+	 * maximum total transmissions. If useFixedTx is false, it calculates the number of
+	 * transmission attempts (pushes) per link and total transmission attempts.
 	 * 
 	 * @param flow is the specified flow to calculate transmissions and cost for
 	 * @return an ArrayList containing the number of transmissions per link and
 	 *         total cost of the specified flow
-	 */
-	/**
-	 * Calculates the number of transmissions per link and total transmission cost for the given flow.
-	 * 
-	 * @param flow Flow object representing the network flow
-	 * @return ArrayList containing the number of transmissions per link and total transmission cost
 	 */
 	public ArrayList<Integer> numTxPerLinkAndTotalTxCost(Flow flow) {
 		if (useFixedTx) {
