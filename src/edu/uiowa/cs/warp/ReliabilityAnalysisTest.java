@@ -76,6 +76,9 @@ public class ReliabilityAnalysisTest {
     }
 
 
+    /**
+     * Tests getReliabilities method with Example.txt as the input file to check if actual value is not null
+     */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetReliabilities() {
@@ -91,6 +94,10 @@ public class ReliabilityAnalysisTest {
         assertNotNull(reliabilityAnalysis.getReliabilities());
     }
 
+    /**
+     * Tests the getColumnIndicesofFlow method with Example.txt as the input file to get the 
+     * ordered flow nodes to represent the column indices for the reliability table
+     */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetColumnIndicesOfFlow() {
@@ -119,6 +126,10 @@ public class ReliabilityAnalysisTest {
         assertEquals(2, columnIndices.get(columnIndices.size() - 1), "The last index should match the snk node index");
     }
 
+    /**
+     * Tests the getOldRow method with Example.txt as the input file to get the previous 
+     * rows from the reliability table to calculate the next row of reliability values
+     */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetOldRow() {
@@ -149,7 +160,10 @@ public class ReliabilityAnalysisTest {
         assertNotNull(oldRow, "The result should not be null");
     }
 
-
+    /**
+     * Tests the getFlowNamesToResend method with Example.txt as the input file to determine
+     * the flows that needs to resend the message based on the flow's period in one program cycle
+     */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFlowNamesToResend() {
@@ -165,6 +179,11 @@ public class ReliabilityAnalysisTest {
         assertNotNull(reliabilityAnalysis.getFlowNamesToResend(5));
     }
 
+    /**
+     * Tests the getFlowNodeToColumnAssociation with Example.txt as the input file to
+     * check each pair of flow name and node name association on the reliability table
+     * column that is matched with the column header created by the ReliabilityVizualization class is not null
+     */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFlowNodeToColumnAssociation() {
@@ -180,6 +199,10 @@ public class ReliabilityAnalysisTest {
         assertNotNull(reliabilityAnalysis.getFlowNodeToColumnAssociation());
     }
 
+    /** 
+     * Tests the getNumRows method with Example.txt as the input file to return 
+     * the number of rows from the getReliabilities table
+     */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumRows() {
@@ -195,6 +218,10 @@ public class ReliabilityAnalysisTest {
         assertEquals(100, reliabilityAnalysis.getNumRows());
     }
 
+    /**
+	 * Tests the getNumColumns method with Example.txt as the input file to return 
+     * the number of columns from the getReliabilities table
+     */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumColumns() {
@@ -210,6 +237,10 @@ public class ReliabilityAnalysisTest {
         assertEquals(6, reliabilityAnalysis.getNumColumns());
     }
 
+    /**
+     * Tests the verifyReliabilities method with Example.txt as the input file to return 
+     * a boolean True if all the flows have met their minimum end-to-end reliabilities.
+     */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testVerifyReliabilities() {
@@ -225,6 +256,10 @@ public class ReliabilityAnalysisTest {
         assertTrue(reliabilityAnalysis.verifyReliabilities());
     }
 
+    /**
+     * Tests the getProgram method with with Example.txt as the input file to check
+     * that the value of the program's schedule choice is not null
+     */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetProgram() {
@@ -239,7 +274,10 @@ public class ReliabilityAnalysisTest {
         ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         assertNotNull(reliabilityAnalysis.getProgram());
     }
-
+    
+    /**
+     * Tests the getM method with with Example.txt as the input file
+     */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetM() {
@@ -255,7 +293,10 @@ public class ReliabilityAnalysisTest {
 
         assertEquals(m, reliabilityAnalysis.getM());
     }
-
+    
+    /**
+     * Tests the getE2E method with with Example.txt as the input file
+     */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetE2E() {
@@ -271,6 +312,9 @@ public class ReliabilityAnalysisTest {
         assertEquals(0.99, reliabilityAnalysis.getE2E(), 0.01);
     }
 
+    /**
+     * Tests the numTxPerLinkAndTotalTxCost method with Example.txt as the input file
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testNumTxPerLinkAndTotalTxCost() {
@@ -299,7 +343,11 @@ public class ReliabilityAnalysisTest {
         assertEquals(actual, result, "The result should match the expected values");
     }
 
-
+    /**
+     * Tests the getNumTxAttemptsPerLinkAndTotalTxAttempts method with Example.txt as the input file
+     * to return the number of transmission attempts per link and the total transmission attempts of a flow
+     * when the end-to-end reliability and minimum packet reception rate is specified by the user
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumTxAttemptsPerLinkAndTotalTxAttempts() {
@@ -327,7 +375,11 @@ public class ReliabilityAnalysisTest {
         assertEquals(result, actual);
     }
 
-
+    /**
+     * Tests the getFixedTxPerLinkAndTotalTxCost method with Example.txt as the input file
+     * to return the total number of transmission per link and the total cost of the requested flow
+     * when the number of faults is specified by the user
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFixedTxPerLinkAndTotalTxCost() {
