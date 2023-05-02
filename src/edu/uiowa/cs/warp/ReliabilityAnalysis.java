@@ -100,7 +100,8 @@ public class ReliabilityAnalysis {
 	 * False when using specified e2e and minimum packet reception rate constructor.
 	 */
 	private boolean useFixedTx;
-
+	
+	private ReliabilityTable reliabilities = null;
 
 	/**
 	 * Class constructor specifying the program
@@ -172,6 +173,14 @@ public class ReliabilityAnalysis {
 	 *         node in a flow at each time slot
 	 */
 	public ReliabilityTable getReliabilities() {
+		if (reliabilities != null) {
+			return reliabilities;
+		}
+		buildReliabilityTable();
+		return reliabilities;
+	}
+	
+	public void buildReliabilityTable() {
 		int numRows = getNumRows();
 		Double M = this.minPacketReceptionRate;
 		WarpDSL dsl = new WarpDSL();
@@ -204,7 +213,7 @@ public class ReliabilityAnalysis {
 			reliabilities.set(row, newRow);
 		}
 		
-		return reliabilities;
+		this.reliabilities = reliabilities;
 	}
 	
 	/**
