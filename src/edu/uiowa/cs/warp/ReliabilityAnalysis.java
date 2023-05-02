@@ -155,6 +155,12 @@ public class ReliabilityAnalysis {
 		for (ReliabilityRow row : reliabilities) {
 			System.out.println(row);
 		}
+		// for testing verifyReliabilities
+		System.out.println("----------------");
+		boolean verified = ra.verifyReliabilities();
+		ArrayList<Double> finalRow = ra.getFinalReliabilityRow();
+		System.out.println(finalRow.toString());
+		System.out.println("Reliabilities met: " + verified);
 	}
 
 	/**
@@ -324,17 +330,73 @@ public class ReliabilityAnalysis {
 	}
 
 	/**
-	 * This method declares whether all reliabilities are met
-	 * 
-	 * I don't know if this should be changed or if its supposed to always return
-	 * true if packets are always pushed again until the minimum link reliability is
-	 * met?
-	 * 
-	 * @return Boolean true
+	 * This method declares whether all flows meet their minimum E2E reliabilities by 
+	 * comparing each node's e2e reliability at the last time slot in the ReliabilityTable
+	 * to the program's minimum e2e, and prints messages identifying all flows/nodes
+	 * that do not meet the minimum e2e
+	 *
+	 * @return boolean representing whether all flows meet the minimum e2e reliability
 	 */
-	public Boolean verifyReliabilities() {
-		// TODO Auto-generated method stub
-		return true;
+	public boolean verifyReliabilities() {
+		// Iterate through each el return of getFinalReliabilityRow()
+		// For each element in it, check if el < e2e
+		// If el < e2e, reliability is not met and print an error
+		// Otherwise, return boolean = true
+		boolean reliabilitiesMet = true;
+		Double e2e = getE2E();
+		ArrayList<Double> e2eReliabilities = getFinalReliabilityRow();
+		int currentColumn = 0;
+		for(double actual : e2eReliabilities) {
+			if(actual < e2e) {
+				reliabilitiesMet = false;
+				Map<Integer, String> columnToFlowNode = getColumnToFlowNodeAssociation();
+				String flowNode[] = columnToFlowNode.get(currentColumn).split(":");
+				System.out.println(String.format("flow %s does not meet the E2E reliability at node %s", flowNode[0], flowNode[1]));
+				currentColumn++;
+			}
+		}
+		return reliabilitiesMet;
+	}
+	
+	/**
+	 * This method returns the final row of the ReliabilityTable representing the probabilities
+	 * that a package has arrived at each node at the final time slot
+	 * 
+	 * @return ArrayList<Double> containing all entries from the last row of the ReliabilityTable
+	 */
+	public ArrayList<Double> getFinalReliabilityRow() {
+		// should be private
+		ReliabilityTable reliabilities = getReliabilities();
+		int numRows = getNumRows() - 1;
+		ArrayList<Double> finalReliabilityRow = new ArrayList<Double>(getNumColumns());
+		for(int i = 0; i < getNumColumns(); i++) {		// do differently ?
+			finalReliabilityRow.add(reliabilities.get(numRows, i));
+		}
+		return finalReliabilityRow;
+	}
+	
+	/**
+	 * This method creates a Map that will pair each column index to a <flowname>:<nodename> association
+	 * for the ReliabilityTable such that the columns will match up with the column header created
+	 * in the ReliabilityVisualization class
+	 * 
+	 * Modified from getFlowNodeToColumnAssociation() to create a hashmap with the column indices
+	 * as keys and <flowname>:<nodename> strings as values for easier access in verifyReliabilities()
+	 * 
+	 * @return Map<Integer, String> representing the association from column index to <flowname>:<nodename>
+	 */
+	public Map<Integer, String> getColumnToFlowNodeAssociation() {
+		// this returns a hashmap that maps a column in the reliability table to its corresponding <flowname>:<nodeinflow> 
+		// should be private
+		HashMap<Integer, String> association = new HashMap<Integer, String>();
+		int columnIndex = 0;
+		for (String flow : this.program.workLoad.getFlowNamesInPriorityOrder()) {
+			for (String node : program.workLoad.getNodesInFlow(flow)) {
+				association.put(columnIndex, String.format("%s:%s", flow, node));
+				columnIndex++;
+			}
+		}
+		return association;
 	}
 	
 	/**

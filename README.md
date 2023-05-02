@@ -89,12 +89,21 @@ Tasks:
 Documents added:
 * The sequence diagram was updated to show the visualization of the file
 * Warp-Sprint2 was added documenting our plans
-* SequenceDiagramCode.txt
-* SequenceDiagram2.txt
+* Sprint2SequenceDiagramCode.txt
+* Sprint2SequenceDiagram2.pdf
 
 Collaboration:
 * The team met on April 16 to work on the tasks and finish the sprint
 
+## Sprint 3
+Tasks:
+* Update Readme for Sprint 3 (Abby)
+* JUnit tests for new methods in ReliabilityAnalysis (Evan: 50%, everyone else: 50%)
+* Implement getReliabilities (Zach)
+* Implement verifyReliabilities (Abby)
+* Document the ReliabilityAnalysis class (Wei Ching)
+* Update sequence diagram to reflect changes (Abby or Zach ?)
+* Update UML diagrams to reflect changes (Wei Ching)
 
 
 
