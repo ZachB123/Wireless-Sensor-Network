@@ -92,9 +92,10 @@ public class ReliabilityAnalysisTest {
      * Tests getReliabilities method with Example.txt as the input file to check if actual value is not null
      */
     @Test
-	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetReliabilities() {
-        assertNotNull(reliabilityAnalysis.getReliabilities());
+        String message = "getReliabilities() should return a non-null value";
+        assertNotNull(reliabilityAnalysis.getReliabilities(), message);
     }
 
     /**
@@ -139,8 +140,9 @@ public class ReliabilityAnalysisTest {
 
         int rowNum = 1;
         ReliabilityRow oldRow = reliabilityAnalysis.getOldRow(rowNum, columnMapping, reliabilityTable);
+        String message = "The result should not be null";
 
-        assertNotNull(oldRow, "The result should not be null");
+        assertNotNull(oldRow, message);
     }
 
     /**
@@ -150,7 +152,8 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFlowNamesToResend() {
-        assertNotNull(reliabilityAnalysis.getFlowNamesToResend(5));
+        String message = "There should be no flows to resend";
+        assertTrue(reliabilityAnalysis.getFlowNamesToResend(5).isEmpty(), message);
     }
 
     /**
@@ -159,10 +162,23 @@ public class ReliabilityAnalysisTest {
      * column that is matched with the column header created by the ReliabilityVizualization class is not null
      */
     @Test
-	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFlowNodeToColumnAssociation() {
-        assertNotNull(reliabilityAnalysis.getFlowNodeToColumnAssociation());
+        // Create the expected map
+        Map<String, Integer> expectedMap = new HashMap<>();
+        expectedMap.put("F0:A", 0);
+        expectedMap.put("F0:B", 1);
+        expectedMap.put("F0:C", 2);
+        expectedMap.put("F1:A", 5);
+        expectedMap.put("F1:B", 4);
+        expectedMap.put("F1:C", 3);
+
+        Map<String, Integer> actualMap = reliabilityAnalysis.getFlowNodeToColumnAssociation();
+        String message = "The actual FlowNode to Column Association map does not match the expected map";
+        assertEquals(expectedMap, actualMap, message);
     }
+
+
 
     /** 
      * Tests the getNumRows method with Example.txt as the input file to return 
@@ -171,7 +187,8 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumRows() {
-        assertEquals(100, reliabilityAnalysis.getNumRows());
+    	String message = "The actual number of rows does not match the expected number of rows";
+        assertEquals(100, reliabilityAnalysis.getNumRows(), message);
     }
 
     /**
@@ -181,7 +198,8 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumColumns() {
-        assertEquals(6, reliabilityAnalysis.getNumColumns());
+    	String message = "The actual number of columns does not match the expected number of columns";
+        assertEquals(6, reliabilityAnalysis.getNumColumns(), message);
     }
 
     /**
@@ -191,7 +209,8 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testVerifyReliabilities() {
-        assertTrue(reliabilityAnalysis.verifyReliabilities());
+    	String message = "All flows should have met their end-to-end reliabilities";
+        assertTrue(reliabilityAnalysis.verifyReliabilities(), message);
     }
     
     /**
@@ -207,7 +226,8 @@ public class ReliabilityAnalysisTest {
         expected.add(1.0);
         expected.add(0.999);
         expected.add(0.9963);
-        assertEquals(expected, reliabilityAnalysis.getFinalReliabilityRow());
+        String message = "The actual final reliability row does not match the expected final reliability row";
+        assertEquals(expected, reliabilityAnalysis.getFinalReliabilityRow(), message);
     }
     
     /**
@@ -223,7 +243,8 @@ public class ReliabilityAnalysisTest {
         expected.put(3, "F1:C");
         expected.put(4, "F1:B");
         expected.put(5, "F1:A");
-        assertEquals(expected, reliabilityAnalysis.getColumnToFlowNodeAssociation());
+        String message = "Not all columns match their flow node association";
+        assertEquals(expected, reliabilityAnalysis.getColumnToFlowNodeAssociation(), message);
     }
 
     /**
@@ -233,7 +254,8 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetProgram() {
-        assertNotNull(reliabilityAnalysis.getProgram());
+    	String message = "The value of the program's schedule choice should not be null";
+        assertNotNull(reliabilityAnalysis.getProgram(), message);
     }
     
     /**
@@ -242,7 +264,8 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetM() {
-        assertEquals(0.9, reliabilityAnalysis.getM());
+    	String message = "The actual value of M does not match the expected value of M";
+        assertEquals(0.9, reliabilityAnalysis.getM(), message);
     }
     
     /**
@@ -251,7 +274,8 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetE2E() {
-        assertEquals(0.99, reliabilityAnalysis.getE2E(), 0.01);
+    	String message = "The actual value of e2e does not match the expected value of e2e";
+        assertEquals(0.99, reliabilityAnalysis.getE2E(), 0.01, message);
     }
 
     /**
@@ -290,11 +314,11 @@ public class ReliabilityAnalysisTest {
         testFlow.nodes.add(new Node("Node2", 2, 1));
         testFlow.nodes.add(new Node("Node3", 3, 2));
 
-        ArrayList<Integer> result = reliabilityAnalysis.getNumTxAttemptsPerLinkAndTotalTxAttempts(testFlow);
+        ArrayList<Integer> expected = reliabilityAnalysis.getNumTxAttemptsPerLinkAndTotalTxAttempts(testFlow);
 
-        assertNotNull(result, "The result should not be null");
+        assertNotNull(expected, "The result should not be null");
         ArrayList<Integer> actual = new ArrayList<>(Arrays.asList(3, 3, 0, 4));
-        assertEquals(result, actual);
+        assertEquals(expected, actual, "The actual number of transmission attempts per link and total transmission attempts does not match the expected number");
     }
 
     /**
@@ -324,10 +348,10 @@ public class ReliabilityAnalysisTest {
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetReliabilitiesEmptyWorkLoad() {
         ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
-
+        String message = "The method should throw an IndexOutOfBoundsException for an empty workload";
         assertThrows(IndexOutOfBoundsException.class, () -> {
             emptyReliabilityAnalysis.getReliabilities();
-        }, "The method should throw an IndexOutOfBoundsException for an empty workload");
+        }, message);
     }
 
     @Test
@@ -339,7 +363,8 @@ public class ReliabilityAnalysisTest {
         columnMapping.put("F0:C", 2);
 
         List<Integer> columnIndices = reliabilityAnalysis.getColumnIndicesOfFlow("", columnMapping);
-        assertTrue(columnIndices.isEmpty(), "The result should be an empty list for an empty flow name");
+        String message = "The result should be an empty list for an empty flow name";
+        assertTrue(columnIndices.isEmpty(), message);
     }
 
     @Test
@@ -355,17 +380,18 @@ public class ReliabilityAnalysisTest {
         reliabilityTable.add(new ReliabilityRow(4, 0.0));
 
         int rowNum = -1;
-
+        String message = "The method should throw an IndexOutOfBoundsException for an invalid row number";
         assertThrows(IndexOutOfBoundsException.class, () -> {
             reliabilityAnalysis.getOldRow(rowNum, columnMapping, reliabilityTable);
-        }, "The method should throw an IndexOutOfBoundsException for an invalid row number");
+        }, message);
     }
 
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFlowNamesToResendNegativeCycle() {
         List<String> flowNamesToResend = reliabilityAnalysis.getFlowNamesToResend(-1);
-        assertTrue(flowNamesToResend.isEmpty(), "The result should be an empty list for a negative cycle");
+        String message = "The result should be an empty list for a negative cycle";
+        assertTrue(flowNamesToResend.isEmpty(), message);
     }
 
 
@@ -373,27 +399,48 @@ public class ReliabilityAnalysisTest {
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumRowsEmptyWorkLoad() {
         ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
-        assertEquals(1, emptyReliabilityAnalysis.getNumRows());
+        String message = "The actual number of rows does not match the expected number of rows";
+        assertEquals(1, emptyReliabilityAnalysis.getNumRows(), message);
     }
 
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumColumnsEmptyWorkLoad() {
         ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
-        assertEquals(0, emptyReliabilityAnalysis.getNumColumns());
+        String message = "The actual number of columns does not match the expected number of columns";
+        assertEquals(0, emptyReliabilityAnalysis.getNumColumns(), message);
     }
 
+    /**
+     * 
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    public void testVerifyReliabilitiesEdgeCase() {
-        // Come back to
+    public void testVerifyReliabilitiesEmptyWorkLoad() {
+        ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
+        String message = "Expected IndexOutOfBoundsException for empty workload";
+        assertThrows(IndexOutOfBoundsException.class, () -> emptyReliabilityAnalysis.verifyReliabilities(), message);
     }
-
 
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFinalReliabilityRowEdgeCase() {
-        // Come back to
+        // Create a sample ReliabilityAnalysis object
+        ReliabilityAnalysis edgeCaseReliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
+
+        // Access the ReliabilityTable of the edgeCaseReliabilityAnalysis object
+        ReliabilityTable reliabilityTable = edgeCaseReliabilityAnalysis.getReliabilityTable();
+
+        // Add only one row to the ReliabilityTable
+        Double[] singleRowValues = new Double[]{0.95, 0.92, 0.97, 0.90};
+        ReliabilityRow singleRow = new ReliabilityRow(singleRowValues);
+        reliabilityTable.add(singleRow);
+
+        // Test the getFinalReliabilityRow() method
+        ArrayList<Double> expectedRow = new ArrayList<>(Arrays.asList(0.95, 0.92, 0.97, 0.90));
+        ArrayList<Double> actualRow = edgeCaseReliabilityAnalysis.getFinalReliabilityRow();
+        String message = "The actual final reliability row does not match the expected row";
+        assertEquals(expectedRow, actualRow, message);
     }
 
     @Test
@@ -401,15 +448,16 @@ public class ReliabilityAnalysisTest {
     public void testGetColumnToFlowNodeAssociationEmptyWorkLoad() {
         ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
         Map<Integer, String> columnToFlowNodeAssociation = emptyReliabilityAnalysis.getColumnToFlowNodeAssociation();
-        
-        assertTrue(columnToFlowNodeAssociation.isEmpty(), "The result should be an empty map for an empty workload");
+        String message = "The result should be an empty map for an empty workload";
+        assertTrue(columnToFlowNodeAssociation.isEmpty(), message);
     }
     
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFlowNodeToColumnAssociationEmptyWorkLoad() {
         ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
-        assertTrue(emptyReliabilityAnalysis.getFlowNodeToColumnAssociation().isEmpty(), "The result should be an empty map for an empty workload");
+        String message = "The result should be an empty map for an empty workload";
+        assertTrue(emptyReliabilityAnalysis.getFlowNodeToColumnAssociation().isEmpty(), message);
     }
 
     /**
@@ -424,8 +472,8 @@ public class ReliabilityAnalysisTest {
         columnMapping.put("F0:C", 2);
         
         List<Integer> columnIndices = reliabilityAnalysis.getColumnIndicesOfFlow("NonExistentFlow", columnMapping);
-
-        assertTrue(columnIndices.isEmpty(), "The result should be an empty list for a non-existent flow");
+        String message = "The result should be an empty list for a non-existent flow";
+        assertTrue(columnIndices.isEmpty(), message);
     }
 
     /**
@@ -444,10 +492,10 @@ public class ReliabilityAnalysisTest {
         reliabilityTable.add(new ReliabilityRow(4, 0.0));
 
         int rowNum = 2; // Out of bounds
-
+        String message = "The getOldRow method should throw an IndexOutOfBoundsException";
         assertThrows(IndexOutOfBoundsException.class, () ->
             reliabilityAnalysis.getOldRow(rowNum, columnMapping, reliabilityTable),
-            "The getOldRow method should throw an IndexOutOfBoundsException");
+            message);
     }
 
     /**
@@ -457,16 +505,7 @@ public class ReliabilityAnalysisTest {
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFlowNamesToResendInvalidTimeStep() {
         List<String> flowNamesToResend = reliabilityAnalysis.getFlowNamesToResend(-1);
-        assertTrue(flowNamesToResend.isEmpty(), "The result should be null");
-    }
-
-    /**
-     * Tests the verifyReliabilities method with a WorkLoad that does not meet the minimum end-to-end reliability.
-     */
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    public void testVerifyReliabilitiesNotMet() {
-        ReliabilityAnalysis unmetReliabilityAnalysis = getReliabilityAnalysis(0, 0.9, 1.0, filePath, numChannels, choice);
-        assertFalse(unmetReliabilityAnalysis.verifyReliabilities());
+        String message = "The result should be null";
+        assertTrue(flowNamesToResend.isEmpty(), message);
     }
 }
