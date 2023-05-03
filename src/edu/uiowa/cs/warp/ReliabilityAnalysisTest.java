@@ -3,7 +3,8 @@ package edu.uiowa.cs.warp;
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -318,5 +319,154 @@ public class ReliabilityAnalysisTest {
         assertNotNull(result, "The result should not be null");
         assertEquals(actual, result, "The result should match the expected values");
     }
+    
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetReliabilitiesEmptyWorkLoad() {
+        ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
 
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            emptyReliabilityAnalysis.getReliabilities();
+        }, "The method should throw an IndexOutOfBoundsException for an empty workload");
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetColumnIndicesOfFlowEmptyFlowName() {
+        Map<String, Integer> columnMapping = new HashMap<>();
+        columnMapping.put("F0:A", 0);
+        columnMapping.put("F0:B", 1);
+        columnMapping.put("F0:C", 2);
+
+        List<Integer> columnIndices = reliabilityAnalysis.getColumnIndicesOfFlow("", columnMapping);
+        assertTrue(columnIndices.isEmpty(), "The result should be an empty list for an empty flow name");
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetOldRowInvalidRowNumber() {
+        Map<String, Integer> columnMapping = new HashMap<>();
+        columnMapping.put("flow1:src", 0);
+        columnMapping.put("flow1:node1", 1);
+        columnMapping.put("flow1:node2", 2);
+        columnMapping.put("flow1:snk", 3);
+
+        ReliabilityTable reliabilityTable = new ReliabilityTable();
+        reliabilityTable.add(new ReliabilityRow(4, 0.0));
+
+        int rowNum = -1;
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            reliabilityAnalysis.getOldRow(rowNum, columnMapping, reliabilityTable);
+        }, "The method should throw an IndexOutOfBoundsException for an invalid row number");
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetFlowNamesToResendNegativeCycle() {
+        List<String> flowNamesToResend = reliabilityAnalysis.getFlowNamesToResend(-1);
+        assertTrue(flowNamesToResend.isEmpty(), "The result should be an empty list for a negative cycle");
+    }
+
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetNumRowsEmptyWorkLoad() {
+        ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
+        assertEquals(1, emptyReliabilityAnalysis.getNumRows());
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetNumColumnsEmptyWorkLoad() {
+        ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
+        assertEquals(0, emptyReliabilityAnalysis.getNumColumns());
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testVerifyReliabilitiesEdgeCase() {
+        // Come back to
+    }
+
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetFinalReliabilityRowEdgeCase() {
+        // Come back to
+    }
+
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetColumnToFlowNodeAssociationEmptyWorkLoad() {
+        ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
+        Map<Integer, String> columnToFlowNodeAssociation = emptyReliabilityAnalysis.getColumnToFlowNodeAssociation();
+        
+        assertTrue(columnToFlowNodeAssociation.isEmpty(), "The result should be an empty map for an empty workload");
+    }
+    
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetFlowNodeToColumnAssociationEmptyWorkLoad() {
+        ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
+        assertTrue(emptyReliabilityAnalysis.getFlowNodeToColumnAssociation().isEmpty(), "The result should be an empty map for an empty workload");
+    }
+
+    /**
+     * Tests the getColumnIndicesOfFlow method with a non-existent flow name.
+     */
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetColumnIndicesOfFlowNonExistentFlow() {
+        Map<String, Integer> columnMapping = new HashMap<>();
+        columnMapping.put("F0:A", 0);
+        columnMapping.put("F0:B", 1);
+        columnMapping.put("F0:C", 2);
+        
+        List<Integer> columnIndices = reliabilityAnalysis.getColumnIndicesOfFlow("NonExistentFlow", columnMapping);
+
+        assertTrue(columnIndices.isEmpty(), "The result should be an empty list for a non-existent flow");
+    }
+
+    /**
+     * Tests the getOldRow method with a row number that is out of bounds.
+     */
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetOldRowRowOutOfBounds() {
+        Map<String, Integer> columnMapping = new HashMap<>();
+        columnMapping.put("flow1:src", 0);
+        columnMapping.put("flow1:node1", 1);
+        columnMapping.put("flow1:node2", 2);
+        columnMapping.put("flow1:snk", 3);
+
+        ReliabilityTable reliabilityTable = new ReliabilityTable();
+        reliabilityTable.add(new ReliabilityRow(4, 0.0));
+
+        int rowNum = 2; // Out of bounds
+
+        assertThrows(IndexOutOfBoundsException.class, () ->
+            reliabilityAnalysis.getOldRow(rowNum, columnMapping, reliabilityTable),
+            "The getOldRow method should throw an IndexOutOfBoundsException");
+    }
+
+    /**
+     * Tests the getFlowNamesToResend method with an invalid time step.
+     */
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetFlowNamesToResendInvalidTimeStep() {
+        List<String> flowNamesToResend = reliabilityAnalysis.getFlowNamesToResend(-1);
+        assertTrue(flowNamesToResend.isEmpty(), "The result should be null");
+    }
+
+    /**
+     * Tests the verifyReliabilities method with a WorkLoad that does not meet the minimum end-to-end reliability.
+     */
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testVerifyReliabilitiesNotMet() {
+        ReliabilityAnalysis unmetReliabilityAnalysis = getReliabilityAnalysis(0, 0.9, 1.0, filePath, numChannels, choice);
+        assertFalse(unmetReliabilityAnalysis.verifyReliabilities());
+    }
 }
