@@ -24,7 +24,19 @@ public class ReliabilityAnalysisTest {
 	 *The default timeout value for all test cases
 	 */
 	private static final int DEFAULT_TIMEOUT = 2;
+    private static final Double m = 0.9;
+    private static final Double e2e = 0.99;
+    private static final String fileName = "Example";
+    private static final String filePath = fileName + ".txt";
+    private static final Integer numChannels = 3;
+    private static final ScheduleChoices choice = ScheduleChoices.PRIORITY;
+    private ReliabilityAnalysis reliabilityAnalysis;
 	
+    @Before
+    public void setup() {
+        reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
+    }
+    
     /**
      * This method creates a ReliabilityAnalysis for testing
      * @param m is the min packet reception rate
@@ -74,23 +86,13 @@ public class ReliabilityAnalysisTest {
             Integer numFaults, Double m, Double e2e, String inputFileName, Integer numChannels, ScheduleChoices choice) {
         return new ReliabilityAnalysis(new WarpSystem(new WorkLoad(numFaults, m, e2e, inputFileName), numChannels, choice).toProgram());
     }
-
-
+    
     /**
      * Tests getReliabilities method with Example.txt as the input file to check if actual value is not null
      */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetReliabilities() {
-    	Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-		String filePath = fileName + ".txt";
-		Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object before using it
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         assertNotNull(reliabilityAnalysis.getReliabilities());
     }
 
@@ -101,16 +103,6 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetColumnIndicesOfFlow() {
-        Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-        String filePath = fileName + ".txt";
-        Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
-        
         // Prepare a Map<String, Integer> object
         Map<String, Integer> columnMapping = new HashMap<>();
         columnMapping.put("F0:A", 0);
@@ -133,16 +125,6 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetOldRow() {
-        Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-        String filePath = fileName + ".txt";
-        Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
-
         // Prepare a Map<String, Integer> object
         Map<String, Integer> columnMapping = new HashMap<>();
         columnMapping.put("flow1:src", 0);
@@ -167,15 +149,6 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFlowNamesToResend() {
-    	Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-		String filePath = fileName + ".txt";
-		Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         assertNotNull(reliabilityAnalysis.getFlowNamesToResend(5));
     }
 
@@ -187,15 +160,6 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFlowNodeToColumnAssociation() {
-    	Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-		String filePath = fileName + ".txt";
-		Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         assertNotNull(reliabilityAnalysis.getFlowNodeToColumnAssociation());
     }
 
@@ -206,15 +170,6 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumRows() {
-    	Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-		String filePath = fileName + ".txt";
-		Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         assertEquals(100, reliabilityAnalysis.getNumRows());
     }
 
@@ -225,15 +180,6 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumColumns() {
-    	Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-		String filePath = fileName + ".txt";
-		Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         assertEquals(6, reliabilityAnalysis.getNumColumns());
     }
 
@@ -244,15 +190,6 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testVerifyReliabilities() {
-    	Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-		String filePath = fileName + ".txt";
-		Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         assertTrue(reliabilityAnalysis.verifyReliabilities());
     }
     
@@ -262,15 +199,6 @@ public class ReliabilityAnalysisTest {
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFinalReliabilityRow() {
-    	Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-		String filePath = fileName + ".txt";
-		Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         ArrayList<Double> expected = new ArrayList<>();
         expected.add(1.0);
         expected.add(0.999);
@@ -287,15 +215,6 @@ public class ReliabilityAnalysisTest {
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetColumnToFlowNodeAssociation() {
-    	Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-		String filePath = fileName + ".txt";
-		Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         Map<Integer, String> expected = new HashMap<>();
         expected.put(0, "F0:A");
         expected.put(1, "F0:B");
@@ -313,15 +232,6 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetProgram() {
-    	Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-		String filePath = fileName + ".txt";
-		Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         assertNotNull(reliabilityAnalysis.getProgram());
     }
     
@@ -331,17 +241,7 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetM() {
-        Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-		String filePath = fileName + ".txt";
-		Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
-
-        assertEquals(m, reliabilityAnalysis.getM());
+        assertEquals(0.9, reliabilityAnalysis.getM());
     }
     
     /**
@@ -350,15 +250,6 @@ public class ReliabilityAnalysisTest {
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetE2E() {
-    	Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-		String filePath = fileName + ".txt";
-		Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         assertEquals(0.99, reliabilityAnalysis.getE2E(), 0.01);
     }
 
@@ -368,16 +259,6 @@ public class ReliabilityAnalysisTest {
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testNumTxPerLinkAndTotalTxCost() {
-        Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-        String filePath = fileName + ".txt";
-        Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
-
         // Create a Flow object
         Flow testFlow = new Flow("TestFlow", 1, 0);
         // Add nodes to the flow
@@ -401,16 +282,6 @@ public class ReliabilityAnalysisTest {
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumTxAttemptsPerLinkAndTotalTxAttempts() {
-        Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-        String filePath = fileName + ".txt";
-        Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
-
         // Create a Flow object
         Flow testFlow = new Flow("TestFlow", 1, 0);
         // Add nodes to the flow
@@ -433,16 +304,6 @@ public class ReliabilityAnalysisTest {
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFixedTxPerLinkAndTotalTxCost() {
-        Double m = 0.9;
-        Double e2e = 0.99;
-        String fileName = "Example";
-        String filePath = fileName + ".txt";
-        Integer numChannels = 3;
-        ScheduleChoices choice = ScheduleChoices.PRIORITY;
-
-        // Initialize the reliabilityAnalysis object
-        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
-
         // Create a Flow object
         Flow testFlow = new Flow("TestFlow", 1, 0);
         // Add nodes to the flow
