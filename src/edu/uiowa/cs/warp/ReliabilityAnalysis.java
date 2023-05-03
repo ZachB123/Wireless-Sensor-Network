@@ -468,7 +468,8 @@ public class ReliabilityAnalysis {
 	 * @return ArrayList containing the flow nodes, number of transmission attempts per link 
 	 *          and total number of transmission attempts
 	 */
-	private ArrayList<Integer> getNumTxAttemptsPerLinkAndTotalTxAttempts(Flow flow){ 
+	public ArrayList<Integer> getNumTxAttemptsPerLinkAndTotalTxAttempts(Flow flow){ 
+		// should be private
 		ArrayList<Node> nodesInFlow = flow.nodes;
 
 		/*
@@ -605,7 +606,8 @@ public class ReliabilityAnalysis {
 	 * @return ArrayList containing the flow nodes, number of transmission and total transmission cost
 	 * 
 	 */
-	private ArrayList<Integer> getFixedTxPerLinkAndTotalTxCost(Flow flow) {
+	public ArrayList<Integer> getFixedTxPerLinkAndTotalTxCost(Flow flow) {
+		// should be private
 		ArrayList<Node> nodesInFlow = flow.nodes;
 		int nNodesInFlow = nodesInFlow.size();
 		/*
