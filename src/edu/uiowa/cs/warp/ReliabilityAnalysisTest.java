@@ -255,6 +255,56 @@ public class ReliabilityAnalysisTest {
         ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
         assertTrue(reliabilityAnalysis.verifyReliabilities());
     }
+    
+    /**
+     * 
+     */
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetFinalReliabilityRow() {
+    	Double m = 0.9;
+        Double e2e = 0.99;
+        String fileName = "Example";
+		String filePath = fileName + ".txt";
+		Integer numChannels = 3;
+        ScheduleChoices choice = ScheduleChoices.PRIORITY;
+
+        // Initialize the reliabilityAnalysis object
+        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
+        ArrayList<Double> expected = new ArrayList<>();
+        expected.add(1.0);
+        expected.add(0.999);
+        expected.add(0.9963);
+        expected.add(1.0);
+        expected.add(0.999);
+        expected.add(0.9963);
+        assertEquals(expected, reliabilityAnalysis.getFinalReliabilityRow());
+    }
+    
+    /**
+     * 
+     */
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetColumnToFlowNodeAssociation() {
+    	Double m = 0.9;
+        Double e2e = 0.99;
+        String fileName = "Example";
+		String filePath = fileName + ".txt";
+		Integer numChannels = 3;
+        ScheduleChoices choice = ScheduleChoices.PRIORITY;
+
+        // Initialize the reliabilityAnalysis object
+        ReliabilityAnalysis reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
+        Map<Integer, String> expected = new HashMap<>();
+        expected.put(0, "F0:A");
+        expected.put(1, "F0:B");
+        expected.put(2, "F0:C");
+        expected.put(3, "F1:C");
+        expected.put(4, "F1:B");
+        expected.put(5, "F1:A");
+        assertEquals(expected, reliabilityAnalysis.getColumnToFlowNodeAssociation());
+    }
 
     /**
      * Tests the getProgram method with with Example.txt as the input file to check
