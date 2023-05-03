@@ -166,9 +166,8 @@ public class ReliabilityAnalysis {
 	}
 
 	/**
-	 * This method calculates the probability that a package has made it to a node
-	 * in the workload at every time slot and return a tables of these probabilities
-	 * with the columns corresponding to a flow with a node and the rows a time slot
+	 * This method returns the reliabilities instance variable if it is not null.
+	 * otherwise it builds the reliabilities then returns them.
 	 * 
 	 * @return a ReliabilityTable containing reliabilities of a packet reaching each
 	 *         node in a flow at each time slot
@@ -181,6 +180,13 @@ public class ReliabilityAnalysis {
 		return reliabilities;
 	}
 	
+	/**
+	 * This method calculates the probability that a package has made it to a node
+	 * in the workload at every time slot and sets the reliabilities instance variable
+	 * to a tables of these probabilities with the columns corresponding to a flow 
+	 * with a node and the rows a time slot
+	 * 
+	 */
 	public void buildReliabilityTable() {
 		int numRows = getNumRows();
 		Double M = this.minPacketReceptionRate;
