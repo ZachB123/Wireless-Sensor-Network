@@ -360,13 +360,13 @@ public class ReliabilityAnalysis {
 		// If el < e2e, reliability is not met and print an error
 		// Otherwise, return boolean = true
 		boolean reliabilitiesMet = true;
+		int currentColumn = 0;
 		Double e2e = getE2E();
 		ArrayList<Double> e2eReliabilities = getFinalReliabilityRow();
-		int currentColumn = 0;
+		Map<Integer, String> columnToFlowNode = getColumnToFlowNodeAssociation();
 		for(double actual : e2eReliabilities) {
 			if(actual < e2e) {
 				reliabilitiesMet = false;
-				Map<Integer, String> columnToFlowNode = getColumnToFlowNodeAssociation();
 				String flowNode[] = columnToFlowNode.get(currentColumn).split(":");
 				System.out.println(String.format("flow %s does not meet the E2E reliability at node %s", flowNode[0], flowNode[1]));
 				currentColumn++;
@@ -386,7 +386,7 @@ public class ReliabilityAnalysis {
 		ReliabilityTable reliabilities = getReliabilities();
 		int numRows = getNumRows() - 1;
 		ArrayList<Double> finalReliabilityRow = new ArrayList<Double>(getNumColumns());
-		for(int i = 0; i < getNumColumns(); i++) {		// do differently ?
+		for(int i = 0; i < getNumColumns(); i++) {	
 			finalReliabilityRow.add(reliabilities.get(numRows, i));
 		}
 		return finalReliabilityRow;
