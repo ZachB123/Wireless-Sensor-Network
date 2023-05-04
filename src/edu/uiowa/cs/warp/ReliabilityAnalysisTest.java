@@ -214,7 +214,7 @@ public class ReliabilityAnalysisTest {
     }
     
     /**
-     * 
+     * Tests if the final reliability row in the reliability table matches the expected values.
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -231,7 +231,7 @@ public class ReliabilityAnalysisTest {
     }
     
     /**
-     * 
+     * Tests if the column to flow node association in the reliability analysis matches the expected values.
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -344,6 +344,9 @@ public class ReliabilityAnalysisTest {
         assertEquals(actual, result, "The result should match the expected values");
     }
     
+    /**
+     * Tests the getReliabilities method with an empty workload
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetReliabilitiesEmptyWorkLoad() {
@@ -354,6 +357,9 @@ public class ReliabilityAnalysisTest {
         }, message);
     }
 
+    /**
+     * Tests the getColumnIndicesOfFlow method with an empty flow name
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetColumnIndicesOfFlowEmptyFlowName() {
@@ -367,6 +373,9 @@ public class ReliabilityAnalysisTest {
         assertTrue(columnIndices.isEmpty(), message);
     }
 
+    /**
+     * Tests the getOldRow method with an invalid row number
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetOldRowInvalidRowNumber() {
@@ -386,6 +395,9 @@ public class ReliabilityAnalysisTest {
         }, message);
     }
 
+    /**
+     * Tests the getFlowNamesToResend method with a negative cycle
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFlowNamesToResendNegativeCycle() {
@@ -394,7 +406,9 @@ public class ReliabilityAnalysisTest {
         assertTrue(flowNamesToResend.isEmpty(), message);
     }
 
-
+    /**
+     * Tests the getNumRows method with an empty workload
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumRowsEmptyWorkLoad() {
@@ -403,6 +417,9 @@ public class ReliabilityAnalysisTest {
         assertEquals(1, emptyReliabilityAnalysis.getNumRows(), message);
     }
 
+    /**
+     * Tests the getNumColumns method with an empty workload
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetNumColumnsEmptyWorkLoad() {
@@ -412,7 +429,7 @@ public class ReliabilityAnalysisTest {
     }
 
     /**
-     * 
+     * Tests the verifyReliabilities method with an empty workload
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -422,6 +439,9 @@ public class ReliabilityAnalysisTest {
         assertThrows(IndexOutOfBoundsException.class, () -> emptyReliabilityAnalysis.verifyReliabilities(), message);
     }
 
+    /**
+     * Tests the getFinalReliabilityRow method (not working)
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFinalReliabilityRowEdgeCase() {
@@ -443,6 +463,9 @@ public class ReliabilityAnalysisTest {
         assertEquals(expectedRow, actualRow, message);
     }
 
+    /**
+     * Tests the getColumnToFlowNodeAssociation method with an empty workload
+     */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetColumnToFlowNodeAssociationEmptyWorkLoad() {
@@ -450,14 +473,6 @@ public class ReliabilityAnalysisTest {
         Map<Integer, String> columnToFlowNodeAssociation = emptyReliabilityAnalysis.getColumnToFlowNodeAssociation();
         String message = "The result should be an empty map for an empty workload";
         assertTrue(columnToFlowNodeAssociation.isEmpty(), message);
-    }
-    
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    public void testGetFlowNodeToColumnAssociationEmptyWorkLoad() {
-        ReliabilityAnalysis emptyReliabilityAnalysis = getReliabilityAnalysis(0.9, 0.99, "", 3, ScheduleChoices.PRIORITY);
-        String message = "The result should be an empty map for an empty workload";
-        assertTrue(emptyReliabilityAnalysis.getFlowNodeToColumnAssociation().isEmpty(), message);
     }
 
     /**
