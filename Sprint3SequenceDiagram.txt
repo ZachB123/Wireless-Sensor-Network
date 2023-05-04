@@ -1,0 +1,243 @@
+title -i StressTest.txt -o Sprint1DebugOutputFiles -sch priority --ra
+
+participant Warp
+participant VisualizationFactory
+participant VisualizationImplementation
+participant FileManager
+participant Workload
+participant VisualizationObject
+participant SystemFactory
+participant WarpSystem
+participant Program
+participant ProgramSchedule
+participant Channels
+participant Description
+participant ReliabilityAnalysis
+participant ChannelAnalysis
+
+autoactivation off
+
+[->Warp: main(String[] args)
+
+activate Warp
+
+
+Warp->Warp: setWarpParameters(args)
+activate Warp
+space 1
+deactivate Warp
+
+note over Warp: Workload workload = new Workload(numFaults, minLQ, e2e, inputFile);
+// LOOP ITERATION ONE
+Warp->Warp: visualize(workload, WorkloadChoices choice)
+activate Warp
+Warp->VisualizationFactory: VisualizationFactory.createWorkLoadVisualization(workload, "Sprint1DebugOutputFiles", WorkLoadChoices choice);
+activate VisualizationFactory
+VisualizationFactory->VisualizationImplementation: VisualizationImplementation(workload, "Sprint1DebugOutputFiles", WorkLoadChoices choice);
+activate VisualizationImplementation
+VisualizationImplementation->FileManager: new FileManager();
+activate FileManager
+FileManager-->VisualizationImplementation: FileManager Object
+deactivate FileManager
+VisualizationImplementation->Workload: getInputFileName();
+activate Workload
+Workload-->VisualizationImplementation: "StressTest.txt"
+deactivate Workload
+VisualizationImplementation->VisualizationImplementation: createFileNameTemplate("Sprint1DebugOutputFiles");
+activate VisualizationImplementation
+VisualizationImplementation->FileManager: getBaseDirectory();
+activate FileManager
+FileManager-->VisualizationImplementation: "C:\\Users\\...\\ui\\cs2820"
+deactivate FileManager
+VisualizationImplementation->FileManager: createDirectory("C:\\Users\\..\\ui\\cs2820", Sprint1DebugOutputFiles);
+activate FileManager
+FileManager-->VisualizationImplementation: "C:\Users\...\ui\cs2820\Sprint1DebugOutputFiles"
+deactivate FileManager
+VisualizationImplementation-->VisualizationImplementation: C:\Users\zachb\.vscode\ui\cs2820\Sprint1DebugOutputFiles\StressTest.txt
+deactivate VisualizationImplementation
+VisualizationImplementation->VisualizationImplementation: createVisualization(WorkLoadChoices choice)
+activate VisualizationImplementation
+VisualizationImplementation->VisualizationImplementation: createVisualization(workload);
+activate VisualizationImplementation
+VisualizationImplementation->VisualizationObject: visualization()
+activate VisualizationObject
+VisualizationObject-->VisualizationImplementation: <StressTest.txt Contents>
+deactivate VisualizationObject
+VisualizationImplementation-->VisualizationObject: fileVisualization()
+activate VisualizationObject
+VisualizationObject-->VisualizationImplementation: <StressTest.txt Contents>
+deactivate VisualizationObject
+deactivate VisualizationImplementation
+deactivate VisualizationImplementation
+deactivate VisualizationImplementation
+VisualizationFactory-->Warp: Visualization Object
+deactivate VisualizationFactory
+Warp->VisualizationImplementation: toFile();
+activate VisualizationImplementation
+VisualizationImplementation->FileManager: writeFile("C:\Users\...\ui\cs2820\Sprint1DebugOutputFiles\StressTest.wld", <StressTest.txt Content>);
+activate FileManager
+space 1
+deactivate FileManager
+deactivate VisualizationImplementation
+deactivate Warp
+// END LOOP ITERATION 
+
+Warp->SystemFactory: create(workload, 81, PRIORITY)
+activate SystemFactory
+SystemFactory->WarpSystem: WarpSystem(workload, 81, PRIORITY);
+activate WarpSystem
+WarpSystem->WarpSystem: createProgram(workload, 81, PRIORITY);
+activate WarpSystem
+WarpSystem->Program: new Program(workload, 81, Priority, false, false);
+activate Program
+Program->Program: setDefaultParameters(workload, 81, false, false)
+activate Program
+Program->ProgramSchedule: new ProgramSchedule() (this is just extends and ArrayList)
+activate Program
+ProgramSchedule-->Program: ProgramSchedule object
+deactivate Program
+ProgramSchedule->Workload: setFlowsInPriorityOrder()
+activate Workload
+space 1
+deactivate Workload
+Program->Channels: new Channels(81, false);
+activate Channels
+Channels-->Program: Channels Object
+deactivate Channels
+Program->Description: new Description();
+activate Description
+Description-->Program: Description Object
+deactivate Description
+deactivate Program
+space 1
+Program->Program: buildProgram(PRIORITY)
+activate Program
+Program->Program: selectPriority()
+activate Program
+Program->Program: setScheduleSelected(ScheduleChoices.PRIORITY)
+activate Program
+ProgramSchedule->Workload: setFlowsInPriorityOrder()
+activate Workload
+space 1
+deactivate Workload
+deactivate Program
+deactivate Program
+Program->Program: buildOriginalProgram()
+activate Program
+note over Program:The schedule is created here.
+space 1
+deactivate Program
+deactivate Program
+deactivate Program
+deactivate WarpSystem
+deactivate WarpSystem
+SystemFactory-->Warp: WarpInterface Object
+deactivate SystemFactory
+// FINISHED WITH LINE 204 OF WARP
+note over Warp:WarpInterface warp = SystemFactory.create(workLoad, 81, PRIORITY);\n just finished executing here.
+Warp->Warp: verifyPerformanceRequirements(warp);
+activate Warp
+Warp->Warp: verifyDeadlines(warp);
+activate Warp
+Warp->WarpSystem: deadlinesMet();
+activate WarpSystem
+WarpSystem->Program: deadlineMisses();
+activate Program
+Program-->WarpSystem: <Empty ArrayList>
+deactivate Program
+WarpSystem-->Warp: false
+deactivate WarpSystem
+deactivate Warp
+space 1
+Warp->Warp: verifyReliabilities(warp)
+activate Warp
+Warp->WarpSystem: reliabilitiesMmet();
+activate WarpSystem
+WarpSystem->ReliabilityAnalysis: new ReliabilityAnalysis(program)
+activate ReliabilityAnalysis
+ReliabilityAnalysis-->WarpSystem: RelibilityAnalysis Object
+deactivate ReliabilityAnalysis
+WarpSystem->ReliabilityAnalysis: verifyReliabilities()
+activate ReliabilityAnalysis
+ReliabilityAnalysis-->WarpSystem: true
+deactivate ReliabilityAnalysis
+WarpSystem->Warp: true
+deactivate WarpSystem
+deactivate Warp
+Warp->Warp: verifyNoChannelConflicts(warp)
+activate Warp
+Warp->WarpSystem: warp.toChannelAnalysis()
+activate WarpSystem
+WarpSystem->ChannelAnalysis: new ChannelAnalysis(this)
+activate ChannelAnalysis
+ChannelAnalysis->WarpSystem: warp.toProgram()
+activate WarpSystem
+WarpSystem-->ChannelAnalysis: Program Object
+deactivate WarpSystem
+ChannelAnalysis->Program: program.getSchedule()
+activate Program
+Program-->ChannelAnalysis: ProgramSchedule Object
+deactivate Program
+ChannelAnalysis-->WarpSystem: ChannelAnalysis Object
+deactivate ChannelAnalysis
+WarpSystem->Program: isChannelConflict()
+activate ChannelAnalysis
+ChannelAnalysis-->WarpSystem: false
+deactivate ChannelAnalysis
+deactivate WarpSystem
+deactivate Warp
+deactivate Warp
+loop wordLoadChoices choice: WorkloadChoices.values()
+Warp->Warp: visualize(warp, choice);
+activate Warp
+Warp->VisualizationFactory: createProgramVisualization(warp, "Sprint1DebugOutputFiles", choice)
+activate VisualizationFactory
+VisualizationFactory->VisualizationImplementation: new VisualizationImplementation(warp, "Sprint1DebugOutputFiles", choice)
+activate VisualizationImplementation
+// above start
+VisualizationImplementation->FileManager: new FileManager();
+activate FileManager
+FileManager-->VisualizationImplementation: FileManager Object
+deactivate FileManager
+VisualizationImplementation->Workload: getInputFileName();
+activate Workload
+Workload-->VisualizationImplementation: "StressTest.txt"
+deactivate Workload
+VisualizationImplementation->VisualizationImplementation: createFileNameTemplate("Sprint1DebugOutputFiles");
+activate VisualizationImplementation
+VisualizationImplementation->FileManager: getBaseDirectory();
+activate FileManager
+FileManager-->VisualizationImplementation: "C:\\Users\\...\\ui\\cs2820"
+deactivate FileManager
+VisualizationImplementation->FileManager: createDirectory("C:\\Users\\..\\ui\\cs2820", Sprint1DebugOutputFiles);
+activate FileManager
+FileManager-->VisualizationImplementation: "C:\Users\...\ui\cs2820\Sprint1DebugOutputFiles"
+deactivate FileManager
+VisualizationImplementation-->VisualizationImplementation: C:\Users\zachb\.vscode\ui\cs2820\Sprint1DebugOutputFiles\StressTest.txt
+deactivate VisualizationImplementation
+VisualizationImplementation->VisualizationImplementation: createVisualization(SystemChoices choice)
+activate VisualizationImplementation
+VisualizationImplementation->VisualizationImplementation: createVisualization(workload);
+activate VisualizationImplementation
+VisualizationImplementation->VisualizationObject: visualization()
+activate VisualizationObject
+VisualizationObject-->VisualizationImplementation: <StressTest.txt Contents>
+deactivate VisualizationObject
+VisualizationImplementation-->VisualizationObject: fileVisualization()
+activate VisualizationObject
+VisualizationObject-->VisualizationImplementation: <StressTest.txt Contents>
+deactivate VisualizationObject
+//above end
+VisualizationImplementation-->VisualizationFactory: VisualizationImplementation Object
+deactivate VisualizationImplementation
+deactivate VisualizationFactory
+Warp->VisualizationImplementation: viz.toFile();
+activate VisualizationImplementation
+VisualizationImplementation->FileManager: writeFile("C:\Users\...\cs2820\Sprint1DebugOutputFiles\StressTestPriority-0.9M-0.99E2E.dsl", <The actual schedule contents) 
+activate FileManager
+space 1
+deactivate FileManager
+deactivate VisualizationImplementation
+deactivate Warp
+end
+deactivate Warp
