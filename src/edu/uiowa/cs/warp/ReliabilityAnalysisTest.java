@@ -445,6 +445,9 @@ public class ReliabilityAnalysisTest {
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
     public void testGetFinalReliabilityRowEdgeCase() {
+    	// i think we need to add 1 to numRows in the method somehow because
+    	// if numRows doesnt change its going to return the original final row
+    	
         // Create a sample ReliabilityAnalysis object
         ReliabilityAnalysis edgeCaseReliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
 
