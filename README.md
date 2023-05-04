@@ -98,7 +98,7 @@ Collaboration:
 ## Sprint 3
 Tasks:
 * Update Readme for Sprint 3 (Zach). Completed on May 3rd.
-* JUnit tests for new methods in ReliabilityAnalysis (Evan: 75%, Wei Ching: 75%). A more detailed breakdown of what was tested and who tested what is available in the design document. Completed May 4th.
+* JUnit tests for new methods in ReliabilityAnalysis (Evan: 75%, Wei Ching: 25%). A more detailed breakdown of what was tested and who tested what is available in the design document. Completed May 4th.
 * Implement getReliabilities (Zach). Completed April 20.
 * Implement verifyReliabilities (Abby). Completed May 1.
 * Document the ReliabilityAnalysis class (Wei Ching). Completed May 2.
@@ -107,7 +107,7 @@ Tasks:
 
 Documents Added:
 * UML Diagrams have been updated to show the changes in the ReliabilityAnalysis class.
-* A new Sequence Diagram has been created (ReliabilityAnalysisSequence.txt) and (ReliabilityAnalysisSequence.pdf) to show the execution of getReliabilities and verifyReliabilities
+* A new Sequence Diagram has been created (ReliabilityAnalysisSequence.txt) and (ReliabilityAnalysisSequence.pdf) to show the execution of getReliabilities and verifyReliabilities. Also in Sprint3SequenceDiagram the diagram has been updated to better reflect the -ra option.
 * Design Documents have been updated (Warp-Sprint3.pdf)
 
 Collaboration:
