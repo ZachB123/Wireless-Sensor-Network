@@ -449,7 +449,7 @@ public class ReliabilityAnalysisTest {
         ReliabilityAnalysis edgeCaseReliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
 
         // Access the ReliabilityTable of the edgeCaseReliabilityAnalysis object
-        ReliabilityTable reliabilityTable = edgeCaseReliabilityAnalysis.getReliabilityTable();
+        ReliabilityTable reliabilityTable = edgeCaseReliabilityAnalysis.getReliabilities();
 
         // Add only one row to the ReliabilityTable
         Double[] singleRowValues = new Double[]{0.95, 0.92, 0.97, 0.90};
@@ -457,7 +457,7 @@ public class ReliabilityAnalysisTest {
         reliabilityTable.add(singleRow);
 
         // Test the getFinalReliabilityRow() method
-        ArrayList<Double> expectedRow = new ArrayList<>(Arrays.asList(0.95, 0.92, 0.97, 0.90));
+        ArrayList<Double> expectedRow = new ArrayList<Double>(Arrays.asList(0.95, 0.92, 0.97, 0.90));
         ArrayList<Double> actualRow = edgeCaseReliabilityAnalysis.getFinalReliabilityRow();
         String message = "The actual final reliability row does not match the expected row";
         assertEquals(expectedRow, actualRow, message);
