@@ -1,0 +1,52 @@
+title Diagram of getReliabilites and verifyReliabilites when Warp is run with the arguments: -i Example4.txt -o Sprint3DebugOutputFiles -m 0.9 -e 0.99 --all -sch priority
+
+participant ReliabilityAnalysis
+
+[->ReliabilityAnalysis:getReliabilities()
+activate ReliabilityAnalysis
+group if reliabilites != null
+ReliabilityAnalysis-->[:reliabilities
+end
+ReliabilityAnalysis->ReliabilityAnalysis: buildReliabilityTable()
+activate ReliabilityAnalysis
+ReliabilityAnalysis->ReliabilityAnalysis:getNumRows()
+activate ReliabilityAnalysis
+space 1
+deactivate ReliabilityAnalysis
+ReliabilityAnalysis->ReliabilityAnalysis:getNumColumns()
+activate ReliabilityAnalysis
+loop for flow : program.workload.getFlowNamesInPriorityOrder()
+note over ReliabilityAnalysis: num += program.workload.getNodesInFlow(flow).length;
+end
+deactivate ReliabilityAnalysis
+ReliabilityAnalysis-->ReliabilityAnalysis: num
+note over ReliabilityAnalysis: Double M = this.minPacketReceptionRate\nWarpDSL dsl = new WarpDSL()\nProgramSchedule programSchedule = program.getSchedule()\nReliabilityTable reliabilities = new ReliabilityTable(numRows, numColumns)\nMap<String, Integer> flowNodeToColumnIndex = getFlowNodeToColumnAssociation();
+ReliabilityAnalysis->ReliabilityAnalysis: getFlowNodeToColumnAssociation()
+activate ReliabilityAnalysis
+note over ReliabilityAnalysis: HashMap<String, Integer> association = new HashMap<String, Integer>()\nint columnIndex = 0
+loop String flow : this.program.workLoad.getFlowNamesInPriorityOrder()
+loop String node : program.workLoad.getNodesInFlow(flow)
+note over ReliabilityAnalysis: association.put(String.format("%s:%s", flow, node), columnIndex)\ncolumnIndex+=1
+end
+end
+deactivate ReliabilityAnalysis
+ReliabilityAnalysis-->ReliabilityAnalysis: association
+space 1
+loop int row = 0; row < numRows; row++
+note over ReliabilityAnalysis: ReliabilityRow oldRow = getOldRow(row, flowNodeToColumnIndex, reliabilities)\nReliabilityRow newRow = new ReliabilityRow(oldRow.toArray(new Double[oldRow.size()]))\nInstructionTimeSlot instructionSlot = programSchedule.get(row)
+loop String instruction: instructionSlot
+note over ReliabilityAnalysis: List<InstructionParameters> instructionParams = dsl.getInstructionParameters(instruction)
+loop InstructionParameters instructionParam : instructionParams
+note over ReliabilityAnalysis: name = instructionParam.getName()
+group if !(name.equals("pull") || name.equals("push"))
+note over ReliabilityAnalysis: continue
+end
+note over ReliabilityAnalysis: String flow = instructionParam.getFlow()\nString src = instructionParam.getSrc()\nint srcColIndex = flowNodeToColumnIndex.get(String.format("%s:%s", flow, src))\nString snk = instructionParam.getSnk()\nint snkColIndex = flowNodeToColumnIndex.get(String.format("%s:%s", flow, snk))\nDouble prevSrcNodeState = oldRow.get(srcColIndex)\nDouble prevSnkNodeState = oldRow.get(snkColIndex)\nDouble newSinkNodeState = (1-M) * prevSnkNodeState + M * prevSrcNodeState\nnewRow.set(snkColIndex, newSinkNodeState);
+end
+end
+note over ReliabilityAnalysis: reliabilites.set(row, newRow)
+end
+note over ReliabilityAnalysis: this.reliabilities = reliabilites
+deactivate ReliabilityAnalysis
+deactivate ReliabilityAnalysis
+ReliabilityAnalysis-->[: reliabilities

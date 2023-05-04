@@ -189,13 +189,14 @@ public class ReliabilityAnalysis {
 	 */
 	public void buildReliabilityTable() {
 		int numRows = getNumRows();
+		int numColumns = getNumColumns();
 		Double M = this.minPacketReceptionRate;
 		WarpDSL dsl = new WarpDSL();
 		ProgramSchedule programSchedule = program.getSchedule();
-		ReliabilityTable reliabilities = new ReliabilityTable(getNumRows(), getNumColumns());
+		ReliabilityTable reliabilities = new ReliabilityTable(numRows, numColumns);
 		Map<String, Integer> flowNodeToColumnIndex = getFlowNodeToColumnAssociation();
 		for (int row = 0; row < numRows; row++) {
-			ReliabilityRow oldRow = getOldRow(row, flowNodeToColumnIndex, reliabilities); //reliabilities.get(row == 0 ? row : row - 1);
+			ReliabilityRow oldRow = getOldRow(row, flowNodeToColumnIndex, reliabilities);
 			ReliabilityRow newRow = new ReliabilityRow(oldRow.toArray(new Double[oldRow.size()]));
 			InstructionTimeSlot instructionSlot = programSchedule.get(row);
 			for (String instruction : instructionSlot) {
