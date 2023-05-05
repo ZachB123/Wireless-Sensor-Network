@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_2DVhULhDEe2QK54y_oSyxw" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_2DWIYLhDEe2QK54y_oSyxw" source="codegen">
         <details xmi:id="_2DWIYbhDEe2QK54y_oSyxw" key="codegenDirectory" value="/cs2820-spring23/src"/>
-        <details xmi:id="_4bdPQLhDEe2QK54y_oSyxw" key="AssociatedSourceCode" value="/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelAnalysis.java;2515762246/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelVisualization.java;3549530263/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Edge.java;2557287305/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyAnalysis.java;982524150/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyVisualization.java;3638017576/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramVisualization.java;1367527794/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityVisualization.java;2186280138/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemAttributes.java;876440066/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Visualization.java;2548788944/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationFactory.java;923113377/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationImplementation.java;3055860927/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Warp.java;1246636550/1;/cs2820-spring23/src/edu/uiowa/cs/warp/AbstractMap.java;2633489473/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activation.java;3634548837/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activations.java;3305092594/1;/cs2820-spring23/src/edu/uiowa/cs/warp/BasicPoset.java;3238489715/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Channels.java;3701064188/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CodeFragment.java;1941462046/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CombinedActivation.java;3978818808/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CommunicationGraph.java;724670632/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ConnectivityPoset.java;3754377617/1;/cs2820-spring23/src/edu/uiowa/cs/warp/DeadlineComparator.java;492899634/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Description.java;736293084/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FileManager.java;1791012323/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Flow.java;3359544952/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowMap.java;3735737588/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowNodeToActivationMap.java;4234899521/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphViz.java;1071888484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphVizListener.java;2126849807/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GuiVisualization.java;654882569/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InputGraphFile.java;937049578/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InstructionTimeSlot.java;3408505142/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatestReleaseTimeComparator.java;1106993157/1;/cs2820-spring23/src/edu/uiowa/cs/warp/MaxPhaseComparator.java;1745026972/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Node.java;229355987/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NodeMap.java;2177811796/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NonPreemptiveSchedule.java;387408079/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NotImplentedVisualization.java;3646556153/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PeriodComparator.java;3057078727/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Poset.java;4263200805/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PreemptiveSchedule.java;3080876127/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PriorityComparator.java;349151360/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Program.java;144940582/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramSchedule.java;1770485609/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeComparator.java;2065273961/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeQueue.java;1776494724/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityAnalysis.java;3816777890/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityParameters.java;1976749484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityRow.java;3195166460/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityTable.java;2918095589/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReportVisualization.java;2571131140/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Row.java;3413533457/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObjectQueue.java;3263525257/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Schedule.java;3152618411/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTable.java;970860350/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTime.java;2579980776/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SimulatorInput.java;3699590899/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SortedPeriodQueue.java;3537725478/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemFactory.java;3225025894/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Table.java;2577872269/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationObject.java;1954950797/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadListener.java;195958787/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpDSL.java;1986156920/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpPoset.java;4000167019/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpSystem.java;2193779250/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoad.java;1306107233/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadDescription.java;1720498685/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadTest.java;3314002610/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObject.java;2451757979/1;"/>
+        <details xmi:id="_4bdPQLhDEe2QK54y_oSyxw" key="AssociatedSourceCode" value="/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelAnalysis.java;2515762246/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelVisualization.java;3549530263/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Edge.java;2557287305/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyAnalysis.java;982524150/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyVisualization.java;3638017576/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramVisualization.java;1367527794/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityVisualization.java;2186280138/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemAttributes.java;876440066/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Visualization.java;2548788944/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationFactory.java;923113377/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationImplementation.java;3055860927/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Warp.java;1246636550/1;/cs2820-spring23/src/edu/uiowa/cs/warp/AbstractMap.java;2633489473/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activation.java;3634548837/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activations.java;3305092594/1;/cs2820-spring23/src/edu/uiowa/cs/warp/BasicPoset.java;3238489715/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Channels.java;3701064188/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CodeFragment.java;1941462046/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CombinedActivation.java;3978818808/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CommunicationGraph.java;724670632/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ConnectivityPoset.java;3754377617/1;/cs2820-spring23/src/edu/uiowa/cs/warp/DeadlineComparator.java;492899634/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Description.java;736293084/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FileManager.java;1791012323/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Flow.java;3359544952/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowMap.java;3735737588/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowNodeToActivationMap.java;4234899521/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphViz.java;1071888484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphVizListener.java;2126849807/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GuiVisualization.java;654882569/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InputGraphFile.java;937049578/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InstructionTimeSlot.java;3408505142/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatestReleaseTimeComparator.java;1106993157/1;/cs2820-spring23/src/edu/uiowa/cs/warp/MaxPhaseComparator.java;1745026972/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Node.java;229355987/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NodeMap.java;2177811796/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NonPreemptiveSchedule.java;387408079/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NotImplentedVisualization.java;3646556153/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PeriodComparator.java;3057078727/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Poset.java;4263200805/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PreemptiveSchedule.java;3080876127/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PriorityComparator.java;349151360/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Program.java;144940582/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramSchedule.java;1770485609/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeComparator.java;2065273961/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeQueue.java;1776494724/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityAnalysis.java;2414694965/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityParameters.java;1976749484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityRow.java;3195166460/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityTable.java;2918095589/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReportVisualization.java;2571131140/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Row.java;3413533457/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObjectQueue.java;3263525257/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Schedule.java;3152618411/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTable.java;970860350/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTime.java;2579980776/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SimulatorInput.java;3699590899/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SortedPeriodQueue.java;3537725478/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemFactory.java;3225025894/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Table.java;2577872269/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationObject.java;1954950797/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadListener.java;195958787/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpDSL.java;1986156920/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpPoset.java;4000167019/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpSystem.java;2193779250/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoad.java;1306107233/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadDescription.java;1720498685/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadTest.java;3314002610/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObject.java;2451757979/1;"/>
       </contents>
       <contents xmi:type="ecore:EAnnotation" xmi:id="_CEnDYLhbEe2q6biPu3WW0g" source="preferences">
         <contents xmi:type="ecore:EAnnotation" xmi:id="_CEnDYbhbEe2q6biPu3WW0g" source="com.yattasolutions.codegen.reverse">
@@ -7301,7 +7301,7 @@ priority schedule for the Poset using numChannels. &#xD;
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2qExMLhDEe2QK54y_oSyxw" name="ReliabilityAnalysis">
-              <ownedComment xmi:id="_7UKJgOq-Ee2bevirIBkqXw">
+              <ownedComment xmi:id="_yezHMOsSEe2Ox-dX8oSvjA">
                 <body>ReliabilityAnalysis analyzes the end-to-end reliability of messages
 transmitted in flows for the WARP system.
 &lt;p>
@@ -7388,6 +7388,7 @@ schedule time slot.
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23W_RrhDEe2QK54y_oSyxw" name="verifyReliabilities" specification="_2qExMbhDEe2QK54y_oSyxw">
                 <ownedParameter xmi:id="_7UF4FOq-Ee2bevirIBkqXw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
                 </ownedParameter>
                 <language>java</language>
@@ -7563,6 +7564,7 @@ schedule time slot.
                 </ownedParameter>
                 <ownedParameter xmi:id="_7UEp9uq-Ee2bevirIBkqXw" name="map" type="_5mq04NeiEe2IjMkQsyA0cQ"/>
                 <ownedParameter xmi:id="_7UEp9-q-Ee2bevirIBkqXw" isOrdered="true" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7UEp-Oq-Ee2bevirIBkqXw" value="*"/>
                 </ownedParameter>
@@ -7585,7 +7587,9 @@ schedule time slot.
                 </ownedParameter>
                 <ownedParameter xmi:id="_7UFRAuq-Ee2bevirIBkqXw" name="map" type="_5mq04NeiEe2IjMkQsyA0cQ"/>
                 <ownedParameter xmi:id="_7UFRA-q-Ee2bevirIBkqXw" name="reliabilities" type="_2qGmYLhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_7UFRBOq-Ee2bevirIBkqXw" type="_2qFYQrhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_7UFRBOq-Ee2bevirIBkqXw" type="_2qFYQrhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>// should be private
 		int numCols = reliabilities.getNumColumns();
@@ -7607,6 +7611,7 @@ schedule time slot.
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
                 <ownedParameter xmi:id="_7UFRB-q-Ee2bevirIBkqXw" isOrdered="true" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7UFRCOq-Ee2bevirIBkqXw" value="*"/>
                 </ownedParameter>
@@ -7624,7 +7629,9 @@ schedule time slot.
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7UFRCeq-Ee2bevirIBkqXw" name="getFlowNodeToColumnAssociation" specification="_7TRYsOq-Ee2bevirIBkqXw">
-                <ownedParameter xmi:id="_7UFRCuq-Ee2bevirIBkqXw" type="_5mq04NeiEe2IjMkQsyA0cQ" direction="return"/>
+                <ownedParameter xmi:id="_7UFRCuq-Ee2bevirIBkqXw" type="_5mq04NeiEe2IjMkQsyA0cQ" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>// this returns a hashmap that maps &lt;flowname>:&lt;nodeinflow> to its corresponding column in the reliability table
 		// should be private
@@ -7641,6 +7648,7 @@ schedule time slot.
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7UF4EOq-Ee2bevirIBkqXw" name="getNumRows" specification="_7TSm0Oq-Ee2bevirIBkqXw">
                 <ownedParameter xmi:id="_7UF4Eeq-Ee2bevirIBkqXw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
                 <language>java</language>
@@ -7650,6 +7658,7 @@ schedule time slot.
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7UF4Euq-Ee2bevirIBkqXw" name="getNumColumns" specification="_7TTN4Oq-Ee2bevirIBkqXw">
                 <ownedParameter xmi:id="_7UF4E-q-Ee2bevirIBkqXw" direction="return">
+                  <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
                 <language>java</language>
@@ -7662,7 +7671,9 @@ schedule time slot.
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7UGfIOq-Ee2bevirIBkqXw" name="getFinalReliabilityRow" specification="_7TT08Oq-Ee2bevirIBkqXw">
-                <ownedParameter xmi:id="_7UGfIeq-Ee2bevirIBkqXw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_7UGfIeq-Ee2bevirIBkqXw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>// should be private
 		ReliabilityTable reliabilities = getReliabilities();
@@ -7675,7 +7686,9 @@ schedule time slot.
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7UGfIuq-Ee2bevirIBkqXw" name="getColumnToFlowNodeAssociation" specification="_7TVqIeq-Ee2bevirIBkqXw">
-                <ownedParameter xmi:id="_7UGfI-q-Ee2bevirIBkqXw" type="_5mq04NeiEe2IjMkQsyA0cQ" direction="return"/>
+                <ownedParameter xmi:id="_7UGfI-q-Ee2bevirIBkqXw" type="_5mq04NeiEe2IjMkQsyA0cQ" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>// this returns a hashmap that maps a column in the reliability table to its corresponding &lt;flowname>:&lt;nodeinflow> 
 		// should be private
@@ -7692,7 +7705,9 @@ schedule time slot.
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7UHGMOq-Ee2bevirIBkqXw" name="getNumTxAttemptsPerLinkAndTotalTxAttempts" specification="_7TXfUOq-Ee2bevirIBkqXw">
                 <ownedParameter xmi:id="_7UHGMeq-Ee2bevirIBkqXw" name="flow" type="_2pTVILhDEe2QK54y_oSyxw"/>
-                <ownedParameter xmi:id="_7UHGMuq-Ee2bevirIBkqXw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
+                <ownedParameter xmi:id="_7UHGMuq-Ee2bevirIBkqXw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>// should be private
 		ArrayList&lt;Node> nodesInFlow = flow.nodes;
@@ -7824,7 +7839,7 @@ schedule time slot.
 	</body>
               </ownedBehavior>
               <ownedOperation xmi:id="_2qExMbhDEe2QK54y_oSyxw" name="verifyReliabilities" method="_23W_RrhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_7ULXoeq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye0VV-sSEe2Ox-dX8oSvjA">
                   <body>This method declares whether all flows meet their minimum E2E reliabilities by 
 	 * comparing each node's e2e reliability at the last time slot in the ReliabilityTable
 	 * to the program's minimum e2e, and prints messages identifying all flows/nodes
@@ -7840,7 +7855,7 @@ schedule time slot.
                 <eAnnotations xmi:id="_20uiCLhDEe2QK54y_oSyxw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_20uiCbhDEe2QK54y_oSyxw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_7UKJgeq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_yezuQOsSEe2Ox-dX8oSvjA">
                   <body>Class constructor specifying the program
 	 * 
 	 * @param program is the program schedule with flows to use</body>
@@ -7852,7 +7867,7 @@ schedule time slot.
                 <eAnnotations xmi:id="_DWqU083KEe2aPrCP15OoQw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_DWqU1M3KEe2aPrCP15OoQw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_7UKJguq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_yezuQesSEe2Ox-dX8oSvjA">
                   <body>Constructor initializing the class with specified values for end-to-end
 	 * reliability and minimum packet reception rate.
 	 * 
@@ -7864,7 +7879,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_DWqU0s3KEe2aPrCP15OoQw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_DWqU1c3KEe2aPrCP15OoQw" name="numTxPerLinkAndTotalTxCost" method="_DXxIF83KEe2aPrCP15OoQw">
-                <ownedComment xmi:id="_7ULXpuq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye08YusSEe2Ox-dX8oSvjA">
                   <body>This method calculates a flow's numTxPerLinkAndTotalTxCost based on whether
 	 * its fault tolerance is fixed.
 	 * 
@@ -7880,7 +7895,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_DWq74M3KEe2aPrCP15OoQw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_DWsKAM3KEe2aPrCP15OoQw" name="getFixedTxPerLinkAndTotalTxCost" visibility="public" method="_DXxIGs3KEe2aPrCP15OoQw">
-                <ownedComment xmi:id="_7UL-sOq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye1jcesSEe2Ox-dX8oSvjA">
                   <body>Returns the total transmissions per link and the total cost of the requested flow with 
 	 * the specified number of faults.
 	 * 
@@ -7895,7 +7910,7 @@ schedule time slot.
                 <eAnnotations xmi:id="_DXZ7s83KEe2aPrCP15OoQw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_DXaiwM3KEe2aPrCP15OoQw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_7UKJg-q-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_yezuQusSEe2Ox-dX8oSvjA">
                   <body>Constructor initializing the class with a specified number of faults for
 	 * fixed transmission analysis.
 	 * 
@@ -7907,7 +7922,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_DXZ7ss3KEe2aPrCP15OoQw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_OThoIdO2Ee2O0cjNcmYJpQ" name="getM" method="_OWT2ZNO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_7ULXpOq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye08YOsSEe2Ox-dX8oSvjA">
                   <body>This method gets the minimum packet reception rate on an edge in a flow
 	 * 
 	 * @return the double of minimum packet reception rate of the edge in a flow</body>
@@ -7915,7 +7930,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_OULIYdO2Ee2O0cjNcmYJpQ" type="_21600rhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_OThoItO2Ee2O0cjNcmYJpQ" name="getE2E" method="_OWT2ZtO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_7ULXpeq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye08YesSEe2Ox-dX8oSvjA">
                   <body>This methods gets the end-to-end reliability of each flow
 	 * 
 	 * @return the double of the end-to-end reliability value of each flow</body>
@@ -7923,16 +7938,15 @@ schedule time slot.
                 <ownedParameter xmi:id="_OULIYtO2Ee2O0cjNcmYJpQ" type="_21600rhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7TQKkOq-Ee2bevirIBkqXw" name="buildReliabilityTable" method="_7UEp8-q-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_7UKwkOq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye0VUOsSEe2Ox-dX8oSvjA">
                   <body>This method calculates the probability that a package has made it to a node
 	 * in the workload at every time slot and sets the reliabilities instance variable
 	 * to a tables of these probabilities with the columns corresponding to a flow 
-	 * with a node and the rows a time slot
-	 *</body>
+	 * with a node and the rows a time slot</body>
                 </ownedComment>
               </ownedOperation>
               <ownedOperation xmi:id="_7TRYsOq-Ee2bevirIBkqXw" name="getFlowNodeToColumnAssociation" method="_7UFRCeq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_7UKwlOq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye0VVOsSEe2Ox-dX8oSvjA">
                   <body>This method creates a Map that will pair each &lt;flowname>:&lt;nodename> association to a column
 	 * index for the ReliabilityTable such that the columns will match up with the column header created
 	 * in the ReliabilityVisualization class
@@ -7942,7 +7956,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_7TRYseq-Ee2bevirIBkqXw" type="_5mq04NeiEe2IjMkQsyA0cQ" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7TSm0Oq-Ee2bevirIBkqXw" name="getNumRows" method="_7UF4EOq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_7UKwleq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye0VVesSEe2Ox-dX8oSvjA">
                   <body>This method returns an integer representing the number of rows in the
 	 * getReliabilities table. It is found by calculating the number of time slots
 	 * in the program.
@@ -7954,7 +7968,7 @@ schedule time slot.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_7TTN4Oq-Ee2bevirIBkqXw" name="getNumColumns" method="_7UF4Euq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_7ULXoOq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye0VVusSEe2Ox-dX8oSvjA">
                   <body>This method returns an integer representing the number of columns in the
 	 * getReliabilities table. It is found by adding up all the nodes in each flow
 	 * 
@@ -7965,7 +7979,7 @@ schedule time slot.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_7TT08Oq-Ee2bevirIBkqXw" name="getFinalReliabilityRow" method="_7UGfIOq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_7ULXouq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye0VWOsSEe2Ox-dX8oSvjA">
                   <body>This method returns the final row of the ReliabilityTable representing the probabilities
 	 * that a package has arrived at each node at the final time slot
 	 * 
@@ -7974,7 +7988,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_7TT08eq-Ee2bevirIBkqXw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7TVqIeq-Ee2bevirIBkqXw" name="getColumnToFlowNodeAssociation" method="_7UGfIuq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_7ULXo-q-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye0VWesSEe2Ox-dX8oSvjA">
                   <body>This method creates a Map that will pair each column index to a &lt;flowname>:&lt;nodename> association
 	 * for the ReliabilityTable such that the columns will match up with the column header created
 	 * in the ReliabilityVisualization class
@@ -7987,7 +8001,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_7TWRMOq-Ee2bevirIBkqXw" type="_5mq04NeiEe2IjMkQsyA0cQ" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7TXfUOq-Ee2bevirIBkqXw" name="getNumTxAttemptsPerLinkAndTotalTxAttempts" method="_7UHGMOq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_7ULXp-q-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye1jcOsSEe2Ox-dX8oSvjA">
                   <body>Returns the number of transmission attempts per link and the total transmission attempts 
 	 * of a flow with the specified end-to-reliability and minimum packet reception rate.
 	 * 
@@ -7999,13 +8013,16 @@ schedule time slot.
                 <ownedParameter xmi:id="_7TXfUuq-Ee2bevirIBkqXw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7Tv50Oq-Ee2bevirIBkqXw" name="main" isStatic="true" method="_7UEp8Oq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_yezuQ-sSEe2Ox-dX8oSvjA">
+                  <body>This is the main method used to test our implementation with Example1a.txt as the input file</body>
+                </ownedComment>
                 <ownedParameter xmi:id="_7Twg4Oq-Ee2bevirIBkqXw" name="args">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7Twg4eq-Ee2bevirIBkqXw" value="*"/>
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_7TxH8Oq-Ee2bevirIBkqXw" name="getColumnIndicesOfFlow" method="_7UEp9Oq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_7UKwkeq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye0VUesSEe2Ox-dX8oSvjA">
                   <body>This method takes in a flow and returns a list of integers that represent indices
 	 * for columns in the reliability table where each index corresponds to a node in the flow
 	 * the list is ordered such that the first element is the index for src node and last
@@ -8015,17 +8032,17 @@ schedule time slot.
 	 * @param map a map from &lt;flowname>:&lt;nodename> to the index of that column in the reliability table
 	 * @return the indices of all columns that have a node in the flow, the first entry will be the src</body>
                 </ownedComment>
-                <ownedParameter xmi:id="_7TxH8eq-Ee2bevirIBkqXw" name="flow">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-                </ownedParameter>
-                <ownedParameter xmi:id="_7TxH8uq-Ee2bevirIBkqXw" name="map" type="_5mq04NeiEe2IjMkQsyA0cQ"/>
                 <ownedParameter xmi:id="_7TxH8-q-Ee2bevirIBkqXw" isOrdered="true" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7TxH9Oq-Ee2bevirIBkqXw" value="*"/>
                 </ownedParameter>
+                <ownedParameter xmi:id="_7TxH8eq-Ee2bevirIBkqXw" name="flow">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_7TxH8uq-Ee2bevirIBkqXw" name="map" type="_5mq04NeiEe2IjMkQsyA0cQ"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7TyWEeq-Ee2bevirIBkqXw" name="getOldRow" method="_7UFRAOq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_7UKwkuq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye0VUusSEe2Ox-dX8oSvjA">
                   <body>Normally this method just returns the previous row in the reliabilities table to calculate the
 	 * next set of probabilities. However, because sometimes a flow will resend its package the next
 	 * set of calculations will have to be done with all the probabilities reset to 1 for the src node
@@ -8045,7 +8062,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_7T0LQeq-Ee2bevirIBkqXw" type="_2qFYQrhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7T2AcOq-Ee2bevirIBkqXw" name="getFlowNamesToResend" method="_7UFRBeq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_7UKwk-q-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_ye0VU-sSEe2Ox-dX8oSvjA">
                   <body>Since each flow has a period, sometimes a flow is able to send multiple messages
 	 * during one program cycle since other flows have much longer periods. This method
 	 * takes in the time slot of the program and calculates what flows should resend their
@@ -8054,13 +8071,19 @@ schedule time slot.
 	 * @param row the index of row in the Reliabilities table
 	 * @return List&lt;String> of flow names that are going to be resent</body>
                 </ownedComment>
-                <ownedParameter xmi:id="_7T2Aceq-Ee2bevirIBkqXw" name="row">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-                </ownedParameter>
                 <ownedParameter xmi:id="_7T2Acuq-Ee2bevirIBkqXw" isOrdered="true" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7T2ngOq-Ee2bevirIBkqXw" value="*"/>
                 </ownedParameter>
+                <ownedParameter xmi:id="_7T2Aceq-Ee2bevirIBkqXw" name="row">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_n0FbgOsTEe2Ox-dX8oSvjA" name="getReliabilities">
+                <ownedParameter xmi:id="_n0FbgesTEe2Ox-dX8oSvjA" type="_2qGmYLhDEe2QK54y_oSyxw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_QJs0YOsUEe2Ox-dX8oSvjA" name="getProgram">
+                <ownedParameter xmi:id="_QJs0YesUEe2Ox-dX8oSvjA" type="_2pzEYbhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_2qExM7hDEe2QK54y_oSyxw" name="ReliabilityParameters" visibility="package">
@@ -16648,7 +16671,7 @@ of the file is an entry (string) in the Description object.&#xD;
   <UMLLabProfile:Reference xmi:id="_OWgqsNO2Ee2O0cjNcmYJpQ" base_Element="_OWgDoNO2Ee2O0cjNcmYJpQ"/>
   <UMLLabProfile:Reference xmi:id="_OWhRwNO2Ee2O0cjNcmYJpQ" base_Element="_OWgqsdO2Ee2O0cjNcmYJpQ"/>
   <UMLLabProfile:Patch xmi:id="_5OWbgNeiEe2IjMkQsyA0cQ" base_Element="_2pMAZLhDEe2QK54y_oSyxw" patchText="@@ -359,12 +359,8 @@&#xA; tate&#xA;-()()&#xA;  %7B%0D%0A&#xA;" conflicting="false"/>
-  <UMLLabProfile:Patch xmi:id="_5OY3wNeiEe2IjMkQsyA0cQ" base_Element="_2pka4LhDEe2QK54y_oSyxw" patchText="@@ -181,22 +181,25 @@&#xA; ysis %7B%0A%0A&#xA;-public&#xA;+  private&#xA;  static &#xA;@@ -245,21 +245,22 @@&#xA; SS%22;%0A  p&#xA;-ublic&#xA;+rivate&#xA;  static &#xA;" conflicting="false"/>
+  <UMLLabProfile:Patch xmi:id="_5OY3wNeiEe2IjMkQsyA0cQ" base_Element="_2pka4LhDEe2QK54y_oSyxw" patchText="@@ -181,22 +181,25 @@&#xA; ysis %7B%0A%0A&#xA;-public&#xA;+  private&#xA;  static &#xA;@@ -245,21 +245,22 @@&#xA; SS%22;%0A  p&#xA;-ublic&#xA;+rivate&#xA;  static &#xA;" conflicting="true"/>
   <UMLLabProfile:Patch xmi:id="_5Oas8NeiEe2IjMkQsyA0cQ" base_Element="_2qY6QLhDEe2QK54y_oSyxw" patchText="@@ -117,12 +117,8 @@&#xA; ices&#xA;-()()&#xA;  %7B%0D%0A&#xA;" conflicting="false"/>
   <UMLLabProfile:Patch xmi:id="_5Ob7ENeiEe2IjMkQsyA0cQ" base_Element="_2qckobhDEe2QK54y_oSyxw" patchText="@@ -145,28 +145,24 @@&#xA; ystemChoices&#xA;-()()&#xA;  %7B%0D%0A    SOUR&#xA;@@ -288,12 +288,8 @@&#xA; ices&#xA;-()()&#xA;  %7B%0D%0A&#xA;" conflicting="false"/>
   <UMLLabProfile:Patch xmi:id="_5OdJMNeiEe2IjMkQsyA0cQ" base_Element="_2qqAALhDEe2QK54y_oSyxw" patchText="@@ -126,16 +126,20 @@&#xA; ved.%0A */&#xA;+%0A%0Aim&#xA; port jav&#xA;" conflicting="true"/>
@@ -16672,7 +16695,9 @@ of the file is an entry (string) in the Description object.&#xD;
     </associatedElement>
   </UMLLabProfile:LegacyStyledElement>
   <uml:OpaqueBehavior xmi:id="_7UEC4Oq-Ee2bevirIBkqXw" name="getReliabilities" specification="_7UBmoOq-Ee2bevirIBkqXw">
-    <ownedParameter xmi:id="_7UEC4eq-Ee2bevirIBkqXw" type="_2qGmYLhDEe2QK54y_oSyxw" direction="return"/>
+    <ownedParameter xmi:id="_7UEC4eq-Ee2bevirIBkqXw" type="_2qGmYLhDEe2QK54y_oSyxw" direction="return">
+      <name xsi:nil="true"/>
+    </ownedParameter>
     <language>java</language>
     <body>if (reliabilities != null) {
 			return reliabilities;
