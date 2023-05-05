@@ -143,7 +143,9 @@ public class ReliabilityAnalysis {
 		this.useFixedTx = true;
 	}
 
-	
+	/**
+	 * This is the main method used to test our implementation with Example1a.txt as the input file
+	 */
 	// for testing the implementation
 	public static void main(String[] args) {
 		double m = 0.75;
@@ -185,7 +187,6 @@ public class ReliabilityAnalysis {
 	 * in the workload at every time slot and sets the reliabilities instance variable
 	 * to a tables of these probabilities with the columns corresponding to a flow 
 	 * with a node and the rows a time slot
-	 * 
 	 */
 	public void buildReliabilityTable() {
 		int numRows = getNumRows();
