@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_2DVhULhDEe2QK54y_oSyxw" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_2DWIYLhDEe2QK54y_oSyxw" source="codegen">
         <details xmi:id="_2DWIYbhDEe2QK54y_oSyxw" key="codegenDirectory" value="/cs2820-spring23/src"/>
-        <details xmi:id="_4bdPQLhDEe2QK54y_oSyxw" key="AssociatedSourceCode" value="/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelAnalysis.java;2515762246/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelVisualization.java;3549530263/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Edge.java;2557287305/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyAnalysis.java;982524150/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyVisualization.java;3638017576/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramVisualization.java;1367527794/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityVisualization.java;2186280138/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemAttributes.java;876440066/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Visualization.java;2548788944/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationFactory.java;923113377/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationImplementation.java;3055860927/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Warp.java;1246636550/1;/cs2820-spring23/src/edu/uiowa/cs/warp/AbstractMap.java;2633489473/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activation.java;3634548837/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activations.java;3305092594/1;/cs2820-spring23/src/edu/uiowa/cs/warp/BasicPoset.java;3238489715/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Channels.java;3701064188/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CodeFragment.java;1941462046/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CombinedActivation.java;3978818808/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CommunicationGraph.java;724670632/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ConnectivityPoset.java;3754377617/1;/cs2820-spring23/src/edu/uiowa/cs/warp/DeadlineComparator.java;492899634/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Description.java;736293084/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FileManager.java;1791012323/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Flow.java;3359544952/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowMap.java;3735737588/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowNodeToActivationMap.java;4234899521/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphViz.java;1071888484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphVizListener.java;2126849807/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GuiVisualization.java;654882569/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InputGraphFile.java;937049578/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InstructionTimeSlot.java;3408505142/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatestReleaseTimeComparator.java;1106993157/1;/cs2820-spring23/src/edu/uiowa/cs/warp/MaxPhaseComparator.java;1745026972/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Node.java;229355987/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NodeMap.java;2177811796/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NonPreemptiveSchedule.java;387408079/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NotImplentedVisualization.java;3646556153/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PeriodComparator.java;3057078727/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Poset.java;4263200805/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PreemptiveSchedule.java;3080876127/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PriorityComparator.java;349151360/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Program.java;144940582/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramSchedule.java;1770485609/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeComparator.java;2065273961/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeQueue.java;1776494724/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityAnalysis.java;2414694965/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityParameters.java;1976749484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityRow.java;3195166460/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityTable.java;2918095589/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReportVisualization.java;2571131140/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Row.java;3413533457/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObjectQueue.java;3263525257/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Schedule.java;3152618411/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTable.java;970860350/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTime.java;2579980776/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SimulatorInput.java;3699590899/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SortedPeriodQueue.java;3537725478/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemFactory.java;3225025894/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Table.java;2577872269/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationObject.java;1954950797/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadListener.java;195958787/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpDSL.java;1986156920/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpPoset.java;4000167019/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpSystem.java;2193779250/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoad.java;1306107233/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadDescription.java;1720498685/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadTest.java;3314002610/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObject.java;2451757979/1;"/>
+        <details xmi:id="_4bdPQLhDEe2QK54y_oSyxw" key="AssociatedSourceCode" value="/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelAnalysis.java;2515762246/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ChannelVisualization.java;3549530263/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Edge.java;2557287305/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyAnalysis.java;982524150/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatencyVisualization.java;3638017576/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramVisualization.java;1367527794/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityVisualization.java;2378265982/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemAttributes.java;876440066/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Visualization.java;2548788944/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationFactory.java;923113377/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationImplementation.java;3055860927/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Warp.java;903122781/1;/cs2820-spring23/src/edu/uiowa/cs/warp/AbstractMap.java;2633489473/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activation.java;3634548837/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Activations.java;3305092594/1;/cs2820-spring23/src/edu/uiowa/cs/warp/BasicPoset.java;3238489715/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Channels.java;3701064188/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CodeFragment.java;1941462046/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CombinedActivation.java;3978818808/1;/cs2820-spring23/src/edu/uiowa/cs/warp/CommunicationGraph.java;724670632/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ConnectivityPoset.java;3754377617/1;/cs2820-spring23/src/edu/uiowa/cs/warp/DeadlineComparator.java;492899634/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Description.java;736293084/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FileManager.java;1791012323/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Flow.java;3359544952/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowMap.java;3735737588/1;/cs2820-spring23/src/edu/uiowa/cs/warp/FlowNodeToActivationMap.java;4234899521/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphViz.java;1071888484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GraphVizListener.java;2126849807/1;/cs2820-spring23/src/edu/uiowa/cs/warp/GuiVisualization.java;654882569/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InputGraphFile.java;937049578/1;/cs2820-spring23/src/edu/uiowa/cs/warp/InstructionTimeSlot.java;3408505142/1;/cs2820-spring23/src/edu/uiowa/cs/warp/LatestReleaseTimeComparator.java;1106993157/1;/cs2820-spring23/src/edu/uiowa/cs/warp/MaxPhaseComparator.java;1745026972/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Node.java;229355987/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NodeMap.java;2177811796/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NonPreemptiveSchedule.java;387408079/1;/cs2820-spring23/src/edu/uiowa/cs/warp/NotImplentedVisualization.java;3646556153/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PeriodComparator.java;3057078727/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Poset.java;4263200805/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PreemptiveSchedule.java;3080876127/1;/cs2820-spring23/src/edu/uiowa/cs/warp/PriorityComparator.java;349151360/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Program.java;144940582/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ProgramSchedule.java;1770485609/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeComparator.java;2065273961/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReleaseTimeQueue.java;1776494724/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityAnalysis.java;2604916647/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityParameters.java;1976749484/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityRow.java;3195166460/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReliabilityTable.java;2918095589/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ReportVisualization.java;2571131140/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Row.java;3413533457/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObjectQueue.java;3263525257/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Schedule.java;3152618411/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTable.java;970860350/1;/cs2820-spring23/src/edu/uiowa/cs/warp/ScheduleTime.java;2579980776/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SimulatorInput.java;3699590899/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SortedPeriodQueue.java;3537725478/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SystemFactory.java;3225025894/1;/cs2820-spring23/src/edu/uiowa/cs/warp/Table.java;2577872269/1;/cs2820-spring23/src/edu/uiowa/cs/warp/VisualizationObject.java;1954950797/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadListener.java;195958787/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpDSL.java;1986156920/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpPoset.java;4000167019/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WarpSystem.java;2193779250/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoad.java;1306107233/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadDescription.java;1720498685/1;/cs2820-spring23/src/edu/uiowa/cs/warp/WorkLoadTest.java;3314002610/1;/cs2820-spring23/src/edu/uiowa/cs/warp/SchedulableObject.java;2451757979/1;"/>
       </contents>
       <contents xmi:type="ecore:EAnnotation" xmi:id="_CEnDYLhbEe2q6biPu3WW0g" source="preferences">
         <contents xmi:type="ecore:EAnnotation" xmi:id="_CEnDYbhbEe2q6biPu3WW0g" source="com.yattasolutions.codegen.reverse">
@@ -7301,7 +7301,7 @@ priority schedule for the Poset using numChannels. &#xD;
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2qExMLhDEe2QK54y_oSyxw" name="ReliabilityAnalysis">
-              <ownedComment xmi:id="_yezHMOsSEe2Ox-dX8oSvjA">
+              <ownedComment xmi:id="_mR7-wOuAEe2jhcuODib7gA">
                 <body>ReliabilityAnalysis analyzes the end-to-end reliability of messages
 transmitted in flows for the WARP system.
 &lt;p>
@@ -7559,15 +7559,15 @@ schedule time slot.
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7UEp9Oq-Ee2bevirIBkqXw" name="getColumnIndicesOfFlow" specification="_7TxH8Oq-Ee2bevirIBkqXw">
-                <ownedParameter xmi:id="_7UEp9eq-Ee2bevirIBkqXw" name="flow">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-                </ownedParameter>
-                <ownedParameter xmi:id="_7UEp9uq-Ee2bevirIBkqXw" name="map" type="_5mq04NeiEe2IjMkQsyA0cQ"/>
-                <ownedParameter xmi:id="_7UEp9-q-Ee2bevirIBkqXw" isOrdered="true" direction="return">
+                <ownedParameter xmi:id="_oKkJwOt_Ee2jhcuODib7gA" isOrdered="true" direction="return">
                   <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7UEp-Oq-Ee2bevirIBkqXw" value="*"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oKkJwet_Ee2jhcuODib7gA" value="*"/>
                 </ownedParameter>
+                <ownedParameter xmi:id="_oKkJwut_Ee2jhcuODib7gA" name="flow">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_oKkJw-t_Ee2jhcuODib7gA" name="map" type="_5mq04NeiEe2IjMkQsyA0cQ"/>
                 <language>java</language>
                 <body>// should be private
 		// first position is the src and last is the snk
@@ -7607,13 +7607,13 @@ schedule time slot.
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_7UFRBeq-Ee2bevirIBkqXw" name="getFlowNamesToResend" specification="_7T2AcOq-Ee2bevirIBkqXw">
-                <ownedParameter xmi:id="_7UFRBuq-Ee2bevirIBkqXw" name="row">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-                </ownedParameter>
-                <ownedParameter xmi:id="_7UFRB-q-Ee2bevirIBkqXw" isOrdered="true" direction="return">
+                <ownedParameter xmi:id="_oKkw0Ot_Ee2jhcuODib7gA" isOrdered="true" direction="return">
                   <name xsi:nil="true"/>
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7UFRCOq-Ee2bevirIBkqXw" value="*"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oKkw0et_Ee2jhcuODib7gA" value="*"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_oKkw0ut_Ee2jhcuODib7gA" name="row">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
                 <language>java</language>
                 <body>// should be private
@@ -7839,7 +7839,7 @@ schedule time slot.
 	</body>
               </ownedBehavior>
               <ownedOperation xmi:id="_2qExMbhDEe2QK54y_oSyxw" name="verifyReliabilities" method="_23W_RrhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_ye0VV-sSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9z9uuAEe2jhcuODib7gA">
                   <body>This method declares whether all flows meet their minimum E2E reliabilities by 
 	 * comparing each node's e2e reliability at the last time slot in the ReliabilityTable
 	 * to the program's minimum e2e, and prints messages identifying all flows/nodes
@@ -7855,7 +7855,7 @@ schedule time slot.
                 <eAnnotations xmi:id="_20uiCLhDEe2QK54y_oSyxw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_20uiCbhDEe2QK54y_oSyxw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_yezuQOsSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9M4OuAEe2jhcuODib7gA">
                   <body>Class constructor specifying the program
 	 * 
 	 * @param program is the program schedule with flows to use</body>
@@ -7867,7 +7867,7 @@ schedule time slot.
                 <eAnnotations xmi:id="_DWqU083KEe2aPrCP15OoQw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_DWqU1M3KEe2aPrCP15OoQw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_yezuQesSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9M4euAEe2jhcuODib7gA">
                   <body>Constructor initializing the class with specified values for end-to-end
 	 * reliability and minimum packet reception rate.
 	 * 
@@ -7879,7 +7879,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_DWqU0s3KEe2aPrCP15OoQw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_DWqU1c3KEe2aPrCP15OoQw" name="numTxPerLinkAndTotalTxCost" method="_DXxIF83KEe2aPrCP15OoQw">
-                <ownedComment xmi:id="_ye08YusSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9z--uAEe2jhcuODib7gA">
                   <body>This method calculates a flow's numTxPerLinkAndTotalTxCost based on whether
 	 * its fault tolerance is fixed.
 	 * 
@@ -7895,7 +7895,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_DWq74M3KEe2aPrCP15OoQw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_DWsKAM3KEe2aPrCP15OoQw" name="getFixedTxPerLinkAndTotalTxCost" visibility="public" method="_DXxIGs3KEe2aPrCP15OoQw">
-                <ownedComment xmi:id="_ye1jcesSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR-bAeuAEe2jhcuODib7gA">
                   <body>Returns the total transmissions per link and the total cost of the requested flow with 
 	 * the specified number of faults.
 	 * 
@@ -7910,7 +7910,7 @@ schedule time slot.
                 <eAnnotations xmi:id="_DXZ7s83KEe2aPrCP15OoQw" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_DXaiwM3KEe2aPrCP15OoQw" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_yezuQusSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9M4uuAEe2jhcuODib7gA">
                   <body>Constructor initializing the class with a specified number of faults for
 	 * fixed transmission analysis.
 	 * 
@@ -7922,7 +7922,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_DXZ7ss3KEe2aPrCP15OoQw" type="_2qExMLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_OThoIdO2Ee2O0cjNcmYJpQ" name="getM" method="_OWT2ZNO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_ye08YOsSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9z-euAEe2jhcuODib7gA">
                   <body>This method gets the minimum packet reception rate on an edge in a flow
 	 * 
 	 * @return the double of minimum packet reception rate of the edge in a flow</body>
@@ -7930,7 +7930,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_OULIYdO2Ee2O0cjNcmYJpQ" type="_21600rhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_OThoItO2Ee2O0cjNcmYJpQ" name="getE2E" method="_OWT2ZtO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_ye08YesSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9z-uuAEe2jhcuODib7gA">
                   <body>This methods gets the end-to-end reliability of each flow
 	 * 
 	 * @return the double of the end-to-end reliability value of each flow</body>
@@ -7938,7 +7938,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_OULIYtO2Ee2O0cjNcmYJpQ" type="_21600rhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7TQKkOq-Ee2bevirIBkqXw" name="buildReliabilityTable" method="_7UEp8-q-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_ye0VUOsSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9M5OuAEe2jhcuODib7gA">
                   <body>This method calculates the probability that a package has made it to a node
 	 * in the workload at every time slot and sets the reliabilities instance variable
 	 * to a tables of these probabilities with the columns corresponding to a flow 
@@ -7946,17 +7946,17 @@ schedule time slot.
                 </ownedComment>
               </ownedOperation>
               <ownedOperation xmi:id="_7TRYsOq-Ee2bevirIBkqXw" name="getFlowNodeToColumnAssociation" method="_7UFRCeq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_ye0VVOsSEe2Ox-dX8oSvjA">
-                  <body>This method creates a Map that will pair each &lt;flowname>:&lt;nodename> association to a column
+                <ownedComment xmi:id="_mR9z8-uAEe2jhcuODib7gA">
+                  <body>This method creates a Map that will pair each {@code &lt;flowname>:&lt;nodename>} association to a column
 	 * index for the ReliabilityTable such that the columns will match up with the column header created
 	 * in the ReliabilityVisualization class
 	 * 
-	 * @return Map&lt;String, Integer> representing the association from &lt;flowname>:&lt;nodename> to column index</body>
+	 * @return {@codeMap &lt;String, Integer>} representing the association from {@code &lt;flowname>:&lt;nodename>} to column index</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_7TRYseq-Ee2bevirIBkqXw" type="_5mq04NeiEe2IjMkQsyA0cQ" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7TSm0Oq-Ee2bevirIBkqXw" name="getNumRows" method="_7UF4EOq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_ye0VVesSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9z9OuAEe2jhcuODib7gA">
                   <body>This method returns an integer representing the number of rows in the
 	 * getReliabilities table. It is found by calculating the number of time slots
 	 * in the program.
@@ -7968,7 +7968,7 @@ schedule time slot.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_7TTN4Oq-Ee2bevirIBkqXw" name="getNumColumns" method="_7UF4Euq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_ye0VVusSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9z9euAEe2jhcuODib7gA">
                   <body>This method returns an integer representing the number of columns in the
 	 * getReliabilities table. It is found by adding up all the nodes in each flow
 	 * 
@@ -7979,29 +7979,29 @@ schedule time slot.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_7TT08Oq-Ee2bevirIBkqXw" name="getFinalReliabilityRow" method="_7UGfIOq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_ye0VWOsSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9z9-uAEe2jhcuODib7gA">
                   <body>This method returns the final row of the ReliabilityTable representing the probabilities
 	 * that a package has arrived at each node at the final time slot
 	 * 
-	 * @return ArrayList&lt;Double> containing all entries from the last row of the ReliabilityTable</body>
+	 * @return {@code ArrayList&lt;Double>} containing all entries from the last row of the ReliabilityTable</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_7TT08eq-Ee2bevirIBkqXw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7TVqIeq-Ee2bevirIBkqXw" name="getColumnToFlowNodeAssociation" method="_7UGfIuq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_ye0VWesSEe2Ox-dX8oSvjA">
-                  <body>This method creates a Map that will pair each column index to a &lt;flowname>:&lt;nodename> association
+                <ownedComment xmi:id="_mR9z-OuAEe2jhcuODib7gA">
+                  <body>This method creates a Map that will pair each column index to a {@code &lt;flowname>:&lt;nodename>} association
 	 * for the ReliabilityTable such that the columns will match up with the column header created
 	 * in the ReliabilityVisualization class
 	 * 
 	 * Modified from getFlowNodeToColumnAssociation() to create a hashmap with the column indices
-	 * as keys and &lt;flowname>:&lt;nodename> strings as values for easier access in verifyReliabilities()
+	 * as keys and {@code &lt;flowname>:&lt;nodename>} strings as values for easier access in verifyReliabilities()
 	 * 
-	 * @return Map&lt;Integer, String> representing the association from column index to &lt;flowname>:&lt;nodename></body>
+	 * @return {@code Map&lt;Integer, String>} representing the association from column index to {@code &lt;flowname>:&lt;nodename>}</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_7TWRMOq-Ee2bevirIBkqXw" type="_5mq04NeiEe2IjMkQsyA0cQ" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7TXfUOq-Ee2bevirIBkqXw" name="getNumTxAttemptsPerLinkAndTotalTxAttempts" method="_7UHGMOq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_ye1jcOsSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR-bAOuAEe2jhcuODib7gA">
                   <body>Returns the number of transmission attempts per link and the total transmission attempts 
 	 * of a flow with the specified end-to-reliability and minimum packet reception rate.
 	 * 
@@ -8013,7 +8013,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_7TXfUuq-Ee2bevirIBkqXw" type="_2z5bkLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7Tv50Oq-Ee2bevirIBkqXw" name="main" isStatic="true" method="_7UEp8Oq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_yezuQ-sSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9M4-uAEe2jhcuODib7gA">
                   <body>This is the main method used to test our implementation with Example1a.txt as the input file</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_7Twg4Oq-Ee2bevirIBkqXw" name="args">
@@ -8022,14 +8022,14 @@ schedule time slot.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_7TxH8Oq-Ee2bevirIBkqXw" name="getColumnIndicesOfFlow" method="_7UEp9Oq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_ye0VUesSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9z8OuAEe2jhcuODib7gA">
                   <body>This method takes in a flow and returns a list of integers that represent indices
 	 * for columns in the reliability table where each index corresponds to a node in the flow
 	 * the list is ordered such that the first element is the index for src node and last
 	 * element is the index for the snk node
 	 * 
 	 * @param flow name of the flow to get the ColumnIndicies of
-	 * @param map a map from &lt;flowname>:&lt;nodename> to the index of that column in the reliability table
+	 * @param map a map from {@code &lt;flowname>:&lt;nodename>} to the index of that column in the reliability table
 	 * @return the indices of all columns that have a node in the flow, the first entry will be the src</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_7TxH8-q-Ee2bevirIBkqXw" isOrdered="true" direction="return">
@@ -8042,7 +8042,7 @@ schedule time slot.
                 <ownedParameter xmi:id="_7TxH8uq-Ee2bevirIBkqXw" name="map" type="_5mq04NeiEe2IjMkQsyA0cQ"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7TyWEeq-Ee2bevirIBkqXw" name="getOldRow" method="_7UFRAOq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_ye0VUusSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9z8euAEe2jhcuODib7gA">
                   <body>Normally this method just returns the previous row in the reliabilities table to calculate the
 	 * next set of probabilities. However, because sometimes a flow will resend its package the next
 	 * set of calculations will have to be done with all the probabilities reset to 1 for the src node
@@ -8050,7 +8050,7 @@ schedule time slot.
 	 * and returns a row containing 1 for all src nodes and 0 everywhere else.
 	 * 
 	 * @param row row in the Schedule
-	 * @param map association from &lt;flowname>:&lt;nodename> to the index of that column
+	 * @param map association from {@code &lt;flowname>:&lt;nodename>} to the index of that column
 	 * @param reliabilities ReliabilityTable that is being created
 	 * @return ReliabilityRow to use for the next probability calculations</body>
                 </ownedComment>
@@ -8062,14 +8062,14 @@ schedule time slot.
                 <ownedParameter xmi:id="_7T0LQeq-Ee2bevirIBkqXw" type="_2qFYQrhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_7T2AcOq-Ee2bevirIBkqXw" name="getFlowNamesToResend" method="_7UFRBeq-Ee2bevirIBkqXw">
-                <ownedComment xmi:id="_ye0VU-sSEe2Ox-dX8oSvjA">
+                <ownedComment xmi:id="_mR9z8uuAEe2jhcuODib7gA">
                   <body>Since each flow has a period, sometimes a flow is able to send multiple messages
 	 * during one program cycle since other flows have much longer periods. This method
 	 * takes in the time slot of the program and calculates what flows should resend their
 	 * message.
 	 * 
 	 * @param row the index of row in the Reliabilities table
-	 * @return List&lt;String> of flow names that are going to be resent</body>
+	 * @return {@code List&lt;String>} of flow names that are going to be resent</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_7T2Acuq-Ee2bevirIBkqXw" isOrdered="true" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -8079,11 +8079,11 @@ schedule time slot.
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
               </ownedOperation>
-              <ownedOperation xmi:id="_n0FbgOsTEe2Ox-dX8oSvjA" name="getReliabilities">
-                <ownedParameter xmi:id="_n0FbgesTEe2Ox-dX8oSvjA" type="_2qGmYLhDEe2QK54y_oSyxw" direction="return"/>
+              <ownedOperation xmi:id="_q6p2UOuAEe2jhcuODib7gA" name="getProgram">
+                <ownedParameter xmi:id="_q6p2UeuAEe2jhcuODib7gA" type="_2pzEYbhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
-              <ownedOperation xmi:id="_QJs0YOsUEe2Ox-dX8oSvjA" name="getProgram">
-                <ownedParameter xmi:id="_QJs0YesUEe2Ox-dX8oSvjA" type="_2pzEYbhDEe2QK54y_oSyxw" direction="return"/>
+              <ownedOperation xmi:id="_azhlQOuBEe2jhcuODib7gA" name="getReliabilities">
+                <ownedParameter xmi:id="_azhlQeuBEe2jhcuODib7gA" type="_2qGmYLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_2qExM7hDEe2QK54y_oSyxw" name="ReliabilityParameters" visibility="package">
@@ -8212,7 +8212,7 @@ schedule time slot.
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2qHNcLhDEe2QK54y_oSyxw" name="ReliabilityVisualization">
-              <ownedComment xmi:id="_7UL-seq-Ee2bevirIBkqXw">
+              <ownedComment xmi:id="_oKtTsOt_Ee2jhcuODib7gA">
                 <body>ReliabilityVisualization creates the visualizations for
 the reliability analysis of the WARP program.
 
@@ -8406,7 +8406,7 @@ the file visualization that is requested in Warp.
 	</body>
               </ownedBehavior>
               <ownedOperation xmi:id="_OTlSgdO2Ee2O0cjNcmYJpQ" name="getScheduler" method="_OWUdd9O2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_7UL-u-q-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKt6xOt_Ee2jhcuODib7gA">
                   <body>This method creates a string indicating the program's scheduler name
 	 * @return scheduler name string</body>
                 </ownedComment>
@@ -8415,7 +8415,7 @@ the file visualization that is requested in Warp.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_OTlSgtO2Ee2O0cjNcmYJpQ" name="getM" method="_OWVEgNO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_7UL-vOq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKt6xet_Ee2jhcuODib7gA">
                   <body>This method creates a string indicating the program's minimum packet reception rate (M)
 	 * @return M string</body>
                 </ownedComment>
@@ -8424,7 +8424,7 @@ the file visualization that is requested in Warp.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_OTlSg9O2Ee2O0cjNcmYJpQ" name="getE2E" method="_OWVEgtO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_7UL-veq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKt6xut_Ee2jhcuODib7gA">
                   <body>This method creates a string indicating the program's end-to-end reliability (E2E)
 	 * @return E2E string</body>
                 </ownedComment>
@@ -8433,7 +8433,7 @@ the file visualization that is requested in Warp.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_OTlShNO2Ee2O0cjNcmYJpQ" name="getnChannels" method="_OWVEhNO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_7UL-vuq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKuh0Ot_Ee2jhcuODib7gA">
                   <body>This method creates a string indicating the program's number of channels (nChannels)
 	 * @return nChannels string</body>
                 </ownedComment>
@@ -8442,7 +8442,7 @@ the file visualization that is requested in Warp.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_OTl5lNO2Ee2O0cjNcmYJpQ" name="getReliabilities" method="_OWVEi9O2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_7UL-uOq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKt6wet_Ee2jhcuODib7gA">
                   <body>This method uses the ReliabiltyAnalysis object to calculate the
 	 * reliabilities of the workload then obtains the data in a ReliabilityTable
 	 * object which it returns
@@ -8454,7 +8454,7 @@ the file visualization that is requested in Warp.
                 <eAnnotations xmi:id="_OWJeUdO2Ee2O0cjNcmYJpQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_OWJeUtO2Ee2O0cjNcmYJpQ" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_7UL-suq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKtTset_Ee2jhcuODib7gA">
                   <body>This constructor calls the VisualizationObject constructor and creates a ReliabilityAnalysis object 
 	 * @param warp the WarpInterface to use</body>
                 </ownedComment>
@@ -8462,12 +8462,12 @@ the file visualization that is requested in Warp.
                 <ownedParameter xmi:id="_OWJeUNO2Ee2O0cjNcmYJpQ" type="_2qHNcLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_5mPXEdeiEe2IjMkQsyA0cQ" name="getFlowsAndNodes" method="_5mw7gNeiEe2IjMkQsyA0cQ">
-                <ownedComment xmi:id="_7UL-tuq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKtTtet_Ee2jhcuODib7gA">
                   <body>This method takes in a list of flows then adds the nodes to each flow
-	 * in the format &lt;flowname>:&lt;nodeinflow> this is done for every node in
+	 * in the format {@code &lt;flowname>:&lt;nodeinflow>} this is done for every node in
 	 * all the flows inputed and collection in a String List
 	 * @param flows is a list of the program's flows
-	 * @return a list in the format &lt;flowname>:&lt;nodeinflow></body>
+	 * @return a list in the format {@code &lt;flowname>:&lt;nodeinflow>}</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_5mP-INeiEe2IjMkQsyA0cQ" name="flows" type="_21IKobhDEe2QK54y_oSyxw"/>
                 <ownedParameter xmi:id="_5mP-IdeiEe2IjMkQsyA0cQ" isOrdered="true" direction="return">
@@ -8476,7 +8476,7 @@ the file visualization that is requested in Warp.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_5mTBcdeiEe2IjMkQsyA0cQ" name="getFakeDataTable" method="_5mw7kNeiEe2IjMkQsyA0cQ">
-                <ownedComment xmi:id="_7UL-ueq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKt6wut_Ee2jhcuODib7gA">
                   <body>This method is for testing purposes since we have not yet implemented
 	 * the method to calculate the proper reliabilities
 	 * DEPRECATED
@@ -8485,7 +8485,7 @@ the file visualization that is requested in Warp.
                 <ownedParameter xmi:id="_5mTBcteiEe2IjMkQsyA0cQ" type="_2qGmYLhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_Yh4qsNomEe2I7PTFa-TjYQ" name="createHeader" method="_YoGncNomEe2I7PTFa-TjYQ">
-                <ownedComment xmi:id="_7UL-s-q-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKtTsut_Ee2jhcuODib7gA">
                   <body>This method creates all of the information required at the
 	 * top of a .ra file.
 	 * This includes, the name of the file the scheduler used
@@ -8497,7 +8497,7 @@ the file visualization that is requested in Warp.
                 <ownedParameter xmi:id="_Yh5RwNomEe2I7PTFa-TjYQ" type="_2pKyQrhDEe2QK54y_oSyxw" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_Yh5RwdomEe2I7PTFa-TjYQ" name="createVisualizationData" method="_YoGnctomEe2I7PTFa-TjYQ">
-                <ownedComment xmi:id="_7UL-tOq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKtTs-t_Ee2jhcuODib7gA">
                   <body>This method obtains the reliability information for each flow and node.
 	 * Then it is converted to a 2d String array
 	 * @return a String[][] with the reliability information</body>
@@ -8508,7 +8508,7 @@ the file visualization that is requested in Warp.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_Yh6f4NomEe2I7PTFa-TjYQ" name="createColumnHeader" method="_YoHOgNomEe2I7PTFa-TjYQ">
-                <ownedComment xmi:id="_7UL-teq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKtTtOt_Ee2jhcuODib7gA">
                   <body>This methods creates a list of all the flows with corresponding nodes
 	 * that will be analyzed in the reliability analysis
 	 * @return a String[] in the form &lt;Flow name>:&lt;Node in said flow></body>
@@ -8519,7 +8519,7 @@ the file visualization that is requested in Warp.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_Yh7uANomEe2I7PTFa-TjYQ" name="reliabilityTableTo2dArray" method="_YoHOg9omEe2I7PTFa-TjYQ">
-                <ownedComment xmi:id="_7UL-t-q-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKt6wOt_Ee2jhcuODib7gA">
                   <body>Converts a ReliabiltyTable object to a 2d String array object with the 
 	 * same data
 	 * @param ReliabilityTable table
@@ -8532,7 +8532,7 @@ the file visualization that is requested in Warp.
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_Yh88IdomEe2I7PTFa-TjYQ" name="getTitle" method="_YoHOh9omEe2I7PTFa-TjYQ">
-                <ownedComment xmi:id="_7UL-uuq-Ee2bevirIBkqXw">
+                <ownedComment xmi:id="_oKt6w-t_Ee2jhcuODib7gA">
                   <body>This method creates a Title for the Reliability Analysis with the program's name
 	 * @return header for the description</body>
                 </ownedComment>
@@ -13082,11 +13082,11 @@ of the file is an entry (string) in the Description object.&#xD;
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_2rJvQLhDEe2QK54y_oSyxw" name="Warp">
-              <ownedComment xmi:id="_9chNodybEe2XNvbkn9TMug">
-                <body>&lt;h1>This is the entry point to the warp program.&lt;/h1>&#xD;
-&#xD;
-@author sgoddard&#xD;
-@version 1.5&#xD;
+              <ownedComment xmi:id="_oKuh0et_Ee2jhcuODib7gA">
+                <body>&lt;h1>This is the entry point to the warp program.&lt;/h1>
+
+@author sgoddard
+@version 1.5
  *</body>
               </ownedComment>
               <ownedAttribute xmi:id="_23AZ8rhDEe2QK54y_oSyxw" name="NUM_CHANNELS" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
@@ -13165,63 +13165,63 @@ of the file is an entry (string) in the Description object.&#xD;
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_23gJO7hDEe2QK54y_oSyxw" value="*"/>
                 </ownedParameter>
                 <language>java</language>
-                <body>// parse command-line options and set WARP system parameters&#xD;
-		setWarpParameters(args);&#xD;
-&#xD;
-		// and print out the values if in verbose mode&#xD;
-		if (verboseMode) {&#xD;
-			printWarpParameters();&#xD;
-		}&#xD;
-&#xD;
-		// Create and visualize the workload&#xD;
-		// inputFile string, which may be null,&#xD;
-		WorkLoad workLoad = new WorkLoad(numFaults, minLQ, e2e, inputFile);&#xD;
-		if (allRequested) {&#xD;
-			for (WorkLoadChoices choice : WorkLoadChoices.values()) {&#xD;
-				visualize(workLoad, choice); // visualize all Program choices&#xD;
-			}&#xD;
-			// Create and visualize the Warp System&#xD;
-			if (schedulerRequested) {&#xD;
-				WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);&#xD;
-				verifyPerformanceRequirements(warp);&#xD;
-				for (SystemChoices choice : SystemChoices.values()) {&#xD;
-					visualize(warp, choice); // visualize all System choices&#xD;
-				}&#xD;
-			} else { // create a system for all scheduler choices&#xD;
-				for (ScheduleChoices sch : ScheduleChoices.values()) {&#xD;
-					schedulerSelected = sch;&#xD;
-					WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);&#xD;
-					verifyPerformanceRequirements(warp);&#xD;
-					for (SystemChoices choice : SystemChoices.values()) {&#xD;
-						visualize(warp, choice); // visualize all System choices&#xD;
-					}&#xD;
-				}&#xD;
-			}&#xD;
-		} else { // visualize warp workload, source program and other requested items&#xD;
-			visualize(workLoad, WorkLoadChoices.INPUT_GRAPH);&#xD;
-			if (wfRequested) {&#xD;
-				visualize(workLoad, WorkLoadChoices.COMUNICATION_GRAPH);&#xD;
-			}&#xD;
-			if (gvRequested) {&#xD;
-				visualize(workLoad, WorkLoadChoices.GRAPHVIZ);&#xD;
-			}&#xD;
-			WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);&#xD;
-			verifyPerformanceRequirements(warp);&#xD;
-			visualize(warp, SystemChoices.SOURCE);&#xD;
-			if (caRequested) {&#xD;
-				visualize(warp, SystemChoices.CHANNEL);&#xD;
-			}&#xD;
-			if (laRequested) {&#xD;
-				visualize(warp, SystemChoices.LATENCY);&#xD;
-			}&#xD;
-			if (latencyRequested || laRequested) {&#xD;
-				visualize(warp, SystemChoices.LATENCY_REPORT);&#xD;
-			}&#xD;
-			if (raRequested) {&#xD;
-				visualize(warp, SystemChoices.RELIABILITIES);&#xD;
-			}&#xD;
-		}&#xD;
-&#xD;
+                <body>// parse command-line options and set WARP system parameters
+		setWarpParameters(args);
+
+		// and print out the values if in verbose mode
+		if (verboseMode) {
+			printWarpParameters();
+		}
+
+		// Create and visualize the workload
+		// inputFile string, which may be null,
+		WorkLoad workLoad = new WorkLoad(numFaults, minLQ, e2e, inputFile);
+		if (allRequested) {
+			for (WorkLoadChoices choice : WorkLoadChoices.values()) {
+				visualize(workLoad, choice); // visualize all Program choices
+			}
+			// Create and visualize the Warp System
+			if (schedulerRequested) {
+				WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
+				verifyPerformanceRequirements(warp);
+				for (SystemChoices choice : SystemChoices.values()) {
+					visualize(warp, choice); // visualize all System choices
+				}
+			} else { // create a system for all scheduler choices
+				for (ScheduleChoices sch : ScheduleChoices.values()) {
+					schedulerSelected = sch;
+					WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
+					verifyPerformanceRequirements(warp);
+					for (SystemChoices choice : SystemChoices.values()) {
+						visualize(warp, choice); // visualize all System choices
+					}
+				}
+			}
+		} else { // visualize warp workload, source program and other requested items
+			visualize(workLoad, WorkLoadChoices.INPUT_GRAPH);
+			if (wfRequested) {
+				visualize(workLoad, WorkLoadChoices.COMUNICATION_GRAPH);
+			}
+			if (gvRequested) {
+				visualize(workLoad, WorkLoadChoices.GRAPHVIZ);
+			}
+			WarpInterface warp = SystemFactory.create(workLoad, nChannels, schedulerSelected);
+			verifyPerformanceRequirements(warp);
+			visualize(warp, SystemChoices.SOURCE);
+			if (caRequested) {
+				visualize(warp, SystemChoices.CHANNEL);
+			}
+			if (laRequested) {
+				visualize(warp, SystemChoices.LATENCY);
+			}
+			if (latencyRequested || laRequested) {
+				visualize(warp, SystemChoices.LATENCY_REPORT);
+			}
+			if (raRequested) {
+				visualize(warp, SystemChoices.RELIABILITIES);
+			}
+		}
+
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23gwQLhDEe2QK54y_oSyxw" name="setWarpParameters" specification="_2rLkcbhDEe2QK54y_oSyxw">
@@ -13230,248 +13230,248 @@ of the file is an entry (string) in the Description object.&#xD;
                   <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_23gwQrhDEe2QK54y_oSyxw" value="*"/>
                 </ownedParameter>
                 <language>java</language>
-                <body>// move command line parsing into this&#xD;
-		// function--need to set up globals?&#xD;
-&#xD;
-// create holder objects for storing results ...&#xD;
-// BooleanHolder debug = new BooleanHolder();&#xD;
-		StringHolder schedulerSelected = new StringHolder();&#xD;
-		IntHolder channels = new IntHolder();&#xD;
-		IntHolder faults = new IntHolder();&#xD;
-		DoubleHolder m = new DoubleHolder();&#xD;
-		DoubleHolder end2end = new DoubleHolder();&#xD;
-		BooleanHolder gui = new BooleanHolder();&#xD;
-		BooleanHolder gv = new BooleanHolder();&#xD;
-		BooleanHolder wf = new BooleanHolder();&#xD;
-		BooleanHolder ra = new BooleanHolder();&#xD;
-		BooleanHolder la = new BooleanHolder();&#xD;
-		BooleanHolder ca = new BooleanHolder();&#xD;
-		BooleanHolder s = new BooleanHolder();&#xD;
-		BooleanHolder all = new BooleanHolder();&#xD;
-		BooleanHolder latency = new BooleanHolder();&#xD;
-		BooleanHolder verbose = new BooleanHolder();&#xD;
-		StringHolder input = new StringHolder();&#xD;
-		StringHolder output = new StringHolder();&#xD;
-&#xD;
-// create the parser and specify the allowed options ...&#xD;
-		ArgParser parser = new ArgParser(&quot;java -jar warp.jar&quot;);&#xD;
-		parser.addOption(&quot;-sch, --schedule %s {priority,rm,dm,rtHart,poset} #scheduler options&quot;, schedulerSelected);&#xD;
-		parser.addOption(&quot;-c, --channels %d {[1,16]} #number of wireless channels&quot;, channels);&#xD;
-		parser.addOption(&quot;-m %f {[0.5,1.0]} #minimum link quality in the system&quot;, m);&#xD;
-		parser.addOption(&quot;-e, --e2e %f {[0.5,1.0]} #global end-to-end communcation reliability for all flows&quot;, end2end);&#xD;
-		parser.addOption(&quot;-f, --faults %d {[1,10]} #number of faults per edge in a flow (per period)&quot;, faults);&#xD;
-		parser.addOption(&quot;-gui %v #create a gui visualizations&quot;, gui);&#xD;
-		parser.addOption(&quot;-gv %v #create a graph visualization (.gv) file for GraphViz&quot;, gv);&#xD;
-		parser.addOption(&#xD;
-				&quot;-wf  %v #create a WARP (.wf) file that shows the maximum number of transmissions on each segment of the flow needed to meet the end-to-end reliability&quot;,&#xD;
-				wf);&#xD;
-		parser.addOption(&quot;-ra  %v #create a reliability analysis file (tab delimited .csv) for the warp program&quot;, ra);&#xD;
-		parser.addOption(&quot;-la  %v #create a latency analysis file (tab delimited .csv) for the warp program&quot;, la);&#xD;
-		parser.addOption(&quot;-ca  %v #create a channel analysis file (tab delimited .csv) for the warp program&quot;, ca);&#xD;
-		parser.addOption(&quot;-s  %v #create a simulator input file (.txt) for the warp program&quot;, s);&#xD;
-		parser.addOption(&quot;-a, --all  %v #create all output files (activates -gv, -wf, -ra, -s)&quot;, all);&#xD;
-		parser.addOption(&quot;-l, --latency  %v #generates end-to-end latency report file (.txt)&quot;, latency);&#xD;
-		parser.addOption(&quot;-i, --input %s #&lt;InputFile> of graph flows (workload)&quot;, input);&#xD;
-		parser.addOption(&quot;-o, --output %s #&lt;OutputDIRECTORY> where output files will be placed&quot;, output);&#xD;
-		parser.addOption(&#xD;
-				&quot;-v, --verbose %v #Echo input file name and parsed contents. Then for each flow instance: show maximum E2E latency and min/max communication cost for that instance of the flow&quot;,&#xD;
-				verbose);&#xD;
-// parser.addOption (&quot;-d, -debug, --debug %v #Debug mode: base directory =&#xD;
-// $HOME/Documents/WARP/&quot;, debug);&#xD;
-&#xD;
-// match the arguments ...&#xD;
-		parser.matchAllArgs(args);&#xD;
-&#xD;
-// Set WARP system configuration options&#xD;
-		if (channels.value > 0) {&#xD;
-			nChannels = channels.value; // set option specified&#xD;
-		} else {&#xD;
-			nChannels = NUM_CHANNELS; // set to default&#xD;
-		}&#xD;
-		if (faults.value > 0) { // global variable for # of Faults tolerated per edge&#xD;
-			numFaults = faults.value; // set option specified&#xD;
-		} else {&#xD;
-			numFaults = DEFAULT_FAULTS_TOLERATED; // set to default&#xD;
-		}&#xD;
-		if (m.value > 0.0) { // global variable for minimum Link Quality in system&#xD;
-			minLQ = m.value; // set option specified&#xD;
-		} else {&#xD;
-			minLQ = MIN_LQ; // set to default&#xD;
-		}&#xD;
-		if (end2end.value > 0.0) { // global variable for minimum Link Quality in system&#xD;
-			e2e = end2end.value; // set option specified&#xD;
-		} else {&#xD;
-			e2e = E2E; // set to default&#xD;
-		}&#xD;
-		if (output.value != null) { // default output subdirectory (from working directory)&#xD;
-			outputSubDirectory = output.value; // set option specified&#xD;
-		} else {&#xD;
-			outputSubDirectory = DEFAULT_OUTPUT_SUB_DIRECTORY; // set to default&#xD;
-		}&#xD;
-&#xD;
-		guiRequested = gui.value; // GraphVis file requested flag&#xD;
-		gvRequested = gv.value; // GraphVis file requested flag&#xD;
-		wfRequested = wf.value; // WARP file requested flag&#xD;
-		raRequested = ra.value; // Reliability Analysis file requested flag&#xD;
-		laRequested = la.value; // Latency Analysis file requested flag&#xD;
-		caRequested = ca.value; // Latency Analysis file requested flag&#xD;
-		simRequested = s.value; // Simulation file requested flag&#xD;
-		allRequested = all.value; // all out files requested flag&#xD;
-		latencyRequested = latency.value; // latency report requested flag&#xD;
-		verboseMode = verbose.value; // verbose mode flag (mainly for running in IDE)&#xD;
-// debugMode = debug.value; // debug mode flag (mainly for running in IDE)&#xD;
-		inputFile = input.value; // input file specified&#xD;
-		if (schedulerSelected.value != null) { // can't switch on a null value so check then switch&#xD;
-			schedulerRequested = true;&#xD;
-			switch (schedulerSelected.value) {&#xD;
-			case &quot;priority&quot;:&#xD;
-				Warp.schedulerSelected = ScheduleChoices.PRIORITY;&#xD;
-				break;&#xD;
-&#xD;
-			case &quot;rm&quot;:&#xD;
-				Warp.schedulerSelected = ScheduleChoices.RM;&#xD;
-				break;&#xD;
-&#xD;
-			case &quot;dm&quot;:&#xD;
-				Warp.schedulerSelected = ScheduleChoices.DM;&#xD;
-				break;&#xD;
-&#xD;
-			case &quot;rtHart&quot;:&#xD;
-				Warp.schedulerSelected = ScheduleChoices.RTHART;&#xD;
-				break;&#xD;
-&#xD;
-			case &quot;poset&quot;:&#xD;
-				Warp.schedulerSelected = ScheduleChoices.POSET_PRIORITY;&#xD;
-				break;&#xD;
-&#xD;
-			default:&#xD;
-				Warp.schedulerSelected = ScheduleChoices.PRIORITY;&#xD;
-				break;&#xD;
-			}&#xD;
-		} else { // null value when no scheduler specified; so use default&#xD;
-			Warp.schedulerSelected = DEFAULT_SCHEDULER;&#xD;
-		}&#xD;
+                <body>// move command line parsing into this
+		// function--need to set up globals?
+
+// create holder objects for storing results ...
+// BooleanHolder debug = new BooleanHolder();
+		StringHolder schedulerSelected = new StringHolder();
+		IntHolder channels = new IntHolder();
+		IntHolder faults = new IntHolder();
+		DoubleHolder m = new DoubleHolder();
+		DoubleHolder end2end = new DoubleHolder();
+		BooleanHolder gui = new BooleanHolder();
+		BooleanHolder gv = new BooleanHolder();
+		BooleanHolder wf = new BooleanHolder();
+		BooleanHolder ra = new BooleanHolder();
+		BooleanHolder la = new BooleanHolder();
+		BooleanHolder ca = new BooleanHolder();
+		BooleanHolder s = new BooleanHolder();
+		BooleanHolder all = new BooleanHolder();
+		BooleanHolder latency = new BooleanHolder();
+		BooleanHolder verbose = new BooleanHolder();
+		StringHolder input = new StringHolder();
+		StringHolder output = new StringHolder();
+
+// create the parser and specify the allowed options ...
+		ArgParser parser = new ArgParser(&quot;java -jar warp.jar&quot;);
+		parser.addOption(&quot;-sch, --schedule %s {priority,rm,dm,rtHart,poset} #scheduler options&quot;, schedulerSelected);
+		parser.addOption(&quot;-c, --channels %d {[1,16]} #number of wireless channels&quot;, channels);
+		parser.addOption(&quot;-m %f {[0.5,1.0]} #minimum link quality in the system&quot;, m);
+		parser.addOption(&quot;-e, --e2e %f {[0.5,1.0]} #global end-to-end communcation reliability for all flows&quot;, end2end);
+		parser.addOption(&quot;-f, --faults %d {[1,10]} #number of faults per edge in a flow (per period)&quot;, faults);
+		parser.addOption(&quot;-gui %v #create a gui visualizations&quot;, gui);
+		parser.addOption(&quot;-gv %v #create a graph visualization (.gv) file for GraphViz&quot;, gv);
+		parser.addOption(
+				&quot;-wf  %v #create a WARP (.wf) file that shows the maximum number of transmissions on each segment of the flow needed to meet the end-to-end reliability&quot;,
+				wf);
+		parser.addOption(&quot;-ra  %v #create a reliability analysis file (tab delimited .csv) for the warp program&quot;, ra);
+		parser.addOption(&quot;-la  %v #create a latency analysis file (tab delimited .csv) for the warp program&quot;, la);
+		parser.addOption(&quot;-ca  %v #create a channel analysis file (tab delimited .csv) for the warp program&quot;, ca);
+		parser.addOption(&quot;-s  %v #create a simulator input file (.txt) for the warp program&quot;, s);
+		parser.addOption(&quot;-a, --all  %v #create all output files (activates -gv, -wf, -ra, -s)&quot;, all);
+		parser.addOption(&quot;-l, --latency  %v #generates end-to-end latency report file (.txt)&quot;, latency);
+		parser.addOption(&quot;-i, --input %s #&lt;InputFile> of graph flows (workload)&quot;, input);
+		parser.addOption(&quot;-o, --output %s #&lt;OutputDIRECTORY> where output files will be placed&quot;, output);
+		parser.addOption(
+				&quot;-v, --verbose %v #Echo input file name and parsed contents. Then for each flow instance: show maximum E2E latency and min/max communication cost for that instance of the flow&quot;,
+				verbose);
+// parser.addOption (&quot;-d, -debug, --debug %v #Debug mode: base directory =
+// $HOME/Documents/WARP/&quot;, debug);
+
+// match the arguments ...
+		parser.matchAllArgs(args);
+
+// Set WARP system configuration options
+		if (channels.value > 0) {
+			nChannels = channels.value; // set option specified
+		} else {
+			nChannels = NUM_CHANNELS; // set to default
+		}
+		if (faults.value > 0) { // global variable for # of Faults tolerated per edge
+			numFaults = faults.value; // set option specified
+		} else {
+			numFaults = DEFAULT_FAULTS_TOLERATED; // set to default
+		}
+		if (m.value > 0.0) { // global variable for minimum Link Quality in system
+			minLQ = m.value; // set option specified
+		} else {
+			minLQ = MIN_LQ; // set to default
+		}
+		if (end2end.value > 0.0) { // global variable for minimum Link Quality in system
+			e2e = end2end.value; // set option specified
+		} else {
+			e2e = E2E; // set to default
+		}
+		if (output.value != null) { // default output subdirectory (from working directory)
+			outputSubDirectory = output.value; // set option specified
+		} else {
+			outputSubDirectory = DEFAULT_OUTPUT_SUB_DIRECTORY; // set to default
+		}
+
+		guiRequested = gui.value; // GraphVis file requested flag
+		gvRequested = gv.value; // GraphVis file requested flag
+		wfRequested = wf.value; // WARP file requested flag
+		raRequested = ra.value; // Reliability Analysis file requested flag
+		laRequested = la.value; // Latency Analysis file requested flag
+		caRequested = ca.value; // Latency Analysis file requested flag
+		simRequested = s.value; // Simulation file requested flag
+		allRequested = all.value; // all out files requested flag
+		latencyRequested = latency.value; // latency report requested flag
+		verboseMode = verbose.value; // verbose mode flag (mainly for running in IDE)
+// debugMode = debug.value; // debug mode flag (mainly for running in IDE)
+		inputFile = input.value; // input file specified
+		if (schedulerSelected.value != null) { // can't switch on a null value so check then switch
+			schedulerRequested = true;
+			switch (schedulerSelected.value) {
+			case &quot;priority&quot;:
+				Warp.schedulerSelected = ScheduleChoices.PRIORITY;
+				break;
+
+			case &quot;rm&quot;:
+				Warp.schedulerSelected = ScheduleChoices.RM;
+				break;
+
+			case &quot;dm&quot;:
+				Warp.schedulerSelected = ScheduleChoices.DM;
+				break;
+
+			case &quot;rtHart&quot;:
+				Warp.schedulerSelected = ScheduleChoices.RTHART;
+				break;
+
+			case &quot;poset&quot;:
+				Warp.schedulerSelected = ScheduleChoices.POSET_PRIORITY;
+				break;
+
+			default:
+				Warp.schedulerSelected = ScheduleChoices.PRIORITY;
+				break;
+			}
+		} else { // null value when no scheduler specified; so use default
+			Warp.schedulerSelected = DEFAULT_SCHEDULER;
+		}
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_23gwQ7hDEe2QK54y_oSyxw" name="printWarpParameters" specification="_2rMLgrhDEe2QK54y_oSyxw">
                 <language>java</language>
-                <body>// print all system configuration parameters&#xD;
-		// Print out each of the system configuration values&#xD;
-		System.out.println(&quot;WARP system configuration values:&quot;);&#xD;
-		System.out.println(&quot;\tScheduler=&quot; + schedulerSelected);&#xD;
-		System.out.println(&quot;\tnChanels=&quot; + nChannels);&#xD;
-		System.out.println(&quot;\tnumFaults=&quot; + numFaults);&#xD;
-		System.out.println(&quot;\tminLQ=&quot; + minLQ);&#xD;
-		System.out.println(&quot;\tE2E=&quot; + e2e);&#xD;
-		System.out.println(&quot;\tguiRequest flag=&quot; + guiRequested);&#xD;
-		System.out.println(&quot;\tgvRequest flag=&quot; + gvRequested);&#xD;
-		System.out.println(&quot;\twfRequest flag=&quot; + wfRequested);&#xD;
-		System.out.println(&quot;\traRequest flag=&quot; + raRequested);&#xD;
-		System.out.println(&quot;\tlaRequest flag=&quot; + laRequested);&#xD;
-		System.out.println(&quot;\tcaRequest flag=&quot; + caRequested);&#xD;
-		System.out.println(&quot;\tsimRequest flag=&quot; + simRequested);&#xD;
-		System.out.println(&quot;\tallOutFilesRequest flag=&quot; + allRequested);&#xD;
-		System.out.println(&quot;\tlatency flag=&quot; + latencyRequested);&#xD;
-		if (inputFile != null) {&#xD;
-			System.out.println(&quot;\tinput file=&quot; + inputFile);&#xD;
-		} else {&#xD;
-			System.out.println(&quot;\tNo input file specified; will be requested when needed.&quot;);&#xD;
-		}&#xD;
-		System.out.println(&quot;\toutputSubDirectory=&quot; + outputSubDirectory);&#xD;
-		System.out.println(&quot;\tverbose flag=&quot; + verboseMode);&#xD;
-		// System.out.println (&quot;\tdebug flag=&quot; + debugMode);&#xD;
+                <body>// print all system configuration parameters
+		// Print out each of the system configuration values
+		System.out.println(&quot;WARP system configuration values:&quot;);
+		System.out.println(&quot;\tScheduler=&quot; + schedulerSelected);
+		System.out.println(&quot;\tnChanels=&quot; + nChannels);
+		System.out.println(&quot;\tnumFaults=&quot; + numFaults);
+		System.out.println(&quot;\tminLQ=&quot; + minLQ);
+		System.out.println(&quot;\tE2E=&quot; + e2e);
+		System.out.println(&quot;\tguiRequest flag=&quot; + guiRequested);
+		System.out.println(&quot;\tgvRequest flag=&quot; + gvRequested);
+		System.out.println(&quot;\twfRequest flag=&quot; + wfRequested);
+		System.out.println(&quot;\traRequest flag=&quot; + raRequested);
+		System.out.println(&quot;\tlaRequest flag=&quot; + laRequested);
+		System.out.println(&quot;\tcaRequest flag=&quot; + caRequested);
+		System.out.println(&quot;\tsimRequest flag=&quot; + simRequested);
+		System.out.println(&quot;\tallOutFilesRequest flag=&quot; + allRequested);
+		System.out.println(&quot;\tlatency flag=&quot; + latencyRequested);
+		if (inputFile != null) {
+			System.out.println(&quot;\tinput file=&quot; + inputFile);
+		} else {
+			System.out.println(&quot;\tNo input file specified; will be requested when needed.&quot;);
+		}
+		System.out.println(&quot;\toutputSubDirectory=&quot; + outputSubDirectory);
+		System.out.println(&quot;\tverbose flag=&quot; + verboseMode);
+		// System.out.println (&quot;\tdebug flag=&quot; + debugMode);
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DXy9QM3KEe2aPrCP15OoQw" name="visualize" specification="_DW3JIM3KEe2aPrCP15OoQw">
                 <ownedParameter xmi:id="_DXy9Qc3KEe2aPrCP15OoQw" name="workLoad" type="_2q5QkLhDEe2QK54y_oSyxw"/>
                 <ownedParameter xmi:id="_DXy9Qs3KEe2aPrCP15OoQw" name="choice" type="_2012wrhDEe2QK54y_oSyxw"/>
                 <language>java</language>
-                <body>var viz = VisualizationFactory.createWorkLoadVisualization(workLoad, outputSubDirectory, choice);&#xD;
-		if (viz != null) {&#xD;
-			if (verboseMode) {&#xD;
-				System.out.println(viz.toString());&#xD;
-			}&#xD;
-			viz.toFile();&#xD;
-			if (guiRequested) {&#xD;
-				viz.toDisplay();&#xD;
-			}&#xD;
-		}&#xD;
+                <body>var viz = VisualizationFactory.createWorkLoadVisualization(workLoad, outputSubDirectory, choice);
+		if (viz != null) {
+			if (verboseMode) {
+				System.out.println(viz.toString());
+			}
+			viz.toFile();
+			if (guiRequested) {
+				viz.toDisplay();
+			}
+		}
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OWWSoNO2Ee2O0cjNcmYJpQ" name="visualize" specification="_OWL6kNO2Ee2O0cjNcmYJpQ">
                 <ownedParameter xmi:id="_OWWSodO2Ee2O0cjNcmYJpQ" name="warp" type="_OWFM4NO2Ee2O0cjNcmYJpQ"/>
                 <ownedParameter xmi:id="_OWWSotO2Ee2O0cjNcmYJpQ" name="choice" type="_2012wLhDEe2QK54y_oSyxw"/>
                 <language>java</language>
-                <body>var viz = VisualizationFactory.createProgramVisualization(warp, outputSubDirectory, choice);&#xD;
-		if (viz != null) {&#xD;
-			viz.toFile();&#xD;
-			if (guiRequested &amp;&amp; schedulerRequested) {&#xD;
-				/* Only display window when a specific scheduler has been requested */&#xD;
-				viz.toDisplay();&#xD;
-			}&#xD;
-		}&#xD;
+                <body>var viz = VisualizationFactory.createProgramVisualization(warp, outputSubDirectory, choice);
+		if (viz != null) {
+			viz.toFile();
+			if (guiRequested &amp;&amp; schedulerRequested) {
+				/* Only display window when a specific scheduler has been requested */
+				viz.toDisplay();
+			}
+		}
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OWW5sNO2Ee2O0cjNcmYJpQ" name="verifyPerformanceRequirements" specification="_OWL6k9O2Ee2O0cjNcmYJpQ">
                 <ownedParameter xmi:id="_OWW5sdO2Ee2O0cjNcmYJpQ" name="warp" type="_OWFM4NO2Ee2O0cjNcmYJpQ"/>
                 <language>java</language>
-                <body>verifyDeadlines(warp);&#xD;
-		verifyReliabilities(warp);&#xD;
-		verifyNoChannelConflicts(warp);&#xD;
+                <body>verifyDeadlines(warp);
+		verifyReliabilities(warp);
+		verifyNoChannelConflicts(warp);
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OWW5stO2Ee2O0cjNcmYJpQ" name="verifyReliabilities" specification="_OWMhoNO2Ee2O0cjNcmYJpQ">
                 <ownedParameter xmi:id="_OWW5s9O2Ee2O0cjNcmYJpQ" name="warp" type="_OWFM4NO2Ee2O0cjNcmYJpQ"/>
                 <language>java</language>
-                <body>if (schedulerSelected != ScheduleChoices.RTHART) {&#xD;
-			/* RealTime HART doesn't adhere to reliability targets */&#xD;
-			if (!warp.reliabilitiesMet()) {&#xD;
-				System.err.printf(&#xD;
-						&quot;\n\tERROR: Not all flows meet the end-to-end &quot; + &quot;reliability of %s under %s scheduling.\n&quot;,&#xD;
-						String.valueOf(e2e), schedulerSelected.toString());&#xD;
-			} else if (verboseMode) {&#xD;
-				System.out.printf(&quot;\n\tAll flows meet the end-to-end reliability &quot; + &quot;of %s under %s scheduling.\n&quot;,&#xD;
-						String.valueOf(e2e), schedulerSelected.toString());&#xD;
-			}&#xD;
-		}&#xD;
+                <body>if (schedulerSelected != ScheduleChoices.RTHART) {
+			/* RealTime HART doesn't adhere to reliability targets */
+			if (!warp.reliabilitiesMet()) {
+				System.err.printf(
+						&quot;\n\tERROR: Not all flows meet the end-to-end &quot; + &quot;reliability of %s under %s scheduling.\n&quot;,
+						String.valueOf(e2e), schedulerSelected.toString());
+			} else if (verboseMode) {
+				System.out.printf(&quot;\n\tAll flows meet the end-to-end reliability &quot; + &quot;of %s under %s scheduling.\n&quot;,
+						String.valueOf(e2e), schedulerSelected.toString());
+			}
+		}
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OWW5tNO2Ee2O0cjNcmYJpQ" name="verifyDeadlines" specification="_OWMhotO2Ee2O0cjNcmYJpQ">
                 <ownedParameter xmi:id="_OWW5tdO2Ee2O0cjNcmYJpQ" name="warp" type="_OWFM4NO2Ee2O0cjNcmYJpQ"/>
                 <language>java</language>
-                <body>if (!warp.deadlinesMet()) {&#xD;
-			System.err.printf(&quot;\n\tERROR: Not all flows meet their deadlines under %s scheduling.\n&quot;,&#xD;
-					schedulerSelected.toString());&#xD;
-			visualize(warp, SystemChoices.DEADLINE_REPORT);&#xD;
-		} else if (verboseMode) {&#xD;
-			System.out.printf(&quot;\n\tAll flows meet their deadlines under %s scheduling.\n&quot;,&#xD;
-					schedulerSelected.toString());&#xD;
-		}&#xD;
+                <body>if (!warp.deadlinesMet()) {
+			System.err.printf(&quot;\n\tERROR: Not all flows meet their deadlines under %s scheduling.\n&quot;,
+					schedulerSelected.toString());
+			visualize(warp, SystemChoices.DEADLINE_REPORT);
+		} else if (verboseMode) {
+			System.out.printf(&quot;\n\tAll flows meet their deadlines under %s scheduling.\n&quot;,
+					schedulerSelected.toString());
+		}
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_OWW5ttO2Ee2O0cjNcmYJpQ" name="verifyNoChannelConflicts" specification="_OWNIsNO2Ee2O0cjNcmYJpQ">
                 <ownedParameter xmi:id="_OWW5t9O2Ee2O0cjNcmYJpQ" name="warp" type="_OWFM4NO2Ee2O0cjNcmYJpQ"/>
                 <language>java</language>
-                <body>if (warp.toChannelAnalysis().isChannelConflict()) {&#xD;
-			System.err.printf(&quot;\n\tERROR: Channel conficts exists. See Channel Visualization for details.\n&quot;);&#xD;
-			if (!caRequested) { // only need to create the visualization if not already requested&#xD;
-				visualize(warp, SystemChoices.CHANNEL);&#xD;
-			}&#xD;
-		} else if (verboseMode) {&#xD;
-			System.out.printf(&quot;\n\tNo channel conflicts detected.\n&quot;);&#xD;
-		}&#xD;
+                <body>if (warp.toChannelAnalysis().isChannelConflict()) {
+			System.err.printf(&quot;\n\tERROR: Channel conficts exists. See Channel Visualization for details.\n&quot;);
+			if (!caRequested) { // only need to create the visualization if not already requested
+				visualize(warp, SystemChoices.CHANNEL);
+			}
+		} else if (verboseMode) {
+			System.out.printf(&quot;\n\tNo channel conflicts detected.\n&quot;);
+		}
 	</body>
               </ownedBehavior>
               <ownedOperation xmi:id="_2rK9YLhDEe2QK54y_oSyxw" name="main" isStatic="true" method="_23gJObhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_9chNotybEe2XNvbkn9TMug">
-                  <body>&lt;h1>Entry point of the warp program.&lt;/h1>&#xD;
-	 * &lt;p>&#xD;
-	 * Sets up the warp parameters according to the command line arguments. The&#xD;
-	 * program will print the parameters if it is in verbose mode. Then a workload&#xD;
-	 * is created based off of the input file. Finally if all was requested, all&#xD;
-	 * visualizations files are made, and if set&#xD;
-	 * &lt;/p>&#xD;
-	 * &#xD;
+                <ownedComment xmi:id="_oKuh0ut_Ee2jhcuODib7gA">
+                  <body>&lt;h1>Entry point of the warp program.&lt;/h1>
+	 * &lt;p>
+	 * Sets up the warp parameters according to the command line arguments. The
+	 * program will print the parameters if it is in verbose mode. Then a workload
+	 * is created based off of the input file. Finally if all was requested, all
+	 * visualizations files are made, and if set
+	 * &lt;/p>
+	 * 
 	 * @param args command line arguments.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2rK9YbhDEe2QK54y_oSyxw" name="args">
@@ -13480,41 +13480,41 @@ of the file is an entry (string) in the Description object.&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2rLkcbhDEe2QK54y_oSyxw" name="setWarpParameters" visibility="private" isStatic="true" method="_23gwQLhDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_9ch0tNybEe2XNvbkn9TMug">
-                  <body>&lt;h1>Sets the class attributes based on the command line arguments.&lt;/h1>&#xD;
-	 * &lt;p>&#xD;
-	 * If no value is given for an attribute the value will be set to the default.&#xD;
-	 * &lt;/p>&#xD;
-	 * &lt;h2>Options&lt;/h2>&#xD;
-	 * &lt;ul>&#xD;
-	 * &lt;li>-sch, --schedule %s {priority,rm,dm,rtHart,poset} #scheduler options&lt;/li>&#xD;
-	 * &lt;li>-c, --channels %d {[1,16]} #number of wireless channels&lt;/li>&#xD;
-	 * &lt;li>-m %f {[0.5,1.0]} #minimum link quality in the system&lt;/li>&#xD;
-	 * &lt;li>-e, --e2e %f {[0.5,1.0]} #global end-to-end communcation reliability for&#xD;
-	 * all flows&lt;/li>&#xD;
-	 * &lt;li>-f, --faults %d {[1,10]} #number of faults per edge in a flow (per&#xD;
-	 * period)&lt;/li>&#xD;
-	 * &lt;li>-gui %v #create a gui visualizations&lt;/li>&#xD;
-	 * &lt;li>-gv %v #create a graph visualization (.gv) file for GraphViz&lt;/li>&#xD;
-	 * &lt;li>-wf %v #create a WARP (.wf) file that shows the maximum number of&#xD;
-	 * transmissions on each segment of the flow needed to meet the end-to-end&#xD;
-	 * reliability&lt;/li>&#xD;
-	 * &lt;li>-ra %v #create a reliability analysis file (tab delimited .csv) for the&#xD;
-	 * warp program&lt;/li>&#xD;
-	 * &lt;li>-la %v #create a latency analysis file (tab delimited .csv) for the warp&#xD;
-	 * program&lt;/li>&#xD;
-	 * &lt;li>-ca %v #create a channel analysis file (tab delimited .csv) for the warp&#xD;
-	 * program&lt;/li>&#xD;
-	 * &lt;li>-s %v #create a simulator input file (.txt) for the warp program&lt;/li>&#xD;
-	 * &lt;li>-a, --all %v #create all output files (activates -gv, -wf, -ra, -s)&lt;/li>&#xD;
-	 * &lt;li>-l, --latency %v #generates end-to-end latency report file (.txt)&lt;/li>&#xD;
-	 * &lt;li>-i, --input %s #&lt;InputFile> of graph flows (workload)&lt;/li>&#xD;
-	 * &lt;li>-o, --output %s #&lt;OutputDIRECTORY> where output files will be placed&lt;/li>&#xD;
-	 * &lt;li>-v, --verbose %v #Echo input file name and parsed contents. Then for each&#xD;
-	 * flow instance: show maximum E2E latency and min/max communication cost for&#xD;
-	 * that instance of the flow&lt;/li>&#xD;
-	 * &lt;/ul>&#xD;
-	 * &#xD;
+                <ownedComment xmi:id="_oKvI4-t_Ee2jhcuODib7gA">
+                  <body>&lt;h1>Sets the class attributes based on the command line arguments.&lt;/h1>
+	 * &lt;p>
+	 * If no value is given for an attribute the value will be set to the default.
+	 * &lt;/p>
+	 * &lt;h2>Options&lt;/h2>
+	 * &lt;ul>
+	 * &lt;li>-sch, --schedule %s {priority,rm,dm,rtHart,poset} #scheduler options&lt;/li>
+	 * &lt;li>-c, --channels %d {[1,16]} #number of wireless channels&lt;/li>
+	 * &lt;li>-m %f {[0.5,1.0]} #minimum link quality in the system&lt;/li>
+	 * &lt;li>-e, --e2e %f {[0.5,1.0]} #global end-to-end communcation reliability for
+	 * all flows&lt;/li>
+	 * &lt;li>-f, --faults %d {[1,10]} #number of faults per edge in a flow (per
+	 * period)&lt;/li>
+	 * &lt;li>-gui %v #create a gui visualizations&lt;/li>
+	 * &lt;li>-gv %v #create a graph visualization (.gv) file for GraphViz&lt;/li>
+	 * &lt;li>-wf %v #create a WARP (.wf) file that shows the maximum number of
+	 * transmissions on each segment of the flow needed to meet the end-to-end
+	 * reliability&lt;/li>
+	 * &lt;li>-ra %v #create a reliability analysis file (tab delimited .csv) for the
+	 * warp program&lt;/li>
+	 * &lt;li>-la %v #create a latency analysis file (tab delimited .csv) for the warp
+	 * program&lt;/li>
+	 * &lt;li>-ca %v #create a channel analysis file (tab delimited .csv) for the warp
+	 * program&lt;/li>
+	 * &lt;li>-s %v #create a simulator input file (.txt) for the warp program&lt;/li>
+	 * &lt;li>-a, --all %v #create all output files (activates -gv, -wf, -ra, -s)&lt;/li>
+	 * &lt;li>-l, --latency %v #generates end-to-end latency report file (.txt)&lt;/li>
+	 * &lt;li>-i, --input %s #&lt;InputFile> of graph flows (workload)&lt;/li>
+	 * &lt;li>-o, --output %s #&lt;OutputDIRECTORY> where output files will be placed&lt;/li>
+	 * &lt;li>-v, --verbose %v #Echo input file name and parsed contents. Then for each
+	 * flow instance: show maximum E2E latency and min/max communication cost for
+	 * that instance of the flow&lt;/li>
+	 * &lt;/ul>
+	 * 
 	 * @param args An array of strings of the command line arguments</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_2rLkcrhDEe2QK54y_oSyxw" name="args">
@@ -13523,88 +13523,88 @@ of the file is an entry (string) in the Description object.&#xD;
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:id="_2rMLgrhDEe2QK54y_oSyxw" name="printWarpParameters" visibility="private" isStatic="true" method="_23gwQ7hDEe2QK54y_oSyxw">
-                <ownedComment xmi:id="_9ch0tdybEe2XNvbkn9TMug">
+                <ownedComment xmi:id="_oKvI5Ot_Ee2jhcuODib7gA">
                   <body>&lt;h1>Prints the warp system configuration parameters&lt;/h1></body>
                 </ownedComment>
               </ownedOperation>
               <ownedOperation xmi:id="_DW3JIM3KEe2aPrCP15OoQw" name="visualize" visibility="private" isStatic="true" method="_DXy9QM3KEe2aPrCP15OoQw">
-                <ownedComment xmi:id="_9chNo9ybEe2XNvbkn9TMug">
-                  <body>&lt;h1>Visualizes a workload.&lt;/h1>&#xD;
-	 * &lt;p>&#xD;
-	 * Puts the visualization in the the output folder directory. The type of&#xD;
-	 * visualization is determined by the choice object that is passed in.&#xD;
-	 * &lt;/p>&#xD;
-	 * &#xD;
-	 * @param workLoad The workload to visualize&#xD;
-	 * @param choice   An item from the WorkLoadChoices enum that specifies what&#xD;
+                <ownedComment xmi:id="_oKuh0-t_Ee2jhcuODib7gA">
+                  <body>&lt;h1>Visualizes a workload.&lt;/h1>
+	 * &lt;p>
+	 * Puts the visualization in the the output folder directory. The type of
+	 * visualization is determined by the choice object that is passed in.
+	 * &lt;/p>
+	 * 
+	 * @param workLoad The workload to visualize
+	 * @param choice   An item from the WorkLoadChoices enum that specifies what
 	 *                 visualization to create.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_DW3JIc3KEe2aPrCP15OoQw" name="workLoad" type="_2q5QkLhDEe2QK54y_oSyxw"/>
                 <ownedParameter xmi:id="_DW3JIs3KEe2aPrCP15OoQw" name="choice" type="_2012wrhDEe2QK54y_oSyxw"/>
               </ownedOperation>
               <ownedOperation xmi:id="_OWL6kNO2Ee2O0cjNcmYJpQ" name="visualize" visibility="private" isStatic="true" method="_OWWSoNO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_9chNpNybEe2XNvbkn9TMug">
-                  <body>&lt;h1>Creates a visualization for a WarpInterface&lt;/h1>&#xD;
-	 * &lt;p>&#xD;
-	 * Puts the visualization in the the output folder directory. The type of&#xD;
-	 * visualization is determined by the choice object that is passed in.&#xD;
-	 * &lt;/p>&#xD;
-	 * &#xD;
-	 * @param warp   a WarpInteface probably a WarpSystem class&#xD;
-	 * @param choice An item from the SystemChoices enum that specifies what&#xD;
+                <ownedComment xmi:id="_oKuh1Ot_Ee2jhcuODib7gA">
+                  <body>&lt;h1>Creates a visualization for a WarpInterface&lt;/h1>
+	 * &lt;p>
+	 * Puts the visualization in the the output folder directory. The type of
+	 * visualization is determined by the choice object that is passed in.
+	 * &lt;/p>
+	 * 
+	 * @param warp   a WarpInteface probably a WarpSystem class
+	 * @param choice An item from the SystemChoices enum that specifies what
 	 *               visualization to create.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_OWL6kdO2Ee2O0cjNcmYJpQ" name="warp" type="_OWFM4NO2Ee2O0cjNcmYJpQ"/>
                 <ownedParameter xmi:id="_OWL6ktO2Ee2O0cjNcmYJpQ" name="choice" type="_2012wLhDEe2QK54y_oSyxw"/>
               </ownedOperation>
               <ownedOperation xmi:id="_OWL6k9O2Ee2O0cjNcmYJpQ" name="verifyPerformanceRequirements" visibility="private" isStatic="true" method="_OWW5sNO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_9ch0sNybEe2XNvbkn9TMug">
-                  <body>&lt;h1>Verifies a WarpInterface's performance.&lt;/h1>&#xD;
-	 * &lt;p>&#xD;
-	 * Verifies the deadlines, reliabilities and if there are channel conflicts. If&#xD;
-	 * something is not verified a message will be printed to the console and in the&#xD;
-	 * case of a failure to verify the deadlines or the channel conflicts, a&#xD;
-	 * deadline/channel report will be created. If everything is successful a&#xD;
-	 * success message will be printed to the console.&#xD;
-	 * &lt;/p>&#xD;
-	 * &#xD;
+                <ownedComment xmi:id="_oKuh1et_Ee2jhcuODib7gA">
+                  <body>&lt;h1>Verifies a WarpInterface's performance.&lt;/h1>
+	 * &lt;p>
+	 * Verifies the deadlines, reliabilities and if there are channel conflicts. If
+	 * something is not verified a message will be printed to the console and in the
+	 * case of a failure to verify the deadlines or the channel conflicts, a
+	 * deadline/channel report will be created. If everything is successful a
+	 * success message will be printed to the console.
+	 * &lt;/p>
+	 * 
 	 * @param warp The WarpInterface to verify.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_OWL6lNO2Ee2O0cjNcmYJpQ" name="warp" type="_OWFM4NO2Ee2O0cjNcmYJpQ"/>
               </ownedOperation>
               <ownedOperation xmi:id="_OWMhoNO2Ee2O0cjNcmYJpQ" name="verifyReliabilities" visibility="private" isStatic="true" method="_OWW5stO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_9ch0sdybEe2XNvbkn9TMug">
-                  <body>&lt;h1>Checks if the reliabilities are met on the WarpInterface.&lt;/h1>&#xD;
-	 * &lt;p>&#xD;
-	 * NOTE: the reliability check is currently not implemented and will always&#xD;
-	 * return true. Prints the result of the check to the console.&#xD;
-	 * &lt;/p>&#xD;
-	 * &#xD;
+                <ownedComment xmi:id="_oKvI4Ot_Ee2jhcuODib7gA">
+                  <body>&lt;h1>Checks if the reliabilities are met on the WarpInterface.&lt;/h1>
+	 * &lt;p>
+	 * NOTE: the reliability check is currently not implemented and will always
+	 * return true. Prints the result of the check to the console.
+	 * &lt;/p>
+	 * 
 	 * @param warp The WarpInterface to check the reliabilities of.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_OWMhodO2Ee2O0cjNcmYJpQ" name="warp" type="_OWFM4NO2Ee2O0cjNcmYJpQ"/>
               </ownedOperation>
               <ownedOperation xmi:id="_OWMhotO2Ee2O0cjNcmYJpQ" name="verifyDeadlines" visibility="private" isStatic="true" method="_OWW5tNO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_9ch0stybEe2XNvbkn9TMug">
-                  <body>&lt;h1>Checks to see if the deadlines are met on the warp interface&lt;/h1>&#xD;
-	 * &lt;p>&#xD;
-	 * Returns false if there is at least one deadline missed. If a deadline is&#xD;
-	 * missed a deadline report file will be created. Result is printed to the&#xD;
-	 * console.&#xD;
-	 * &lt;/p>&#xD;
-	 * &#xD;
+                <ownedComment xmi:id="_oKvI4et_Ee2jhcuODib7gA">
+                  <body>&lt;h1>Checks to see if the deadlines are met on the warp interface&lt;/h1>
+	 * &lt;p>
+	 * Returns false if there is at least one deadline missed. If a deadline is
+	 * missed a deadline report file will be created. Result is printed to the
+	 * console.
+	 * &lt;/p>
+	 * 
 	 * @param warp The WarpInterface to check the deadlines of.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_OWMho9O2Ee2O0cjNcmYJpQ" name="warp" type="_OWFM4NO2Ee2O0cjNcmYJpQ"/>
               </ownedOperation>
               <ownedOperation xmi:id="_OWNIsNO2Ee2O0cjNcmYJpQ" name="verifyNoChannelConflicts" visibility="private" isStatic="true" method="_OWW5ttO2Ee2O0cjNcmYJpQ">
-                <ownedComment xmi:id="_9ch0s9ybEe2XNvbkn9TMug">
-                  <body>&lt;h1>Checks if there is a channel conflict in the warp interface.&lt;/h1>&#xD;
-	 * &lt;p>&#xD;
-	 * The result is printed to the console. If a channel analysis file was not&#xD;
-	 * originally requested, one will be made.&#xD;
-	 * &lt;/p>&#xD;
-	 * &#xD;
+                <ownedComment xmi:id="_oKvI4ut_Ee2jhcuODib7gA">
+                  <body>&lt;h1>Checks if there is a channel conflict in the warp interface.&lt;/h1>
+	 * &lt;p>
+	 * The result is printed to the console. If a channel analysis file was not
+	 * originally requested, one will be made.
+	 * &lt;/p>
+	 * 
 	 * @param warp The WarpInterface to check the channel conflicts of.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_OWNIsdO2Ee2O0cjNcmYJpQ" name="warp" type="_OWFM4NO2Ee2O0cjNcmYJpQ"/>
