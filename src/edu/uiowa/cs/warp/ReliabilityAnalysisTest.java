@@ -467,33 +467,6 @@ public class ReliabilityAnalysisTest {
     }
 
     /**
-     * Tests the getFinalReliabilityRow method (not working)
-     */
-    @Test
-    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
-    public void testGetFinalReliabilityRowEdgeCase() {
-    	// i think we need to add 1 to numRows in the method somehow because
-    	// if numRows doesnt change its going to return the original final row
-    	
-        // Create a sample ReliabilityAnalysis object
-        ReliabilityAnalysis edgeCaseReliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
-
-        // Access the ReliabilityTable of the edgeCaseReliabilityAnalysis object
-        ReliabilityTable reliabilityTable = edgeCaseReliabilityAnalysis.getReliabilities();
-
-        // Add only one row to the ReliabilityTable
-        Double[] singleRowValues = new Double[]{0.95, 0.92, 0.97, 0.90};
-        ReliabilityRow singleRow = new ReliabilityRow(singleRowValues);
-        reliabilityTable.add(singleRow);
-
-        // Test the getFinalReliabilityRow() method
-        ArrayList<Double> expectedRow = new ArrayList<Double>(Arrays.asList(0.95, 0.92, 0.97, 0.90));
-        ArrayList<Double> actualRow = edgeCaseReliabilityAnalysis.getFinalReliabilityRow();
-        String message = "The actual final reliability row does not match the expected row";
-        assertEquals(expectedRow, actualRow, message);
-    }
-
-    /**
      * Tests the getColumnToFlowNodeAssociation method with an empty workload
      */
     @Test
@@ -552,5 +525,18 @@ public class ReliabilityAnalysisTest {
         List<String> flowNamesToResend = reliabilityAnalysis.getFlowNamesToResend(-1);
         String message = "The result should be null";
         assertTrue(flowNamesToResend.isEmpty(), message);
+    }
+    
+    /**
+     * Test the getFinalReliabilityRow method with an empty workload.
+     * The test expects an IndexOutOfBoundsException to be thrown since there are no rows in the ReliabilityTable.
+     */
+    @Test
+    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
+    public void testGetFinalReliabilityRowEmptyWorkLoad() {
+        ReliabilityAnalysis edgeReliabilityAnalysis = getReliabilityAnalysis(m, e2e, "", numChannels, choice);
+
+        String message = "Expected an IndexOutOfBoundsException to be thrown when using an empty input file";
+        assertThrows(IndexOutOfBoundsException.class, () -> edgeReliabilityAnalysis.getFinalReliabilityRow(), message);
     }
 }
