@@ -8248,7 +8248,7 @@ create different types of visualizations.
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_5LkPkNO4Ee2O0cjNcmYJpQ" name="VisualizationImplementation">
-              <ownedComment xmi:id="_dRoh5NonEe2I7PTFa-TjYQ">
+              <ownedComment xmi:id="_4x49QOsPEe2bevirIBkqXw">
                 <body>@author sgoddard
 @version 1.5</body>
               </ownedComment>
