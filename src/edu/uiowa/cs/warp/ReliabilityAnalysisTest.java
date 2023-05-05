@@ -110,7 +110,7 @@ public class ReliabilityAnalysisTest {
 
     /**
      * This method creates a ReliabilityAnalysis for testing
-     * @param numFaults is the number of faults in the WorkLoad's flows
+     * @param numFaults is the number of faults in the WorkLoad's flows`
      * @param m is the minimum packet reception rate
      * @param e2e is the end-to-end reliability
      * @param inputFileName is the input file

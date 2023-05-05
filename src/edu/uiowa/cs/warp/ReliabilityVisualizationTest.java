@@ -51,7 +51,7 @@ public class ReliabilityVisualizationTest {
 	// 2. Integer numFaults, same as previous after
 	/**
 	 * This method creates a ReliabilityVisualization for testing
-	 * @param m is the min packet reception rate
+	 * @param m is the minimum packet reception rate
 	 * @param e2e is the end-to-end reliability
 	 * @param inputFileName is the input file
 	 * @param numChannels is the number of channels in the program
@@ -66,7 +66,7 @@ public class ReliabilityVisualizationTest {
 	/**
 	 * This method creates a ReliabilityVisualization for testing
 	 * @param numFaults is the number of faults in the WorkLoad's flows
-	 * @param m is the min packet reception rate
+	 * @param m is the minimum packet reception rate
 	 * @param e2e is the end-to-end reliability
 	 * @param inputFileName is the input file
 	 * @param numChannels is the number of channels in the program
@@ -548,9 +548,9 @@ public class ReliabilityVisualizationTest {
         assertEquals(expectedHeader, actualHeader, message);    
     }
 
-    /**
-     * Tests the creation of visualization data for an empty input file.
-     */
+//    /**
+//     * Tests the creation of visualization data for an empty input file.
+//     */
 //    @Test
 //    @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
 //    public void testCreateVisualizationDataEmptyFile() {

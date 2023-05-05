@@ -235,7 +235,7 @@ public class ReliabilityAnalysis {
 	 * element is the index for the snk node
 	 * 
 	 * @param flow name of the flow to get the ColumnIndicies of
-	 * @param map a map from <flowname>:<nodename> to the index of that column in the reliability table
+	 * @param map a map from {@code <flowname>:<nodename>} to the index of that column in the reliability table
 	 * @return the indices of all columns that have a node in the flow, the first entry will be the src
 	 */
 	public List<Integer> getColumnIndicesOfFlow(String flow, Map<String, Integer> map) {
@@ -259,7 +259,7 @@ public class ReliabilityAnalysis {
 	 * and returns a row containing 1 for all src nodes and 0 everywhere else.
 	 * 
 	 * @param row row in the Schedule
-	 * @param map association from <flowname>:<nodename> to the index of that column
+	 * @param map association from {@code <flowname>:<nodename>} to the index of that column
 	 * @param reliabilities ReliabilityTable that is being created
 	 * @return ReliabilityRow to use for the next probability calculations
 	 */
@@ -286,7 +286,7 @@ public class ReliabilityAnalysis {
 	 * message.
 	 * 
 	 * @param row the index of row in the Reliabilities table
-	 * @return List<String> of flow names that are going to be resent
+	 * @return {@code List<String>} of flow names that are going to be resent
 	 */
 	public List<String> getFlowNamesToResend(int row) {
 		// should be private
@@ -303,11 +303,11 @@ public class ReliabilityAnalysis {
 	
 	
 	/**
-	 * This method creates a Map that will pair each <flowname>:<nodename> association to a column
+	 * This method creates a Map that will pair each {@code <flowname>:<nodename>} association to a column
 	 * index for the ReliabilityTable such that the columns will match up with the column header created
 	 * in the ReliabilityVisualization class
 	 * 
-	 * @return Map<String, Integer> representing the association from <flowname>:<nodename> to column index
+	 * @return {@codeMap <String, Integer>} representing the association from {@code <flowname>:<nodename>} to column index
 	 */
 	public Map<String, Integer> getFlowNodeToColumnAssociation() {
 		// this returns a hashmap that maps <flowname>:<nodeinflow> to its corresponding column in the reliability table
@@ -383,7 +383,7 @@ public class ReliabilityAnalysis {
 	 * This method returns the final row of the ReliabilityTable representing the probabilities
 	 * that a package has arrived at each node at the final time slot
 	 * 
-	 * @return ArrayList<Double> containing all entries from the last row of the ReliabilityTable
+	 * @return {@code ArrayList<Double>} containing all entries from the last row of the ReliabilityTable
 	 */
 	public ArrayList<Double> getFinalReliabilityRow() {
 		// should be private
@@ -397,14 +397,14 @@ public class ReliabilityAnalysis {
 	}
 	
 	/**
-	 * This method creates a Map that will pair each column index to a <flowname>:<nodename> association
+	 * This method creates a Map that will pair each column index to a {@code <flowname>:<nodename>} association
 	 * for the ReliabilityTable such that the columns will match up with the column header created
 	 * in the ReliabilityVisualization class
 	 * 
 	 * Modified from getFlowNodeToColumnAssociation() to create a hashmap with the column indices
-	 * as keys and <flowname>:<nodename> strings as values for easier access in verifyReliabilities()
+	 * as keys and {@code <flowname>:<nodename>} strings as values for easier access in verifyReliabilities()
 	 * 
-	 * @return Map<Integer, String> representing the association from column index to <flowname>:<nodename>
+	 * @return {@code Map<Integer, String>} representing the association from column index to {@code <flowname>:<nodename>}
 	 */
 	public Map<Integer, String> getColumnToFlowNodeAssociation() {
 		// this returns a hashmap that maps a column in the reliability table to its corresponding <flowname>:<nodeinflow> 
