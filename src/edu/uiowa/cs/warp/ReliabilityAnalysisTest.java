@@ -25,14 +25,41 @@ public class ReliabilityAnalysisTest {
 	 *The default timeout value for all test cases
 	 */
 	private static final int DEFAULT_TIMEOUT = 2;
+	
+	/**
+	 * The minimum packet reception rate
+	 */
     private static final Double m = 0.9;
+    
+    /**
+     * The end-to-end reliability
+     */
     private static final Double e2e = 0.99;
+    
+    /**
+     * The input file name
+     */
     private static final String fileName = "Example";
+    
+    /**
+     * The input file path
+     */
     private static final String filePath = fileName + ".txt";
+    
+    /**
+     * The number of channels
+     */
     private static final Integer numChannels = 3;
+    
+    /**
+     * The schedule choice for the program
+     */
     private static final ScheduleChoices choice = ScheduleChoices.PRIORITY;
     private ReliabilityAnalysis reliabilityAnalysis;
 	
+    /**
+     * The set up of reliability analysis constructor for test cases
+     */
     @Before
     public void setup() {
         reliabilityAnalysis = getReliabilityAnalysis(m, e2e, filePath, numChannels, choice);
@@ -157,9 +184,9 @@ public class ReliabilityAnalysisTest {
     }
 
     /**
-     * Tests the getFlowNodeToColumnAssociation with Example.txt as the input file to
-     * check each pair of flow name and node name association on the reliability table
-     * column that is matched with the column header created by the ReliabilityVizualization class is not null
+     * Tests the getFlowNodeToColumnAssociation with Example.txt as the input file to check that
+     * each flow name and node name association paired to the column index of the reliability table 
+     * matches the column header created in the ReliabilityVizualization class
      */
     @Test
     @Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -204,7 +231,7 @@ public class ReliabilityAnalysisTest {
 
     /**
      * Tests the verifyReliabilities method with Example.txt as the input file to return 
-     * a boolean True if all the flows have met their minimum end-to-end reliabilities.
+     * a boolean True if all the flows have met their end-to-end reliabilities.
      */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
@@ -249,7 +276,7 @@ public class ReliabilityAnalysisTest {
 
     /**
      * Tests the getProgram method with with Example.txt as the input file to check
-     * that the value of the program's schedule choice is not null
+     * that the program's schedule choice is not null
      */
     @Test
 	@Timeout(value = DEFAULT_TIMEOUT, unit = TimeUnit.SECONDS)
