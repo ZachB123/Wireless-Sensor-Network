@@ -19,6 +19,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * JUnit tests for the methods in ReliabilityAnalysis
+ */
+
 public class ReliabilityAnalysisTest {
 	
 	/**
@@ -55,6 +59,10 @@ public class ReliabilityAnalysisTest {
      * The schedule choice for the program
      */
     private static final ScheduleChoices choice = ScheduleChoices.PRIORITY;
+    
+    /**
+     * The reliabilityAnalysis object to access its methods
+     */
     private ReliabilityAnalysis reliabilityAnalysis;
 	
     /**

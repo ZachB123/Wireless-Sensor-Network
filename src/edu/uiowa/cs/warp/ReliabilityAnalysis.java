@@ -102,6 +102,9 @@ public class ReliabilityAnalysis {
 	 */
 	private boolean useFixedTx;
 	
+	/**
+	 * The reliability table for the program
+	 */
 	private ReliabilityTable reliabilities = null;
 
 	/**
