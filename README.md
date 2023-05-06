@@ -104,6 +104,7 @@ Tasks:
 * Document the ReliabilityAnalysis class (Wei Ching). Completed May 2.
 * Update sequence diagram to reflect changes. Zach will diagram the code for getReliabilities and Abby will diagram the code for verifyReliabilities. Completed May 4.
 * Update UML diagrams to reflect changes (Wei Ching). Completed May 4.
+* Update Design Document Warp-Sprint3.pdf (everyone). Completed May 4.
 
 Documents Added:
 * UML Diagrams have been updated to show the changes in the ReliabilityAnalysis class.
