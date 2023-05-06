@@ -1,18 +1,11 @@
 package edu.uiowa.cs.warp;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.extension.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 
 import edu.uiowa.cs.warp.SystemAttributes.ScheduleChoices;
