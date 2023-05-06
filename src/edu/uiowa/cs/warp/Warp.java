@@ -1,17 +1,17 @@
 /**
  * WARP: On-the-fly Program Synthesis for Agile, Real-time, and Reliable Wireless Networks. This
- * system generates node communication programs WARP uses programs to specify a network’s behavior
+ * system generates node communication programs WARP uses programs to specify a network's behavior
  * and includes a synthesis procedure to automatically generate such programs from a high-level
- * specification of the system’s workload and topology. WARP has three unique features: <br>
+ * specification of the system's workload and topology. WARP has three unique features: <br>
  * (1) WARP uses a domain-specific language to specify stateful programs that include conditional
- * statements to control when a flow’s packets are transmitted. The execution paths of programs
+ * statements to control when a flow's packets are transmitted. The execution paths of programs
  * depend on the pattern of packet losses observed at run-time, thereby enabling WARP to readily
  * adapt to packet losses due to short-term variations in link quality. <br>
  * (2) Our synthesis technique uses heuristics to improve network performance by considering
  * multiple packet loss patterns and associated execution paths when determining the transmissions
  * performed by nodes. Furthermore, the generated programs ensure that the likelihood of a flow
  * delivering its packets by its deadline exceeds a user-specified threshold. <br>
- * (3) WARP can adapt to workload and topology changes without explicitly reconstructing a network’s
+ * (3) WARP can adapt to workload and topology changes without explicitly reconstructing a network's
  * program based on the observation that nodes can independently synthesize the same program when
  * they share the same workload and topology information. Simulations show that WARP improves
  * network throughput for data collection, dissemination, and mixed workloads on two realistic

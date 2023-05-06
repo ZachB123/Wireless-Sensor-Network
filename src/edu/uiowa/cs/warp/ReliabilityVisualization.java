@@ -19,11 +19,29 @@ import java.util.Map;
  *
  */
 public class ReliabilityVisualization extends VisualizationObject {
-	
+	/**
+	 * The default reliability analysis file suffix 
+	 */
 	private static final String SOURCE_SUFFIX = ".ra";
+	
+	/**
+	 * The default object name for reliability analysis 
+	 */
 	private static final String OBJECT_NAME = "Reliability Analysis";
+	
+	/**
+	 * The object for warp interface
+	 */
 	private WarpInterface warp;
+	
+	/**
+	 * The object for reliability analysis
+	 */
 	private ReliabilityAnalysis ra;
+	
+	/**
+	 * The object to set the program requested
+	 */
 	private Program program;
 	
 	/**
@@ -82,10 +100,10 @@ public class ReliabilityVisualization extends VisualizationObject {
 	
 	/**
 	 * This method takes in a list of flows then adds the nodes to each flow
-	 * in the format <flowname>:<nodeinflow> this is done for every node in
+	 * in the format {@code <flowname>:<nodeinflow>} this is done for every node in
 	 * all the flows inputed and collection in a String List
 	 * @param flows is a list of the program's flows
-	 * @return a list in the format <flowname>:<nodeinflow>
+	 * @return a list in the format {@code <flowname>:<nodeinflow>}
 	 */
 	public List<String> getFlowsAndNodes(List<String> flows) {
 		// should be private
